@@ -5,6 +5,7 @@
 }
 
 
+
 #fondo {
 
     position: fixed;
@@ -17,21 +18,6 @@
     transform: translate(-50%, -50%);
 
 
-}
-
-
-.tarjetas{
-
-  margin-top: 58px; 
- text-align: center;
-
-
-}
-.tarjetas img{
-    max-width: 60%;
-    align-self: center;
-    border-radius: 10% !important;
-  padding: 5PX; 
 }
 
 /* #logo{
@@ -136,23 +122,22 @@ section {
 
 
 
-/* .diseñador{
+.diseñador{
    
     position:fixed;
     display: flex;
-justify-content: center;
+    justify-content: center;
     border: 1px solid rgb(192, 141, 47);
     background-color: #7cf86c;
     text-align: center;
     padding: 1px;
-    margin-bottom: 01PX !important;
 
     right: 0;
     left: 0;
     bottom: 1PX;
-  
+    
  
-} */
+}
 
 
 
@@ -188,19 +173,3 @@ section h4 {
     font-size: 2vh;
     text-align: left;
 }
-
-/* #inp{
-    margin-bottom: 58px; 
-} */
-
-
-.cardcontact{
-    padding: 50PX;
-}
-
-.checknot{
-    justify-content: end !important ;
-    margin: auto;
-    text-align: start;
-}
-
