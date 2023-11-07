@@ -139,7 +139,7 @@ btns.forEach(btn => {
 
         let tit = buscarId(da);
         let pre = buscarIdPrecio(da);
-       
+
         agregar(tit);
         agregarP(pre);
         agregarC();
@@ -180,9 +180,9 @@ function buscarIdPrecio(id) {
 function agregar(da) {
 
     interesAgregado.push(da);
-    
+
     let suceso = "Se agrego al carrito";
-    let tipoAlert="alert-success";
+    let tipoAlert = "alert-success";
     alertAgrego(da, suceso, tipoAlert);
 
 
@@ -391,9 +391,11 @@ function EliminarV() {
         parrafo.addEventListener('click', event => {
             // const dato = parrafo.textContent;
             const dato = event.target.textContent;
+                                                        //hacemos visible el alert con su titulo y color
             let suceso = "Se Elimino del carrito";
-            let tipoAlert="alert-danger";
+            let tipoAlert = "alert-danger";
             alertAgrego(dato, suceso, tipoAlert);
+
             const index = interesAgregado.indexOf(dato);
 
 
@@ -458,25 +460,27 @@ function actualizarCarrito() {
 
 
 
-
+//funcion alert personalizada
 
 function alertAgrego(titAlert, suceso, tipoAlert) {
-
+//ponemos el titulo del producto en el alert
     let alertTitulo = document.getElementById("alertTit");
     alertTitulo.textContent = `${titAlert} `;
 
-
+//ponemos el suceso del alert- sea danger o sucess
     let alertSuceso = document.getElementById("alertSuceso");
     alertSuceso.textContent = `${suceso} `;
 
     let alertAgrego = document.getElementById("alertAgrego");
-   
+//hacemos el alert visible 
     alertAgrego.classList.remove("hide", "show");
 
     alertAgrego.classList.remove("alert-success", "alert-danger")
     alertAgrego.classList.add(tipoAlert);
 
-alertAgrego.classList.add("show");
+    alertAgrego.classList.add("show");
+
+    //Colocamos el timpo del alert antes de desactivarse
     setTimeout(() => {
         alertAgrego.classList.remove("hide", "show");
 

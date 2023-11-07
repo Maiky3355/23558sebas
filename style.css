@@ -99,6 +99,14 @@ nav ul li:hover {
 
  */
 
+#nav1 {
+   z-index: 48 !important; 
+}
+
+#offcanvasDark{
+    z-index: 49 !important;
+
+}
 
 #alertAgrego {
     position: fixed;
