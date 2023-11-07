@@ -130,13 +130,16 @@ const btns = document.querySelectorAll('button[id^=idbot]')
 
 btns.forEach(btn => {
 
+
+
     btn.addEventListener('click', event => {
+
 
         da = event.target.id;
 
         let tit = buscarId(da);
         let pre = buscarIdPrecio(da);
-
+        alertAgrego(tit);
         agregar(tit);
         agregarP(pre);
         agregarC();
@@ -360,6 +363,7 @@ botonInteres.addEventListener("click", event => {
 
     canvasInteres.classList.add("show");
 
+
 });
 
 //cambiamos el show por hide al apretar la x cerrar del canvas
@@ -387,23 +391,23 @@ function EliminarV() {
             const dato = event.target.textContent;
 
             const index = interesAgregado.indexOf(dato);
-        
-            
-            if (index > -1){
-                   
+
+
+            if (index > -1) {
+
                 interesAgregado.splice(index, 1);
                 interesPrecioAgregado.splice(index, 1);
-        
+
                 console.log(index, "Se eliminó el valor:", dato);
                 actualizarCarrito();
-               
+
             }
             else {
                 console.log("no se elimino");
-        
+
             };
-        
-        
+
+
             // Eliminar el elemento <p> del contenedor
             parrafo.parentNode.removeChild(parrafo);
         });
@@ -447,3 +451,39 @@ function actualizarCarrito() {
         }
     });
 }
+
+
+
+
+
+function alertAgrego(titAlert) {
+
+    let alertTitulo = document.getElementById("alertTit");
+    alertTitulo.textContent = `${titAlert} `;
+
+    let alertAgrego = document.getElementById("alertAgrego");
+    alertAgrego.classList.remove("hide", "show");
+
+    alertAgrego.classList.add("show");
+
+
+    setTimeout(() => {
+        alertAgrego.classList.remove("hide", "show");
+
+        alertAgrego.classList.add("hide");
+
+
+    }, 2000)
+
+
+
+
+}
+//agregamos la alerta al agregar producto
+
+//cargamos los valores de alerta y botones
+
+//cambiamos el hide por show del canvas al apretar boton
+
+
+//cambiamos el show por hide al apretar la x cerrar del canvas

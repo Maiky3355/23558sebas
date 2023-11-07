@@ -20,18 +20,19 @@
 }
 
 
-.tarjetas{
+.tarjetas {
 
-  margin-top: 58px; 
- text-align: center;
+    margin-top: 58px;
+    text-align: center;
 
 
 }
-.tarjetas img{
+
+.tarjetas img {
     max-width: 60%;
     align-self: center;
     border-radius: 10% !important;
-  padding: 5PX; 
+    padding: 5PX;
 }
 
 /* #logo{
@@ -99,7 +100,14 @@ nav ul li:hover {
  */
 
 
+#alertAgrego {
+    position: fixed;
 
+    left: 50%;
+    top: 10;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
 
 
 
@@ -194,13 +202,12 @@ section h4 {
 } */
 
 
-.cardcontact{
+.cardcontact {
     padding: 50PX;
 }
 
-.checknot{
-    justify-content: end !important ;
+.checknot {
+    justify-content: end !important;
     margin: auto;
     text-align: start;
 }
-
