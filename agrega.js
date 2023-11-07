@@ -139,7 +139,7 @@ btns.forEach(btn => {
 
         let tit = buscarId(da);
         let pre = buscarIdPrecio(da);
-        alertAgrego(tit);
+       
         agregar(tit);
         agregarP(pre);
         agregarC();
@@ -179,9 +179,11 @@ function buscarIdPrecio(id) {
 //agregamos a la lista el titulo a precionar de cada boton
 function agregar(da) {
 
-
-    interesAgregado.push(da)
-    console.log("Se agrego" + interesAgregado)
+    interesAgregado.push(da);
+    
+    let suceso = "Se agrego al carrito";
+    let tipoAlert="alert-success";
+    alertAgrego(da, suceso, tipoAlert);
 
 
     const conjuntoExistente = new Set();
@@ -389,7 +391,9 @@ function EliminarV() {
         parrafo.addEventListener('click', event => {
             // const dato = parrafo.textContent;
             const dato = event.target.textContent;
-
+            let suceso = "Se Elimino del carrito";
+            let tipoAlert="alert-danger";
+            alertAgrego(dato, suceso, tipoAlert);
             const index = interesAgregado.indexOf(dato);
 
 
@@ -456,17 +460,23 @@ function actualizarCarrito() {
 
 
 
-function alertAgrego(titAlert) {
+function alertAgrego(titAlert, suceso, tipoAlert) {
 
     let alertTitulo = document.getElementById("alertTit");
     alertTitulo.textContent = `${titAlert} `;
 
+
+    let alertSuceso = document.getElementById("alertSuceso");
+    alertSuceso.textContent = `${suceso} `;
+
     let alertAgrego = document.getElementById("alertAgrego");
+   
     alertAgrego.classList.remove("hide", "show");
 
-    alertAgrego.classList.add("show");
+    alertAgrego.classList.remove("alert-success", "alert-danger")
+    alertAgrego.classList.add(tipoAlert);
 
-
+alertAgrego.classList.add("show");
     setTimeout(() => {
         alertAgrego.classList.remove("hide", "show");
 
