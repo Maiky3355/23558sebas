@@ -217,38 +217,7 @@ function agregar(da) {
 
 }
 
-//agregamos a la lista el precio a precionar de cada boton
 
-// function agregarP(da) {
-//     interesPrecioAgregado.push(da)
-//     console.log("Se agrego" + interesPrecioAgregado)
-
-
-
-//     const conjuntoExistente = new Set();
-
-//     interesPrecioAgregado.forEach(ia => {
-
-//         const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
-//             parrafo => parrafo.textContent === ia);
-
-
-
-//         if (parrafoExistente) {
-//             parrafoExistente.textContent = ia;
-
-//         }
-//         else {
-//             const parrafo = document.createElement("p");
-//             parrafo.textContent = ia;
-//             interes2.appendChild(parrafo);
-//         }
-//     })
-
-
-
-
-// }
 
 
 //calculamos el precio total y lo mostramos en canvas
@@ -391,7 +360,7 @@ function EliminarV() {
         parrafo.addEventListener('click', event => {
             // const dato = parrafo.textContent;
             const dato = event.target.textContent;
-                                                        //hacemos visible el alert con su titulo y color
+            //hacemos visible el alert con su titulo y color
             let suceso = "Se Elimino del carrito";
             let tipoAlert = "alert-danger";
             alertAgrego(dato, suceso, tipoAlert);
@@ -463,16 +432,16 @@ function actualizarCarrito() {
 //funcion alert personalizada
 
 function alertAgrego(titAlert, suceso, tipoAlert) {
-//ponemos el titulo del producto en el alert
+    //ponemos el titulo del producto en el alert
     let alertTitulo = document.getElementById("alertTit");
     alertTitulo.textContent = `${titAlert} `;
 
-//ponemos el suceso del alert- sea danger o sucess
+    //ponemos el suceso del alert- sea danger o sucess
     let alertSuceso = document.getElementById("alertSuceso");
     alertSuceso.textContent = `${suceso} `;
 
     let alertAgrego = document.getElementById("alertAgrego");
-//hacemos el alert visible 
+    //hacemos el alert visible 
     alertAgrego.classList.remove("hide", "show");
 
     alertAgrego.classList.remove("alert-success", "alert-danger")
@@ -493,11 +462,3 @@ function alertAgrego(titAlert, suceso, tipoAlert) {
 
 
 }
-//agregamos la alerta al agregar producto
-
-//cargamos los valores de alerta y botones
-
-//cambiamos el hide por show del canvas al apretar boton
-
-
-//cambiamos el show por hide al apretar la x cerrar del canvas

@@ -100,17 +100,16 @@ nav ul li:hover {
  */
 
 #nav1 {
-   z-index: 48 !important; 
+    z-index: 48 !important;
 }
 
-#offcanvasDark{
+#offcanvasDark {
     z-index: 49 !important;
 
 }
 
 #alertAgrego {
     position: fixed;
-
     left: 50%;
     top: 10;
     transform: translate(-50%, -50%);
