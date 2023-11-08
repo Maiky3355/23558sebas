@@ -109,7 +109,7 @@ document.body.appendChild(fragmento);//agregamos el contenedor padre
 document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
 
 
-let totalCarritoNavb= document.getElementById("totalCarritoNavb");
+let totalCarritoNavb = document.getElementById("totalCarritoNavb");
 //cargamos a interes la etiqueta donde mostraremos el titulo de producto
 const interes = document.getElementById("interes");
 
@@ -222,7 +222,7 @@ function agregar(da) {
 
 //calculamos el precio total y lo mostramos en canvas
 function total() {
-   
+
     let sumaTotal = 0;
     interesPrecioAgregado.forEach(tot => {
 
@@ -231,7 +231,7 @@ function total() {
 
     });
     intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
-    totalCarritoNavb.textContent= "$ " + sumaTotal.toFixed(2);
+    totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
 };
 
 //agregamos el precio unitario
