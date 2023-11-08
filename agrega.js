@@ -340,7 +340,7 @@ function EliminarV() {
             // const dato = parrafo.textContent;
             const dato = event.target.textContent;
             //hacemos visible el alert con su titulo y color
-            let suceso = "Se Elimino del carrito";
+            let suceso = "Se elimino del carrito";
             let tipoAlert = "alert-danger";
             alertAgrego(dato, suceso, tipoAlert);
 
@@ -352,7 +352,6 @@ function EliminarV() {
                 interesAgregado.splice(index, 1);
                 interesPrecioAgregado.splice(index, 1);
 
-                console.log(index, "Se eliminó el valor:", dato);
                 actualizarCarrito();
 
             }
