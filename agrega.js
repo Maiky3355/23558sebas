@@ -126,7 +126,7 @@ const intprecioTotal = document.getElementById("precioTotal");
 
 //ponemos a escuchar todos los botones y mandamos a agregar los datos
 
-const btns = document.querySelectorAll('button[id^=idbot]')
+const btns = document.querySelectorAll('button[id^=idbot]');
 
 btns.forEach(btn => {
 
@@ -163,7 +163,7 @@ function buscarId(id) {
     const found = datos.find(elem => elem.id == id);
 
     return found.titulo;
-}
+};
 
 //buscamos el id y ponemos el precio
 function buscarIdPrecio(id) {
@@ -171,7 +171,7 @@ function buscarIdPrecio(id) {
 
     console.log(found.precio);
     return found.precio;
-}
+};
 
 
 
@@ -201,21 +201,10 @@ function agregar(da) {
             const parrafo = document.createElement("p");
             parrafo.textContent = ia;
             interes.appendChild(parrafo);
-        }
-    })
+        };
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-}
+};
 
 
 
@@ -263,9 +252,9 @@ function agregarP(da) {
         if (!conjuntoExistente.has(parrafo.textContent)) {
             interes2.removeChild(parrafo);
 
-        }
+        };
     });
-}
+};
 
 
 
@@ -286,7 +275,7 @@ function agregarC() {
         } else {
             // Inicializar la cantidad de repeticiones para un nuevo dato
             repeticionesMap.set(dato, 1);
-        }
+        };
     });
 
     // Crear el contenido para el párrafo interes3
@@ -297,18 +286,7 @@ function agregarC() {
 
     // Agregar o reemplazar el contenido en el elemento con id="interes3"
     interes3.innerHTML = contenidoInteres3;
-}
-
-
-
-
-
-
-
-
-
-
-
+};
 
 
 
@@ -390,7 +368,7 @@ function EliminarV() {
     });
 
 
-}
+};
 
 
 
@@ -399,7 +377,7 @@ function EliminarV() {
 //actualizamos el carrito
 
 function actualizarCarrito() {
-    total()
+    total();
     agregarC();
     const conjuntoExistente = new Set();
 
@@ -424,9 +402,9 @@ function actualizarCarrito() {
         if (!conjuntoExistente.has(parrafo.textContent)) {
             interes2.removeChild(parrafo);
 
-        }
+        };
     });
-}
+};
 
 
 
@@ -445,7 +423,7 @@ function alertAgrego(titAlert, suceso, tipoAlert) {
     //hacemos el alert visible 
     alertAgrego.classList.remove("hide", "show");
 
-    alertAgrego.classList.remove("alert-success", "alert-danger")
+    alertAgrego.classList.remove("alert-success", "alert-danger");
     alertAgrego.classList.add(tipoAlert);
 
     alertAgrego.classList.add("show");
@@ -457,9 +435,6 @@ function alertAgrego(titAlert, suceso, tipoAlert) {
         alertAgrego.classList.add("hide");
 
 
-    }, 2000)
+    }, 2000);
 
-
-
-
-}
+};
