@@ -41,7 +41,7 @@ const datos = [{
 {
     id: "idbot3",
     img: "IMG/LOGOBLANCO.jpg",
-    titulo: "logo",
+    titulo: "logo44",
     descripcion: "compranos aqui",
     precio: "00.01"
 },
