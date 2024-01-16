@@ -436,4 +436,15 @@ function alertAgrego(titAlert, suceso, tipoAlert) {
 
     }, 2000);
 
+
+
+
+
+function cargarDatosBack(){
+
+    
+}
+
+
+
 };
