@@ -16,7 +16,18 @@ let interesPrecioAgregado = [];
 
 
 //creamos el array con los datos
-const datos = [{
+import data from './articulos.json' with { type: 'json' };
+
+
+const datos = Array.from(data);
+
+
+console.log(datos);
+
+
+
+
+const datos2 = [{
     id: "idbot0",
     img: "IMG/LOGONEGRO.jpg",
     titulo: "Maquinas nacionales",
@@ -88,10 +99,10 @@ datos.forEach((dat) => {
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
     template2.querySelector("img").setAttribute("src", dat.img);
-    template2.querySelector("h5").textContent = (dat.titulo);
-    template2.querySelector("p").textContent = (dat.descripcion);
-    template2.querySelector("small").textContent = (dat.precio);
-    template2.querySelector("button").setAttribute("id", dat.id);
+    template2.querySelector("h5").textContent = (dat.Descripción);
+    template2.querySelector("p").textContent = (dat.Categoria);
+    template2.querySelector("small").textContent = (dat.Venta);
+    template2.querySelector("button").setAttribute("id","idbot"+(dat.Artículo));
 
     //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
     let clone = document.importNode(template, true);
@@ -135,10 +146,16 @@ btns.forEach(btn => {
     btn.addEventListener('click', event => {
 
 
-        da = event.target.id;
+        var da = event.target.id;
 
-        let tit = buscarId(da);
-        let pre = buscarIdPrecio(da);
+var regex = /(\d+)/g;
+var da2= (da.match(regex));
+console.log(da);
+console.log(da2);
+
+
+        var tit = buscarId(parseInt(da2));
+        var pre = buscarIdPrecio(parseInt(da2));
 
         agregar(tit);
         agregarP(pre);
@@ -160,17 +177,21 @@ btns.forEach(btn => {
 
 //buscamos el id y ponemos el titulo
 function buscarId(id) {
-    const found = datos.find(elem => elem.id == id);
+    const found = datos.find(elem => elem.Artículo == id);
 
-    return found.titulo;
+    return found.Descripción;
 };
 
 //buscamos el id y ponemos el precio
 function buscarIdPrecio(id) {
-    const found = datos.find(elem => elem.id == id);
+    const found = datos.find(elem => elem.Artículo == id);
+    //buscamos el  valor del dolar en el array
+    const found2 = datos.find(elem => elem.DOLAR == id);
+//reemplazamos las , por .
+  var precioConPuntos =found.Venta.replace(/,/g, ".") ;
 
-    console.log(found.precio);
-    return found.precio;
+    
+    return (precioConPuntos);
 };
 
 
