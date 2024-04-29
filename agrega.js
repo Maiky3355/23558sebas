@@ -27,72 +27,6 @@ console.log(datos);
 
 
 
-const datos2 = [{
-    id: "idbot0",
-    img: "IMG/LOGONEGRO.jpg",
-    titulo: "Maquinas nacionales",
-    descripcion: "Tu mejor opcion",
-    precio: "66.33"
-},
-{
-
-    id: "idbot1",
-    img: "IMG/LOGOBLANCO.jpg",
-    titulo: "Maquinas importadas",
-    descripcion: "Calidad importada",
-    precio: "70.33"
-},
-{
-    id: "idbot2",
-    img: "IMG/LOGONEGRO.jpg",
-    titulo: "logo",
-    descripcion: "compranos aqui",
-    precio: "00.00"
-},
-{
-    id: "idbot3",
-    img: "IMG/LOGOBLANCO.jpg",
-    titulo: "logo44",
-    descripcion: "compranos aqui",
-    precio: "00.01"
-},
-{
-    id: "idbot4",
-    img: "IMG/LOGONEGRO.jpg",
-    titulo: "logo299",
-    descripcion: "compranos aqui2",
-    precio: "22.02"
-},
-{
-    id: "idbot5",
-    img: "IMG/LOGOBLANCO.jpg",
-    titulo: "logo292",
-    descripcion: "compranos aqui2",
-    precio: "28.02"
-},
-{
-    id: "idbot6",
-    img: "IMG/LOGONEGRO.jpg",
-    titulo: "logo022",
-    descripcion: "compranos aqui2",
-    precio: "20.62"
-},
-{
-    id: "idbot7",
-    img: "IMG/LOGOBLANCO.jpg",
-    titulo: "logo232",
-    descripcion: "compranos aqui2",
-    precio: "20.02"
-},
-{
-    id: "idbot8",
-    img: "IMG/LOGONEGRO.jpg",
-    titulo: "logo777",
-    descripcion: "compranos aqui2",
-    precio: "20.82"
-}
-];
-
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((dat) => {
@@ -101,7 +35,8 @@ datos.forEach((dat) => {
     template2.querySelector("img").setAttribute("src", dat.img);
     template2.querySelector("h5").textContent = (dat.Descripción);
     template2.querySelector("p").textContent = (dat.Categoria);
-    template2.querySelector("small").textContent = (dat.Venta);
+    var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(dat.Venta.replace(/,/g, ".")* dat.DOLAR)));
+    template2.querySelector("small").textContent = (precioCatalogo);
     template2.querySelector("button").setAttribute("id","idbot"+(dat.Artículo));
 
     //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
@@ -186,10 +121,10 @@ function buscarId(id) {
 function buscarIdPrecio(id) {
     const found = datos.find(elem => elem.Artículo == id);
     //buscamos el  valor del dolar en el array
-    const found2 = datos.find(elem => elem.DOLAR == id);
+    
 //reemplazamos las , por .
-  var precioConPuntos =found.Venta.replace(/,/g, ".") ;
-
+  var precioConPuntos = (found.Venta.replace(/,/g, "."));
+  //((new Intl.NumberFormat('es-Mx').format(found.Venta.replace(/,/g, ".")*found.DOLAR)))
     
     return (precioConPuntos);
 };
@@ -200,6 +135,8 @@ function buscarIdPrecio(id) {
 //agregamos a la lista el titulo a precionar de cada boton
 function agregar(da) {
 
+    console.log(interesAgregado);
+    obtenerTextoCarrito()
     interesAgregado.push(da);
 
     let suceso = "Se agrego al carrito";
@@ -397,6 +334,7 @@ function EliminarV() {
 //actualizamos el carrito
 
 function actualizarCarrito() {
+    obtenerTextoCarrito()
     total();
     agregarC();
     const conjuntoExistente = new Set();
@@ -469,3 +407,91 @@ function cargarDatosBack(){
 
 
 };
+
+// Función para obtener el texto del carrito
+function obtenerTextoCarrito() {
+    let textoCarrito = "¡Hola! Estos son los productos en mi carrito:\n";
+  
+    interesAgregado.forEach((sebas) => {
+      const producto = datos.find((dat) => dat.Descripción == sebas);
+      if (producto) {
+        console.log(JSON.stringify(producto).replace(/{/g, " "));
+        console.log(typeof (JSON.stringify(producto).replace(/{,}/g, " ")));
+    
+        textoCarrito += JSON.stringify(producto.Descripción);
+      
+    return (textoCarrito);
+    }
+    });
+  
+    const total = interesPrecioAgregado.reduce((acc, precio) => acc + Number(precio), 0);
+    textoCarrito += `\nPrecio Total: $${total.toFixed(2)}`;
+  
+    return (textoCarrito.replace(/{,}/g, " "));
+  }
+  
+  // ...
+  
+  // Función para generar el enlace de WhatsApp
+  function generarEnlaceWhatsApp() {
+    const textoCarrito = obtenerTextoCarrito();
+    const telefono = "1125275189"; // Reemplaza con el número de teléfono deseado
+  
+    const enlace = `https://wa.me/${telefono}/?text=${textoCarrito}`;
+    return enlace;
+  }
+  
+  // Agregamos el enlace de WhatsApp al documento
+  const enlaceWhatsApp = document.createElement("a");
+  enlaceWhatsApp.setAttribute("href", generarEnlaceWhatsApp());
+  enlaceWhatsApp.textContent = "Mandar carrito por WhatsApp";
+  document.getElementById("whats").appendChild(enlaceWhatsApp);
+  
+  // ...
+
+
+
+
+  //buscador
+
+    const formulario= document.querySelector('#formulario');
+    const boton=document.querySelector('#botonBuscar');
+    const filtrar = () =>{
+        console.log("se busco:"+formulario.value)
+
+const texto= formulario.value.toLowerCase();
+for(let producto of datos){
+
+
+let Descripcion= producto.Descripción.toLowerCase();
+if(Descripcion.indexOf(texto) !== -1){
+
+
+
+template.querySelector(".esteSi").setAttribute("id", contenedorId);
+
+template2.querySelector("img").setAttribute("src", producto.img);
+template2.querySelector("h5").textContent = (producto.Descripción);
+template2.querySelector("p").textContent = (producto.Categoria);
+var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(producto.Venta.replace(/,/g, ".")* producto.DOLAR)));
+template2.querySelector("small").textContent = (precioCatalogo);
+template2.querySelector("button").setAttribute("id","idbot"+(producto.Artículo));
+
+//hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
+let clone = document.importNode(template, true);
+fragmento.appendChild(clone);
+
+let clone2 = document.importNode(template2, true);
+fragmento2.appendChild(clone2);
+
+}
+}
+document.body.appendChild(fragmento);//agregamos el contenedor padre
+document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
+
+
+
+
+
+    };
+    boton.addEventListener('click', filtrar)
