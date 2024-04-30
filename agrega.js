@@ -528,14 +528,10 @@ subir();
     };
 
 formulario.addEventListener('keydown', filtrar);
+formulario.addEventListener('click', filtrar);
+formulario.addEventListener('change', filtrar);
+formulario.addEventListener('inputType', filtrar);
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('formulario').forEach( node => node.addEventListener('keypress', e => {
-      if(e.keyCode == 13) {
-        e.preventDefault();
-      }
-    }))
-  });
 
 function subir(){
     
