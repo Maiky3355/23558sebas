@@ -12,7 +12,7 @@ let fragmento2 = document.createDocumentFragment();
 
 
 //creamos un array para guardar los intereses
-let interesAgregado = [];
+var interesAgregado = [];
 
 //creamos un array para guardar los precios
 let interesPrecioAgregado = [];
@@ -97,8 +97,7 @@ btns.forEach(btn => {
 
 var regex = /(\d+)/g;
 var da2= (da.match(regex));
-console.log(da);
-console.log(da2);
+
 
 
         var tit = buscarId(parseInt(da2));
@@ -158,9 +157,8 @@ function buscarIdPrecio(id) {
 function agregar(da) {
 
     console.log(interesAgregado);
-    obtenerTextoCarrito()
     interesAgregado.push(da);
-
+    actualizarEnlaceWhatsApp();
     let suceso = "Se agrego al carrito";
     let tipoAlert = "alert-success";
     alertAgrego(da, suceso, tipoAlert);
@@ -210,8 +208,7 @@ function total() {
 function agregarP(da) {
 
     interesPrecioAgregado.push(da);
-    console.log("Se agregó " + da);
-
+    
     const conjuntoExistente = new Set();
 
     interesPrecioAgregado.forEach(ia => {
@@ -336,7 +333,7 @@ function EliminarV() {
                 interesPrecioAgregado.splice(index, 1);
 
                 actualizarCarrito();
-
+                actualizarEnlaceWhatsApp();
             }
             else {
                 console.log("no se elimino");
@@ -428,51 +425,51 @@ function cargarDatosBack(){
 
     
 }
-
-
-
 };
 
-// Función para obtener el texto del carrito
-function obtenerTextoCarrito() {
-    let textoCarrito = "¡Hola! Estos son los productos en mi carrito:\n";
-  
-    interesAgregado.forEach((sebas) => {
-      const producto = datos.find((dat) => dat.Descripción == sebas);
-      if (producto) {
-        console.log(JSON.stringify(producto).replace(/{/g, " "));
-        console.log(typeof (JSON.stringify(producto).replace(/{,}/g, " ")));
-    
-        textoCarrito += JSON.stringify(producto.Descripción);
-      
-    return (textoCarrito);
-    }
-    });
-  
-    const total = interesPrecioAgregado.reduce((acc, precio) => acc + Number(precio), 0);
-    textoCarrito += `\nPrecio Total: $${total.toFixed(2)}`;
-  
-    return (textoCarrito.replace(/{,}/g, " "));
+
+
+
+
+
+
+
+// Función para generar el enlace de WhatsApp
+function generarEnlaceWhatsApp() {
+    const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
+    const textoCarrito = interesAgregado.map(item => item.replace(/[^a-zA-Z0-9 ]/g, '')).join(' ');
+    const enlace = `https://wa.me/${telefono}/?text=${encodeURIComponent(textoCarrito)}`;
+    return enlace;
   }
   
-  // ...
-  
-  // Función para generar el enlace de WhatsApp
-  function generarEnlaceWhatsApp() {
-    const textoCarrito = obtenerTextoCarrito();
-    const telefono = "+5491125275189"; // Reemplaza con el número de teléfono deseado
-  
-    const enlace = `https://wa.me/${telefono}/?text=${textoCarrito}`;
-    return enlace;
+  // Función para actualizar el enlace de WhatsApp
+  function actualizarEnlaceWhatsApp() {
+    const enlace = generarEnlaceWhatsApp();
+    enlaceWhatsApp.setAttribute("href", enlace);
   }
   
   // Agregamos el enlace de WhatsApp al documento
   const enlaceWhatsApp = document.createElement("a");
-  enlaceWhatsApp.setAttribute("href", generarEnlaceWhatsApp());
+  enlaceWhatsApp.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita la redirección
+    window.open(enlaceWhatsApp.getAttribute("href"), '_blank');
+  });
   enlaceWhatsApp.textContent = "Mandar carrito por WhatsApp";
   document.getElementById("whats").appendChild(enlaceWhatsApp);
   
-  // ...
+  // Ejemplo de modificación del array y actualización del enlace
+  interesAgregado.push("Nuevo elemento"); // Agregar nuevo elemento al array
+  actualizarEnlaceWhatsApp(); // Actualizar el enlace
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -534,7 +531,7 @@ formulario.addEventListener('inputType', filtrar);
 
 
 function subir(){
-    
+    console.log(interesAgregado);
  
       window.scrollTo({
         top:0, behavior:"smooth"
