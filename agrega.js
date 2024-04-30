@@ -1,4 +1,7 @@
 
+let fragmento3 = document.createDocumentFragment();
+let fragmento4 = document.createDocumentFragment();
+
 
 //cargamos los template del html y creamos los fragmentos
 let template = document.getElementById("contTemplate").content;
@@ -29,15 +32,15 @@ console.log(datos);
 
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
-datos.forEach((dat) => {
+datos.forEach((datos) => {
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
-    template2.querySelector("img").setAttribute("src", dat.img);
-    template2.querySelector("h5").textContent = (dat.Descripción);
-    template2.querySelector("p").textContent = (dat.Categoria);
-    var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(dat.Venta.replace(/,/g, ".")* dat.DOLAR)));
+    template2.querySelector("img").setAttribute("src", datos.img);
+    template2.querySelector("h5").textContent = (datos.Descripción);
+    template2.querySelector("p").textContent = (datos.Categoria);
+    var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(datos.Venta.replace(/,/g, ".")* datos.DOLAR)));
     template2.querySelector("small").textContent = (precioCatalogo);
-    template2.querySelector("button").setAttribute("id","idbot"+(dat.Artículo));
+    template2.querySelector("button").setAttribute("id","idbot"+(datos.Artículo));
 
     //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
     let clone = document.importNode(template, true);
@@ -68,10 +71,19 @@ const interes3 = document.getElementById("interes3");
 
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
+escucharBotones();
+
+
+
+
+
+
+
+
 
 
 //ponemos a escuchar todos los botones y mandamos a agregar los datos
-
+function escucharBotones(){
 const btns = document.querySelectorAll('button[id^=idbot]');
 
 btns.forEach(btn => {
@@ -109,6 +121,16 @@ console.log(da2);
     });
 
 });
+
+};
+
+
+
+
+
+
+
+
 
 //buscamos el id y ponemos el titulo
 function buscarId(id) {
@@ -180,6 +202,9 @@ function total() {
     intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
     totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
 };
+
+
+
 
 //agregamos el precio unitario
 function agregarP(da) {
@@ -455,7 +480,7 @@ function obtenerTextoCarrito() {
   //buscador
 
     const formulario= document.querySelector('#formulario');
-    const boton=document.querySelector('#botonBuscar');
+
     const filtrar = () =>{
         console.log("se busco:"+formulario.value)
 
@@ -464,11 +489,16 @@ for(let producto of datos){
 
 
 let Descripcion= producto.Descripción.toLowerCase();
+
 if(Descripcion.indexOf(texto) !== -1){
 
+const element = document.querySelector(".esteSi");
+element.remove();
 
 
-template.querySelector(".esteSi").setAttribute("id", contenedorId);
+
+
+template.querySelector('.esteSi').setAttribute("id", contenedorId);
 
 template2.querySelector("img").setAttribute("src", producto.img);
 template2.querySelector("h5").textContent = (producto.Descripción);
@@ -478,20 +508,42 @@ template2.querySelector("small").textContent = (precioCatalogo);
 template2.querySelector("button").setAttribute("id","idbot"+(producto.Artículo));
 
 //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
+
 let clone = document.importNode(template, true);
-fragmento.appendChild(clone);
+fragmento3.appendChild(clone);
 
 let clone2 = document.importNode(template2, true);
-fragmento2.appendChild(clone2);
+fragmento4.appendChild(clone2);
 
 }
+document.body.appendChild(fragmento3);//agregamos el contenedor padre
+
+
+
 }
-document.body.appendChild(fragmento);//agregamos el contenedor padre
-document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
+document.getElementById(contenedorId).appendChild(fragmento4); //agregamos las cards
 
-
-
-
-
+escucharBotones();
+subir();
     };
-    boton.addEventListener('click', filtrar)
+
+formulario.addEventListener('keydown', filtrar);
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('formulario').forEach( node => node.addEventListener('keypress', e => {
+      if(e.keyCode == 13) {
+        e.preventDefault();
+      }
+    }))
+  });
+
+function subir(){
+    
+ 
+      window.scrollTo({
+        top:0, behavior:"smooth"
+      })
+    }
+  
+
+    
