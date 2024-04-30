@@ -460,7 +460,7 @@ function obtenerTextoCarrito() {
   // Función para generar el enlace de WhatsApp
   function generarEnlaceWhatsApp() {
     const textoCarrito = obtenerTextoCarrito();
-    const telefono = "1125275189"; // Reemplaza con el número de teléfono deseado
+    const telefono = "+5491125275189"; // Reemplaza con el número de teléfono deseado
   
     const enlace = `https://wa.me/${telefono}/?text=${textoCarrito}`;
     return enlace;
