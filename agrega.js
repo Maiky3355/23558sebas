@@ -527,8 +527,8 @@ for(let producto of datos){
 
 let Descripcion= producto.Descripción.toLowerCase();
 
-if(Descripcion.indexOf(texto) !== -1){
-
+if(Descripcion.indexOf(texto) !== -1 && producto.Inventario >=1){
+ 
 const element = document.querySelector(".esteSi");
 element.remove();
 
