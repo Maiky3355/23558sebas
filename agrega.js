@@ -31,6 +31,8 @@ console.log(datos);
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((datos) => {
+
+    if (datos.Inventario >=1){
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
     template2.querySelector("img").setAttribute("src", datos.img);
@@ -47,7 +49,7 @@ datos.forEach((datos) => {
     let clone2 = document.importNode(template2, true);
     fragmento2.appendChild(clone2);
 
-
+}
 
 
 });
