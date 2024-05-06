@@ -17,13 +17,17 @@ var interesAgregado = [];
 //creamos un array para guardar los precios
 let interesPrecioAgregado = [];
 
-
 //creamos el array con los datos
 import data from './articulos.json' with { type: 'json' };
 
 
 const datos = Array.from(data);
 
+
+
+let dolar = datos.dolar;
+//actualizamos el precio en pesos
+interesPrecioAgregado = interesPrecioAgregado.map(precio => (precio * dolar).toFixed(2));
 
 console.log(datos);
 
@@ -186,87 +190,58 @@ function agregar(da) {
 
 
 //calculamos el precio total y lo mostramos en canvas
-function total() {
-
-    let sumaTotal = 0;
-    interesPrecioAgregado.forEach(tot => {
-
-        sumaTotal += Number(tot);
-
-
-    });
-    intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
-    totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
-};
-
-
-
-
-//agregamos el precio unitario
-function agregarP(da) {
-
-    interesPrecioAgregado.push(da);
-    
-    const conjuntoExistente = new Set();
-
-    interesPrecioAgregado.forEach(ia => {
-        const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
-            parrafo => parrafo.textContent === ia
-        );
-
-        if (parrafoExistente) {
-            parrafoExistente.textContent = ia;
-        } else {
-            const parrafo = document.createElement("p");
-            parrafo.textContent = ia;
-            interes2.appendChild(parrafo);
-        }
-
-        conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
-    });
-
-    // Eliminar los párrafos sobrantes del contenedor
-    Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
-        if (!conjuntoExistente.has(parrafo.textContent)) {
-            interes2.removeChild(parrafo);
-
-        };
-    });
-};
-
-
-
-
-
-
-
-//agregamos la cantidad de cada producto
+// ...
 
 function agregarC() {
-
-    const repeticionesMap = new Map();
-
-    interesAgregado.forEach(dato => {
-        if (repeticionesMap.has(dato)) {
-            // Incrementar la cantidad de repeticiones para el dato existente
-            repeticionesMap.set(dato, repeticionesMap.get(dato) + 1);
-        } else {
-            // Inicializar la cantidad de repeticiones para un nuevo dato
-            repeticionesMap.set(dato, 1);
-        };
+    let sum = 0;
+    interesPrecioAgregado.forEach((precio) => {
+      sum += parseFloat(precio);
     });
-
-    // Crear el contenido para el párrafo interes3
-    let contenidoInteres3 = "";
-    repeticionesMap.forEach((repeticiones, dato) => {
-        contenidoInteres3 += `<p id="${dato}"> ${repeticiones}</p>`;
+    interes3.textContent = interesPrecioAgregado.length.toString(); // Actualizamos la cantidad en el HTML
+    intprecioTotal.textContent = "$" + sum.toFixed(2); // Actualizamos el precio total en el HTML
+  }
+  
+  // ...
+  
+  function total() {
+    let sum = 0;
+    interesPrecioAgregado.forEach((precio) => {
+      sum += parseFloat(precio);
     });
+    totalCarritoNavb.textContent = "Total: $" + sum.toFixed(2); // Actualizamos el precio total en el carrito
+  }
+  
+  // ...
+  // ...
 
-    // Agregar o reemplazar el contenido en el elemento con id="interes3"
-    interes3.innerHTML = contenidoInteres3;
-};
-
-
+function agregarP(da) {
+    interesPrecioAgregado.push(da);
+  
+    const conjuntoExistente = new Set();
+  
+    interesPrecioAgregado.forEach(ia => {
+      const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
+        parrafo => parrafo.textContent === ia
+      );
+  
+      if (parrafoExistente) {
+        parrafoExistente.textContent = ia;
+      } else {
+        const parrafo = document.createElement("p");
+        parrafo.textContent = ia;
+        interes2.appendChild(parrafo);
+      }
+  
+      conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
+    });
+  
+    // Eliminar los párrafos sobrantes del contenedor
+    Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
+      if (!conjuntoExistente.has(parrafo.textContent)) {
+        interes2.removeChild(parrafo);
+      }
+    });
+  }
 
 
 
