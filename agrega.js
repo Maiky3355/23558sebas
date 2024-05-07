@@ -403,16 +403,17 @@ function alertAgrego(titAlert, suceso, tipoAlert) {
     let alertAgrego = document.getElementById("alertAgrego");
     //hacemos el alert visible 
     alertAgrego.classList.remove("hide", "show");
+    alertAgrego.style.cssText='z-index: -50 !important;';
 
     alertAgrego.classList.remove("alert-success", "alert-danger");
     alertAgrego.classList.add(tipoAlert);
 
     alertAgrego.classList.add("show");
-
+    alertAgrego.style.cssText='z-index: 50 !important;';
     //Colocamos el timpo del alert antes de desactivarse
     setTimeout(() => {
         alertAgrego.classList.remove("hide", "show");
-
+        alertAgrego.style.cssText='z-index: -50 !important;';
         alertAgrego.classList.add("hide");
 
 
