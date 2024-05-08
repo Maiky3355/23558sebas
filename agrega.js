@@ -466,7 +466,7 @@ function generarEnlaceWhatsApp() {
     });
   
     // Construir el texto del mensaje con la información de los duplicados y los precios
-    let textoCarrito = "";
+    let textoCarrito = "Hola! Me interesan estos productos de la web:\n\n";
     Object.keys(duplicados).forEach(item => {
       const { cantidad, index } = duplicados[item];
       const precio = (interesPrecioAgregado[index] * cantidad).toFixed(2);
@@ -484,6 +484,8 @@ function generarEnlaceWhatsApp() {
 function actualizarEnlaceWhatsApp() {
   const enlace = generarEnlaceWhatsApp();
   enlaceWhatsApp.setAttribute("href", enlace);
+  enlaceWhatsApp.style.cssText= '  font-weight: bold;font-size: 17px; color: yellow;   background-color: rgb(10, 100, 10);';
+
 }
 
 // Agregamos el enlace de WhatsApp al documento

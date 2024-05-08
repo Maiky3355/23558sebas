@@ -17,6 +17,7 @@ var interesAgregado = [];
 //creamos un array para guardar los precios
 let interesPrecioAgregado = [];
 
+
 //creamos el array con los datos
 import data from './articulos.json' with { type: 'json' };
 
@@ -24,17 +25,14 @@ import data from './articulos.json' with { type: 'json' };
 const datos = Array.from(data);
 
 
-
-let dolar = datos.dolar;
-//actualizamos el precio en pesos
-interesPrecioAgregado = interesPrecioAgregado.map(precio => (precio * dolar).toFixed(2));
-
 console.log(datos);
 
 
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((datos) => {
+
+    if (datos.Inventario >=1){
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
     template2.querySelector("img").setAttribute("src", datos.img);
@@ -51,7 +49,7 @@ datos.forEach((datos) => {
     let clone2 = document.importNode(template2, true);
     fragmento2.appendChild(clone2);
 
-
+}
 
 
 });
@@ -190,58 +188,87 @@ function agregar(da) {
 
 
 //calculamos el precio total y lo mostramos en canvas
-// ...
+function total() {
 
-function agregarC() {
-    let sum = 0;
-    interesPrecioAgregado.forEach((precio) => {
-      sum += parseFloat(precio);
-    });
-    interes3.textContent = interesPrecioAgregado.length.toString(); // Actualizamos la cantidad en el HTML
-    intprecioTotal.textContent = "$" + sum.toFixed(2); // Actualizamos el precio total en el HTML
-  }
-  
-  // ...
-  
-  function total() {
-    let sum = 0;
-    interesPrecioAgregado.forEach((precio) => {
-      sum += parseFloat(precio);
-    });
-    totalCarritoNavb.textContent = "Total: $" + sum.toFixed(2); // Actualizamos el precio total en el carrito
-  }
-  
-  // ...
-  // ...
+    let sumaTotal = 0;
+    interesPrecioAgregado.forEach(tot => {
 
+        sumaTotal += Number(tot);
+
+
+    });
+    intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
+    totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
+};
+
+
+
+
+//agregamos el precio unitario
 function agregarP(da) {
+
     interesPrecioAgregado.push(da);
-  
+    
     const conjuntoExistente = new Set();
-  
+
     interesPrecioAgregado.forEach(ia => {
-      const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
-        parrafo => parrafo.textContent === ia
-      );
-  
-      if (parrafoExistente) {
-        parrafoExistente.textContent = ia;
-      } else {
-        const parrafo = document.createElement("p");
-        parrafo.textContent = ia;
-        interes2.appendChild(parrafo);
-      }
-  
-      conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
+        const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
+            parrafo => parrafo.textContent === ia
+        );
+
+        if (parrafoExistente) {
+            parrafoExistente.textContent = ia; //aca multiplicar
+        } else {
+            const parrafo = document.createElement("p");
+            parrafo.textContent = ia;
+            interes2.appendChild(parrafo);
+        }
+
+        conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
     });
-  
+
     // Eliminar los párrafos sobrantes del contenedor
     Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
-      if (!conjuntoExistente.has(parrafo.textContent)) {
-        interes2.removeChild(parrafo);
-      }
+        if (!conjuntoExistente.has(parrafo.textContent)) {
+            interes2.removeChild(parrafo);
+
+        };
     });
-  }
+};
+
+
+
+
+
+
+
+//agregamos la cantidad de cada producto
+
+function agregarC() {
+
+    const repeticionesMap = new Map();
+
+    interesAgregado.forEach(dato => {
+        if (repeticionesMap.has(dato)) {
+            // Incrementar la cantidad de repeticiones para el dato existente
+            repeticionesMap.set(dato, repeticionesMap.get(dato) + 1);
+        } else {
+            // Inicializar la cantidad de repeticiones para un nuevo dato
+            repeticionesMap.set(dato, 1);
+        };
+    });
+
+    // Crear el contenido para el párrafo interes3
+    let contenidoInteres3 = "";
+    repeticionesMap.forEach((repeticiones, dato) => {
+        contenidoInteres3 += `<p id="${dato}"> ${repeticiones}</p>`;
+    });
+
+    // Agregar o reemplazar el contenido en el elemento con id="interes3"
+    interes3.innerHTML = contenidoInteres3;
+};
+
+
 
 
 
@@ -376,16 +403,17 @@ function alertAgrego(titAlert, suceso, tipoAlert) {
     let alertAgrego = document.getElementById("alertAgrego");
     //hacemos el alert visible 
     alertAgrego.classList.remove("hide", "show");
+    alertAgrego.style.cssText='z-index: -50 !important;';
 
     alertAgrego.classList.remove("alert-success", "alert-danger");
     alertAgrego.classList.add(tipoAlert);
 
     alertAgrego.classList.add("show");
-
+    alertAgrego.style.cssText='z-index: 50 !important;';
     //Colocamos el timpo del alert antes de desactivarse
     setTimeout(() => {
         alertAgrego.classList.remove("hide", "show");
-
+        alertAgrego.style.cssText='z-index: -50 !important;';
         alertAgrego.classList.add("hide");
 
 
@@ -438,7 +466,7 @@ function generarEnlaceWhatsApp() {
     });
   
     // Construir el texto del mensaje con la información de los duplicados y los precios
-    let textoCarrito = "";
+    let textoCarrito = "Hola! Me interesan estos productos de la web:\n\n";
     Object.keys(duplicados).forEach(item => {
       const { cantidad, index } = duplicados[item];
       const precio = (interesPrecioAgregado[index] * cantidad).toFixed(2);
@@ -455,7 +483,11 @@ function generarEnlaceWhatsApp() {
 // Función para actualizar el enlace de WhatsApp
 function actualizarEnlaceWhatsApp() {
   const enlace = generarEnlaceWhatsApp();
+
+
   enlaceWhatsApp.setAttribute("href", enlace);
+  enlaceWhatsApp.style.cssText= '  font-weight: bold;font-size: 17px; color: yellow;   background-color: rgb(10, 100, 10);';
+
 }
 
 // Agregamos el enlace de WhatsApp al documento
@@ -500,8 +532,8 @@ for(let producto of datos){
 
 let Descripcion= producto.Descripción.toLowerCase();
 
-if(Descripcion.indexOf(texto) !== -1){
-
+if(Descripcion.indexOf(texto) !== -1 && producto.Inventario >=1){
+ 
 const element = document.querySelector(".esteSi");
 element.remove();
 
