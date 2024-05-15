@@ -37,7 +37,7 @@ datos.forEach((datos) => {
     if (datos.Inventario >=1){
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
-    template2.querySelector("img").setAttribute("src", datos.img);
+    template2.querySelector("img").setAttribute("src", "./imgcarrito/"+(datos.Artículo)+".jpg");
     template2.querySelector("h5").textContent = (datos.Descripción);
     template2.querySelector("p").textContent = (datos.Categoria);
     var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(datos.Venta.replace(/,/g, ".")* datos.DOLAR)));
@@ -367,6 +367,9 @@ function EliminarV() {
       }
     };
   
+
+
+
     let parrafos = interes.querySelectorAll('p');
   
     for (let i = 0; i < parrafos.length; i++) {
@@ -577,7 +580,7 @@ element.remove();
 
 template.querySelector('.esteSi').setAttribute("id", contenedorId);
 
-template2.querySelector("img").setAttribute("src", producto.img);
+template2.querySelector("img").setAttribute("src", "./imgcarrito/"+(producto.Artículo)+".jpg");
 template2.querySelector("h5").textContent = (producto.Descripción);
 template2.querySelector("p").textContent = (producto.Categoria);
 var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(producto.Venta.replace(/,/g, ".")* producto.DOLAR)));
