@@ -12,12 +12,14 @@ let fragmento2 = document.createDocumentFragment();
 
 
 //creamos un array para guardar los intereses
-var interesAgregado = [];
+let interesAgregado = [];
 
+var itemAgregado = new Object();
+let itemCarrito=[];
 //creamos un array para guardar los precios
 let interesPrecioAgregado = [];
 
-
+let  unidades = 1;
 //creamos el array con los datos
 import data from './articulos.json' with { type: 'json' };
 
@@ -35,7 +37,7 @@ datos.forEach((datos) => {
     if (datos.Inventario >=1){
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
-    template2.querySelector("img").setAttribute("src", "/imgcarrito/"+(datos.Artículo)+".jpg");
+    template2.querySelector("img").setAttribute("src", datos.img);
     template2.querySelector("h5").textContent = (datos.Descripción);
     template2.querySelector("p").textContent = (datos.Categoria);
     var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(datos.Venta.replace(/,/g, ".")* datos.DOLAR)));
@@ -71,6 +73,8 @@ const interes3 = document.getElementById("interes3");
 
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
+
+//Ponemos a escuchar botones de productos
 escucharBotones();
 
 
@@ -99,9 +103,32 @@ var regex = /(\d+)/g;
 var da2= (da.match(regex));
 
 
-
+//juntamos los datos del producto que agregamos al carrito
         var tit = buscarId(parseInt(da2));
         var pre = buscarIdPrecio(parseInt(da2));
+        var dol = buscarIdDol(parseInt(da2));
+        let  unidades = Number(1);
+
+//cargamos los datos en el array de objetos
+
+let agregarOModificarItem=(Artículo, Descripción, Venta, DOLAR, Unidades) =>{
+    
+let siEsta = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
+
+if (siEsta){
+    siEsta.Unidades += unidades;
+} else{
+    itemCarrito.push({Artículo, Descripción, Venta, DOLAR, Unidades})
+}
+};
+
+agregarOModificarItem ((parseInt(da2)),tit,pre,dol,unidades)
+
+//mostramos el array de objetos en la consola.
+console.log(itemCarrito)
+
+
+
 
         agregar(tit);
         agregarP(pre);
@@ -137,6 +164,13 @@ function buscarId(id) {
 
     return found.Descripción;
 };
+//buscamos el id y ponemos el dolar
+function buscarIdDol(id) {
+    const found = datos.find(elem => elem.Artículo == id);
+
+    return found.DOLAR;
+};
+
 
 //buscamos el id y ponemos el precio
 function buscarIdPrecio(id) {
@@ -308,51 +342,53 @@ botonInteresC.addEventListener("click", event2 => {
 
 
 
-
-//eliminamos las ventas que tocamos
 function EliminarV() {
-
-
-    const parrafos = interes.querySelectorAll('p');
-
-    parrafos.forEach(parrafo => {
-        parrafo.addEventListener('click', event => {
-            // const dato = parrafo.textContent;
-            const dato = event.target.textContent;
-            //hacemos visible el alert con su titulo y color
-            let suceso = "Se elimino del carrito";
-            let tipoAlert = "alert-danger";
-            alertAgrego(dato, suceso, tipoAlert);
-
-            const index = interesAgregado.indexOf(dato);
-
-
-            if (index > -1) {
-
-                interesAgregado.splice(index, 1);
-                interesPrecioAgregado.splice(index, 1);
-
-                actualizarCarrito();
-                actualizarEnlaceWhatsApp();
-                
-            }
-            else {
-                console.log("no se elimino");
-
-            };
-
-
-            // Eliminar el elemento <p> del contenedor
+    let eliminarOModificarItem = (dato, unidades, parrafo) => {
+      let siEsta = itemCarrito.find((artic) => artic.Descripción === dato);
+      if (siEsta) {
+        console.log(siEsta.Unidades);
+  
+        if (siEsta.Unidades >= 2) {
+          siEsta.Unidades -= unidades;
+          return;
+        } else {
+          const index = itemCarrito.findIndex((artic) => artic.Descripción === dato);
+  
+          if (index > -1) {
+            itemCarrito.splice(index, 1);
             parrafo.parentNode.removeChild(parrafo);
-            
-        });
-    });
+  
+            actualizarCarrito();
+            actualizarEnlaceWhatsApp();
+          }
+        }
+      } else {
+        console.log("El elemento no se encontró en el carrito");
+      }
+    };
+  
+    let parrafos = interes.querySelectorAll('p');
+  
+    for (let i = 0; i < parrafos.length; i++) {
+      const parrafo = parrafos[i];
+      parrafo.removeEventListener('click', eliminarParrafo);
+    parrafo.addEventListener('click', eliminarParrafo); // Agregar el nuevo evento de clic
 
-
-};
-
-
-
+    }
+  
+    function eliminarParrafo(event) {
+      const dato = event.target.textContent;
+      let unidades = 1;
+  
+      let suceso = "Se eliminó del carrito";
+      let tipoAlert = "alert-danger";
+      alertAgrego(dato, suceso, tipoAlert);
+  
+      if (dato) {
+        eliminarOModificarItem(dato, unidades, event.target);
+      }
+    }
+  }
 
 
 //actualizamos el carrito
@@ -541,7 +577,7 @@ element.remove();
 
 template.querySelector('.esteSi').setAttribute("id", contenedorId);
 
-template2.querySelector("img").setAttribute("src", "/imgcarrito/"+(producto.Artículo)+".jpg");
+template2.querySelector("img").setAttribute("src", producto.img);
 template2.querySelector("h5").textContent = (producto.Descripción);
 template2.querySelector("p").textContent = (producto.Categoria);
 var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(producto.Venta.replace(/,/g, ".")* producto.DOLAR)));
@@ -583,4 +619,3 @@ function subir(){
     }
   
 
-    
