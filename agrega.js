@@ -35,7 +35,7 @@ datos.forEach((datos) => {
     if (datos.Inventario >=1){
     template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
-    template2.querySelector("img").setAttribute("src", "/imgcarrito/23558sebas/"+(datos.Artículo)+".jpg");
+    template2.querySelector("img").setAttribute("src", "/23558sebas/imgcarrito/"+(datos.Artículo)+".jpg");
     template2.querySelector("h5").textContent = (datos.Descripción);
     template2.querySelector("p").textContent = (datos.Categoria);
     var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(datos.Venta.replace(/,/g, ".")* datos.DOLAR)));
@@ -541,7 +541,7 @@ element.remove();
 
 template.querySelector('.esteSi').setAttribute("id", contenedorId);
 
-template2.querySelector("img").setAttribute("src", "/imgcarrito/23558sebas/"+(producto.Artículo)+".jpg");
+template2.querySelector("img").setAttribute("src", "/23558sebas/imgcarrito/"+(producto.Artículo)+".jpg");
 template2.querySelector("h5").textContent = (producto.Descripción);
 template2.querySelector("p").textContent = (producto.Categoria);
 var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(producto.Venta.replace(/,/g, ".")* producto.DOLAR)));
