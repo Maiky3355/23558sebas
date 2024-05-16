@@ -130,7 +130,7 @@ console.log(itemCarrito)
 
 
 
-        agregar(tit);
+        agregar(tit,da2);
         agregarP(pre);
         agregarC();
         EliminarV();
@@ -150,6 +150,99 @@ console.log(itemCarrito)
 
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function EliminarV(){
+    
+
+    const parrafos = document.querySelectorAll('p[id^=item]');
+
+    parrafos.forEach(parr => {
+        parr.addEventListener('click', parraf => {
+          parraf.stopImmediatePropagation(); // Detener la propagación y ejecución adicional
+      
+            var da = parraf.target.id;
+          unidades=1;
+
+            var regex = /(\d+)/g;
+            let da2= (da.match(regex));
+            console.log(Number(da2));
+         
+      let suceso = "Se eliminó del carrito";
+      let tipoAlert = "alert-danger";
+      alertAgrego(Number(da2), suceso, tipoAlert);
+  
+   
+        eliminarOModificarItem(Number(da2), unidades, da);
+
+
+
+
+
+
+        })})
+
+        let eliminarOModificarItem = (dato, unidades, parrafo) => {
+          let siEsta = itemCarrito.find((artic) => artic.Artículo === dato);
+          if (siEsta) {
+            console.log(siEsta.Unidades);
+      
+            if (siEsta.Unidades >= 2) {
+              siEsta.Unidades -= unidades;
+              return;
+            } else {
+              const index = itemCarrito.findIndex((artic) => artic.Artículo === dato);
+      
+              if (index > -1) {
+                itemCarrito.splice(index, 1);
+                document.getElementById(parrafo).remove();
+      
+                actualizarCarrito();
+                actualizarEnlaceWhatsApp();
+              }
+            }
+          } else {
+            console.log("El elemento no se encontró en el carrito");
+          }
+        };
+      
+
+
+
+
+
+    }
+
+
+
+
+
+
+   
 
 
 
@@ -188,7 +281,7 @@ function buscarIdPrecio(id) {
 
 
 //agregamos a la lista el titulo a precionar de cada boton
-function agregar(da) {
+function agregar(da,da2) {
 
     console.log(interesAgregado);
     interesAgregado.push(da);
@@ -212,6 +305,7 @@ function agregar(da) {
         else {
             const parrafo = document.createElement("p");
             parrafo.textContent = ia;
+            parrafo.setAttribute("id","item"+da2)
             interes.appendChild(parrafo);
         };
     });
@@ -342,56 +436,7 @@ botonInteresC.addEventListener("click", event2 => {
 
 
 
-function EliminarV() {
-    let eliminarOModificarItem = (dato, unidades, parrafo) => {
-      let siEsta = itemCarrito.find((artic) => artic.Descripción === dato);
-      if (siEsta) {
-        console.log(siEsta.Unidades);
-  
-        if (siEsta.Unidades >= 2) {
-          siEsta.Unidades -= unidades;
-          return;
-        } else {
-          const index = itemCarrito.findIndex((artic) => artic.Descripción === dato);
-  
-          if (index > -1) {
-            itemCarrito.splice(index, 1);
-            parrafo.parentNode.removeChild(parrafo);
-  
-            actualizarCarrito();
-            actualizarEnlaceWhatsApp();
-          }
-        }
-      } else {
-        console.log("El elemento no se encontró en el carrito");
-      }
-    };
-  
 
-
-
-    let parrafos = interes.querySelectorAll('p');
-  
-    for (let i = 0; i < parrafos.length; i++) {
-      const parrafo = parrafos[i];
-      parrafo.removeEventListener('click', eliminarParrafo);
-    parrafo.addEventListener('click', eliminarParrafo); // Agregar el nuevo evento de clic
-
-    }
-  
-    function eliminarParrafo(event) {
-      const dato = event.target.textContent;
-      let unidades = 1;
-  
-      let suceso = "Se eliminó del carrito";
-      let tipoAlert = "alert-danger";
-      alertAgrego(dato, suceso, tipoAlert);
-  
-      if (dato) {
-        eliminarOModificarItem(dato, unidades, event.target);
-      }
-    }
-  }
 
 
 //actualizamos el carrito
@@ -621,4 +666,3 @@ function subir(){
       })
     }
   
-
