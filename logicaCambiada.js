@@ -191,16 +191,16 @@ function EliminarV(){
             var regex = /(\d+)/g;
             let da2= (da.match(regex));
             console.log(Number(da2));
-         
-      let suceso = "Se eliminó del carrito";
-      let tipoAlert = "alert-danger";
-      alertAgrego(Number(da2), suceso, tipoAlert);
   
    
-        eliminarOModificarItem(Number(da2), unidades, da);
+      var caca =eliminarOModificarItem(Number(da2), unidades, da);
 
 
-
+       
+        let suceso = "Se eliminó del carrito";
+        let tipoAlert = "alert-danger";
+        alertAgrego(caca, suceso, tipoAlert);
+    
 
 
 
@@ -228,6 +228,7 @@ function EliminarV(){
           } else {
             console.log("El elemento no se encontró en el carrito");
           }
+          return siEsta.Descripción;
         };
       
 
@@ -280,54 +281,136 @@ function buscarIdPrecio(id) {
 
 
 
+
+
+
+
+
+
+
+function agregar(da, da2) {
+  console.log(itemCarrito);
+
+  let suceso = "Se agregó al carrito";
+  let tipoAlert = "alert-success";
+  alertAgrego(da, suceso, tipoAlert);
+
+  // Limpiar el contenido existente en el contenedor
+  interes.innerHTML = '';
+
+  // Mostrar los productos en el DOM
+  itemCarrito.forEach(producto => {
+      const parrafo = document.createElement("p");
+      parrafo.textContent = `${producto.Descripción} - Unidades: ${producto.Unidades} - Precio Total: ${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)}`;
+      parrafo.setAttribute("id", "item"+producto.Artículo);
+      interes.appendChild(parrafo);
+  });
+  actualizarCarrito();
+  
+  actualizarEnlaceWhatsApp();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //agregamos a la lista el titulo a precionar de cada boton
-function agregar(da,da2) {
+// function agregar(da,da2) {
 
-    console.log(interesAgregado);
-    interesAgregado.push(da);
-    actualizarEnlaceWhatsApp();
-    let suceso = "Se agrego al carrito";
-    let tipoAlert = "alert-success";
-    alertAgrego(da, suceso, tipoAlert);
+//     console.log(interesAgregado);
+//     interesAgregado.push(da);
+//     actualizarEnlaceWhatsApp();
+//     let suceso = "Se agrego al carrito";
+//     let tipoAlert = "alert-success";
+//     alertAgrego(da, suceso, tipoAlert);
 
 
-    const conjuntoExistente = new Set();
+//     const conjuntoExistente = new Set();
 
-    interesAgregado.forEach(ia => {
+//     interesAgregado.forEach(ia => {
 
-        const parrafoExistente = Array.from(interes.getElementsByTagName("p")).find(
-            parrafo => parrafo.textContent === ia);
+//         const parrafoExistente = Array.from(interes.getElementsByTagName("p")).find(
+//             parrafo => parrafo.textContent === ia);
 
-        if (parrafoExistente) {
-            parrafoExistente.textContent = ia;
+//         if (parrafoExistente) {
+//             parrafoExistente.textContent = ia;
 
-        }
-        else {
-            const parrafo = document.createElement("p");
-            parrafo.textContent = ia;
-            parrafo.setAttribute("id","item"+da2)
-            interes.appendChild(parrafo);
-        };
-    });
+//         }
+//         else {
+//             const parrafo = document.createElement("p");
+//             parrafo.textContent = ia;
+//             parrafo.setAttribute("id","item"+da2)
+//             interes.appendChild(parrafo);
+//         };
+//     });
 
-};
+// };
 
 
 
 
 //calculamos el precio total y lo mostramos en canvas
+// function total() {
+
+
+//     let sumaTotal = 0;
+//     interesPrecioAgregado.forEach(tot => {
+
+//         sumaTotal += Number(tot);
+
+
+//     });
+//     intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
+//     totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
+// };
+
 function total() {
+  let sumaTotal = 0;
 
-    let sumaTotal = 0;
-    interesPrecioAgregado.forEach(tot => {
+  itemCarrito.forEach(producto => {
+    sumaTotal += producto.Venta * producto.DOLAR * producto.Unidades;
+  });
 
-        sumaTotal += Number(tot);
+  intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
+  totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
+}
 
 
-    });
-    intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
-    totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -443,8 +526,7 @@ botonInteresC.addEventListener("click", event2 => {
 
 function actualizarCarrito() {
 
-    total();
-    agregarC();
+    
     const conjuntoExistente = new Set();
 
     interesPrecioAgregado.forEach(ia => {
