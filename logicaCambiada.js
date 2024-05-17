@@ -212,15 +212,26 @@ function EliminarV(){
       
             if (siEsta.Unidades >= 2) {
               siEsta.Unidades -= unidades;
+              if(siEsta){
+                actualizarCarrito();
+
+                return siEsta.Descripción
+              }
               actualizarCarrito();
-              return;
+             
             } else {
               const index = itemCarrito.findIndex((artic) => artic.Artículo === dato);
       
               if (index > -1) {
                 itemCarrito.splice(index, 1);
                 document.getElementById(parrafo).remove();
-      
+
+               
+                
+                if(siEsta){
+
+                  return siEsta.Descripción
+                }
                 actualizarCarrito();
                 actualizarEnlaceWhatsApp();
               }
@@ -228,8 +239,12 @@ function EliminarV(){
           } else {
             console.log("El elemento no se encontró en el carrito");
           }
+          if(siEsta){
+
+            return siEsta.Descripción
+          }
+          
           actualizarCarrito();
-         
         };
       
 
@@ -589,7 +604,7 @@ total();
 
     const span = document.createElement("span");
     span.setAttribute("class", "badge badge-primary badge-pill active");
-    span.style.cssText= '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: rgb(0, 123, 255);';
+    span.style.cssText= '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: black;';
 
     span.textContent = producto.Unidades;
 
