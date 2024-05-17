@@ -129,15 +129,7 @@ console.log(itemCarrito)
       
         EliminarV();
         total();
-        // let sumaTotal = 0;
-        // interesPrecioAgregado.forEach(tot => {
-
-        //     sumaTotal += Number(tot);
-
-
-        //     intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal;
-        // });
-
+     
     });
 
 });
@@ -300,35 +292,6 @@ function buscarIdPrecio(id) {
 
 
 
-
-// function agregar(da, da2) {
-//   console.log(itemCarrito);
-
-//   let suceso = "Se agregó al carrito";
-//   let tipoAlert = "alert-success";
-//   alertAgrego(da, suceso, tipoAlert);
-
-//   // Limpiar el contenido existente en el contenedor
-//   interes.innerHTML = '';
-
-//   // Mostrar los productos en el DOM
-//   itemCarrito.forEach(producto => {
-//       const parrafo = document.createElement("li");
-//       var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
-//       precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-//       parrafo.setAttribute("id", "item"+producto.Artículo);
-//   parrafo.setAttribute("class","list-group-item d-flex justify-content-between align-items-center")
-//   parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
-     
-//       interes.appendChild(parrafo);
-//   });
-//   actualizarCarrito();
-  
-//   actualizarEnlaceWhatsApp();
-
-// }
-
 function agregar(da, da2) {
   console.log(itemCarrito);
 
@@ -378,60 +341,6 @@ function agregar(da, da2) {
 
 
 
-
-
-
-
-//agregamos a la lista el titulo a precionar de cada boton
-// function agregar(da,da2) {
-
-//     console.log(interesAgregado);
-//     interesAgregado.push(da);
-//     actualizarEnlaceWhatsApp();
-//     let suceso = "Se agrego al carrito";
-//     let tipoAlert = "alert-success";
-//     alertAgrego(da, suceso, tipoAlert);
-
-
-//     const conjuntoExistente = new Set();
-
-//     interesAgregado.forEach(ia => {
-
-//         const parrafoExistente = Array.from(interes.getElementsByTagName("p")).find(
-//             parrafo => parrafo.textContent === ia);
-
-//         if (parrafoExistente) {
-//             parrafoExistente.textContent = ia;
-
-//         }
-//         else {
-//             const parrafo = document.createElement("p");
-//             parrafo.textContent = ia;
-//             parrafo.setAttribute("id","item"+da2)
-//             interes.appendChild(parrafo);
-//         };
-//     });
-
-// };
-
-
-
-
-//calculamos el precio total y lo mostramos en canvas
-// function total() {
-
-
-//     let sumaTotal = 0;
-//     interesPrecioAgregado.forEach(tot => {
-
-//         sumaTotal += Number(tot);
-
-
-//     });
-//     intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
-//     totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
-// };
-
 function total() {
   let sumaTotal = 0;
 
@@ -458,86 +367,6 @@ function total() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//agregamos el precio unitario
-// function agregarP(da) {
-
-//     interesPrecioAgregado.push(da);
-    
-//     const conjuntoExistente = new Set();
-
-//     interesPrecioAgregado.forEach(ia => {
-//         const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
-//             parrafo => parrafo.textContent === ia
-//         );
-
-//         if (parrafoExistente) {
-//             parrafoExistente.textContent = ia;
-//         } else {
-//             const parrafo = document.createElement("p");
-//             parrafo.textContent = ia;
-//             interes2.appendChild(parrafo);
-//         }
-
-//         conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
-//     });
-
-//     // Eliminar los párrafos sobrantes del contenedor
-//     Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
-//         if (!conjuntoExistente.has(parrafo.textContent)) {
-//             interes2.removeChild(parrafo);
-
-//         };
-//     });
-// };
-
-
-
-
-
-
-
-//agregamos la cantidad de cada producto
-
-// function agregarC() {
-
-//     const repeticionesMap = new Map();
-
-//     interesAgregado.forEach(dato => {
-//         if (repeticionesMap.has(dato)) {
-//             // Incrementar la cantidad de repeticiones para el dato existente
-//             repeticionesMap.set(dato, repeticionesMap.get(dato) + 1);
-//         } else {
-//             // Inicializar la cantidad de repeticiones para un nuevo dato
-//             repeticionesMap.set(dato, 1);
-//         };
-//     });
-
-//     // Crear el contenido para el párrafo interes3
-//     let contenidoInteres3 = "";
-//     repeticionesMap.forEach((repeticiones, dato) => {
-//         contenidoInteres3 += `<p id="${dato}"> ${repeticiones}</p>`;
-//     });
-
-//     // Agregar o reemplazar el contenido en el elemento con id="interes3"
-//     interes3.innerHTML = contenidoInteres3;
-// };
 
 
 
@@ -692,40 +521,6 @@ let tota= total();
 
 
 
-
-
-
-// // Función para generar el enlace de WhatsApp
-// function generarEnlaceWhatsApp() {
-//     const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
-  
-//     // Objeto para realizar el seguimiento de los elementos duplicados
-//     const duplicados = {};
-//     const preciosMultiplicados = {}; // Objeto para almacenar los precios multiplicados
-  
-//     // Recorrer el array y contar los elementos duplicados
-//     interesAgregado.forEach((item, index) => {
-//       if (duplicados[item]) {
-//         duplicados[item].cantidad += 1;
-//       } else {
-//         duplicados[item] = { cantidad: 1, index: index };
-//       }
-//     });
-  
-//     // Construir el texto del mensaje con la información de los duplicados y los precios
-//     let textoCarrito = "Hola! Me interesan estos productos de la web:\n\n";
-//     Object.keys(duplicados).forEach(item => {
-//       const { cantidad, index } = duplicados[item];
-//       const precio = (interesPrecioAgregado[index] * cantidad).toFixed(2);
-  
-//       textoCarrito += `${item} (x${cantidad}) - Precio: ${precio}, \n\n`; // Agregar un salto de línea adicional
-  
-//       preciosMultiplicados[index] = precio; // Almacenar el precio multiplicado en el objeto preciosMultiplicados
-//     });
-  
-//     const enlace = `https://wa.me/${telefono}/?text=${encodeURIComponent(textoCarrito)}`;
-//     return enlace;
-//   }
 
 // Función para actualizar el enlace de WhatsApp
 function actualizarEnlaceWhatsApp() {
