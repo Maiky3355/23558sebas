@@ -229,7 +229,6 @@ function EliminarV(){
             console.log("El elemento no se encontró en el carrito");
           }
           actualizarCarrito();
-          return siEsta.Descripción;
          
         };
       
@@ -290,6 +289,34 @@ function buscarIdPrecio(id) {
 
 
 
+// function agregar(da, da2) {
+//   console.log(itemCarrito);
+
+//   let suceso = "Se agregó al carrito";
+//   let tipoAlert = "alert-success";
+//   alertAgrego(da, suceso, tipoAlert);
+
+//   // Limpiar el contenido existente en el contenedor
+//   interes.innerHTML = '';
+
+//   // Mostrar los productos en el DOM
+//   itemCarrito.forEach(producto => {
+//       const parrafo = document.createElement("li");
+//       var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+//       precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+//       parrafo.setAttribute("id", "item"+producto.Artículo);
+//   parrafo.setAttribute("class","list-group-item d-flex justify-content-between align-items-center")
+//   parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
+     
+//       interes.appendChild(parrafo);
+//   });
+//   actualizarCarrito();
+  
+//   actualizarEnlaceWhatsApp();
+
+// }
+
 function agregar(da, da2) {
   console.log(itemCarrito);
 
@@ -302,23 +329,29 @@ function agregar(da, da2) {
 
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
-      const parrafo = document.createElement("li");
-      var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
-      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+    const parrafo = document.createElement("li");
+    var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-      parrafo.setAttribute("id", "item"+producto.Artículo);
-  parrafo.setAttribute("class","list-group-item d-flex justify-content-between align-items-center")
-  parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
-     
-      interes.appendChild(parrafo);
-  });
-  actualizarCarrito();
+    parrafo.setAttribute("id", "item" + producto.Artículo);
+    parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
+    parrafo.style.cssText= '  z-index: 1100 !important; ';
+    const span = document.createElement("span");
+    span.setAttribute("class", "badge badge-primary badge-pill");
+    span.style.cssText= '  z-index: 1101 !important; font-weight: bold;font-size: 17px; color: yellow;   background-color: rgb(10, 100, 10); ';
+    span.textContent = producto.Unidades;
+
+
+    
+    parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
+    parrafo.appendChild(span);
+    interes.appendChild(parrafo);
   
+  });
+
+  actualizarCarrito();
   actualizarEnlaceWhatsApp();
-
 }
-
-
 
 
 
@@ -547,12 +580,24 @@ total();
     var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
     precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-    parrafo.setAttribute("id", "item"+producto.Artículo);
-parrafo.setAttribute("class","list-group-item d-flex justify-content-between align-items-center")
-parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
-   
+    parrafo.setAttribute("id", "item" + producto.Artículo);
+    parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
+
+   parrafo.style.cssText= ' z-index: 998!important;';
+
+    const span = document.createElement("span");
+    span.setAttribute("class", "badge badge-primary badge-pill active");
+    span.style.cssText= '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: rgb(0, 123, 255);';
+
+    span.textContent = producto.Unidades;
+
+ 
+    parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
+    parrafo.appendChild(span);
     interes.appendChild(parrafo);
-});
+
+  });
+actualizarEnlaceWhatsApp();
   EliminarV();
 };
 
@@ -672,7 +717,7 @@ let tota= total();
 function actualizarEnlaceWhatsApp() {
   const enlace = generarEnlaceWhatsApp();
   enlaceWhatsApp.setAttribute("href", enlace);
-  enlaceWhatsApp.style.cssText= '  font-weight: bold;font-size: 17px; color: yellow;   background-color: rgb(10, 100, 10);';
+  enlaceWhatsApp.style.cssText= '  font-weight: bold;font-size: 17px; color: limegreen;   ;';
 
 }
 
