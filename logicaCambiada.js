@@ -389,6 +389,9 @@ function total() {
 
   intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
   totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
+
+  return  ("$ " + sumaTotal.toFixed(2));
+
 }
 
 
@@ -588,50 +591,66 @@ function cargarDatosBack(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Función para generar el enlace de WhatsApp
 function generarEnlaceWhatsApp() {
-    const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
+  const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
+
+  // Construir el texto del mensaje con la información de los duplicados y los precios
+  let textoCarrito = "Hola! Me interesan estos productos de la web: \n\n";
+  itemCarrito.forEach(producto => {
+    textoCarrito += `\n\n ${producto.Unidades} - ${producto.Descripción} -  $${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)} \n\n`;
+    
+});
+let tota= total();
+    textoCarrito += `\n\n--- PRECIO TOTAL DEL CARRITO:${tota} \n\n`; // Agregar un salto de línea adicional
+
+  const enlace = `https://wa.me/${telefono}/?text=${encodeURIComponent(textoCarrito)}`;
+  return enlace;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Función para generar el enlace de WhatsApp
+// function generarEnlaceWhatsApp() {
+//     const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
   
-    // Objeto para realizar el seguimiento de los elementos duplicados
-    const duplicados = {};
-    const preciosMultiplicados = {}; // Objeto para almacenar los precios multiplicados
+//     // Objeto para realizar el seguimiento de los elementos duplicados
+//     const duplicados = {};
+//     const preciosMultiplicados = {}; // Objeto para almacenar los precios multiplicados
   
-    // Recorrer el array y contar los elementos duplicados
-    interesAgregado.forEach((item, index) => {
-      if (duplicados[item]) {
-        duplicados[item].cantidad += 1;
-      } else {
-        duplicados[item] = { cantidad: 1, index: index };
-      }
-    });
+//     // Recorrer el array y contar los elementos duplicados
+//     interesAgregado.forEach((item, index) => {
+//       if (duplicados[item]) {
+//         duplicados[item].cantidad += 1;
+//       } else {
+//         duplicados[item] = { cantidad: 1, index: index };
+//       }
+//     });
   
-    // Construir el texto del mensaje con la información de los duplicados y los precios
-    let textoCarrito = "Hola! Me interesan estos productos de la web:\n\n";
-    Object.keys(duplicados).forEach(item => {
-      const { cantidad, index } = duplicados[item];
-      const precio = (interesPrecioAgregado[index] * cantidad).toFixed(2);
+//     // Construir el texto del mensaje con la información de los duplicados y los precios
+//     let textoCarrito = "Hola! Me interesan estos productos de la web:\n\n";
+//     Object.keys(duplicados).forEach(item => {
+//       const { cantidad, index } = duplicados[item];
+//       const precio = (interesPrecioAgregado[index] * cantidad).toFixed(2);
   
-      textoCarrito += `${item} (x${cantidad}) - Precio: ${precio}, \n\n`; // Agregar un salto de línea adicional
+//       textoCarrito += `${item} (x${cantidad}) - Precio: ${precio}, \n\n`; // Agregar un salto de línea adicional
   
-      preciosMultiplicados[index] = precio; // Almacenar el precio multiplicado en el objeto preciosMultiplicados
-    });
+//       preciosMultiplicados[index] = precio; // Almacenar el precio multiplicado en el objeto preciosMultiplicados
+//     });
   
-    const enlace = `https://wa.me/${telefono}/?text=${encodeURIComponent(textoCarrito)}`;
-    return enlace;
-  }
+//     const enlace = `https://wa.me/${telefono}/?text=${encodeURIComponent(textoCarrito)}`;
+//     return enlace;
+//   }
 
 // Función para actualizar el enlace de WhatsApp
 function actualizarEnlaceWhatsApp() {
