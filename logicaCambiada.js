@@ -131,8 +131,7 @@ console.log(itemCarrito)
 
 
         agregar(tit,da2);
-        agregarP(pre);
-        agregarC();
+      
         EliminarV();
         total();
         // let sumaTotal = 0;
@@ -213,6 +212,7 @@ function EliminarV(){
       
             if (siEsta.Unidades >= 2) {
               siEsta.Unidades -= unidades;
+              actualizarCarrito();
               return;
             } else {
               const index = itemCarrito.findIndex((artic) => artic.Artículo === dato);
@@ -228,7 +228,9 @@ function EliminarV(){
           } else {
             console.log("El elemento no se encontró en el carrito");
           }
+          actualizarCarrito();
           return siEsta.Descripción;
+         
         };
       
 
@@ -301,7 +303,7 @@ function agregar(da, da2) {
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
       const parrafo = document.createElement("p");
-      parrafo.textContent = `${producto.Descripción} - Unidades: ${producto.Unidades} - Precio Total: ${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)}`;
+      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)}`;
       parrafo.setAttribute("id", "item"+producto.Artículo);
       interes.appendChild(parrafo);
   });
@@ -416,36 +418,36 @@ function total() {
 
 
 //agregamos el precio unitario
-function agregarP(da) {
+// function agregarP(da) {
 
-    interesPrecioAgregado.push(da);
+//     interesPrecioAgregado.push(da);
     
-    const conjuntoExistente = new Set();
+//     const conjuntoExistente = new Set();
 
-    interesPrecioAgregado.forEach(ia => {
-        const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
-            parrafo => parrafo.textContent === ia
-        );
+//     interesPrecioAgregado.forEach(ia => {
+//         const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
+//             parrafo => parrafo.textContent === ia
+//         );
 
-        if (parrafoExistente) {
-            parrafoExistente.textContent = ia;
-        } else {
-            const parrafo = document.createElement("p");
-            parrafo.textContent = ia;
-            interes2.appendChild(parrafo);
-        }
+//         if (parrafoExistente) {
+//             parrafoExistente.textContent = ia;
+//         } else {
+//             const parrafo = document.createElement("p");
+//             parrafo.textContent = ia;
+//             interes2.appendChild(parrafo);
+//         }
 
-        conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
-    });
+//         conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
+//     });
 
-    // Eliminar los párrafos sobrantes del contenedor
-    Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
-        if (!conjuntoExistente.has(parrafo.textContent)) {
-            interes2.removeChild(parrafo);
+//     // Eliminar los párrafos sobrantes del contenedor
+//     Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
+//         if (!conjuntoExistente.has(parrafo.textContent)) {
+//             interes2.removeChild(parrafo);
 
-        };
-    });
-};
+//         };
+//     });
+// };
 
 
 
@@ -455,29 +457,29 @@ function agregarP(da) {
 
 //agregamos la cantidad de cada producto
 
-function agregarC() {
+// function agregarC() {
 
-    const repeticionesMap = new Map();
+//     const repeticionesMap = new Map();
 
-    interesAgregado.forEach(dato => {
-        if (repeticionesMap.has(dato)) {
-            // Incrementar la cantidad de repeticiones para el dato existente
-            repeticionesMap.set(dato, repeticionesMap.get(dato) + 1);
-        } else {
-            // Inicializar la cantidad de repeticiones para un nuevo dato
-            repeticionesMap.set(dato, 1);
-        };
-    });
+//     interesAgregado.forEach(dato => {
+//         if (repeticionesMap.has(dato)) {
+//             // Incrementar la cantidad de repeticiones para el dato existente
+//             repeticionesMap.set(dato, repeticionesMap.get(dato) + 1);
+//         } else {
+//             // Inicializar la cantidad de repeticiones para un nuevo dato
+//             repeticionesMap.set(dato, 1);
+//         };
+//     });
 
-    // Crear el contenido para el párrafo interes3
-    let contenidoInteres3 = "";
-    repeticionesMap.forEach((repeticiones, dato) => {
-        contenidoInteres3 += `<p id="${dato}"> ${repeticiones}</p>`;
-    });
+//     // Crear el contenido para el párrafo interes3
+//     let contenidoInteres3 = "";
+//     repeticionesMap.forEach((repeticiones, dato) => {
+//         contenidoInteres3 += `<p id="${dato}"> ${repeticiones}</p>`;
+//     });
 
-    // Agregar o reemplazar el contenido en el elemento con id="interes3"
-    interes3.innerHTML = contenidoInteres3;
-};
+//     // Agregar o reemplazar el contenido en el elemento con id="interes3"
+//     interes3.innerHTML = contenidoInteres3;
+// };
 
 
 
@@ -525,33 +527,17 @@ botonInteresC.addEventListener("click", event2 => {
 //actualizamos el carrito
 
 function actualizarCarrito() {
-
-    
-    const conjuntoExistente = new Set();
-
-    interesPrecioAgregado.forEach(ia => {
-        const parrafoExistente = Array.from(interes2.getElementsByTagName("p")).find(
-            parrafo => parrafo.textContent === ia
-        );
-
-        if (parrafoExistente) {
-            parrafoExistente.textContent = ia;
-        } else {
-            const parrafo = document.createElement("p");
-            parrafo.textContent = ia;
-            interes2.appendChild(parrafo);
-        }
-
-        conjuntoExistente.add(ia); // Agregar el valor al conjunto existente
-    });
-
-    // Eliminar los párrafos sobrantes del contenedor
-    Array.from(interes2.getElementsByTagName("p")).forEach(parrafo => {
-        if (!conjuntoExistente.has(parrafo.textContent)) {
-            interes2.removeChild(parrafo);
-
-        };
-    });
+total();
+  // Limpiar el contenido existente en el contenedor
+  interes.innerHTML = '';
+  // Mostrar los productos en el DOM
+  itemCarrito.forEach(producto => {
+      const parrafo = document.createElement("p");
+      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)}`;
+      parrafo.setAttribute("id", "item"+producto.Artículo);
+      interes.appendChild(parrafo);
+  });
+  EliminarV();
 };
 
 
