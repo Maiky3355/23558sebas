@@ -178,7 +178,7 @@ console.log(itemCarrito)
 function EliminarV(){
     
 
-    const parrafos = document.querySelectorAll('p[id^=item]');
+    const parrafos = document.querySelectorAll('li[id^=item]');
 
     parrafos.forEach(parr => {
         parr.addEventListener('click', parraf => {
@@ -302,12 +302,14 @@ function agregar(da, da2) {
 
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
-      const parrafo = document.createElement("p");
+      const parrafo = document.createElement("li");
       var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
       precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
       parrafo.setAttribute("id", "item"+producto.Artículo);
+  parrafo.setAttribute("class","list-group-item d-flex justify-content-between align-items-center")
+  parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
+     
       interes.appendChild(parrafo);
   });
   actualizarCarrito();
@@ -541,14 +543,16 @@ total();
   interes.innerHTML = '';
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
-      const parrafo = document.createElement("p");
-      var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
-      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+    const parrafo = document.createElement("li");
+    var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
-      parrafo.setAttribute("id", "item"+producto.Artículo);
-      interes.appendChild(parrafo);
-  });
+    parrafo.setAttribute("id", "item"+producto.Artículo);
+parrafo.setAttribute("class","list-group-item d-flex justify-content-between align-items-center")
+parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
+   
+    interes.appendChild(parrafo);
+});
   EliminarV();
 };
 
