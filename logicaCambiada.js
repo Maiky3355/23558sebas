@@ -335,18 +335,20 @@ function agregar(da, da2) {
 
     parrafo.setAttribute("id", "item" + producto.Artículo);
     parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
-    parrafo.style.cssText= '  z-index: 1100 !important; ';
+
+   parrafo.style.cssText= ' z-index: 998!important;';
+
     const span = document.createElement("span");
-    span.setAttribute("class", "badge badge-primary badge-pill");
-    span.style.cssText= '  z-index: 1101 !important; font-weight: bold;font-size: 17px; color: yellow;   background-color: rgb(10, 100, 10); ';
+    span.setAttribute("class", "badge badge-primary badge-pill active");
+    span.style.cssText= '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: rgb(0, 123, 255);';
+
     span.textContent = producto.Unidades;
 
-
-    
+ 
     parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
     parrafo.appendChild(span);
     interes.appendChild(parrafo);
-  
+
   });
 
   actualizarCarrito();
