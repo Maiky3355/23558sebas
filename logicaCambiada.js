@@ -64,12 +64,6 @@ let totalCarritoNavb = document.getElementById("totalCarritoNavb");
 //cargamos a interes la etiqueta donde mostraremos el titulo de producto
 const interes = document.getElementById("interes");
 
-//cargamos a interes2 la etiqueta donde mostraremos el precio unitario
-const interes2 = document.getElementById("interes2");
-
-
-//cargamos a interes2 la etiqueta donde mostraremos la cantidad
-const interes3 = document.getElementById("interes3");
 
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
@@ -214,7 +208,7 @@ function EliminarV(){
               siEsta.Unidades -= unidades;
               if(siEsta){
                 actualizarCarrito();
-
+                actualizarEnlaceWhatsApp();
                 return siEsta.Descripción
               }
               actualizarCarrito();
@@ -229,7 +223,8 @@ function EliminarV(){
                
                 
                 if(siEsta){
-
+                  actualizarCarrito();
+                  actualizarEnlaceWhatsApp();
                   return siEsta.Descripción
                 }
                 actualizarCarrito();
@@ -240,7 +235,8 @@ function EliminarV(){
             console.log("El elemento no se encontró en el carrito");
           }
           if(siEsta){
-
+            actualizarCarrito();
+            actualizarEnlaceWhatsApp();
             return siEsta.Descripción
           }
           
