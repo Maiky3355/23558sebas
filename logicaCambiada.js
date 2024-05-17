@@ -49,13 +49,14 @@ datos.forEach((datos) => {
 
       // Hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo.
       // Clone 1 contenedor. Clone 2 etiquetas restantes.
-      let clone = document.importNode(template, true);
-      fragmento.appendChild(clone);
+     
 
       let clone2 = document.importNode(template2, true);
       fragmento2.appendChild(clone2);
   }
 });
+let clone = document.importNode(template, true);
+fragmento.appendChild(clone);
 document.body.appendChild(fragmento);//agregamos el contenedor padre
 document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
 
