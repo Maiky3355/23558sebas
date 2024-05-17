@@ -73,7 +73,7 @@ categoriasUnicas.forEach(categoria => {
 
 
     datos.forEach((datos) => {
-      if (datos.Inventario >= 1 && (FILTROS === "" || datos.Categoria == FILTROS)) {
+      if (datos.Inventario >= 1 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
         template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
