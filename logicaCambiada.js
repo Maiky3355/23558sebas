@@ -33,29 +33,29 @@ console.log(datos);
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((datos) => {
+  if (datos.Inventario >= 1) {
+      template.querySelector(".esteSi").setAttribute("id", contenedorId);
 
-    if (datos.Inventario >=1){
-    template.querySelector(".esteSi").setAttribute("id", contenedorId);
+      template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+      template2.querySelector("h5").textContent = (datos.Descripción);
+      template2.querySelector("p").textContent = (datos.Categoria);
+      
+      // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+      var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-    template2.querySelector("img").setAttribute("src", "./imgcarrito/"+(datos.Artículo)+".jpg");
-    template2.querySelector("h5").textContent = (datos.Descripción);
-    template2.querySelector("p").textContent = (datos.Categoria);
-    var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(datos.Venta.replace(/,/g, ".")* datos.DOLAR)));
-    template2.querySelector("small").textContent = (precioCatalogo);
-    template2.querySelector("button").setAttribute("id","idbot"+(datos.Artículo));
+      template2.querySelector("small").textContent = "$"+ precioCatalogo;
+      template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
 
-    //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
-    let clone = document.importNode(template, true);
-    fragmento.appendChild(clone);
+      // Hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo.
+      // Clone 1 contenedor. Clone 2 etiquetas restantes.
+      let clone = document.importNode(template, true);
+      fragmento.appendChild(clone);
 
-    let clone2 = document.importNode(template2, true);
-    fragmento2.appendChild(clone2);
-
-}
-
-
+      let clone2 = document.importNode(template2, true);
+      fragmento2.appendChild(clone2);
+  }
 });
-
 document.body.appendChild(fragmento);//agregamos el contenedor padre
 document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
 
@@ -303,7 +303,10 @@ function agregar(da, da2) {
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
       const parrafo = document.createElement("p");
-      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)}`;
+      var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
       parrafo.setAttribute("id", "item"+producto.Artículo);
       interes.appendChild(parrafo);
   });
@@ -384,13 +387,16 @@ function total() {
   let sumaTotal = 0;
 
   itemCarrito.forEach(producto => {
-    sumaTotal += producto.Venta * producto.DOLAR * producto.Unidades;
+    sumaTotal+= (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+
+
   });
+  sumaTotal = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(sumaTotal);
 
-  intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal.toFixed(2);
-  totalCarritoNavb.textContent = "$ " + sumaTotal.toFixed(2);
+  intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal;
+  totalCarritoNavb.textContent = "$ " + sumaTotal
 
-  return  ("$ " + sumaTotal.toFixed(2));
+  return  ("$ " + sumaTotal);
 
 }
 
@@ -536,7 +542,10 @@ total();
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
       const parrafo = document.createElement("p");
-      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)}`;
+      var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+      parrafo.textContent = `${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
       parrafo.setAttribute("id", "item"+producto.Artículo);
       interes.appendChild(parrafo);
   });
@@ -596,9 +605,12 @@ function generarEnlaceWhatsApp() {
   const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
 
   // Construir el texto del mensaje con la información de los duplicados y los precios
-  let textoCarrito = "Hola! Me interesan estos productos de la web: \n\n";
+  let textoCarrito = "Hola! Me interesan estos productos de la web:";
   itemCarrito.forEach(producto => {
-    textoCarrito += `\n\n ${producto.Unidades} - ${producto.Descripción} -  $${(producto.Venta * producto.DOLAR * producto.Unidades).toFixed(2)} \n\n`;
+    var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+    textoCarrito += `\n\n ${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
     
 });
 let tota= total();
@@ -715,8 +727,12 @@ template.querySelector('.esteSi').setAttribute("id", contenedorId);
 template2.querySelector("img").setAttribute("src", "./imgcarrito/"+(producto.Artículo)+".jpg");
 template2.querySelector("h5").textContent = (producto.Descripción);
 template2.querySelector("p").textContent = (producto.Categoria);
-var precioCatalogo= ("$"+(new Intl.NumberFormat('es-Mx').format(producto.Venta.replace(/,/g, ".")* producto.DOLAR)));
-template2.querySelector("small").textContent = (precioCatalogo);
+ // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+ var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR);
+ precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+ template2.querySelector("small").textContent = "$"+ precioCatalogo;
+
 template2.querySelector("button").setAttribute("id","idbot"+(producto.Artículo));
 
 //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
