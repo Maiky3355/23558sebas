@@ -1,7 +1,4 @@
 
-let fragmento3 = document.createDocumentFragment();
-let fragmento4 = document.createDocumentFragment();
-
 
 //cargamos los template del html y creamos los fragmentos
 let template = document.getElementById("contTemplate").content;
@@ -11,41 +8,67 @@ let template2 = document.getElementById("contTemplate2").content;
 let fragmento2 = document.createDocumentFragment();
 
 
+//cargamos donde mostramos total de carrino en el navbar
+let totalCarritoNavb = document.getElementById("totalCarritoNavb");
+//cargamos a interes la etiqueta donde mostraremos el titulo de producto
+const interes = document.getElementById("interes");
+
+
+//cargamos a interes2 la etiqueta donde mostraremos el precio total
+const intprecioTotal = document.getElementById("precioTotal");
 
 
 
+//creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
+function MostrarEnCatalogo(datos) {
+  //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
+  template.querySelector('.esteSi').setAttribute("id", contenedorId);
+
+  template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+  template2.querySelector("h5").textContent = (datos.Descripción);
+  template2.querySelector("p").textContent = (datos.Categoria);
+  // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+  var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+  precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+  template2.querySelector("small").textContent = "$" + precioCatalogo;
+
+  template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
+
+  //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
+
+  let clone2 = document.importNode(template2, true);
+  fragmento2.appendChild(clone2);
+  return fragmento2
+
+};
 
 
 
-//creamos un array para guardar los intereses
+//creamos una variable para los filtros de productos en catalogo
 var FILTROS = "";
 
-
-
-
+//creamos un array para guardar los productos
 let itemCarrito = [];
-//creamos un array para guardar los precios
 
+//creamos una variable para las unidades (falta agregar para opciones de mas unidades)
 let unidades = 1;
+
 //creamos el array con los datos
 import data from './articulos.json' with { type: 'json' };
 
 //creamos el array datos con los datos del json
 const datos = Array.from(data);
 
-
 // Obtener el contenedor del menú desplegable para buscar productos por categoria
 const dropdownContainer = document.querySelector(".porCategoria");
 const dropdownMenu = dropdownContainer.querySelector(".porCategoriaUl");
 const nombreDesplegable = dropdownContainer.querySelector(".nombreDesplegable");
 
-
 // Crear un conjunto (Set) para almacenar las categorías únicas
 const categoriasUnicas = new Set();
 
 // Iterar sobre el array de datos y agregar cada categoría al conjunto
-
-
 datos.forEach(objeto => {
   //si las categorias tienen productos con stock la agregamos al menu desplegable
   if (objeto.Inventario >= 1) {
@@ -66,37 +89,15 @@ categoriasUnicas.forEach(categoria => {
   boton.addEventListener("click", () => {
     FILTROS = boton.textContent;
 
-
     //eliminamos el contenido del cATALOGO PARA MOSTRAR EL CONTENIDO FILTRADO
     const element = document.querySelector(".esteSi");
-    element.remove();
-
+    element.parentElement.remove();
 
     datos.forEach((datos) => {
       if (datos.Inventario >= 1 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
-        template.querySelector(".esteSi").setAttribute("id", contenedorId);
+        //mostramos los datos en el catalogo!!! <--------------------------------------------------
+        fragmento2 = MostrarEnCatalogo(datos);
 
-        template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
-        template2.querySelector("h5").textContent = (datos.Descripción);
-        template2.querySelector("p").textContent = (datos.Categoria);
-
-        // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-        var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
-        precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-        template2.querySelector("small").textContent = "$" + precioCatalogo;
-        template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
-
-
-        //quiero agregar esto para mostrar descripcion del producto
-        /* <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a> */
-
-
-        // Hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo.
-        // Clone 1 contenedor. Clone 2 etiquetas restantes.
-
-        let clone2 = document.importNode(template2, true);
-        fragmento2.appendChild(clone2);
       }
     });
     let clone = document.importNode(template, true);
@@ -142,29 +143,8 @@ let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((datos) => {
   if (datos.Inventario >= 1) {
-    template.querySelector(".esteSi").setAttribute("id", contenedorId);
-
-    template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
-    template2.querySelector("h5").textContent = (datos.Descripción);
-    template2.querySelector("p").textContent = (datos.Categoria);
-
-    // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-    var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
-    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-    template2.querySelector("small").textContent = "$" + precioCatalogo;
-    template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
-
-
-    //quiero agregar esto para mostrar descripcion del producto
-    /* <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a> */
-
-
-    // Hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo.
-    // Clone 1 contenedor. Clone 2 etiquetas restantes.
-
-    let clone2 = document.importNode(template2, true);
-    fragmento2.appendChild(clone2);
+    //mostramos los datos en el catalogo!!! <--------------------------------------------------
+    fragmento2 = MostrarEnCatalogo(datos);
   }
 });
 let clone = document.importNode(template, true);
@@ -173,13 +153,6 @@ document.body.appendChild(fragmento);//agregamos el contenedor padre
 document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
 
 
-let totalCarritoNavb = document.getElementById("totalCarritoNavb");
-//cargamos a interes la etiqueta donde mostraremos el titulo de producto
-const interes = document.getElementById("interes");
-
-
-//cargamos a interes2 la etiqueta donde mostraremos el precio total
-const intprecioTotal = document.getElementById("precioTotal");
 
 //Ponemos a escuchar botones de productos
 escucharBotones();
@@ -679,48 +652,38 @@ const filtrar = () => {
 
 
     let Descripcion = producto.Descripción.toLowerCase();
+    //BORRAMOS LOS ELEMENTOS DEL CATALOGO
+    
+    //lo siguiente elimina tarjetas container, pero borra todos.
+    // const element2 = document.querySelector(".tarjetas");
+    // element2.remove();
     //VEMOS SI COINCIDEN CON EL TEXTO BUSCADO Y SI TIENE INVENTARIO
     if (Descripcion.indexOf(texto) !== -1 && producto.Inventario >= 1) {
-      //BORRAMOS LOS ELEMENTOS DEL CATALOGO
-      const element = document.querySelector(".esteSi");
-      element.remove();
 
 
-      //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
 
-      template.querySelector('.esteSi').setAttribute("id", contenedorId);
+      //mostramos los datos en el catalogo!!! <--------------------------------------------------
+      fragmento2 = MostrarEnCatalogo(producto);
 
-      template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (producto.Artículo) + ".jpg");
-      template2.querySelector("h5").textContent = (producto.Descripción);
-      template2.querySelector("p").textContent = (producto.Categoria);
-      // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-      var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR);
-      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-      template2.querySelector("small").textContent = "$" + precioCatalogo;
-
-      template2.querySelector("button").setAttribute("id", "idbot" + (producto.Artículo));
-
-      //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
-
-      let clone = document.importNode(template, true);
-      fragmento3.appendChild(clone);
-
-      let clone2 = document.importNode(template2, true);
-      fragmento4.appendChild(clone2);
 
     }
-    document.body.appendChild(fragmento3);//agregamos el contenedor padre
-
-
+ 
 
   }
-  document.getElementById(contenedorId).appendChild(fragmento4); //agregamos las cards
+  const element = document.querySelector(".esteSi");
+    element.parentElement.remove();
+  let clone = document.importNode(template, true);
+  fragmento.appendChild(clone);
+
+  document.body.appendChild(fragmento);//agregamos el contenedor padre
+
+
+  document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
 
   escucharBotones();
   subir();
 };
-//PONEMOS LOS EVENTOS DEL BUSCADOR
+//PONEMOS LOS EVENTOS DEL BUSCADOR 
 formulario.addEventListener('keydown', filtrar);
 formulario.addEventListener('click', filtrar);
 formulario.addEventListener('change', filtrar);
