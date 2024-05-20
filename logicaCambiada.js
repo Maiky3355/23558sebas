@@ -100,7 +100,7 @@ const intprecioTotal = document.getElementById("precioTotal");
 
 
 
-//hacemos que los botones aparezcan despues de mostrar las tarjetas
+//hacemos que los botones agregar carrito aparezcan despues de mostrar las tarjetas
 
 function mostrarBotones(){
 
@@ -189,6 +189,9 @@ const sumarUnidades =(array) =>array.reduce((total,item)=>total+ item.Unidades,0
 const sumaTotal= sumarUnidades(array)  
 return sumaTotal;
 }
+
+
+
 //creamos una variable para las unidades (falta agregar para opciones de mas unidades)
 let unidades = 1;
 
@@ -212,9 +215,10 @@ datos.forEach(objeto => {
   if (objeto.Inventario >= 1) {
 
     categoriasUnicas.add(objeto.Categoria);
+   
   }
 });
-
+categoriasUnicas.add("TODOS");
 // Crear los elementos de lista dinámicamente utilizando las categorías únicas
 categoriasUnicas.forEach(categoria => {
   const lil = document.createElement("li");
