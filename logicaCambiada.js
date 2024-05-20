@@ -96,7 +96,7 @@ function mostrarBotones(){
             setTimeout(function() {
               entrada.target.style.opacity = '1';
               entrada.target.style.animation = 'aparecerDesdeAbajo 0.5s ease-in-out forwards';
-            }, 1200); // Retraso de 2 segundos (2000 milisegundos)
+            }, 900); // Retraso de 2 segundos (2000 milisegundos)
             observer.unobserve(entrada.target);
           }
         });
