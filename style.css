@@ -225,3 +225,52 @@ section h4 {
     margin: auto;
     text-align: start;
 }
+
+@keyframes aparecerDesdeAbajo {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card-text button {
+
+        display: block; /* Convertir el botón en un elemento de bloque */
+
+        margin: auto; /* Establecer márgenes automáticos para centrarlo */
+      
+    opacity: 0;
+  }
+  .card-text{
+
+    display: block; /* Convertir el botón en un elemento de bloque */
+    margin:auto ; /* Establecer márgenes automáticos para centrarlo */
+    
+}
+  .card {
+    width: 100%; /* Establece el ancho deseado para la imagen */
+    height: 100%; /* Establece la altura deseada para la imagen */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+  }
+  .card-img-top {
+    width: 100%; /* Establece el ancho deseado para la imagen */
+    height: 200px; /* Establece la altura deseada para el contenedor */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+  }
+  .card-body {
+    width: 100%; /* Establece el ancho deseado para la imagen */
+    height: 200px; /* Establece la altura deseada para el contenedor */
+    object-fit: contain;/* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+  }
+/* hacemos que las tarjetas se muevan de posicion */
+  .card-img-top {
+  transition: transform 0.0s ease;
+}
+/* hacemos que las imagenes se agranden al pasar el puntero */
+.card-img-top:hover {
+  transform: scale(1.5);
+}

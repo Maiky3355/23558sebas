@@ -19,6 +19,101 @@ const intprecioTotal = document.getElementById("precioTotal");
 
 
 
+//  // Espera a que el documento esté cargado completamente
+//    $(document).ready(function() {
+//       $('[data-bs-toggle="popover"]').popover();
+
+//       // Agrega el código para ocultar el popover al deslizar la pantalla
+//       $(window).scroll(function () {
+//         $('[data-bs-toggle="popover"]').popover('hide');
+//       });
+//     });
+
+// $(document).ready(function() {
+//   var images = $('.card-img-top');
+//   var selectedCard = null;
+//   var originalStyles = null;
+
+//   images.each(function() {
+//     $(this).click(function() {
+//       $('.card').removeClass('card-selected');
+//       selectedCard = $(this).closest('.card');
+//       selectedCard.addClass('card-selected');
+//       originalStyles = getOriginalStyles(selectedCard);
+//       resizeAndCenterCard(selectedCard);
+//     });
+//   });
+
+//   $(window).scroll(function() {
+//     if (selectedCard) {
+//       selectedCard.css(originalStyles);
+//     }
+//   });
+// });
+
+// function getOriginalStyles(card) {
+//   return {
+//     'position': card.css('position'),
+//     'top': card.css('top'),
+//     'left': card.css('left'),
+//     'transform': card.css('transform')
+//   };
+// }
+
+// function resizeAndCenterCard(card) {
+//   var windowWidth = $(window).width();
+//   var windowHeight = $(window).height();
+//   var cardWidth = card.outerWidth();
+//   var cardHeight = card.outerHeight();
+//   var leftPosition = (windowWidth - cardWidth) / 2;
+//   var topPosition = (windowHeight - cardHeight) / 2;
+
+//   card.css({
+//     'position': 'fixed',
+//     'top': topPosition + 'px',
+//     'left': leftPosition + 'px',
+//     'transform': 'scale(1.5)'
+//   });
+// }
+
+
+//hacemos que los botones aparezcan despues de mostrar las tarjetas
+
+function mostrarBotones(){
+
+    $(document).ready(function() {
+      var botones = document.querySelectorAll('.card-text button');
+    
+      var opciones = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+    
+      var observer = new IntersectionObserver(function (entradas, observer) {
+        entradas.forEach(function (entrada) {
+          if (entrada.intersectionRatio > 0) {
+            setTimeout(function() {
+              entrada.target.style.opacity = '1';
+              entrada.target.style.animation = 'aparecerDesdeAbajo 0.5s ease-in-out forwards';
+            }, 1200); // Retraso de 2 segundos (2000 milisegundos)
+            observer.unobserve(entrada.target);
+          }
+        });
+      }, opciones);
+    
+      botones.forEach(function (boton) {
+        observer.observe(boton);
+      });
+    });
+  }
+  
+
+
+
+
+
+
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
@@ -27,6 +122,8 @@ function MostrarEnCatalogo(datos) {
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
   template2.querySelector("h5").textContent = (datos.Descripción);
   template2.querySelector("p").textContent = (datos.Categoria);
+  // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
+  // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
   precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
@@ -40,8 +137,15 @@ function MostrarEnCatalogo(datos) {
   let clone2 = document.importNode(template2, true);
   fragmento2.appendChild(clone2);
   return fragmento2
-
 };
+
+
+
+
+
+
+
+
 
 
 
@@ -99,6 +203,7 @@ categoriasUnicas.forEach(categoria => {
         fragmento2 = MostrarEnCatalogo(datos);
 
       }
+      mostrarBotones();
     });
     let clone = document.importNode(template, true);
     fragmento.appendChild(clone);
@@ -146,6 +251,7 @@ datos.forEach((datos) => {
     //mostramos los datos en el catalogo!!! <--------------------------------------------------
     fragmento2 = MostrarEnCatalogo(datos);
   }
+  mostrarBotones();
 });
 let clone = document.importNode(template, true);
 fragmento.appendChild(clone);
@@ -670,6 +776,7 @@ const filtrar = () => {
  
 
   }
+
   const element = document.querySelector(".esteSi");
     element.parentElement.remove();
   let clone = document.importNode(template, true);
@@ -679,7 +786,7 @@ const filtrar = () => {
 
 
   document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
-
+  mostrarBotones();
   escucharBotones();
   subir();
 };
