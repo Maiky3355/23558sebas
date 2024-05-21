@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#fondo {
+
+    position: fixed;
+    z-index: -50;
+    opacity: 10%;
+    height: 90%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+/* #logo{
+    position: fixed;
+    z-index: -49;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    opacity: 25%;
+    
+    left: 15%;
+    top: 30%;
+    transform: translate(-15%, -30%);
+
+} */
+
+/* 
+
+
+nav ul {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 83, 83);
+    right: 0;
+    left: 0;
+    top: 0;
+
+}
+
+nav ul li {
+    border: 1px solid rgb(122, 155, 155);
+    text-align: center;
+    padding: 2PX;
+    background-color: rgb(5, 5, 5);
+    list-style: none;
+    transition: background-color .5 cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 10%;
+    margin: 1PX;
+
+
+
+} */
+
+/* 
+nav ul li a {
+    text-decoration: NONE;
+    font-size: 16px;
+    color: aliceblue;
+
+
+}
+
+
+
+
+nav ul li:hover {
+    background-color: rgb(192, 83, 32);
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+ */
+
+
+
+
+
+
+
+
+
+footer .redes {
+    position: fixed;
+    top: 80%;
+    right: 0;
+    z-index: 50;
+}
+
+
+.redes a img {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+}
+
+
+
+
+
+
+.diseñador{
+   
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(192, 141, 47);
+    background-color: #7cf86c;
+    text-align: center;
+    padding: 1px;
+
+    right: 0;
+    left: 0;
+    bottom: 1PX;
+    
+ 
+}
+
+
+
+section iframe {
+
+    border-radius: 20%;
+
+}
+
+section img {
+    border-radius: 50%;
+    width: 15vh;
+    height: 15vh;
+}
+
+section h1 {
+    font-size: 44px;
+    font-weight: bold
+}
+
+section h4 {
+    font-size: 18px;
+    font-weight: bold
+}
+
+
+.home {
+    font-size: 16px;
+    text-align: center;
+}
+
+.home2 {
+    font-size: 2vh;
+    text-align: left;
+}

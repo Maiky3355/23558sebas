@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#totalCarritoNavb{
+    font-size: 14px;
+}
+
+
+#fondo {
+
+    position: fixed;
+    z-index: -50;
+    opacity: 10%;
+    height: 90%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+.tarjetas {
+
+    margin-top: 58px;
+    text-align: center;
+
+
+}
+
+.tarjetas img {
+    max-width: 60%;
+    align-self: center;
+    border-radius: 10% !important;
+    padding: 5PX;
+}
+
+/* #logo{
+    position: fixed;
+    z-index: -49;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    opacity: 25%;
+    
+    left: 15%;
+    top: 30%;
+    transform: translate(-15%, -30%);
+
+} */
+
+/* 
+
+
+nav ul {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 83, 83);
+    right: 0;
+    left: 0;
+    top: 0;
+
+}
+
+nav ul li {
+    border: 1px solid rgb(122, 155, 155);
+    text-align: center;
+    padding: 2PX;
+    background-color: rgb(5, 5, 5);
+    list-style: none;
+    transition: background-color .5 cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 10%;
+    margin: 1PX;
+
+
+
+} */
+
+/* 
+nav ul li a {
+    text-decoration: NONE;
+    font-size: 16px;
+    color: aliceblue;
+
+
+}
+
+
+
+
+nav ul li:hover {
+    background-color: rgb(192, 83, 32);
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+ */
+
+#nav1 {
+    z-index: 48 !important;
+}
+
+#offcanvasDark {
+    z-index: 49 !important;
+
+}
+
+#alertAgrego {
+    position: fixed;
+    left: 50%;
+    top: 30% !important;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+
+
+#totalCarritoNavb {
+    z-index: 1100 !important;  
+}
+
+
+
+footer .redes {
+    position: fixed;
+    top: 80%;
+    right: 0;
+    z-index: 50;
+}
+
+
+.redes a img {
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+}
+
+
+
+
+
+
+/* .diseñador{
+   
+    position:fixed;
+    display: flex;
+justify-content: center;
+    border: 1px solid rgb(192, 141, 47);
+    background-color: #7cf86c;
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 01PX !important;
+
+    right: 0;
+    left: 0;
+    bottom: 1PX;
+  
+ 
+} */
+
+
+
+section iframe {
+
+    border-radius: 20%;
+
+}
+
+section img {
+    border-radius: 50%;
+    width: 15vh;
+    height: 15vh;
+}
+
+section h1 {
+    font-size: 44px;
+    font-weight: bold
+}
+
+section h4 {
+    font-size: 18px;
+    font-weight: bold
+}
+
+
+.home {
+    font-size: 16px;
+    text-align: center;
+}
+
+.home2 {
+    font-size: 2vh;
+    text-align: left;
+}
+
+/* #inp{
+    margin-bottom: 58px; 
+} */
+
+
+.cardcontact {
+    padding: 50PX;
+}
+
+.checknot {
+    justify-content: end !important;
+    margin: auto;
+    text-align: start;
+}
+
+@keyframes aparecerDesdeAbajo {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card-text button {
+
+        display: block; /* Convertir el botón en un elemento de bloque */
+
+        margin: auto; /* Establecer márgenes automáticos para centrarlo */
+      
+    opacity: 0;
+  }
+  .card-text{
+
+    display: block; /* Convertir el botón en un elemento de bloque */
+    margin:auto ; /* Establecer márgenes automáticos para centrarlo */
+    
+}
+  .card {
+    width: 100%; /* Establece el ancho deseado para la imagen */
+    height: 100%; /* Establece la altura deseada para la imagen */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+  }
+  .card-img-top {
+    width: 100%; /* Establece el ancho deseado para la imagen */
+    height: 200px; /* Establece la altura deseada para el contenedor */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+  }
+  .card-body {
+    width: 100%; /* Establece el ancho deseado para la imagen */
+    height: 200px; /* Establece la altura deseada para el contenedor */
+    object-fit: contain;/* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+  }
+/* hacemos que las tarjetas se muevan de posicion */
+  .card-img-top {
+  transition: transform 0.0s ease;
+}
+/* hacemos que las imagenes se agranden al pasar el puntero */
+.card-img-top:hover {
+  transform: scale(1.5);
+}
