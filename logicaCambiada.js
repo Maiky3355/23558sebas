@@ -710,13 +710,15 @@ function generarEnlaceWhatsApp() {
 // Función para actualizar el enlace de WhatsApp
 function actualizarEnlaceWhatsApp() {
   const enlace = generarEnlaceWhatsApp();
+  enlaceWhatsApp.setAttribute("class","btn btn-success")
   enlaceWhatsApp.setAttribute("href", enlace);
-  enlaceWhatsApp.style.cssText = '  font-weight: bold;font-size: 17px; color: limegreen;   ;';
+  enlaceWhatsApp.style.cssText = '  font-weight: bold;font-size: 17px; color: white;   ;';
 
 }
 
 // Agregamos el enlace de WhatsApp al documento
-const enlaceWhatsApp = document.createElement("a");
+const enlaceWhatsApp = document.createElement("button");
+
 enlaceWhatsApp.addEventListener('click', function (event) {
   event.preventDefault(); // Evita la redirección
   window.open(enlaceWhatsApp.getAttribute("href"), '_blank');
