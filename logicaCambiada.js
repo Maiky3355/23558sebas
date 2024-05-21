@@ -102,35 +102,35 @@ const intprecioTotal = document.getElementById("precioTotal");
 
 //hacemos que los botones agregar carrito aparezcan despues de mostrar las tarjetas
 
-function mostrarBotones(){
+function mostrarBotones() {
 
-    $(document).ready(function() {
-      var botones = document.querySelectorAll('.card-text button');
-    
-      var opciones = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5
-      };
-    
-      var observer = new IntersectionObserver(function (entradas, observer) {
-        entradas.forEach(function (entrada) {
-          if (entrada.intersectionRatio > 0) {
-            setTimeout(function() {
-              entrada.target.style.opacity = '1';
-              entrada.target.style.animation = 'aparecerDesdeAbajo 0.5s ease-in-out forwards';
-            }, 400); // Retraso de 2 segundos (2000 milisegundos)
-            observer.unobserve(entrada.target);
-          }
-        });
-      }, opciones);
-    
-      botones.forEach(function (boton) {
-        observer.observe(boton);
+  $(document).ready(function () {
+    var botones = document.querySelectorAll('.card-text button');
+
+    var opciones = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    var observer = new IntersectionObserver(function (entradas, observer) {
+      entradas.forEach(function (entrada) {
+        if (entrada.intersectionRatio > 0) {
+          setTimeout(function () {
+            entrada.target.style.opacity = '1';
+            entrada.target.style.animation = 'aparecerDesdeAbajo 0.5s ease-in-out forwards';
+          }, 400); // Retraso de 2 segundos (2000 milisegundos)
+          observer.unobserve(entrada.target);
+        }
       });
+    }, opciones);
+
+    botones.forEach(function (boton) {
+      observer.observe(boton);
     });
-  }
-  
+  });
+}
+
 
 
 
@@ -151,7 +151,7 @@ function MostrarEnCatalogo(datos) {
 
   template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
 
- 
+
 
 
   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
@@ -178,22 +178,22 @@ var FILTROS = "";
 
 //creamos un array para guardar los productos
 let itemCarrito = extraerDeLocalStorage();
-if (itemCarrito !== null){
+if (itemCarrito !== null) {
   actualizarCarrito();
-  let contenido= tieneContenido(itemCarrito);
-  if(contenido>0){
+  let contenido = tieneContenido(itemCarrito);
+  if (contenido > 0) {
     let suceso = "Productos en tu carrito";
     let tipoAlert = "alert-success";
-    let da= contenido;
+    let da = contenido;
     alertAgrego(da, suceso, tipoAlert);
-  
+
   }
 }
-function tieneContenido(array){
-  
-const sumarUnidades =(array) =>array.reduce((total,item)=>total+ item.Unidades,0);
-const sumaTotal= sumarUnidades(array)  
-return sumaTotal;
+function tieneContenido(array) {
+
+  const sumarUnidades = (array) => array.reduce((total, item) => total + item.Unidades, 0);
+  const sumaTotal = sumarUnidades(array)
+  return sumaTotal;
 }
 
 
@@ -221,7 +221,7 @@ datos.forEach(objeto => {
   if (objeto.Inventario >= 1) {
 
     categoriasUnicas.add(objeto.Categoria);
-   
+
   }
 });
 categoriasUnicas.add("TODOS");
@@ -335,24 +335,51 @@ function escucharBotones() {
       var tit = buscarId(parseInt(da2));
       var pre = buscarIdPrecio(parseInt(da2));
       var dol = buscarIdDol(parseInt(da2));
+      var stock = buscarStock(parseInt(da2));
 
-      let agregarOModificarItem = (Artículo, Descripción, Venta, DOLAR, Unidades) => {
+      let agregarOModificarItem = (da2,Artículo, Descripción, Venta, DOLAR, Unidades) => {
         let siEsta = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
 
         if (siEsta) {
-          siEsta.Unidades += unidades;
-          guardarEnLocalStorage(itemCarrito);
+          if ((siEsta.Unidades + unidades) <= stock) {
+
+            siEsta.Unidades += unidades;
+            guardarEnLocalStorage(itemCarrito);
+            agregar(tit, da2);
+          }
+          else {
+       //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
+            let suceso = "NO HAY STOCK SUFICIENTE";
+            let tipoAlert = "alert-danger";
+            alertAgrego(Descripción, suceso, tipoAlert);
+            return;
+          }
+
+
+
         } else {
+          if ((Unidades) <= stock) {
+
           itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
           guardarEnLocalStorage(itemCarrito);
+          agregar(tit, da2);
+  
+          }
+          else {
+
+                 //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
+      let suceso = "NO HAY STOCK SUFICIENTE";
+      let tipoAlert = "alert-danger";
+      alertAgrego(Descripción, suceso, tipoAlert);
+            return;
+          }
+
         }
       };
 
-      agregarOModificarItem((parseInt(da2)), tit, pre, dol, unidades);
+      agregarOModificarItem(da2,(parseInt(da2)), tit, pre, dol, unidades);
 
       console.log(itemCarrito);
-
-      agregar(tit, da2);
 
       EliminarV();
       total();
@@ -507,7 +534,11 @@ function buscarIdPrecio(id) {
 
   return (precioConPuntos);
 };
+function buscarStock(id) {
+  const found = datos.find(elem => elem.Artículo == id);
 
+  return found.Inventario;
+};
 
 
 
@@ -710,7 +741,7 @@ function generarEnlaceWhatsApp() {
 // Función para actualizar el enlace de WhatsApp
 function actualizarEnlaceWhatsApp() {
   const enlace = generarEnlaceWhatsApp();
-  enlaceWhatsApp.setAttribute("class","btn btn-success")
+  enlaceWhatsApp.setAttribute("class", "btn btn-success")
   enlaceWhatsApp.setAttribute("href", enlace);
   enlaceWhatsApp.style.cssText = '  font-weight: bold;font-size: 17px; color: white;   ;';
 
@@ -761,7 +792,7 @@ const filtrar = () => {
 
     let Descripcion = producto.Descripción.toLowerCase();
     //BORRAMOS LOS ELEMENTOS DEL CATALOGO
-    
+
     //lo siguiente elimina tarjetas container, pero borra todos.
     // const element2 = document.querySelector(".tarjetas");
     // element2.remove();
@@ -775,12 +806,12 @@ const filtrar = () => {
 
 
     }
- 
+
 
   }
 
   const element = document.querySelector(".esteSi");
-    element.parentElement.remove();
+  element.parentElement.remove();
   let clone = document.importNode(template, true);
   fragmento.appendChild(clone);
 
