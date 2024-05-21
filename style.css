@@ -274,3 +274,10 @@ section h4 {
 /* .card-img-top:hover {
   transform: scale(1.5);
 } */
+
+
+.form-select {
+    width: 70px; /* Ajusta el valor según tus necesidades */
+    display: block; /* Convertir el botón en un elemento de bloque */
+    margin:auto ; /* Establecer márgenes automáticos para centrarlo */
+  }

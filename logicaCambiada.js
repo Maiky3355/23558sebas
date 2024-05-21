@@ -148,6 +148,12 @@ function MostrarEnCatalogo(datos) {
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+
+  template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
+
+ 
+
+
   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
   precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
@@ -318,57 +324,41 @@ function escucharBotones() {
   const btns = document.querySelectorAll('button[id^=idbot]');
 
   btns.forEach(btn => {
-
-
-
     btn.addEventListener('click', event => {
-
-
       var da = event.target.id;
-
       var regex = /(\d+)/g;
       var da2 = (da.match(regex));
 
+      let selectElement = document.getElementById('idbot' + da2); // Obtener el elemento select por su id
+      unidades = Number(selectElement.value); // Obtener el valor seleccionado del elemento select
 
-      //juntamos los datos del producto que agregamos al carrito
       var tit = buscarId(parseInt(da2));
       var pre = buscarIdPrecio(parseInt(da2));
       var dol = buscarIdDol(parseInt(da2));
-      let unidades = Number(1);
-
-      //cargamos los datos en el array de objetos
 
       let agregarOModificarItem = (Artículo, Descripción, Venta, DOLAR, Unidades) => {
-
         let siEsta = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
 
         if (siEsta) {
           siEsta.Unidades += unidades;
           guardarEnLocalStorage(itemCarrito);
         } else {
-          itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades })
+          itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
           guardarEnLocalStorage(itemCarrito);
         }
       };
 
-      agregarOModificarItem((parseInt(da2)), tit, pre, dol, unidades)
+      agregarOModificarItem((parseInt(da2)), tit, pre, dol, unidades);
 
-      //mostramos el array de objetos en la consola.
-      console.log(itemCarrito)
-
-
-
+      console.log(itemCarrito);
 
       agregar(tit, da2);
 
       EliminarV();
       total();
-
     });
-
   });
-
-};
+}
 
 
 
@@ -849,35 +839,31 @@ function actualizarCarrito() {
   EliminarV();
 };
 
-
-
-
-// funcion guardar carrito en local storage
+// Función para guardar el carrito en el local storage
 function guardarEnLocalStorage(array) {
-  //convierte el array en una cadena json
-  var json= JSON.stringify(array);
-  //guarda la cadena json en el almacenamiento local
-  localStorage.setItem('itemCarrito', json);
-};
+  var datos = {
+    items: array,
+    timestamp: new Date().getTime() + 24 * 60 * 60 * 1000 // Marca de tiempo actual + 24 horas en milisegundos
+  };
 
+  localStorage.setItem('datosCarrito', JSON.stringify(datos));
+}
 
-
-
-
-// funcion extraer carrito de local storage si existe
+// Función para extraer el carrito del local storage si existe y está dentro de la fecha de validez
 function extraerDeLocalStorage() {
-  //obtiene la cadena json almacenada en el almacenamiento local
-   var json= localStorage.getItem('itemCarrito');
- //verifica si existe
- if(json===null){
-   //retornamos array vacio
-   return[];
- }
- //convierte json en array de objetos
- var array= JSON.parse(json);
- //retornamos el array de objetos
- return array;
- };
- 
- 
+  var datos = localStorage.getItem('datosCarrito');
 
+  if (datos === null) {
+    return [];
+  }
+
+  datos = JSON.parse(datos);
+  var tiempoActual = new Date().getTime();
+
+  if (tiempoActual > datos.timestamp) {
+    localStorage.removeItem('datosCarrito');
+    return [];
+  }
+
+  return datos.items;
+}
