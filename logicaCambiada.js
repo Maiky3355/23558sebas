@@ -144,7 +144,7 @@ function MostrarEnCatalogo(datos) {
 
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
   template2.querySelector("h5").textContent = (datos.Descripción);
-  template2.querySelector("p").textContent = (datos.Categoria);
+  template2.querySelector("p").textContent = (datos.Inventario)+" unidades disponibles";
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
