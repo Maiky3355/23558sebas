@@ -384,10 +384,7 @@ function escucharBotones() {
 
 
 
-
-
 function EliminarV() {
-
   //SELECCIONAMOS LAS LI DEL CANVAS PARA HACERLAS ESCUCHAR
   const parrafos = document.querySelectorAll('li[id^=item]');
 
@@ -402,20 +399,21 @@ function EliminarV() {
       let da2 = (da.match(regex));
       console.log(Number(da2));
 
-
       var caca = eliminarOModificarItem(Number(da2), unidades, da);
-
 
       //MOSTRAMOS ALERTAS DE LO ELIMINADO
       let suceso = "Se eliminó del carrito";
       let tipoAlert = "alert-danger";
       alertAgrego(caca, suceso, tipoAlert);
-
-
-
-
     })
+
+    // Agregar eventos de arrastrar y soltar
+    parr.draggable = true; // Hacer el elemento arrastrable
+    parr.addEventListener('dragstart', handleDragStart);
+    parr.addEventListener('dragover', handleDragOver);
+    parr.addEventListener('drop', handleDrop);
   })
+
   //ELIMINAMOS DEPENDE SI HAY VARIOS O 1 SOLO Y VAMOS ACTUALIZANDO CARRITO Y LINK DE WHATSAPP
   let eliminarOModificarItem = (dato, unidades, parrafo) => {
     let siEsta = itemCarrito.find((artic) => artic.Artículo === dato);
@@ -438,8 +436,6 @@ function EliminarV() {
           itemCarrito.splice(index, 1);
           document.getElementById(parrafo).remove();
 
-
-
           if (siEsta) {
             actualizarCarrito();
             actualizarEnlaceWhatsApp();
@@ -460,15 +456,47 @@ function EliminarV() {
 
     actualizarCarrito();
   };
-
-
-
-
-
-
 }
 
+// Funciones auxiliares para manejar el evento de arrastrar y soltar
+function handleDragStart(event) {
+  event.dataTransfer.setData('text/plain', event.target.id);
+  event.target.classList.add('dragging'); // Agregar clase 'dragging' al elemento arrastrado
+}
 
+function handleDragOver(event) {
+  event.preventDefault(); // Permitir el efecto de soltar
+}
+
+function handleDrop(event) {
+  event.preventDefault(); // Evitar el comportamiento predeterminado de soltar
+  const itemId = event.dataTransfer.getData('text/plain');
+  const itemElement = document.getElementById(itemId);
+  const itemIndex = itemCarrito.findIndex(item => item.Artículo === parseInt(itemId.match(/\d+/)[0]));
+
+  if (itemIndex !== -1) {
+   let dat= itemCarrito.find((artic) => artic.Artículo === parseInt(itemId.match(/\d+/)[0]));
+      //MOSTRAMOS ALERTAS DE LO ELIMINADO
+      console.log(dat.Descripción)
+    
+        let suceso = "Se desecho del carrito";
+        let tipoAlert = "alert-danger";
+        alertAgrego(dat.Descripción, suceso, tipoAlert);
+    
+        itemCarrito.splice(itemIndex, 1); // Eliminar el elemento del array
+        itemElement.remove(); // Eliminar el elemento del DOM
+       
+      
+    actualizarCarrito();
+    actualizarEnlaceWhatsApp();
+  }
+
+  // Remover la clase 'dragging' cuando se suelta el elemento
+  itemElement.classList.remove('dragging');
+
+  // Restablecer el color de fondo del elemento
+  itemElement.style.Color = 'black';
+}
 
 
 
@@ -722,7 +750,7 @@ const enlaceWhatsApp = document.createElement("button");
 enlaceWhatsApp.addEventListener('click', function (event) {
   event.preventDefault(); // Evita la redirección
   window.open(enlaceWhatsApp.getAttribute("href"), '_blank');
-  localStorage.removeItem('itemCarrito')
+  localStorage.removeItem('datosCarrito')
 });
 enlaceWhatsApp.textContent = "Mandar carrito por WhatsApp";
 document.getElementById("whats").appendChild(enlaceWhatsApp);
@@ -845,7 +873,7 @@ function actualizarCarrito() {
 function guardarEnLocalStorage(array) {
   var datos = {
     items: array,
-    timestamp: new Date().getTime() + 24 * 60 * 60 * 1000 // Marca de tiempo actual + 24 horas en milisegundos
+    timestamp: new Date().getTime() + 23 * 60 * 60 * 1000 // Marca de tiempo actual + 24 horas en milisegundos
   };
 
   localStorage.setItem('datosCarrito', JSON.stringify(datos));

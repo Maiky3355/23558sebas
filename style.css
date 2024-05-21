@@ -281,3 +281,9 @@ section h4 {
     display: block; /* Convertir el botón en un elemento de bloque */
     margin:auto ; /* Establecer márgenes automáticos para centrarlo */
   }
+
+
+ 
+  .dragging {
+    color: red;
+  }
