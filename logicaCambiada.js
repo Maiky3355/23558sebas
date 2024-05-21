@@ -77,6 +77,29 @@ const intprecioTotal = document.getElementById("precioTotal");
 // }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //hacemos que los botones aparezcan despues de mostrar las tarjetas
 
 function mostrarBotones(){
@@ -96,7 +119,7 @@ function mostrarBotones(){
             setTimeout(function() {
               entrada.target.style.opacity = '1';
               entrada.target.style.animation = 'aparecerDesdeAbajo 0.5s ease-in-out forwards';
-            }, 900); // Retraso de 2 segundos (2000 milisegundos)
+            }, 400); // Retraso de 2 segundos (2000 milisegundos)
             observer.unobserve(entrada.target);
           }
         });
@@ -144,17 +167,28 @@ function MostrarEnCatalogo(datos) {
 
 
 
-
-
-
-
-
 //creamos una variable para los filtros de productos en catalogo
 var FILTROS = "";
 
 //creamos un array para guardar los productos
-let itemCarrito = [];
-
+let itemCarrito = extraerDeLocalStorage();
+if (itemCarrito !== null){
+  actualizarCarrito();
+  let contenido= tieneContenido(itemCarrito);
+  if(contenido>0){
+    let suceso = "Productos en tu carrito";
+    let tipoAlert = "alert-success";
+    let da= contenido;
+    alertAgrego(da, suceso, tipoAlert);
+  
+  }
+}
+function tieneContenido(array){
+  
+const sumarUnidades =(array) =>array.reduce((total,item)=>total+ item.Unidades,0);
+const sumaTotal= sumarUnidades(array)  
+return sumaTotal;
+}
 //creamos una variable para las unidades (falta agregar para opciones de mas unidades)
 let unidades = 1;
 
@@ -244,6 +278,9 @@ categoriasUnicas.forEach(categoria => {
 
 
 
+
+
+
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((datos) => {
@@ -303,8 +340,10 @@ function escucharBotones() {
 
         if (siEsta) {
           siEsta.Unidades += unidades;
+          guardarEnLocalStorage(itemCarrito);
         } else {
           itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades })
+          guardarEnLocalStorage(itemCarrito);
         }
       };
 
@@ -604,40 +643,6 @@ botonInteresC.addEventListener("click", event2 => {
 
 
 
-//actualizamos el carrito
-
-function actualizarCarrito() {
-  total();
-  // Limpiar el contenido existente en el contenedor
-  interes.innerHTML = '';
-  // Mostrar los productos en el DOM
-  itemCarrito.forEach(producto => {
-    const parrafo = document.createElement("li");
-    var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
-    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-    parrafo.setAttribute("id", "item" + producto.Artículo);
-    parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
-
-    parrafo.style.cssText = ' z-index: 998!important;';
-
-    const span = document.createElement("span");
-    span.setAttribute("class", "badge badge-primary badge-pill active");
-    span.style.cssText = '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: black;';
-
-    span.textContent = producto.Unidades;
-
-
-    parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
-    parrafo.appendChild(span);
-    interes.appendChild(parrafo);
-
-  });
-  actualizarEnlaceWhatsApp();
-  EliminarV();
-};
-
-
 
 //funcion PARA MOSTRAR ALERTAS PERSONALIZADAS
 
@@ -721,6 +726,7 @@ const enlaceWhatsApp = document.createElement("a");
 enlaceWhatsApp.addEventListener('click', function (event) {
   event.preventDefault(); // Evita la redirección
   window.open(enlaceWhatsApp.getAttribute("href"), '_blank');
+  localStorage.removeItem('itemCarrito')
 });
 enlaceWhatsApp.textContent = "Mandar carrito por WhatsApp";
 document.getElementById("whats").appendChild(enlaceWhatsApp);
@@ -803,3 +809,71 @@ function subir() {
     top: 0, behavior: "smooth"
   })
 }
+
+
+//actualizamos el carrito
+
+function actualizarCarrito() {
+  total();
+  // Limpiar el contenido existente en el contenedor
+  interes.innerHTML = '';
+  // Mostrar los productos en el DOM
+  itemCarrito.forEach(producto => {
+    const parrafo = document.createElement("li");
+    var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
+    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+    parrafo.setAttribute("id", "item" + producto.Artículo);
+    parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
+
+    parrafo.style.cssText = ' z-index: 998!important;';
+
+    const span = document.createElement("span");
+    span.setAttribute("class", "badge badge-primary badge-pill active");
+    span.style.cssText = '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: black;';
+
+    span.textContent = producto.Unidades;
+
+
+    parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
+    parrafo.appendChild(span);
+    interes.appendChild(parrafo);
+
+  });
+
+  guardarEnLocalStorage(itemCarrito);
+  EliminarV();
+};
+
+
+
+
+// funcion guardar carrito en local storage
+function guardarEnLocalStorage(array) {
+  //convierte el array en una cadena json
+  var json= JSON.stringify(array);
+  //guarda la cadena json en el almacenamiento local
+  localStorage.setItem('itemCarrito', json);
+};
+
+
+
+
+
+// funcion extraer carrito de local storage si existe
+function extraerDeLocalStorage() {
+  //obtiene la cadena json almacenada en el almacenamiento local
+   var json= localStorage.getItem('itemCarrito');
+ //verifica si existe
+ if(json===null){
+   //retornamos array vacio
+   return[];
+ }
+ //convierte json en array de objetos
+ var array= JSON.parse(json);
+ //retornamos el array de objetos
+ return array;
+ };
+ 
+ 
+

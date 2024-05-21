@@ -267,10 +267,10 @@ section h4 {
     object-fit: contain;/* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
   }
 /* hacemos que las tarjetas se muevan de posicion */
-  .card-img-top {
+  /* .card-img-top {
   transition: transform 0.0s ease;
-}
+} */
 /* hacemos que las imagenes se agranden al pasar el puntero */
-.card-img-top:hover {
+/* .card-img-top:hover {
   transform: scale(1.5);
-}
+} */
