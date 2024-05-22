@@ -304,3 +304,24 @@ section h4 {
     margin-left: 30px;
     margin-right: 10px;
   }
+
+  .scroll-up-btn-container {
+    position: fixed;
+    bottom: 50px;
+    left: 5px;
+    z-index: 999;
+    display: none;
+  }
+  
+  .scroll-up-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .scroll-up-btn img {
+    width: 10vh;
+    height:10vh;
+    border-radius: 50%;
+  }
