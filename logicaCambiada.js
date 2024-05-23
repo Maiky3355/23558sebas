@@ -7,6 +7,7 @@ let fragmento = document.createDocumentFragment();
 let template2 = document.getElementById("contTemplate2").content;
 let fragmento2 = document.createDocumentFragment();
 
+let template3 = document.getElementById("contTemplate3").content;
 
 //cargamos donde mostramos total de carrino en el navbar
 let totalCarritoNavb = document.getElementById("totalCarritoNavb");
@@ -17,7 +18,7 @@ const interes = document.getElementById("interes");
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
 
-
+localStorage.removeItem('datosCarrito');
 
 //  // Espera a que el documento esté cargado completamente
 //    $(document).ready(function() {
@@ -138,7 +139,7 @@ function mostrarBotones() {
 
 
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
-function MostrarEnCatalogo(datos) {
+function MostrarEnCatalogo(datos, contenedorId) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
 
@@ -196,6 +197,18 @@ function tieneContenido(array) {
   return sumaTotal;
 }
 
+// function tieneContenido(array) {
+//   // Verificamos si el parámetro 'array' es un arreglo y si tiene al menos un elemento
+//   if (!Array.isArray(array) || array.length === 0) {
+//     // Si no cumple la condición, devolvemos 0
+//     return 0;
+//   }
+
+//   // Si el 'array' es válido, llamamos a la función 'sumarUnidades' y devolvemos el resultado
+//   const sumarUnidades = (array) => array.reduce((total, item) => total + item.Unidades, 0);
+//   const sumaTotal = sumarUnidades(array)
+//   return sumaTotal;
+// }
 
 
 //creamos una variable para las unidades (falta agregar para opciones de mas unidades)
@@ -233,6 +246,7 @@ categoriasUnicas.forEach(categoria => {
   boton.className = "dropdown-item";
   boton.type = "button";
 
+
   // Agregar evento de clic al botón
   boton.addEventListener("click", () => {
     FILTROS = boton.textContent;
@@ -244,7 +258,8 @@ categoriasUnicas.forEach(categoria => {
     datos.forEach((datos) => {
       if (datos.Inventario >= 1 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
-        fragmento2 = MostrarEnCatalogo(datos);
+        contenedorId=0;
+        fragmento2 = MostrarEnCatalogo(datos,contenedorId);
 
       }
       mostrarBotones();
@@ -271,18 +286,55 @@ categoriasUnicas.forEach(categoria => {
 
 
 
+function MostrarDescuentos() {
+  let contenedorId = 1;
+      // Crear el elemento <a>
+     
+      // Agregar el elemento <a> como hijo del template2
+  // Por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
+  datos.forEach((datos) => {
+    if (datos.Inventario >= 1 && datos.Descuento > 0) {
+      // Mostramos los datos en el catalogo
+      let contenedorId = 1;
+
+      // MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
+      template3.querySelector('.caca').setAttribute("id", contenedorId);
+
+      template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+      template2.querySelector("h5").textContent = (datos.Descripción);
+      template2.querySelector("p").textContent = (datos.Inventario) + " unidades disponibles";
+
+      template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
 
 
+      // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+      let precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+      precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
+let precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number(datos.Descuento) / 100));
+precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
+ 
+template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>"+ " $"+ precioCatalogo2 ;
 
+      template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
 
+      // Hacer un clon y subirlo al fragmento correspondiente para poder repetirlo
+      let clone2 = document.importNode(template2, true);
+      fragmento2.appendChild(clone2);
+    }
+  });
 
+  if (fragmento2.hasChildNodes()) {
+    template3.querySelector("H3").textContent = 'PRODUCTOS CON DESCUENTOS!';
+    let clon = document.importNode(template3, true);
+    fragmento.appendChild(clon);
+    document.body.appendChild(fragmento); // Agregamos el contenedor padre
+    document.getElementById(contenedorId).appendChild(fragmento2); // Agregamos las cards
+    
+  }
+}
 
-
-
-
-
-
+MostrarDescuentos()
 
 
 
@@ -294,12 +346,18 @@ categoriasUnicas.forEach(categoria => {
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
 datos.forEach((datos) => {
-  if (datos.Inventario >= 1) {
+  if (datos.Inventario >= 1 && datos.Descuento == 0) {
     //mostramos los datos en el catalogo!!! <--------------------------------------------------
-    fragmento2 = MostrarEnCatalogo(datos);
+    contenedorId=0
+    fragmento2 = MostrarEnCatalogo(datos,contenedorId);
   }
   mostrarBotones();
 });
+
+template.querySelector("H3").textContent = 'LISTA DE PRECIOS!';
+
+
+
 let clone = document.importNode(template, true);
 fragmento.appendChild(clone);
 document.body.appendChild(fragmento);//agregamos el contenedor padre
@@ -336,8 +394,9 @@ function escucharBotones() {
       var pre = buscarIdPrecio(parseInt(da2));
       var dol = buscarIdDol(parseInt(da2));
       var stock = buscarStock(parseInt(da2));
+      var desc = buscarDescuento(parseInt(da2));
 
-      let agregarOModificarItem = (da2,Artículo, Descripción, Venta, DOLAR, Unidades) => {
+      let agregarOModificarItem = (da2,Artículo, Descripción, Venta, DOLAR, Unidades,Descuento) => {
         let siEsta = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
 
         if (siEsta) {
@@ -359,11 +418,22 @@ function escucharBotones() {
 
         } else {
           if ((Unidades) <= stock) {
+if(Descuento>0){
+  let ventaCD = ((Venta) * (1 - (Number(Descuento)/100)));
 
+  itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades });
+  guardarEnLocalStorage(itemCarrito);
+  agregar(tit, da2);
+
+}
+         else{
           itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
           guardarEnLocalStorage(itemCarrito);
           agregar(tit, da2);
-  
+    console.log(Venta)
+    console.log(typeof Venta);
+
+         }
           }
           else {
 
@@ -377,7 +447,7 @@ function escucharBotones() {
         }
       };
 
-      agregarOModificarItem(da2,(parseInt(da2)), tit, pre, dol, unidades);
+      agregarOModificarItem(da2,(parseInt(da2)), tit, pre, dol, unidades, desc);
 
       console.log(itemCarrito);
 
@@ -541,7 +611,11 @@ function buscarStock(id) {
 };
 
 
+function buscarDescuento(id) {
+  const found = datos.find(elem => elem.Artículo == id);
 
+  return found.Descuento;
+};
 
 
 
@@ -800,9 +874,9 @@ const filtrar = () => {
     if (Descripcion.indexOf(texto) !== -1 && producto.Inventario >= 1) {
 
 
-
+      contenedorId=0;
       //mostramos los datos en el catalogo!!! <--------------------------------------------------
-      fragmento2 = MostrarEnCatalogo(producto);
+      fragmento2 = MostrarEnCatalogo(producto,contenedorId);
 
 
     }
