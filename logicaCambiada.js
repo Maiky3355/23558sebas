@@ -310,7 +310,7 @@ function MostrarDescuentos() {
       // Agregar el elemento <a> como hijo del template2
   // Por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
   datos.forEach((datos) => {
-    if (datos.Inventario >= 1 && datos.Descuento > 0) {
+    if (datos.Inventario >= 1 && datos.Descuento != 0) {
       // Mostramos los datos en el catalogo
       let contenedorId = 1;
 
@@ -327,8 +327,8 @@ function MostrarDescuentos() {
       // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
       let precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
       precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-let precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number(datos.Descuento) / 100));
+//los valores vienen con "," y hay q pasarlos a puntos
+let precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number((datos.Descuento).replace(/,/g, ".")) ));
 precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
  
 template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>"+ " $"+ precioCatalogo2 ;
@@ -498,7 +498,7 @@ function escucharBotones() {
 
         } else {
           if ((Unidades) <= stock) {
-if(Descuento>0){
+if(Descuento!=0){
   let ventaCD = ((Venta) * (1 - (Number(Descuento)/100)));
 
   itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades });
@@ -690,11 +690,11 @@ function buscarStock(id) {
   return found.Inventario;
 };
 
-
+//los numeros vienen con "," y hay q pasarlos a "." y multiplicar x100
 function buscarDescuento(id) {
   const found = datos.find(elem => elem.Artículo == id);
-
-  return found.Descuento;
+let valor= ((found.Descuento.replace(/,/g, "."))*100)
+  return valor
 };
 
 
