@@ -18,8 +18,8 @@ const interes = document.getElementById("interes");
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
 
-localStorage.removeItem('datosCarrito');
 
+let flagMostrarDescuentos = false;
 //  // Espera a que el documento esté cargado completamente
 //    $(document).ready(function() {
 //       $('[data-bs-toggle="popover"]').popover();
@@ -204,11 +204,7 @@ function tieneContenido(array) {
 //     return 0;
 //   }
 
-//   // Si el 'array' es válido, llamamos a la función 'sumarUnidades' y devolvemos el resultado
-//   const sumarUnidades = (array) => array.reduce((total, item) => total + item.Unidades, 0);
-//   const sumaTotal = sumarUnidades(array)
-//   return sumaTotal;
-// }
+
 
 
 //creamos una variable para las unidades (falta agregar para opciones de mas unidades)
@@ -254,14 +250,22 @@ categoriasUnicas.forEach(categoria => {
     //eliminamos el contenido del cATALOGO PARA MOSTRAR EL CONTENIDO FILTRADO
     const element = document.querySelector(".esteSi");
     element.parentElement.remove();
-
+    while (fragmento2.firstChild) {
+      fragmento2.removeChild(fragmento2.firstChild);
+    }
+    while (fragmento.firstChild) {
+      fragmento.removeChild(fragmento.firstChild);
+    }
     datos.forEach((datos) => {
-      if (datos.Inventario >= 1 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
+      if (datos.Inventario >= 1 && datos.Descuento == 0 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
         contenedorId=0;
         fragmento2 = MostrarEnCatalogo(datos,contenedorId);
 
       }
+      
+
+
       mostrarBotones();
     });
     let clone = document.importNode(template, true);
@@ -273,6 +277,7 @@ categoriasUnicas.forEach(categoria => {
     //CAMBIAMOS EL NOMBRE AL BOTON PRINCIPAL DEL MENU DESPLEGABLE POR EL SELECCIONADO
     nombreDesplegable.textContent = FILTROS;
     //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
+
     escucharBotones();
     subir()
   });
@@ -287,9 +292,21 @@ categoriasUnicas.forEach(categoria => {
 
 
 function MostrarDescuentos() {
+  if(flagMostrarDescuentos ==false){
+    flagMostrarDescuentos= true
+  }
+  else {
+    return
+  }
+
   let contenedorId = 1;
       // Crear el elemento <a>
-     
+      while (fragmento2.firstChild) {
+        fragmento2.removeChild(fragmento2.firstChild);
+      }
+      while (fragmento.firstChild) {
+        fragmento.removeChild(fragmento.firstChild);
+      }
       // Agregar el elemento <a> como hijo del template2
   // Por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
   datos.forEach((datos) => {
@@ -325,16 +342,61 @@ template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>
   });
 
   if (fragmento2.hasChildNodes()) {
-    template3.querySelector("H3").textContent = 'PRODUCTOS CON DESCUENTOS!';
+    template3.querySelector("H3").textContent = '¡PROMOCIONES Y OFERTAS!';
     let clon = document.importNode(template3, true);
     fragmento.appendChild(clon);
     document.body.appendChild(fragmento); // Agregamos el contenedor padre
     document.getElementById(contenedorId).appendChild(fragmento2); // Agregamos las cards
     
   }
+
+  const toggleButton = document.getElementById('toggleDiscountSection');
+  toggleButton.addEventListener('click', toggleCacaContent);
+
+
+  
+  return
+
 }
 
-MostrarDescuentos()
+toggleCacaContent
+
+function toggleCacaContent() {
+  const cacaContainer = document.querySelector('.caca');
+  cacaContainer.classList.toggle('d-none');
+
+  const toggleButton = document.getElementById('toggleDiscountSection');
+  if (cacaContainer.classList.contains('d-none')) {
+    toggleButton.textContent = 'Mostrar sección de descuentos';
+  } else {
+    toggleButton.textContent = 'Ocultar sección de descuentos';
+  }
+}
+
+
+
+// Buscar el elemento con clase "caca"
+const element2 = document.querySelector(".caca");
+
+// Verificar si el elemento fue encontrado
+if (element2) {
+  // Eliminar el elemento del DOM
+  element2.parentElement.remove();
+  element2.children.remove();
+  element2.remove();
+  if(flagMostrarDescuentos ==false){
+    MostrarDescuentos();
+  }
+
+} else {
+  // El elemento no fue encontrado
+  console.log("No se encontró ningún elemento con la clase 'caca'");
+if(flagMostrarDescuentos ==false){
+  MostrarDescuentos();
+}
+  
+  mostrarBotones();
+}
 
 
 
@@ -342,6 +404,21 @@ MostrarDescuentos()
 
 
 
+
+
+
+
+
+
+
+
+
+while (fragmento2.firstChild) {
+  fragmento2.removeChild(fragmento2.firstChild);
+}
+while (fragmento.firstChild) {
+  fragmento.removeChild(fragmento.firstChild);
+}
 
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
@@ -354,7 +431,7 @@ datos.forEach((datos) => {
   mostrarBotones();
 });
 
-template.querySelector("H3").textContent = 'LISTA DE PRECIOS!';
+template.querySelector("H3").textContent = 'PRECIOS GENERALES';
 
 
 
@@ -375,14 +452,17 @@ escucharBotones();
 
 
 
-
+//esta es la funcion que agrega los datos a itemCarrito
 
 //ponemos a escuchar todos los botones y mandamos a agregar los datos
 function escucharBotones() {
+ 
   const btns = document.querySelectorAll('button[id^=idbot]');
-
+  document.querySelectorAll('button[id^=idbot]').forEach(button => {
+    button.removeEventListener('click',Event);})
   btns.forEach(btn => {
     btn.addEventListener('click', event => {
+      event.stopImmediatePropagation(); // Detiene la propagación del evento de forma inmediata
       var da = event.target.id;
       var regex = /(\d+)/g;
       var da2 = (da.match(regex));
@@ -851,13 +931,18 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
 
 
 
-
+//usamos el siguiente codigo para buscar productos
 //buscador 
 //VEMOS EL CONTENIDO DEL FORMULARIO BUSCAR
 const formulario = document.querySelector('#formulario');
 
 const filtrar = () => {
-
+  while (fragmento2.firstChild) {
+    fragmento2.removeChild(fragmento2.firstChild);
+  }
+  while (fragmento.firstChild) {
+    fragmento.removeChild(fragmento.firstChild);
+  }
   console.log("se busco:" + formulario.value)
 
   const texto = formulario.value.toLowerCase();
@@ -871,7 +956,7 @@ const filtrar = () => {
     // const element2 = document.querySelector(".tarjetas");
     // element2.remove();
     //VEMOS SI COINCIDEN CON EL TEXTO BUSCADO Y SI TIENE INVENTARIO
-    if (Descripcion.indexOf(texto) !== -1 && producto.Inventario >= 1) {
+    if (Descripcion.indexOf(texto) !== -1 && producto.Descuento == 0 && producto.Inventario >= 1) {
 
 
       contenedorId=0;
@@ -894,6 +979,7 @@ const filtrar = () => {
 
   document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
   mostrarBotones();
+ 
   escucharBotones();
   subir();
 };
