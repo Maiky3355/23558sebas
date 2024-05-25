@@ -283,7 +283,7 @@ section h4 {
   }
 
 
- 
+/*  
   nav {
     width: 100%;
     margin: 0;
@@ -299,11 +299,11 @@ section h4 {
   nav ul li {
     width: 100%;
   }
-
+*/
   li form{
     margin-left: 30px;
     margin-right: 10px;
-  }
+  } 
 
   .scroll-up-btn-container {
     position: fixed;
@@ -324,4 +324,23 @@ section h4 {
     width: 10vh;
     height:10vh;
     border-radius: 50%;
+  }
+
+
+  .image-container {
+    position: relative;
+    display: inline-block; /* Agrega esto para que el texto se posicione correctamente */
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold; /* Agrega esta línea */
+    color: #333;
+    z-index: 1;
   }

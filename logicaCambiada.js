@@ -318,6 +318,7 @@ function MostrarDescuentos() {
       template3.querySelector('.caca').setAttribute("id", contenedorId);
 
       template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+      template2.querySelector("img").setAttribute("id", "img" + (datos.Artículo));
       template2.querySelector("h5").textContent = (datos.Descripción);
       template2.querySelector("p").textContent = (datos.Inventario) + " unidades disponibles";
 
@@ -1087,3 +1088,29 @@ function toggleScrollUpButton() {
 
 // Agrega un evento de scroll a la ventana que llame a la función 'toggleScrollUpButton()'
 window.addEventListener('scroll', toggleScrollUpButton);
+
+
+
+
+// Obtener todas las imágenes con id que comienzan con "img"
+const imageElements = document.querySelectorAll('[id^="img"]');
+
+// Iterar sobre cada imagen
+imageElements.forEach((imgElement, index) => {
+  // Crear el elemento de texto
+  const textElement = document.createElement('span');
+  textElement.classList.add('text-overlay');
+
+  // Asignar el valor de la variable según el índice
+  let discountValues = "5% OFF"; // Ejemplo de valores de descuento
+  textElement.textContent = discountValues; // Usar valor predeterminado si no hay valor definido
+
+  // Posicionar el texto dentro de la imagen
+  textElement.style.position = 'absolute';
+  textElement.style.top = '15%';
+  textElement.style.left = '87%';
+  textElement.style.transform = 'translate(-50%, -50%)';
+
+  // Agregar el texto al contenedor de la imagen
+  imgElement.parentElement.appendChild(textElement);
+});
