@@ -141,9 +141,11 @@ function mostrarBotones() {
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos, contenedorId) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
+  console.log(template2)
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
-
+  const imageId = `img-${contenedorId}-${datos.Artículo}`;
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+  template2.querySelector("img").setAttribute("id", imageId);
   template2.querySelector("h5").textContent = (datos.Descripción);
   template2.querySelector("p").textContent = (datos.Inventario)+" unidades disponibles";
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
@@ -359,6 +361,22 @@ template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>
   return
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 toggleCacaContent
 
@@ -1091,19 +1109,23 @@ window.addEventListener('scroll', toggleScrollUpButton);
 
 
 
+//EN EL SIGUIENTE CODIGO VEMOS LA ID DE IMAGEN Y AGREGAMOS AVISO DE DESCUENTO CORRESPONDIENTE AL PRODUCTO
 
 // Obtener todas las imágenes con id que comienzan con "img"
 const imageElements = document.querySelectorAll('[id^="img"]');
 
 // Iterar sobre cada imagen
-imageElements.forEach((imgElement, index) => {
+imageElements.forEach((imgElement) => {
+  // Obtener el valor numérico del ID de la imagen
+  const imageId = parseInt(imgElement.id.replace("img", ""));
+
+  // Buscar el valor de descuento en el objeto "datos"
+  let discountValue = datos.find(item => item.Artículo === imageId)?.Descuento;
+  discountValue= (discountValue.replace(/,/g, "."))*100;
   // Crear el elemento de texto
   const textElement = document.createElement('span');
   textElement.classList.add('text-overlay');
-
-  // Asignar el valor de la variable según el índice
-  let discountValues = "5% OFF"; // Ejemplo de valores de descuento
-  textElement.textContent = discountValues; // Usar valor predeterminado si no hay valor definido
+  textElement.textContent = discountValue+"% OFF";
 
   // Posicionar el texto dentro de la imagen
   textElement.style.position = 'absolute';
@@ -1114,3 +1136,7 @@ imageElements.forEach((imgElement, index) => {
   // Agregar el texto al contenedor de la imagen
   imgElement.parentElement.appendChild(textElement);
 });
+
+
+
+
