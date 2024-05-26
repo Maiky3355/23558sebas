@@ -18,7 +18,8 @@ import * as subirScroll from './subirScroll.js';
 import * as inItemCarr from './inItemCarr.js';
 //cargamos la variable de itemCarrito
 import { itemCarrito } from './inItemCarr.js';
-
+//cargamos los eventos de cerrar canvas
+import * as eventCerrCanvas from './eventCerrCanvas.js';
 
 //cargamos los template del html y creamos los fragmentos
 let template = document.getElementById("contTemplate").content;
@@ -33,7 +34,6 @@ let template3 = document.getElementById("contTemplate3").content;
 let totalCarritoNavb = document.getElementById("totalCarritoNavb");
 //cargamos a interes la etiqueta donde mostraremos el titulo de producto
 const interes = document.getElementById("interes");
-
 
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
@@ -526,13 +526,13 @@ function EliminarV() {
       console.log(Number(da2));
 
 
-      var elemAElimin = eliminarOModificarItem(Number(da2), unidades, da);
+      var prodAElimin = eliminarOModificarItem(Number(da2), unidades, da);
 
 
       //MOSTRAMOS ALERTAS DE LO ELIMINADO
       let suceso = "Se eliminó del carrito";
       let tipoAlert = "alert-danger";
-      alertas.alertAgrego(elemAElimin, suceso, tipoAlert);
+      alertas.alertAgrego(prodAElimin, suceso, tipoAlert);
 
 
 
@@ -687,34 +687,7 @@ function total() {
 
 
 
-
-
-
-//cargamos los valores de canvas y botones
-
-let canvasInteres = document.getElementById("offcanvasDark");
-
-let botonInteres = document.getElementById("listaInteres");
-
-//cambiamos el hide por show del canvas al apretar boton
-botonInteres.addEventListener("click", event => {
-
-  canvasInteres.classList.remove("hide", "show");
-
-  canvasInteres.classList.add("show");
-
-
-});
-
-//cambiamos el show por hide al apretar la x cerrar del canvas
-let botonInteresC = document.getElementById("cerrarCanvas");
-
-botonInteresC.addEventListener("click", event2 => {
-
-  canvasInteres.classList.replace("show", "hide");
-
-});
-
+eventCerrCanvas.eventCerrCanvas();
 
 
 
@@ -746,16 +719,6 @@ function generarEnlaceWhatsApp() {
   return enlace;
 }
 
-
-
-
-
-
-
-
-
-
-
 // Función para actualizar el enlace de WhatsApp
 function actualizarEnlaceWhatsApp() {
   const enlace = generarEnlaceWhatsApp();
@@ -782,20 +745,11 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
 
 
 
+filtrarConBusqueda()
 
+  //usamos el siguiente codigo para buscar productos
+function filtrarConBusqueda(){
 
-
-
-
-
-
-
-
-
-
-
-
-//usamos el siguiente codigo para buscar productos
 //buscador 
 //VEMOS EL CONTENIDO DEL FORMULARIO BUSCAR
 const formulario = document.querySelector('#formulario');
@@ -854,6 +808,7 @@ formulario.addEventListener('change', filtrar);
 formulario.addEventListener('inputType', filtrar);
 
 
+}
 
 //actualizamos el carrito
 
@@ -892,9 +847,6 @@ function actualizarCarrito() {
 
 //llamamos a la funcion que crea el boton scroll y sube.
 subirScroll.crearBotonScroll();
-
-
-
 
 //llamamos a la funcion para mostrar el % de descuento correspondiente
 porDeDescuento.porDeDescuento();
