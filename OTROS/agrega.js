@@ -19,7 +19,7 @@ let interesPrecioAgregado = [];
 
 
 //creamos el array con los datos
-import data from './articulos.json' with { type: 'json' };
+import data from '../articulos.json' with { type: 'json' };
 
 
 const datos = Array.from(data);

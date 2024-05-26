@@ -10,6 +10,15 @@ import * as alertas from './alertas.js';
 import * as buscarDatos from './buscarDatos.js';
 //funciones de carga y extraccion de local storage
 import * as localStor from './localStor.js';
+//cargamos la funcion que muestra los porcentajes de descuentos correspondientes
+import * as porDeDescuento from './porDeDescuento.js';
+//vargamos la funvion de subir scroll y el boton con esa misma accion
+import * as subirScroll from './subirScroll.js';
+//cargamos la inicializacion de itemCarrito
+import * as inItemCarr from './inItemCarr.js';
+//cargamos la variable de itemCarrito
+import { itemCarrito } from './inItemCarr.js';
+
 
 //cargamos los template del html y creamos los fragmentos
 let template = document.getElementById("contTemplate").content;
@@ -93,29 +102,6 @@ let flagMostrarDescuentos = false;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos, contenedorId) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
@@ -150,40 +136,12 @@ function MostrarEnCatalogo(datos, contenedorId) {
 };
 
 
-
-
-
+//llamamos a la inicializacion de itemCarrito y luego actualizamos
+inItemCarr.inItemCarr();
+actualizarCarrito();
 
 //creamos una variable para los filtros de productos en catalogo
 var FILTROS = "";
-
-//creamos un array para guardar los productos
-let itemCarrito = localStor.extraerDeLocalStorage();
-if (itemCarrito !== null) {
-  actualizarCarrito();
-  let contenido = tieneContenido(itemCarrito);
-  if (contenido > 0) {
-    let suceso = "Productos en tu carrito";
-    let tipoAlert = "alert-success";
-    let da = contenido;
-    alertas.alertAgrego(da, suceso, tipoAlert);
-
-  }
-}
-function tieneContenido(array) {
-
-  const sumarUnidades = (array) => array.reduce((total, item) => total + item.Unidades, 0);
-  const sumaTotal = sumarUnidades(array)
-  return sumaTotal;
-}
-
-// function tieneContenido(array) {
-//   // Verificamos si el parámetro 'array' es un arreglo y si tiene al menos un elemento
-//   if (!Array.isArray(array) || array.length === 0) {
-//     // Si no cumple la condición, devolvemos 0
-//     return 0;
-//   }
-
 
 
 
@@ -252,13 +210,16 @@ categoriasUnicas.forEach(categoria => {
     //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
 
     escucharBotones();
-    subir()
+    subirScroll.subir()
   });
   //ESTO SUBE AL DOM LAS CATEGORIAS
   lil.appendChild(boton);
   dropdownMenu.appendChild(lil);
 
 });
+
+
+
 
 
 
@@ -878,7 +839,7 @@ const filtrar = () => {
   mBotones.mostrarBotones();
 
   escucharBotones();
-  subir();
+  subirScroll.subir();
 };
 //PONEMOS LOS EVENTOS DEL BUSCADOR 
 formulario.addEventListener('keydown', filtrar);
@@ -886,13 +847,6 @@ formulario.addEventListener('click', filtrar);
 formulario.addEventListener('change', filtrar);
 formulario.addEventListener('inputType', filtrar);
 
-//FUNCION PARA SUBIR ARRIBA DEL DOM
-function subir() {
-
-  window.scrollTo({
-    top: 0, behavior: "smooth"
-  })
-}
 
 
 //actualizamos el carrito
@@ -930,68 +884,11 @@ function actualizarCarrito() {
 };
 
 
-
-//creamos el boton que aparece al haber scroll hacia arriba para subir
-// Primero, crea el elemento del botón
-const scrollUpButton = document.createElement('button');
-const scrollUpButtonImg = document.createElement('img');
-scrollUpButtonImg.src = './IMG/up.png'; // Reemplaza con la ruta de tu imagen
-scrollUpButton.appendChild(scrollUpButtonImg);
-scrollUpButton.classList.add('scroll-up-btn');
-
-// Agrega un evento de clic al botón que llame a la función 'subir()'
-scrollUpButton.addEventListener('click', subir);
-
-// Luego, agrega el botón al DOM con posición fija
-const scrollUpButtonContainer = document.createElement('div');
-scrollUpButtonContainer.classList.add('scroll-up-btn-container');
-scrollUpButtonContainer.appendChild(scrollUpButton);
-document.body.appendChild(scrollUpButtonContainer);
-
-// Función para mostrar/ocultar el botón según el scroll
-function toggleScrollUpButton() {
-  if (window.pageYOffset > 0) {
-    scrollUpButtonContainer.style.display = 'block';
-  } else {
-    scrollUpButtonContainer.style.display = 'none';
-  }
-}
-
-// Agrega un evento de scroll a la ventana que llame a la función 'toggleScrollUpButton()'
-window.addEventListener('scroll', toggleScrollUpButton);
+//llamamos a la funcion que crea el boton scroll y sube.
+subirScroll.crearBotonScroll();
 
 
 
 
-
-//EN EL SIGUIENTE CODIGO VEMOS LA ID DE IMAGEN Y AGREGAMOS AVISO DE DESCUENTO CORRESPONDIENTE AL PRODUCTO
-
-// Obtener todas las imágenes con id que comienzan con "img"
-const imageElements = document.querySelectorAll('[id^="img"]');
-
-// Iterar sobre cada imagen
-imageElements.forEach((imgElement) => {
-  // Obtener el valor numérico del ID de la imagen
-  const imageId = parseInt(imgElement.id.replace("img", ""));
-
-  // Buscar el valor de descuento en el objeto "datos"
-  let discountValue = datos.find(item => item.Artículo === imageId)?.Descuento;
-  discountValue = (discountValue.replace(/,/g, ".")) * 100;
-  // Crear el elemento de texto
-  const textElement = document.createElement('span');
-  textElement.classList.add('text-overlay');
-  textElement.textContent = discountValue + "% OFF";
-
-  // Posicionar el texto dentro de la imagen
-  textElement.style.position = 'absolute';
-  textElement.style.top = '15%';
-  textElement.style.left = '87%';
-  textElement.style.transform = 'translate(-50%, -50%)';
-
-  // Agregar el texto al contenedor de la imagen
-  imgElement.parentElement.appendChild(textElement);
-});
-
-
-
-
+//llamamos a la funcion para mostrar el % de descuento correspondiente
+porDeDescuento.porDeDescuento();
