@@ -185,7 +185,7 @@ function buscarIdPrecio(id) {
 function agregar(da) {
 
 
-    
+
     interesAgregado.push(da);
 
     let suceso = "Se agrego al carrito";

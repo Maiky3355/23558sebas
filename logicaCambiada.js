@@ -1,4 +1,15 @@
+//importamos los modulos y variables a ser utilizados
 
+//datos carga el Json en variable (datos)
+import { datos } from './jADatos.js';
+//mBotones muestra los botones Agregar al carrito con movimiento
+import * as mBotones from './mBotones.js';
+//alertas muestras las alertas!
+import * as alertas from './alertas.js';
+//cargamos las funciones de vuscar los datos de los productos para agregar al carrito
+import * as buscarDatos from './buscarDatos.js';
+//funciones de carga y extraccion de local storage
+import * as localStor from './localStor.js';
 
 //cargamos los template del html y creamos los fragmentos
 let template = document.getElementById("contTemplate").content;
@@ -101,39 +112,6 @@ let flagMostrarDescuentos = false;
 
 
 
-//hacemos que los botones agregar carrito aparezcan despues de mostrar las tarjetas
-
-function mostrarBotones() {
-
-  $(document).ready(function () {
-    var botones = document.querySelectorAll('.card-text button');
-
-    var opciones = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5
-    };
-
-    var observer = new IntersectionObserver(function (entradas, observer) {
-      entradas.forEach(function (entrada) {
-        if (entrada.intersectionRatio > 0) {
-          setTimeout(function () {
-            entrada.target.style.opacity = '1';
-            entrada.target.style.animation = 'aparecerDesdeAbajo 0.5s ease-in-out forwards';
-          }, 400); // Retraso de 2 segundos (2000 milisegundos)
-          observer.unobserve(entrada.target);
-        }
-      });
-    }, opciones);
-
-    botones.forEach(function (boton) {
-      observer.observe(boton);
-    });
-  });
-}
-
-
-
 
 
 
@@ -141,13 +119,13 @@ function mostrarBotones() {
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos, contenedorId) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
-  console.log(template2)
+
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
-  const imageId = `img-${contenedorId}-${datos.Artículo}`;
+  const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
   template2.querySelector("img").setAttribute("id", imageId);
   template2.querySelector("h5").textContent = (datos.Descripción);
-  template2.querySelector("p").textContent = (datos.Inventario)+" unidades disponibles";
+  template2.querySelector("p").textContent = (datos.Inventario) + " unidades disponibles";
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
@@ -180,7 +158,7 @@ function MostrarEnCatalogo(datos, contenedorId) {
 var FILTROS = "";
 
 //creamos un array para guardar los productos
-let itemCarrito = extraerDeLocalStorage();
+let itemCarrito = localStor.extraerDeLocalStorage();
 if (itemCarrito !== null) {
   actualizarCarrito();
   let contenido = tieneContenido(itemCarrito);
@@ -188,7 +166,7 @@ if (itemCarrito !== null) {
     let suceso = "Productos en tu carrito";
     let tipoAlert = "alert-success";
     let da = contenido;
-    alertAgrego(da, suceso, tipoAlert);
+    alertas.alertAgrego(da, suceso, tipoAlert);
 
   }
 }
@@ -211,12 +189,6 @@ function tieneContenido(array) {
 
 //creamos una variable para las unidades (falta agregar para opciones de mas unidades)
 let unidades = 1;
-
-//creamos el array con los datos
-import data from './articulos.json' with { type: 'json' };
-
-//creamos el array datos con los datos del json
-const datos = Array.from(data);
 
 // Obtener el contenedor del menú desplegable para buscar productos por categoria
 const dropdownContainer = document.querySelector(".porCategoria");
@@ -261,14 +233,13 @@ categoriasUnicas.forEach(categoria => {
     datos.forEach((datos) => {
       if (datos.Inventario >= 1 && datos.Descuento == 0 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
-        contenedorId=0;
-        fragmento2 = MostrarEnCatalogo(datos,contenedorId);
+        contenedorId = 0;
+        fragmento2 = MostrarEnCatalogo(datos, contenedorId);
 
       }
-      
 
+      mBotones.mostrarBotones();
 
-      mostrarBotones();
     });
     let clone = document.importNode(template, true);
     fragmento.appendChild(clone);
@@ -294,22 +265,22 @@ categoriasUnicas.forEach(categoria => {
 
 
 function MostrarDescuentos() {
-  if(flagMostrarDescuentos ==false){
-    flagMostrarDescuentos= true
+  if (flagMostrarDescuentos == false) {
+    flagMostrarDescuentos = true
   }
   else {
     return
   }
 
   let contenedorId = 1;
-      // Crear el elemento <a>
-      while (fragmento2.firstChild) {
-        fragmento2.removeChild(fragmento2.firstChild);
-      }
-      while (fragmento.firstChild) {
-        fragmento.removeChild(fragmento.firstChild);
-      }
-      // Agregar el elemento <a> como hijo del template2
+  // Crear el elemento <a>
+  while (fragmento2.firstChild) {
+    fragmento2.removeChild(fragmento2.firstChild);
+  }
+  while (fragmento.firstChild) {
+    fragmento.removeChild(fragmento.firstChild);
+  }
+  // Agregar el elemento <a> como hijo del template2
   // Por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
   datos.forEach((datos) => {
     if (datos.Inventario >= 1 && datos.Descuento != 0) {
@@ -330,11 +301,11 @@ function MostrarDescuentos() {
       // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
       let precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
       precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-//los valores vienen con "," y hay q pasarlos a puntos
-let precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number((datos.Descuento).replace(/,/g, ".")) ));
-precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
- 
-template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>"+ " $"+ precioCatalogo2 ;
+      //los valores vienen con "," y hay q pasarlos a puntos
+      let precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number((datos.Descuento).replace(/,/g, "."))));
+      precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
+
+      template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>" + " $" + precioCatalogo2;
 
       template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
 
@@ -350,34 +321,19 @@ template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>
     fragmento.appendChild(clon);
     document.body.appendChild(fragmento); // Agregamos el contenedor padre
     document.getElementById(contenedorId).appendChild(fragmento2); // Agregamos las cards
-    
+
   }
 
   const toggleButton = document.getElementById('toggleDiscountSection');
   toggleButton.addEventListener('click', toggleCacaContent);
 
 
-  
+
   return
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//muestra u oculta los descuentos desde un boton
 toggleCacaContent
 
 function toggleCacaContent() {
@@ -394,7 +350,7 @@ function toggleCacaContent() {
 
 
 
-// Buscar el elemento con clase "caca"
+// Buscar el elemento con clase "caca" donde estan los productos con descuentos
 const element2 = document.querySelector(".caca");
 
 // Verificar si el elemento fue encontrado
@@ -403,18 +359,21 @@ if (element2) {
   element2.parentElement.remove();
   element2.children.remove();
   element2.remove();
-  if(flagMostrarDescuentos ==false){
+  //si aun no se ingreso los ingresa
+  if (flagMostrarDescuentos == false) {
     MostrarDescuentos();
   }
 
 } else {
   // El elemento no fue encontrado
   console.log("No se encontró ningún elemento con la clase 'caca'");
-if(flagMostrarDescuentos ==false){
-  MostrarDescuentos();
-}
-  
-  mostrarBotones();
+
+  //si aun no se ingreso los ingresa
+  if (flagMostrarDescuentos == false) {
+    MostrarDescuentos();
+  }
+
+  mBotones.mostrarBotones();
 }
 
 
@@ -444,10 +403,10 @@ let contenedorId = 0;
 datos.forEach((datos) => {
   if (datos.Inventario >= 1 && datos.Descuento == 0) {
     //mostramos los datos en el catalogo!!! <--------------------------------------------------
-    contenedorId=0
-    fragmento2 = MostrarEnCatalogo(datos,contenedorId);
+    contenedorId = 0
+    fragmento2 = MostrarEnCatalogo(datos, contenedorId);
   }
-  mostrarBotones();
+  mBotones.mostrarBotones();
 });
 
 template.querySelector("H3").textContent = 'PRECIOS GENERALES';
@@ -475,10 +434,11 @@ escucharBotones();
 
 //ponemos a escuchar todos los botones y mandamos a agregar los datos
 function escucharBotones() {
- 
+
   const btns = document.querySelectorAll('button[id^=idbot]');
   document.querySelectorAll('button[id^=idbot]').forEach(button => {
-    button.removeEventListener('click',Event);})
+    button.removeEventListener('click', Event);
+  })
   btns.forEach(btn => {
     btn.addEventListener('click', event => {
       event.stopImmediatePropagation(); // Detiene la propagación del evento de forma inmediata
@@ -489,27 +449,27 @@ function escucharBotones() {
       let selectElement = document.getElementById('idbot' + da2); // Obtener el elemento select por su id
       unidades = Number(selectElement.value); // Obtener el valor seleccionado del elemento select
 
-      var tit = buscarId(parseInt(da2));
-      var pre = buscarIdPrecio(parseInt(da2));
-      var dol = buscarIdDol(parseInt(da2));
-      var stock = buscarStock(parseInt(da2));
-      var desc = buscarDescuento(parseInt(da2));
+      var tit = buscarDatos.buscarId(parseInt(da2));
+      var pre = buscarDatos.buscarIdPrecio(parseInt(da2));
+      var dol = buscarDatos.buscarIdDol(parseInt(da2));
+      var stock = buscarDatos.buscarStock(parseInt(da2));
+      var desc = buscarDatos.buscarDescuento(parseInt(da2));
 
-      let agregarOModificarItem = (da2,Artículo, Descripción, Venta, DOLAR, Unidades,Descuento) => {
+      let agregarOModificarItem = (da2, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento) => {
         let siEsta = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
 
         if (siEsta) {
           if ((siEsta.Unidades + unidades) <= stock) {
 
             siEsta.Unidades += unidades;
-            guardarEnLocalStorage(itemCarrito);
+            localStor.guardarEnLocalStorage(itemCarrito);
             agregar(tit, da2);
           }
           else {
-       //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
+            //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
             let suceso = "NO HAY STOCK SUFICIENTE";
             let tipoAlert = "alert-danger";
-            alertAgrego(Descripción, suceso, tipoAlert);
+            alertas.alertAgrego(Descripción, suceso, tipoAlert);
             return;
           }
 
@@ -517,36 +477,36 @@ function escucharBotones() {
 
         } else {
           if ((Unidades) <= stock) {
-if(Descuento!=0){
-  let ventaCD = ((Venta) * (1 - (Number(Descuento)/100)));
+            if (Descuento != 0) {
+              let ventaCD = ((Venta) * (1 - (Number(Descuento) / 100)));
 
-  itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades });
-  guardarEnLocalStorage(itemCarrito);
-  agregar(tit, da2);
+              itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades });
+              localStor.guardarEnLocalStorage(itemCarrito);
+              agregar(tit, da2);
 
-}
-         else{
-          itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
-          guardarEnLocalStorage(itemCarrito);
-          agregar(tit, da2);
-    console.log(Venta)
-    console.log(typeof Venta);
+            }
+            else {
+              itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
+              localStor.guardarEnLocalStorage(itemCarrito);
+              agregar(tit, da2);
+              console.log(Venta)
+              console.log(typeof Venta);
 
-         }
+            }
           }
           else {
 
-                 //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
-      let suceso = "NO HAY STOCK SUFICIENTE";
-      let tipoAlert = "alert-danger";
-      alertAgrego(Descripción, suceso, tipoAlert);
+            //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
+            let suceso = "NO HAY STOCK SUFICIENTE";
+            let tipoAlert = "alert-danger";
+            alertas.alertAgrego(Descripción, suceso, tipoAlert);
             return;
           }
 
         }
       };
 
-      agregarOModificarItem(da2,(parseInt(da2)), tit, pre, dol, unidades, desc);
+      agregarOModificarItem(da2, (parseInt(da2)), tit, pre, dol, unidades, desc);
 
       console.log(itemCarrito);
 
@@ -605,7 +565,7 @@ function EliminarV() {
       //MOSTRAMOS ALERTAS DE LO ELIMINADO
       let suceso = "Se eliminó del carrito";
       let tipoAlert = "alert-danger";
-      alertAgrego(caca, suceso, tipoAlert);
+      alertas.alertAgrego(caca, suceso, tipoAlert);
 
 
 
@@ -653,14 +613,8 @@ function EliminarV() {
       actualizarEnlaceWhatsApp();
       return siEsta.Descripción
     }
-
     actualizarCarrito();
   };
-
-
-
-
-
 
 }
 
@@ -678,47 +632,6 @@ function EliminarV() {
 
 
 
-//buscamos el id y ponemos el titulo
-function buscarId(id) {
-  const found = datos.find(elem => elem.Artículo == id);
-
-  return found.Descripción;
-};
-//buscamos el id y ponemos el dolar
-function buscarIdDol(id) {
-  const found = datos.find(elem => elem.Artículo == id);
-
-  return found.DOLAR;
-};
-
-
-//buscamos el id y ponemos el precio
-function buscarIdPrecio(id) {
-  const found = datos.find(elem => elem.Artículo == id);
-  //buscamos el  valor del dolar en el array
-
-  //reemplazamos las , por .
-  var precioConPuntos = (found.Venta.replace(/,/g, "."));
-  //((new Intl.NumberFormat('es-Mx').format(found.Venta.replace(/,/g, ".")*found.DOLAR)))
-
-  return (precioConPuntos);
-};
-function buscarStock(id) {
-  const found = datos.find(elem => elem.Artículo == id);
-
-  return found.Inventario;
-};
-
-//los numeros vienen con "," y hay q pasarlos a "." y multiplicar x100
-function buscarDescuento(id) {
-  const found = datos.find(elem => elem.Artículo == id);
-let valor= ((found.Descuento.replace(/,/g, "."))*100)
-  return valor
-};
-
-
-
-
 //AGREGAMOS LOS DATOS AL CANVAS AL TOCAR BOTONES "AGREGAR AL CARRITO" DEL CATALOGO
 
 function agregar(da, da2) {
@@ -726,7 +639,7 @@ function agregar(da, da2) {
 
   let suceso = "Se agregó al carrito";
   let tipoAlert = "alert-success";
-  alertAgrego(da, suceso, tipoAlert);
+  alertas.alertAgrego(da, suceso, tipoAlert);
 
   // Limpiar el contenido existente en el contenedor
   interes.innerHTML = '';
@@ -842,41 +755,6 @@ botonInteresC.addEventListener("click", event2 => {
 
 
 
-//funcion PARA MOSTRAR ALERTAS PERSONALIZADAS
-
-function alertAgrego(titAlert, suceso, tipoAlert) {
-  //ponemos el titulo del producto en el alert
-  let alertTitulo = document.getElementById("alertTit");
-  alertTitulo.textContent = `${titAlert} `;
-
-  //ponemos el suceso del alert- sea danger o sucess
-  let alertSuceso = document.getElementById("alertSuceso");
-  alertSuceso.textContent = `${suceso} `;
-
-  let alertAgrego = document.getElementById("alertAgrego");
-  //hacemos el alert visible 
-  alertAgrego.classList.remove("hide", "show");
-  alertAgrego.style.cssText = 'z-index: -50 !important;';
-
-  alertAgrego.classList.remove("alert-success", "alert-danger");
-  alertAgrego.classList.add(tipoAlert);
-
-  alertAgrego.classList.add("show");
-  alertAgrego.style.cssText = 'z-index: 50 !important;';
-  //Colocamos el timpo del alert antes de desactivarse
-  setTimeout(() => {
-    alertAgrego.classList.remove("hide", "show");
-    alertAgrego.style.cssText = 'z-index: -50 !important;';
-    alertAgrego.classList.add("hide");
-
-
-  }, 2000);
-
-
-};
-
-
-
 
 
 
@@ -926,7 +804,7 @@ const enlaceWhatsApp = document.createElement("button");
 enlaceWhatsApp.addEventListener('click', function (event) {
   event.preventDefault(); // Evita la redirección
   window.open(enlaceWhatsApp.getAttribute("href"), '_blank');
-  localStorage.removeItem('datosCarrito')
+ localStorage.removeItem('datosCarrito')
 });
 enlaceWhatsApp.textContent = "Mandar carrito por WhatsApp";
 document.getElementById("whats").appendChild(enlaceWhatsApp);
@@ -978,9 +856,9 @@ const filtrar = () => {
     if (Descripcion.indexOf(texto) !== -1 && producto.Descuento == 0 && producto.Inventario >= 1) {
 
 
-      contenedorId=0;
+      contenedorId = 0;
       //mostramos los datos en el catalogo!!! <--------------------------------------------------
-      fragmento2 = MostrarEnCatalogo(producto,contenedorId);
+      fragmento2 = MostrarEnCatalogo(producto, contenedorId);
 
 
     }
@@ -997,8 +875,8 @@ const filtrar = () => {
 
 
   document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
-  mostrarBotones();
- 
+  mBotones.mostrarBotones();
+
   escucharBotones();
   subir();
 };
@@ -1047,38 +925,13 @@ function actualizarCarrito() {
 
   });
 
-  guardarEnLocalStorage(itemCarrito);
+  localStor.guardarEnLocalStorage(itemCarrito);
   EliminarV();
 };
 
-// Función para guardar el carrito en el local storage
-function guardarEnLocalStorage(array) {
-  var datos = {
-    items: array,
-    timestamp: new Date().getTime() + 23 * 60 * 60 * 1000 // Marca de tiempo actual + 24 horas en milisegundos
-  };
 
-  localStorage.setItem('datosCarrito', JSON.stringify(datos));
-}
 
-// Función para extraer el carrito del local storage si existe y está dentro de la fecha de validez
-function extraerDeLocalStorage() {
-  var datos = localStorage.getItem('datosCarrito');
-
-  if (datos === null) {
-    return [];
-  }
-
-  datos = JSON.parse(datos);
-  var tiempoActual = new Date().getTime();
-
-  if (tiempoActual > datos.timestamp) {
-    localStorage.removeItem('datosCarrito');
-    return [];
-  }
-
-  return datos.items;
-}
+//creamos el boton que aparece al haber scroll hacia arriba para subir
 // Primero, crea el elemento del botón
 const scrollUpButton = document.createElement('button');
 const scrollUpButtonImg = document.createElement('img');
@@ -1109,6 +962,8 @@ window.addEventListener('scroll', toggleScrollUpButton);
 
 
 
+
+
 //EN EL SIGUIENTE CODIGO VEMOS LA ID DE IMAGEN Y AGREGAMOS AVISO DE DESCUENTO CORRESPONDIENTE AL PRODUCTO
 
 // Obtener todas las imágenes con id que comienzan con "img"
@@ -1121,11 +976,11 @@ imageElements.forEach((imgElement) => {
 
   // Buscar el valor de descuento en el objeto "datos"
   let discountValue = datos.find(item => item.Artículo === imageId)?.Descuento;
-  discountValue= (discountValue.replace(/,/g, "."))*100;
+  discountValue = (discountValue.replace(/,/g, ".")) * 100;
   // Crear el elemento de texto
   const textElement = document.createElement('span');
   textElement.classList.add('text-overlay');
-  textElement.textContent = discountValue+"% OFF";
+  textElement.textContent = discountValue + "% OFF";
 
   // Posicionar el texto dentro de la imagen
   textElement.style.position = 'absolute';

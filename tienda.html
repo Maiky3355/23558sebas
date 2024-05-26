@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Sublime Supplies</title>
 
@@ -51,9 +52,9 @@
                             <li>
 
                                 <form class="d-flex justify-content-center " role="search" onsubmit="return false;">
-                                    <input id="formulario" class="form-control me-2" type="search" placeholder="Buscar producto"
-                                        aria-label="Search">
-                            
+                                    <input id="formulario" class="form-control me-2" type="search"
+                                        placeholder="Buscar producto" aria-label="Search">
+
                                 </form>
                             </li>
 
@@ -61,26 +62,26 @@
                         </ul>
 
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
- <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="tienda.html">Tienda</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
                             </li>
 
-                           
+
                             <li class="nav-item">
                                 <a class="nav-link" href="contacto.html">Contacto</a>
                             </li>
-                            
-                                     </ul>
-                            </li>
+
+                        </ul>
+                        </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-    
+
     </header>
 
 
@@ -90,9 +91,9 @@
         <template id="contTemplate3">
             <div class="tarjetas container">
                 <button id="toggleDiscountSection" class="btn btn-secondary">Ocultar sección de descuentos</button>
-                   <div class=" row justify-content-center caca">
+                <div class=" row justify-content-center caca">
                     <H3 class="card-text"></H3>
-                   <!-- <div class="card " >
+                    <!-- <div class="card " >
                         <img class="card-img-top" >
                         <div class="card-body">
                             <h5 class="card-title"></h5>
@@ -110,7 +111,7 @@
         <template id="contTemplate">
             <div class="tarjetas container">
                 <div class=" row justify-content-center esteSi">
-<h3></h3>
+                    <h3></h3>
                     <!-- <div class="card " >
                         <img class="card-img-top" >
                         <div class="card-body">
@@ -134,7 +135,7 @@
                             <h5 class="card-title"></h5>
                             <p class="card-text"></p>
                             <!-- <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-placement="top" data-bs-content="">Descripcion</a> -->
-                           
+
                             <p class="card-text"><small class="text-body-secondary"></small>
                                 <br>
                                 <select class="form-select" aria-label="Default select example">
@@ -143,7 +144,7 @@
                                     <option value="3">3</option>
                                     <option value="4">4</option>
                                     <option value="5">5</option>
-                                  </select>
+                                </select>
                                 <button type="button" class="btn btn-dark inter">Agregar<svg
                                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-cart" viewBox="0 0 16 16">
@@ -176,24 +177,25 @@
                         <h4>Imagenes a modo ilustrativo</h4>
                         <h4>Precios solo en efectivo</h4>
                         <h4>Fuentes, maquinas y kits ver en: <a
-                            href="https://drive.google.com/file/d/1XXb7YNY9to02aB-IX_B4SIPUElDXinAs/view?usp=drive_link"
-                            target="_blank">Catalogo maquinas</a></h4>
+                                href="https://drive.google.com/file/d/1XXb7YNY9to02aB-IX_B4SIPUElDXinAs/view?usp=drive_link"
+                                target="_blank">Catalogo maquinas</a></h4>
 
                         <!-- etiquetas del alert -->
-                        <div id="alertAgrego" class="alert alert-success fade hide" role="alert" >
+                        <div id="alertAgrego" class="alert alert-success fade hide" role="alert">
                             <strong id="alertTit"></strong>
                             <div id="alertSuceso"></div>
                         </div>
 
                         <div class="dropdown porCategoria">
-                            <button class="btn btn-primary dropdown-toggle nombreDesplegable" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Seleccionar por categoria
-                         
-                             </button>
+                            <button class="btn btn-primary dropdown-toggle nombreDesplegable" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Seleccionar por categoria
+
+                            </button>
                             <ul class="dropdown-menu porCategoriaUl">
-                               
+
                             </ul>
-                          </div>
+                        </div>
 
                 </div>
 
@@ -208,35 +210,35 @@
                 aria-labelledby="offcanvasDarkLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkLabel">Carrito de productos</h5>
-                    
+
                     <button id="cerrarCanvas" type="button" class="btn-close btn-close-white"
                         data-bs-dismiss="offcanvasDark" aria-label="Close"></button>
                 </div>
                 <P id="precioTotal" style="text-align: start;">PRECIO TOTAL: $</P>
                 <br>
-                    <div id="whats"></div>
+                <div id="whats"></div>
                 <div class="offcanvas-body">
                     <div class="container">
                         <div class="row">
-                      
+
                             <div class="col-12">
                                 <div class="card">
                                     <p>PRODUCTOS</p>
                                     <div id="aca">
-                                            <ul id="interes" class="list-group" style="cursor: pointer">
-                                                
-                                              </ul>
-                                       
+                                        <ul id="interes" class="list-group" style="cursor: pointer">
+
+                                        </ul>
+
                                     </div>
 
                                 </div>
                             </div>
-                           
+
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <p>Precione en el item para eliminar cantidad</p>
-                          
+
                                 <br>
                                 <p>PRECIOS SUJETOS A CAMBIOS SIN PREVIO AVISO</p>
                                 <p>Al enviar su carrito por WhatsApp, recibira atencion personalizada.</p>
@@ -272,7 +274,8 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    <!-- <script type="module" src="agrega3.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script type="module" src="agrega3.js"></script> -->
 
     <!-- <script type="module" src="agrega.js"></script> -->
     <script type="module" src="logicaCambiada.js"></script>
