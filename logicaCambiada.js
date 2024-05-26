@@ -294,6 +294,12 @@ function MostrarDescuentos() {
 
 }
 
+
+
+
+
+
+
 //muestra u oculta los descuentos desde un boton
 toggleCacaContent
 
@@ -520,13 +526,13 @@ function EliminarV() {
       console.log(Number(da2));
 
 
-      var caca = eliminarOModificarItem(Number(da2), unidades, da);
+      var elemAElimin = eliminarOModificarItem(Number(da2), unidades, da);
 
 
       //MOSTRAMOS ALERTAS DE LO ELIMINADO
       let suceso = "Se eliminó del carrito";
       let tipoAlert = "alert-danger";
-      alertas.alertAgrego(caca, suceso, tipoAlert);
+      alertas.alertAgrego(elemAElimin, suceso, tipoAlert);
 
 
 
