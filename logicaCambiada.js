@@ -101,8 +101,8 @@ const intprecioTotal = document.getElementById("precioTotal");
 
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos, contenedorId) {
-  //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
 
+  //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
   const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
@@ -112,12 +112,7 @@ function MostrarEnCatalogo(datos, contenedorId) {
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-
   template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
-
-
-
-
   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
   precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
@@ -140,9 +135,7 @@ actualizarCarrito();
 //creamos una variable para los filtros de productos en catalogo
 var FILTROS = "";
 
-
-
-//creamos una variable para las unidades (falta agregar para opciones de mas unidades)
+//creamos una variable para las unidades a ser agregadas al itemCarrito
 let unidades = 1;
 
 // Obtener el contenedor del menú desplegable para buscar productos por categoria
@@ -255,7 +248,6 @@ function MostrarDescuentos() {
 
       template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
 
-
       // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
       let precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
       precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
@@ -274,21 +266,17 @@ function MostrarDescuentos() {
   });
 
   if (fragmento2.hasChildNodes()) {
-    template3.querySelector("H3").textContent = '¡PROMOCIONES Y OFERTAS!';
+    template3.querySelector("H3").textContent = '¡PROMOCIONES Y OFERTAS SEMANALES!';
     let clon = document.importNode(template3, true);
     fragmento.appendChild(clon);
     document.body.appendChild(fragmento); // Agregamos el contenedor padre
     document.getElementById(contenedorId).appendChild(fragmento2); // Agregamos las cards
-
   }
 
   const toggleButton = document.getElementById('toggleDiscountSection');
   toggleButton.addEventListener('click', toggleCacaContent);
 
-
-
   return
-
 }
 
 
@@ -310,34 +298,33 @@ function toggleCacaContent() {
 }
 
 
-function llamaMostDescuentos(){
-// Buscar el elemento con clase "caca" donde estan los productos con descuentos
-const element2 = document.querySelector(".caca");
+function llamaMostDescuentos() {
+  // Buscar el elemento con clase "caca" donde estan los productos con descuentos
+  const element2 = document.querySelector(".caca");
 
-// Verificar si el elemento fue encontrado
-if (element2) {
-  // Eliminar el elemento del DOM
-  element2.parentElement.remove();
-  element2.children.remove();
-  element2.remove();
-  //si aun no se ingreso los ingresa
-  if (flagMostrarDescuentos == false) {
-    MostrarDescuentos();
+  // Verificar si el elemento fue encontrado
+  if (element2) {
+    // Eliminar el elemento del DOM
+    element2.parentElement.remove();
+    element2.children.remove();
+    element2.remove();
+    //si aun no se ingreso los ingresa
+    if (flagMostrarDescuentos == false) {
+      MostrarDescuentos();
+    }
+
+  } else {
+    // El elemento no fue encontrado
+    console.log("No se encontró ningún elemento con la clase 'caca'");
+
+    //si aun no se ingreso los ingresa
+    if (flagMostrarDescuentos == false) {
+      MostrarDescuentos();
+    }
+    mBotones.mostrarBotones();
   }
-
-} else {
-  // El elemento no fue encontrado
-  console.log("No se encontró ningún elemento con la clase 'caca'");
-
-  //si aun no se ingreso los ingresa
-  if (flagMostrarDescuentos == false) {
-    MostrarDescuentos();
-  }
-
-  mBotones.mostrarBotones();
 }
 
-}
 
 
 //muestra u oculta los descuentos desde un boton
@@ -347,21 +334,6 @@ llamaMostDescuentos()
 
 
 
-
-
-
-
-
-
-
-
-
-while (fragmento2.firstChild) {
-  fragmento2.removeChild(fragmento2.firstChild);
-}
-while (fragmento.firstChild) {
-  fragmento.removeChild(fragmento.firstChild);
-}
 
 let contenedorId = 0;
 //por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
@@ -719,7 +691,7 @@ const enlaceWhatsApp = document.createElement("button");
 enlaceWhatsApp.addEventListener('click', function (event) {
   event.preventDefault(); // Evita la redirección
   window.open(enlaceWhatsApp.getAttribute("href"), '_blank');
- localStorage.removeItem('datosCarrito')
+  localStorage.removeItem('datosCarrito')
 });
 enlaceWhatsApp.textContent = "Mandar carrito por WhatsApp";
 document.getElementById("whats").appendChild(enlaceWhatsApp);
@@ -732,65 +704,54 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
 
 filtrarConBusqueda()
 
-  //usamos el siguiente codigo para buscar productos
-function filtrarConBusqueda(){
+//usamos el siguiente codigo para buscar productos
+function filtrarConBusqueda() {
 
-//buscador 
-//VEMOS EL CONTENIDO DEL FORMULARIO BUSCAR
-const formulario = document.querySelector('#formulario');
+  //buscador 
+  //VEMOS EL CONTENIDO DEL FORMULARIO BUSCAR
+  const formulario = document.querySelector('#formulario');
 
-const filtrar = () => {
-  while (fragmento2.firstChild) {
-    fragmento2.removeChild(fragmento2.firstChild);
-  }
-  while (fragmento.firstChild) {
-    fragmento.removeChild(fragmento.firstChild);
-  }
-  console.log("se busco:" + formulario.value)
+  const filtrar = () => {
 
-  const texto = formulario.value.toLowerCase();
-  for (let producto of datos) {
+    console.log("se busco:" + formulario.value)
 
+    const texto = formulario.value.toLowerCase();
+    for (let producto of datos) {
+      let Descripcion = producto.Descripción.toLowerCase();
+      //BORRAMOS LOS ELEMENTOS DEL CATALOGO
 
-    let Descripcion = producto.Descripción.toLowerCase();
-    //BORRAMOS LOS ELEMENTOS DEL CATALOGO
+      //lo siguiente elimina tarjetas container, pero borra todos.
+      // const element2 = document.querySelector(".tarjetas");
+      // element2.remove();
+      //VEMOS SI COINCIDEN CON EL TEXTO BUSCADO, SI TIENE INVENTARIO Y NO TIENE DESCUENTO
+      if (Descripcion.indexOf(texto) !== -1 && producto.Descuento == 0 && producto.Inventario >= 1) {
 
-    //lo siguiente elimina tarjetas container, pero borra todos.
-    // const element2 = document.querySelector(".tarjetas");
-    // element2.remove();
-    //VEMOS SI COINCIDEN CON EL TEXTO BUSCADO Y SI TIENE INVENTARIO
-    if (Descripcion.indexOf(texto) !== -1 && producto.Descuento == 0 && producto.Inventario >= 1) {
-
-
-      contenedorId = 0;
-      //mostramos los datos en el catalogo!!! <--------------------------------------------------
-      fragmento2 = MostrarEnCatalogo(producto, contenedorId);
-
+        contenedorId = 0;
+        //mostramos los datos en el catalogo!!! <--------------------------------------------------
+        fragmento2 = MostrarEnCatalogo(producto, contenedorId);
+      }
 
     }
 
+    const element = document.querySelector(".esteSi");
+    element.parentElement.remove();
+    let clone = document.importNode(template, true);
+    fragmento.appendChild(clone);
 
-  }
-
-  const element = document.querySelector(".esteSi");
-  element.parentElement.remove();
-  let clone = document.importNode(template, true);
-  fragmento.appendChild(clone);
-
-  document.body.appendChild(fragmento);//agregamos el contenedor padre
+    document.body.appendChild(fragmento);//agregamos el contenedor padre
 
 
-  document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
-  mBotones.mostrarBotones();
+    document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
+    mBotones.mostrarBotones();
 
-  escucharBotones();
-  subirScroll.subir();
-};
-//PONEMOS LOS EVENTOS DEL BUSCADOR 
-formulario.addEventListener('keydown', filtrar);
-formulario.addEventListener('click', filtrar);
-formulario.addEventListener('change', filtrar);
-formulario.addEventListener('inputType', filtrar);
+    escucharBotones();
+    subirScroll.subir();
+  };
+  //PONEMOS LOS EVENTOS DEL BUSCADOR 
+  formulario.addEventListener('keydown', filtrar);
+  formulario.addEventListener('click', filtrar);
+  formulario.addEventListener('change', filtrar);
+  formulario.addEventListener('inputType', filtrar);
 
 
 }
