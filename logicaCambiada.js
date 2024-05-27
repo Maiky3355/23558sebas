@@ -10,8 +10,8 @@ import * as alertas from './alertas.js';
 import * as buscarDatos from './buscarDatos.js';
 //funciones de carga y extraccion de local storage
 import * as localStor from './localStor.js';
-//cargamos la funcion que muestra los porcentajes de descuentos correspondientes
-import * as porDeDescuento from './porDeDescuento.js';
+//cargamos la funcion de descuentos correspondientes
+import * as descu from './descu.js';
 //vargamos la funvion de subir scroll y el boton con esa misma accion
 import * as subirScroll from './subirScroll.js';
 //cargamos la inicializacion de itemCarrito
@@ -20,24 +20,6 @@ import * as inItemCarr from './inItemCarr.js';
 import { itemCarrito } from './inItemCarr.js';
 //cargamos los eventos de cerrar canvas
 import * as eventCerrCanvas from './eventCerrCanvas.js';
-
-//cargamos los template del html y creamos los fragmentos
-let template = document.getElementById("contTemplate").content;
-let fragmento = document.createDocumentFragment();
-
-let template2 = document.getElementById("contTemplate2").content;
-let fragmento2 = document.createDocumentFragment();
-
-let template3 = document.getElementById("contTemplate3").content;
-
-//cargamos donde mostramos total de carrino en el navbar
-let totalCarritoNavb = document.getElementById("totalCarritoNavb");
-//cargamos a interes la etiqueta donde mostraremos el titulo de producto
-const interes = document.getElementById("interes");
-
-//cargamos a interes2 la etiqueta donde mostraremos el precio total
-const intprecioTotal = document.getElementById("precioTotal");
-
 
 let flagMostrarDescuentos = false;
 //  // Espera a que el documento esté cargado completamente
@@ -98,7 +80,22 @@ let flagMostrarDescuentos = false;
 // }
 
 
+//cargamos los template del html y creamos los fragmentos
+let template = document.getElementById("contTemplate").content;
+let fragmento = document.createDocumentFragment();
 
+let template2 = document.getElementById("contTemplate2").content;
+let fragmento2 = document.createDocumentFragment();
+
+let template3 = document.getElementById("contTemplate3").content;
+
+//cargamos donde mostramos total de carrino en el navbar
+let totalCarritoNavb = document.getElementById("totalCarritoNavb");
+//cargamos a interes la etiqueta donde mostraremos el titulo de producto
+const interes = document.getElementById("interes");
+
+//cargamos a interes2 la etiqueta donde mostraremos el precio total
+const intprecioTotal = document.getElementById("precioTotal");
 
 
 
@@ -300,9 +297,6 @@ function MostrarDescuentos() {
 
 
 
-//muestra u oculta los descuentos desde un boton
-toggleCacaContent
-
 function toggleCacaContent() {
   const cacaContainer = document.querySelector('.caca');
   cacaContainer.classList.toggle('d-none');
@@ -316,7 +310,7 @@ function toggleCacaContent() {
 }
 
 
-
+function llamaMostDescuentos(){
 // Buscar el elemento con clase "caca" donde estan los productos con descuentos
 const element2 = document.querySelector(".caca");
 
@@ -343,9 +337,13 @@ if (element2) {
   mBotones.mostrarBotones();
 }
 
+}
 
 
-
+//muestra u oculta los descuentos desde un boton
+toggleCacaContent
+//llama a mostrar descuentos
+llamaMostDescuentos()
 
 
 
@@ -674,19 +672,6 @@ function total() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 eventCerrCanvas.eventCerrCanvas();
 
 
@@ -849,4 +834,4 @@ function actualizarCarrito() {
 subirScroll.crearBotonScroll();
 
 //llamamos a la funcion para mostrar el % de descuento correspondiente
-porDeDescuento.porDeDescuento();
+descu.porDeDescuento();
