@@ -1,6 +1,6 @@
 [{"Artículo":1, "Descripción":"PIGMENTO HARBOR 1OZ", "Venta":"4,5", "Descuento":"0", "Inventario":"264", "Categoria":"PIGMENTOS", "BAlterna":"TINTA SUBLIME", "Marca":"SUBLIME", "Favoritos":"-45453,5190162037", "DOLAR":"1225"},
  {"Artículo":2, "Descripción":"TETINAS CHICAS X100 35grs", "Venta":"1,8", "Descuento":"0", "Inventario":"796", "Categoria":"TETINAS", "BAlterna":"CUPS", "Marca":"OTRAS", "Favoritos":"-45435,6045023148", "DOLAR":"1225"},
- {"Artículo":3, "Descripción":"AGUJAS CAJA X50 ", "Venta":"11,63", "Descuento":"0", "Inventario":"429", "Categoria":"AGUJAS", "BAlterna":"AGUJAS", "Marca":"SUBLIME", "Favoritos":"-45254,8418518519", "DOLAR":"1225"},
+ {"Artículo":3, "Descripción":"AGUJAS CAJA X50", "Venta":"11,63", "Descuento":"0", "Inventario":"429", "Categoria":"AGUJAS", "BAlterna":"AGUJAS", "Marca":"SUBLIME", "Favoritos":"-45461,5226388889", "DOLAR":"1225"},
  {"Artículo":4, "Descripción":"AGUJAS BLISTER X5U", "Venta":"2,04", "Descuento":"0", "Inventario":"145", "Categoria":"AGUJAS", "BAlterna":"BLISTER AGUJAS", "Marca":"OTRAS", "Favoritos":"-45254,8808449074", "DOLAR":"1225"},
  {"Artículo":5, "Descripción":"TETINAS MEDIANAS X100 64grs", "Venta":"2,1", "Descuento":"0", "Inventario":"888", "Categoria":"TETINAS", "BAlterna":"CUPS M", "Marca":"OTRAS", "Favoritos":"-45453,7395601852", "DOLAR":"1225"},
  {"Artículo":6, "Descripción":"TETINAS GRANDES X100 95grs", "Venta":"2,6", "Descuento":"0", "Inventario":"973", "Categoria":"TETINAS", "BAlterna":"CUPS G", "Marca":"OTRAS", "Favoritos":"-45435,6046180556", "DOLAR":"1225"},
@@ -232,4 +232,5 @@
  {"Artículo":269, "Descripción":"JABON CLORHEXIDINA X1L", "Venta":"16,28", "Descuento":"0", "Inventario":"1", "Categoria":"ESPUMAS Y LIMPIEZA", "BAlterna":"", "Marca":"OTRAS", "Favoritos":"-45446,8077662037", "DOLAR":"1225"},
  {"Artículo":270, "Descripción":"PIGMENTOS SET CAMOUFLAJE EXTREME X1OZ", "Venta":"16,61", "Descuento":"0", "Inventario":"2", "Categoria":"PIGMENTOS", "BAlterna":"", "Marca":"EXTREME", "Favoritos":"-45446,8193518519", "DOLAR":"1225"},
  {"Artículo":271, "Descripción":"PIGMENTOS SET GRISES EXTREME X1OZ 7 TONOS", "Venta":"16,61", "Descuento":"0", "Inventario":"2", "Categoria":"PIGMENTOS", "BAlterna":"", "Marca":"EXTREME", "Favoritos":"-45446,8117939815", "DOLAR":"1225"},
- {"Artículo":272, "Descripción":"ENVASE FRAZCO 8OZ COMPLETO ", "Venta":"1,56", "Descuento":"0", "Inventario":"9", "Categoria":"ENVASES", "BAlterna":"", "Marca":"OTRAS", "Favoritos":"-45457,5275578704", "DOLAR":"1225"}]
+ {"Artículo":272, "Descripción":"ENVASE FRAZCO 8OZ COMPLETO ", "Venta":"1,56", "Descuento":"0", "Inventario":"9", "Categoria":"ENVASES", "BAlterna":"", "Marca":"OTRAS", "Favoritos":"-45457,5275578704", "DOLAR":"1225"},
+ {"Artículo":273, "Descripción":"AGUJAS CAJA X50U PREMIUM", "Venta":"12,66", "Descuento":"0", "Inventario":"5", "Categoria":"AGUJAS", "BAlterna":"", "Marca":"OTRAS", "Favoritos":"-45461,5263078704", "DOLAR":"1225"}]
