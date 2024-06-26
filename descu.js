@@ -1,6 +1,7 @@
 
 
-import { datos } from './jADatos.js';
+//import { datos } from './jADatos.js'; SACAMOS ESTE Y PROBAMOS CON EL FETCH
+import datos from './jADatos.js';
 
 export function porDeDescuento(){
 //EN EL SIGUIENTE CODIGO VEMOS LA ID DE IMAGEN Y AGREGAMOS AVISO DE DESCUENTO CORRESPONDIENTE AL PRODUCTO

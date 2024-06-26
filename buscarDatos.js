@@ -1,4 +1,5 @@
-import { datos } from './jADatos.js';
+//import { datos } from './jADatos.js'; SACAMOS ESTE Y PROBAMOS CON EL FETCH
+import datos from './jADatos.js';
 
 //buscamos el id y ponemos el titulo
 export function buscarId(id) {

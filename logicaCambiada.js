@@ -1,7 +1,9 @@
 //importamos los modulos y variables a ser utilizados
 
 //datos carga el Json en variable (datos)
-import { datos } from './jADatos.js';
+import  data from './jADatos.js';
+const datos = Array.from(data);
+
 //mBotones muestra los botones Agregar al carrito con movimiento
 import * as mBotones from './mBotones.js';
 //alertas muestras las alertas!
@@ -126,6 +128,80 @@ function MostrarEnCatalogo(datos, contenedorId) {
   fragmento2.appendChild(clone2);
   return fragmento2
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function MostrarEnCatalogo(datos, contenedorId) {
+//   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
+//   template.querySelector('.esteSi').setAttribute("id", contenedorId);
+
+//   var imageId = `gimg-${contenedorId}-${datos.Artículo}`;
+
+//   // Crear la nueva imagen y comprobar si existe
+//   var img = new Image();
+//   img.src = `./imgcarrito/${datos.Artículo}.jpg`;
+
+//   img.onload = function() {
+//     // La imagen existe, asignamos la ruta a la imagen en el DOM
+//     template2.querySelector("img").setAttribute("src", `./imgcarrito/${datos.Artículo}.jpg`);
+//   console.log("se encontro imagen "+ datos.Artículo)
+  
+//   };
+
+//   img.onerror = function() {
+//     // La imagen no existe, asignamos la ruta a la imagen predeterminada
+//     template2.querySelector("img").setAttribute("src", "./imgcarrito/IMGND.jpeg");
+//     console.log(" no se encontro imagen "+ datos.Artículo)
+
+//   };
+
+//   template2.querySelector("img").setAttribute("id", imageId);
+//   template2.querySelector("h5").textContent = (datos.Descripción);
+//   template2.querySelector("p").textContent = (datos.Inventario) + " unidades disponibles";
+//   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
+//   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
+//   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+//   template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
+//   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+//   precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+
+//   template2.querySelector("small").textContent = "$" + precioCatalogo;
+
+//   template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
+
+//   //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
+
+//   let clone2 = document.importNode(template2, true);
+//   fragmento2.appendChild(clone2);
+//   return fragmento2
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //llamamos a la inicializacion de itemCarrito y luego actualizamos
@@ -315,7 +391,7 @@ function llamaMostDescuentos() {
 
   } else {
     // El elemento no fue encontrado
-    console.log("No se encontró ningún elemento con la clase 'caca'");
+    console.log("A CONTINUACION SE CARGA CATALOGO");
 
     //si aun no se ingreso los ingresa
     if (flagMostrarDescuentos == false) {
