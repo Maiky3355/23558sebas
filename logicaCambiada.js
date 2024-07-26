@@ -82,6 +82,52 @@ let flagMostrarDescuentos = false;
 // }
 
 
+
+
+
+//este es para poner imagen si no estala imagen
+// var img = new Image();
+// img.src = `./imgcarrito/${datos.Artículo}.jpg`;
+
+// if  (img.src.includes(img.src))  {
+
+// contenedorId = 0;
+
+//   // La imagen existe, asignamos la ruta a la imagen en el DOM
+//    let imgn= (datos.Artículo);
+
+//    fragmento2 = MostrarEnCatalogo(datos, contenedorId, imgn);
+//   console.log("se encontro imagen "+ datos.Artículo)
+
+
+// } else
+
+// {
+//   // La imagen no existe, asignamos la ruta a la imagen predeterminada
+//  contenedorId = 0;
+
+  
+//    let imgn="IMGND";
+//    fragmento2 = MostrarEnCatalogo(datos, contenedorId, imgn);
+
+//   console.log(" no se encontro imagen "+ datos.Artículo)
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //cargamos los template del html y creamos los fragmentos
 let template = document.getElementById("contTemplate").content;
 let fragmento = document.createDocumentFragment();
@@ -416,8 +462,11 @@ let contenedorId = 0;
 datos.forEach((datos) => {
   if (datos.Inventario >= 1 && datos.Descuento == 0) {
     //mostramos los datos en el catalogo!!! <--------------------------------------------------
+   let imgn=comprobarImagen(datos)
+   console.log(imgn)
     contenedorId = 0
-    fragmento2 = MostrarEnCatalogo(datos, contenedorId);
+  
+    fragmento2 = MostrarEnCatalogo(datos, contenedorId,imgn);
   }
   mBotones.mostrarBotones();
 });
@@ -872,3 +921,58 @@ subirScroll.crearBotonScroll();
 
 //llamamos a la funcion para mostrar el % de descuento correspondiente
 descu.porDeDescuento();
+
+
+
+
+
+
+
+function comprobarImagen(datos) {
+  // Ruta de la imagen que quieres comprobar
+  let imagePath = "./imgcarrito/" + datos.Artículo + ".jpg";
+
+  let finalImagePath;
+
+  // Comprobar si la imagen existe
+  return checkImageExists(imagePath)
+    .then(() => {
+      console.log('La imagen existe en el directorio');
+      finalImagePath = imagePath;
+      return finalImagePath;
+    })
+    .catch(() => {
+      console.log('La imagen no se encuentra en el directorio');
+      finalImagePath = "./imgcarrito/IMGND.jpg";
+      return finalImagePath;
+    });
+}
+
+function checkImageExists(path) {
+  return new Promise((resolve, reject) => {
+    // Usar la API de Entrada de Archivos si está disponible
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+      fetch(path)
+        .then((response) => {
+          if (response.ok) {
+            resolve();
+          } else {
+            reject();
+          }
+        })
+        .catch(() => {
+          reject();
+        });
+    } else {
+      // Usar una alternativa adecuada para la plataforma
+      reject();
+    }
+  });
+}
+
+
+
+
+
+
+//funcion para comprobar si la imagen existe

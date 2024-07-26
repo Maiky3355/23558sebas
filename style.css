@@ -279,7 +279,8 @@ section h4 {
 .card-body {
   width: 100%;
   /* Establece el ancho deseado para la imagen */
-  height: 220px;
+  /* height: 220px; cambio a 300 para que sea mas chico y aparezcan mejor de a 2 tarjetas*/
+  height: 300px;
   /* Establece la altura deseada para el contenedor */
   object-fit: contain;
   /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
