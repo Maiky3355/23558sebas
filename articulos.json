@@ -155,7 +155,7 @@
  {"Artículo":188, "Descripción":"MAQUINA IMPORTADA NEGRA Y GRIS", "Venta":"21,7894736842105", "Descuento":"0", "Inventario":"0", "Categoria":"MAQUINAS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":189, "Descripción":"OFERTA", "Venta":"0,3", "Descuento":"0", "Inventario":"-63", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":190, "Descripción":"CUBRE MAQUINA X250U", "Venta":"3,56", "Descuento":"0", "Inventario":"0", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
- {"Artículo":191, "Descripción":"CARTUCHOS SPARK X20U", "Venta":"12,09", "Descuento":"0", "Inventario":"931", "Categoria":"CARTUCHOS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
+ {"Artículo":191, "Descripción":"CARTUCHOS SPARK X20U", "Venta":"13,77", "Descuento":"0,05", "Inventario":"931", "Categoria":"CARTUCHOS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":192, "Descripción":"CUBRE MAQUINA PEN X100U", "Venta":"3,12", "Descuento":"0", "Inventario":"10", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":193, "Descripción":"MAQUINITAS DE AFEITAR UNIDAD X1U", "Venta":"0,45", "Descuento":"0", "Inventario":"71", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":194, "Descripción":"PIGMENTO KLUG V3 1OZ", "Venta":"7,81", "Descuento":"0", "Inventario":"18", "Categoria":"PIGMENTOS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
