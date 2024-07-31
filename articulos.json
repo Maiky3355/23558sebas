@@ -1,240 +1,3602 @@
-[{"Art√≠culo":1, "Descripci√≥n":"PIGMENTO HARBOR 1OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"4,5", "Descuento":"0", "Inventario":"263", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"TINTA SUBLIME", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45453,5190162037", "DOLAR":"1340", "F18":"0"},
- {"Art√≠culo":2, "Descripci√≥n":"TETINAS CHICAS X100 35grs", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,4", "Descuento":"0", "Inventario":"794", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"CUPS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6045023148", "DOLAR":"1340", "F18":"9 mas 70"},
- {"Art√≠culo":3, "Descripci√≥n":"AGUJAS CAJA X50", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11,63", "Descuento":"0", "Inventario":"427", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"AGUJAS", "MSTOCK":0, "BAlterna":"AGUJAS", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45461,5226388889", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":4, "Descripci√≥n":"AGUJAS BLISTER X5U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,04", "Descuento":"0", "Inventario":"134", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"AGUJAS", "MSTOCK":0, "BAlterna":"BLISTER AGUJAS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8808449074", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":5, "Descripci√≥n":"TETINAS MEDIANAS X100 59grs", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,9", "Descuento":"0", "Inventario":"887", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"CUPS M", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45481,5931134259", "DOLAR":"1340", "F18":"9 mas 70"},
- {"Art√≠culo":6, "Descripci√≥n":"TETINAS GRANDES X100 95grs", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,4", "Descuento":"0", "Inventario":"972", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"CUPS G", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6046180556", "DOLAR":"1340", "F18":"9 mas 70"},
- {"Art√≠culo":8, "Descripci√≥n":"TIPS COMUNES X50", "Unidad":"Pieza", "Compra":"2,13", "Venta":"3,38947368421053", "Descuento":"0", "Inventario":"565", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"TIPS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8198263889", "DOLAR":"1340", "F18":"0"},
- {"Art√≠culo":9, "Descripci√≥n":"DESCARTADOR X2L", "Unidad":"Pieza", "Compra":"1,64", "Venta":"3,28", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"PATOGENOS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8165509259", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":10, "Descripci√≥n":"VASELINA X1KG", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"VASELINA KILO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8198726852", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":11, "Descripci√≥n":"ANESTESIA TKTX 40% 10G VARIOS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"5,7", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"TKTX", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6037152778", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":12, "Descripci√≥n":"ENVASE PIZETA BOMBA VACIO X500ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"PIZETA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6033333333", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":13, "Descripci√≥n":"PUNTERA DESCARTABLE NYN 25MM X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,65", "Descuento":"0", "Inventario":"7990", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"PUNTERA NYN", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5097337963", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":14, "Descripci√≥n":"CAMPOS COMPRESAS X100U", "Unidad":"Pieza", "Compra":"2,61", "Venta":"4,31", "Descuento":"0", "Inventario":"9", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"COMPRESAS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7688078704", "DOLAR":"1340", "F18":"65"},
- {"Art√≠culo":15, "Descripci√≥n":"ESPUMA ELEPHAT X160ML", "Unidad":"Pieza", "Compra":"4,93", "Venta":"6.90", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"ESPUMA LIMPIEZA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45471,5092361111", "DOLAR":"1340", "F18":"40"},
- {"Art√≠culo":16, "Descripci√≥n":"DILUYENTE SUBLIME X3OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DILUYENTES", "MSTOCK":0, "BAlterna":"DILUYENTE SUBLIME", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45436,6924652778", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":18, "Descripci√≥n":"STENCIL SUBLIME 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"STENCIL SUBLIME", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6558449074", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":19, "Descripci√≥n":"BAJA LENGUAS ADULTO X100", "Unidad":"Pieza", "Compra":"0,49", "Venta":"1,96", "Descuento":"0", "Inventario":"17", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"PALITOS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"300"},
- {"Art√≠culo":20, "Descripci√≥n":"CINTA TIPO COBAN 5CM", "Unidad":"Pieza", "Compra":"0,9", "Venta":"1,8", "Descuento":"0", "Inventario":"124", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"CINTA CUBRE GRIP", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7690393519", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":21, "Descripci√≥n":"ANESTESIA NOPAIN LIDOCAINA X3OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"NOPAIN", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6621759259", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":22, "Descripci√≥n":"CARTUCHOS BLUE INK CAJA X10", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11,0036842105263", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"CARTUCHOS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8355439815", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":23, "Descripci√≥n":"STENCIL ELEPHANT BLANCO X125CC", "Unidad":"Pieza", "Compra":"0,01", "Venta":"5,9", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"STENCIL ELEPHANT C", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45468,5907291667", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":24, "Descripci√≥n":"STENCIL ELEPHANT NEGRO X200CC", "Unidad":"Pieza", "Compra":"5,05", "Venta":"7,9", "Descuento":"0", "Inventario":"8", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"STENCIL ELEPHANT G", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45468,5909375", "DOLAR":"1340", "F18":"56"},
- {"Art√≠culo":25, "Descripci√≥n":"PUNTERA IMPORTADA 19MM X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,65", "Descuento":"0", "Inventario":"9936", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"PUNTERAS 19MM", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5098842593", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":26, "Descripci√≥n":"TETINAS CHICAS X1000U", "Unidad":"Pieza", "Compra":"5,15", "Venta":"7,52", "Descuento":"0", "Inventario":"947", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"TETINAS CHICAS X1000", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6089583333", "DOLAR":"1340", "F18":"46"},
- {"Art√≠culo":27, "Descripci√≥n":"TETINAS MEDIANAS X1000U", "Unidad":"Pieza", "Compra":"6,64", "Venta":"10,23", "Descuento":"0", "Inventario":"978", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"TETINAS MEDIANAS X1000", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6090856481", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":28, "Descripci√≥n":"TETINAS GRANDES X1000U", "Unidad":"Pieza", "Compra":"8,20", "Venta":"12,79", "Descuento":"0", "Inventario":"993", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"TETINAS GRANDES X1000", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,609224537", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":29, "Descripci√≥n":"BANDITAS ELASTICAS X50U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,9", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"GOMITAS ELASTICAS X50", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"0"},
- {"Art√≠culo":31, "Descripci√≥n":"FILM ROLLO 38CM GRANDE", "Unidad":"Pieza", "Compra":"1,87", "Venta":"4,74", "Descuento":"0,1", "Inventario":"39", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"FILM ADHERENTE X100", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45481,7412384259", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":33, "Descripci√≥n":"ADAPTADOR CARTUCHO ALUMINIO GENERICO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"GRIPS Y ADAPTADORES", "MSTOCK":0, "BAlterna":"ADAPTADOR CARTUCHO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6100231481", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":34, "Descripci√≥n":"CUBRE CABLES X10U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,837280701794737", "Descuento":"0", "Inventario":"857", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"CUBRE CLIP X10", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":35, "Descripci√≥n":"CUBRE CABLES X100", "Unidad":"Pieza", "Compra":"1,56", "Venta":"3,12", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"CUBRE CLIP X100", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":36, "Descripci√≥n":"CLIP CORD SILICONADO IMPORTADO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"8,4", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"CLIP CORD", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6528472222", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":37, "Descripci√≥n":"CABLE RCA SUBLIME ECONOMICO", "Unidad":"Pieza", "Compra":"4,66", "Venta":"5,83", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"RCA ECONOMICO", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6561458333", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":39, "Descripci√≥n":"NIPPLES X10U", "Unidad":"Pieza", "Compra":"0,75", "Venta":"1", "Descuento":"0", "Inventario":"908", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"NIPPLES X10", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,833599537", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":40, "Descripci√≥n":"NIPPLES X100U", "Unidad":"Pieza", "Compra":"1,82", "Venta":"3", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"NIPPLES X100", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5453240741", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":41, "Descripci√≥n":"CINTA HIPOALERGENICA X1U", "Unidad":"Pieza", "Compra":"0,46", "Venta":"0,74", "Descuento":"0", "Inventario":"917", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"CINTA HIPOALERGENICA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8334143519", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":42, "Descripci√≥n":"PAPEL HECTOGRAFICO X1U", "Unidad":"Pieza", "Compra":"0,29", "Venta":"0,95", "Descuento":"0", "Inventario":"8858", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"HOJA HECTOGRAFICO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45453,7399768519", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":43, "Descripci√≥n":"PIGMENTO HARBOR BLANCO 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"TINTA SUBLIME BLANCA 4OZ", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,8332986111", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":44, "Descripci√≥n":"PIGMENTO HARBOR NEGRO 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"TINTA SUBLIME NEGRA 4OZ", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,761123", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":45, "Descripci√≥n":"COMBO PIGMENTOS SUBLIME 2X 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"COMBO TINTAS SUBLIME 2X 4OZ", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":46, "Descripci√≥n":"MAQUINA IMPORTADA CHINA ECONOMICA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"23,56", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"MAQUINA BOBINAS CHICA ECONOMICA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45394,7245601852", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":47, "Descripci√≥n":"MAQUINA BISHOP GENERICA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"30,13", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"BISHOP GENERICA", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45461,6665856481", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":48, "Descripci√≥n":"MAQUINA PEN AFRODITA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"94,5370613994737", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"PEN AFRODITA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":49, "Descripci√≥n":"MAQUINA ROTATIVA ECONOMICA PLASTICA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"25,0225877152632", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"ROTATIVA ECONOMICA PLASTICA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8342476852", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":51, "Descripci√≥n":"PEDAL ACRILICO SUBLIME", "Unidad":"Pieza", "Compra":"0,01", "Venta":"7,35", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"PEDAL SUBLIME", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6631597222", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":52, "Descripci√≥n":"PEDAL CHAPA NEGRO IMPORTADO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11,4", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"PEDAL CHAPA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,536400463", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":53, "Descripci√≥n":"PUNTERAS NYN CAJA X50U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"CAJA PUNTERAS NYN", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"24/11/2023 09:09:14 p.m.", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":54, "Descripci√≥n":"JABON CLORHEXIDINA X500ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"JABON CLORHEXIDINA X500", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8167592593", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":55, "Descripci√≥n":"REPUESTO MARTILLO NACIONAL PAVONADO", "Unidad":"Pieza", "Compra":"2,17", "Venta":"3,84", "Descuento":"0", "Inventario":"994", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"MARTILLO NACIONAL", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,60875", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":56, "Descripci√≥n":"REPUESTO TORNILLO DE CONTACTO NACIONAL", "Unidad":"Pieza", "Compra":"6,64", "Venta":"4,95", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"TORNILLO NACIONAL DEL CONTACTO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7241087963", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":57, "Descripci√≥n":"REPUESTO TORNILLO DE CONTACTO IMPORTADO", "Unidad":"Pieza", "Compra":"6,64", "Venta":"3,34", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"TORNILLO IMPORTADO DE CONTACTO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6070949074", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":59, "Descripci√≥n":"PUNTERA 25MM IMPORTADA X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,65", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"PUNTERA 25MM X1U", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5098148148", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":60, "Descripci√≥n":"PUNTERA 30MM IMPORTADA X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,65", "Descuento":"0", "Inventario":"934", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"PUNTERA 30MM IMPORTADA", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45328,5099652778", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":61, "Descripci√≥n":"REPUESTO JUEGO DE FLEJES UNIVERSALES", "Unidad":"Pieza", "Compra":"1,19", "Venta":"2,51", "Descuento":"0", "Inventario":"907", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"JUEGO FLEJES", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6109259259", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":62, "Descripci√≥n":"PUNTERA + AGUJA NYN X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,03", "Descuento":"0", "Inventario":"7133", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"AGUJAS", "MSTOCK":0, "BAlterna":"AGUJA CON PUNTERA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6062384259", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":64, "Descripci√≥n":"LLAVES ALLEN KIT", "Unidad":"Pieza", "Compra":"0,56", "Venta":"1,12", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"juego allen", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8359837963", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":65, "Descripci√≥n":"AGUJA SUELTA X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,58", "Descuento":"0", "Inventario":"9640", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"AGUJAS", "MSTOCK":0, "BAlterna":"AGUJA SUELTA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8359490741", "DOLAR":"1340", "F18":"40"},
- {"Art√≠culo":66, "Descripci√≥n":"REPUESTO ORRINGS X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,5", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"orrings", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6617013889", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":67, "Descripci√≥n":"MAQUINA PEN SUBLIME V3 RCA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"22,37", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"PEN SUBLIME V2", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,8781597222", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":68, "Descripci√≥n":"CAPACITOR 47UF X50V X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,84", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"CAPACITOR", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6085648148", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":69, "Descripci√≥n":"lapiz hipoalergenico", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"lapiz hectografico", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6596759259", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":71, "Descripci√≥n":"TIP ACERO", "Unidad":"Pieza", "Compra":"1,12", "Venta":"2,24", "Descuento":"0", "Inventario":"91", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"TIP ACERO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8358796296", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":73, "Descripci√≥n":"PIGMENTO 1OZ PROMO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,73245613994737", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"NEGRO OFERTA", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45254,8611342593", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":74, "Descripci√≥n":"ARREGLO SERVICE", "Unidad":"Pieza", "Compra":"0,01", "Venta":"6,6", "Descuento":"0", "Inventario":"-1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"ARREGLO", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45483,738587963", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":75, "Descripci√≥n":"AGUJAS CAJA SURTIDA X50U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"14,82", "Descuento":"0", "Inventario":"907", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"AGUJAS", "MSTOCK":0, "BAlterna":"AGUJAS SURTIDAS", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8180787037", "DOLAR":"1340", "F18":"30"},
- {"Art√≠culo":76, "Descripci√≥n":"MINI FUENTE 3 AMP NACIONAL 1 MAQUINA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"FUNTE MINI 1 MAQUINA", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,8193055556", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":78, "Descripci√≥n":"PUNTERAS NYN CAJA X25U", "Unidad":"Pieza", "Compra":"11,12", "Venta":"14,46", "Descuento":"0", "Inventario":"9975", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"NYN X25", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5027430556", "DOLAR":"1340", "F18":"30"},
- {"Art√≠culo":79, "Descripci√≥n":"MORZA PUNTERA PARA MAQUINA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"MORZA MAQUINA", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":80, "Descripci√≥n":"FUENTE NACIONAL SUBLIME 1 MAQUINA 3 AMP", "Unidad":"Pieza", "Compra":"0,01", "Venta":"37,2", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"1 MAQUINA 3 AMP", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45394,7239467593", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":82, "Descripci√≥n":"CARTUCHOS SUELTOS X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,22", "Descuento":"0", "Inventario":"8515", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"CARTUCHOS X1U", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8688425926", "DOLAR":"1340", "F18":"30"},
- {"Art√≠culo":84, "Descripci√≥n":"CARTUCHOS DRAGONFLY YELLOW X20U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"17,2", "Descuento":"0", "Inventario":"30", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6658564815", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":87, "Descripci√≥n":"MOTOR 5 A 9V", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,9", "Descuento":"0", "Inventario":"996", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8165972222", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":88, "Descripci√≥n":"APOYA BRAZOS CA\u00d1O REDONDO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"38,56", "Descuento":"0,1", "Inventario":"5", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45477,5278125", "DOLAR":"1340", "F18":"41"},
- {"Art√≠culo":89, "Descripci√≥n":"CLIP CORD ECONOMICO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"6,00", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6531944444", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":90, "Descripci√≥n":"MAQUINA ALLIEN HEAD ROTATIVA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"25,0225877152632", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":91, "Descripci√≥n":"ESPUMA SECRET X160ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"5", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,8055555556", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":93, "Descripci√≥n":"STENCIL LA VIRGEN X4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6552546296", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":94, "Descripci√≥n":"VASELINA X900GRS", "Unidad":"Pieza", "Compra":"5,15", "Venta":"8,24", "Descuento":"0", "Inventario":"9", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8191087963", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":95, "Descripci√≥n":"DILUYENTE LA VIRGEN 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,28", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DILUYENTES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6725347222", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":96, "Descripci√≥n":"PIGMENTO LA VIRGEN BLANCO 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5413541667", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":97, "Descripci√≥n":"PIGMENTO LA VIRGEN NEGRO 4OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45477,5313078704", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":100, "Descripci√≥n":"FUENTE 3 AMP 1 MAQUINA DIGITAL", "Unidad":"Pieza", "Compra":"0,01", "Venta":"43,5063157894737", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":102, "Descripci√≥n":"ENVASE FRAZCO 1 OZ COMPLETO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1", "Descuento":"0", "Inventario":"979", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6072569444", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":103, "Descripci√≥n":"FUENTE SUBLIME NACIONAL 2.5AMP MINI", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,8349305556", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":107, "Descripci√≥n":"BUTTER OLD SCHOOL COMUN X250G oferta", "Unidad":"Pieza", "Compra":"2,61", "Venta":"2", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":108, "Descripci√≥n":"AGUA INYECTABLE X500", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,42105263157895", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":110, "Descripci√≥n":"MAQUINA PEN ECONOMICA IMPORTADA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"75,0728070215789", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":111, "Descripci√≥n":"PUNTERAS IMPORTADAS CAJA 19MM X30U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11,66", "Descuento":"0", "Inventario":"9952", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5024652778", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":112, "Descripci√≥n":"PUNTERAS IMPORTADAS CAJA 30MM X15U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"11,66", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5029398148", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":114, "Descripci√≥n":"VASOS DESCARTABLES X50", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,51315789473684", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":116, "Descripci√≥n":"PIGMENTO HARBOR 8OZ ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"14,8894736842105", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":119, "Descripci√≥n":"STENCIL ELEPHANT VIOLETA 70CC", "Unidad":"Pieza", "Compra":"2,06", "Venta":"3,71", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7693981482", "DOLAR":"1340", "F18":"80"},
- {"Art√≠culo":120, "Descripci√≥n":"JABON CLORHEXIDINA X250ML 4%", "Unidad":"Pieza", "Compra":"3,35", "Venta":"4,69", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"40"},
- {"Art√≠culo":122, "Descripci√≥n":"DILUYENTE SUBLIME 1OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DILUYENTES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6076041667", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":123, "Descripci√≥n":"DILUYENTE SUBLIME 4 OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,28", "Descuento":"0,1", "Inventario":"49", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DILUYENTES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45442,628912037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":124, "Descripci√≥n":"MAQUINA PEN SUBLIME PORTATIL", "Unidad":"Pieza", "Compra":"0,01", "Venta":"53,03", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45485,7243287037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":125, "Descripci√≥n":"REVISTA ECONOMICA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,51315789473684", "Descuento":"0", "Inventario":"5", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":126, "Descripci√≥n":"CARTUCHOS SURTIDOS DRAGON X20U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"18,97", "Descuento":"0", "Inventario":"878", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"CARTUCHOS SURTIDOS X20", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"20"},
- {"Art√≠culo":127, "Descripci√≥n":"COMBO CAJA AGUJAS + TIPS MISMA MEDIDA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8188541667", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":128, "Descripci√≥n":"MAQUINA PEN SUBLIME PORTATIL + CARTUCHOS SURTIDOS X20", "Unidad":"Pieza", "Compra":"0,01", "Venta":"119,842105263158", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45254,8188194444", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":129, "Descripci√≥n":"PAPEL HECTOGRAFICOS X10", "Unidad":"Pieza", "Compra":"2,69", "Venta":"7,5", "Descuento":"0", "Inventario":"20", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6651736111", "DOLAR":"1340", "F18":"145.6"},
- {"Art√≠culo":130, "Descripci√≥n":"OFERTA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,05315789473684", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":132, "Descripci√≥n":"CREMA CUIDADO ELEPHANT POST TATTOO", "Unidad":"Pieza", "Compra":"1,04", "Venta":"1,56", "Descuento":"0", "Inventario":"22", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CREMAS DE CUIDADO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6648726852", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":134, "Descripci√≥n":"MAQUINA CUSTOM IMPORTADA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"36,31", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45356,7072453704", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":135, "Descripci√≥n":"CREMA CUIDADO ELEPHANT REVENDEDOR 10 UNIDADES", "Unidad":"Pieza", "Compra":"10,40", "Venta":"13,52", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CREMAS DE CUIDADO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"30"},
- {"Art√≠culo":136, "Descripci√≥n":"PIGMENTO DYNAMIC 8OZ", "Unidad":"Pieza", "Compra":"32,84", "Venta":"39,4", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"33"},
- {"Art√≠culo":137, "Descripci√≥n":"BUTTER OLD SCHOOL MIEL X250G", "Unidad":"Pieza", "Compra":"2,99", "Venta":"4,71", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8180439815", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":138, "Descripci√≥n":"BUTTER OLD SCHOOL ALOE X150G oferta", "Unidad":"Pieza", "Compra":"2,61", "Venta":"2", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,8610416667", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":139, "Descripci√≥n":"BUTTER OLD SCHOOL COCO X250G", "Unidad":"Pieza", "Compra":"2,83", "Venta":"4,5", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":140, "Descripci√≥n":"REMOVEDOR HECTOGRAFICO OLD SCHOOL", "Unidad":"Pieza", "Compra":"2,32", "Venta":"3,75", "Descuento":"0,25", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45502,5072569444", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":141, "Descripci√≥n":"CONVERTIDOR 2 MAQUINAS SUBLIME", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":1, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"24/11/2023 09:08:21 p.m.", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":142, "Descripci√≥n":"10 hecto + elephant x200cc", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,653599537", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":144, "Descripci√≥n":"ENVASE FRAZCO 4 OZ COMPLETO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,3", "Descuento":"0", "Inventario":"997", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6123842593", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":145, "Descripci√≥n":"PIGMENTO HARBOR PALETA COMPLETA 1OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,59", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,560914", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":146, "Descripci√≥n":"WITCH HAZEL EXTREME X60ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,94", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45471,5083912037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":147, "Descripci√≥n":"ANESTESIA NOPAIN LIDOCAINA 1OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6127314815", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":148, "Descripci√≥n":"CAMPOS COMPRESAS NEGRAS X50U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"4,97", "Descuento":"0", "Inventario":"15", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5134953704", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":149, "Descripci√≥n":"FICHA PLUG ON OFF PEDAL", "Unidad":"Pieza", "Compra":"1,64", "Venta":"6", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,652662037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":150, "Descripci√≥n":"EXCENTRICO ROTATIVO NACIONAL", "Unidad":"Pieza", "Compra":"0,01", "Venta":"15,93", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6129976852", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":151, "Descripci√≥n":"KIT INICIAL ECO BOBINAS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"KIT BOBINAS ECO", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":152, "Descripci√≥n":"JABON CLOROXILENOL X250ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,89789473684211", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":153, "Descripci√≥n":"PIGMENTO EXTREME 2OZ NEGROS O BLANCO", "Unidad":"Pieza", "Compra":"3,57", "Venta":"6.78", "Descuento":"0", "Inventario":"29", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5341898148", "DOLAR":"1340", "F18":"90"},
- {"Art√≠culo":154, "Descripci√≥n":"PIGMENTO EXTREME 1OZ COLORES", "Unidad":"Pieza", "Compra":"1,79", "Venta":"3,58", "Descuento":"0,1", "Inventario":"15", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45453,5086689815", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":155, "Descripci√≥n":"ESPUMA EXTREME DETTOL X160ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"4,17631578947368", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":156, "Descripci√≥n":"ESPUMA EXTREME FOAM X160ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,61947368421053", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":157, "Descripci√≥n":"ESPUMA EXTREME FOAM X60ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,50578947368421", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":158, "Descripci√≥n":"BUTTER CLASIC EXTREME X900GRS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"9", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":159, "Descripci√≥n":"CUBRE MAQUINA X100", "Unidad":"Pieza", "Compra":"0,82", "Venta":"2,05", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"150"},
- {"Art√≠culo":160, "Descripci√≥n":"CAMPOS COMPRESAS NEGROS X25U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":161, "Descripci√≥n":"GUANTES LATEX CAJA X100U", "Unidad":"Pieza", "Compra":"1,87", "Venta":"6,71", "Descuento":"0", "Inventario":"950", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":162, "Descripci√≥n":"FUENTE HARBOR NACIONAL 3 AMPERS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"43,36", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45461,6670833333", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":163, "Descripci√≥n":"GUANTES NITRILO NEGROS X100U", "Unidad":"Pieza", "Compra":"5,15", "Venta":"8,24", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5486342593", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":164, "Descripci√≥n":"MAQUINA PEN AFRODITA VENUS NEGRA Y ROJA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8185763889", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":165, "Descripci√≥n":"CAPACITOR CELESTE 47 X 63V", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,96", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,613287037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":166, "Descripci√≥n":"MAQUINA PEN IMPORTADA TATTOO ARTIST", "Unidad":"Pieza", "Compra":"0,01", "Venta":"80,86", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45342,8150810185", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":167, "Descripci√≥n":"EXCENTRICO PEN NACIONAL", "Unidad":"Pieza", "Compra":"0,01", "Venta":"12,39", "Descuento":"0", "Inventario":"49", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"REPUESTOS MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6077314815", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":168, "Descripci√≥n":"CABLE RCA IMPORTADO FLEXIBLE", "Unidad":"Pieza", "Compra":"0,01", "Venta":"8,4", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6524768519", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":169, "Descripci√≥n":"CABLE DC NACIONAL", "Unidad":"Pieza", "Compra":"9,96", "Venta":"6,67", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CABLES FICHAS Y PEDALES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"-45435,6527314815", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":170, "Descripci√≥n":"CARTUCHOS ELITE X20U TODAS LAS MEDIDAS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"23,01", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6660300926", "DOLAR":"1340", "F18":"65"},
- {"Art√≠culo":171, "Descripci√≥n":"SPRAY SECRET POST TATTOO X60ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CREMAS DE CUIDADO", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":172, "Descripci√≥n":"SPRAY SECRET POST TATTOO X10U X60ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CREMAS DE CUIDADO", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":173, "Descripci√≥n":"STENCIL SECRET X100ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"-45435,6550462963", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":175, "Descripci√≥n":"BUTTER SECRET COMUN X225GRS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,99", "Descuento":"0,25", "Inventario":"11", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"-45442,6293634259", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":176, "Descripci√≥n":"PIERCING ARITO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,4", "Descuento":"0", "Inventario":"-4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":177, "Descripci√≥n":"WITCH HAZEL SECRET X300ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,97", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"-45470,5450925926", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":178, "Descripci√≥n":"STENCIL OLD SCHOOL X125ML", "Unidad":"Pieza", "Compra":"2,54", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6549305556", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":179, "Descripci√≥n":"PIGMENTOS SET PIEL EXTREME X1OZ 7 TONOS", "Unidad":"Pieza", "Compra":"10,38", "Venta":"16,61", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"EXTREME", "UAlmac√©n":"", "Favoritos":"-45435,6655671296", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":180, "Descripci√≥n":"BUTTER MOTHER CARE X200ML VARIOS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,9", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"EXTREME", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":181, "Descripci√≥n":"BUTTER OLD SCHOOL MINT X150GRS", "Unidad":"Pieza", "Compra":"3,10", "Venta":"4,65", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":182, "Descripci√≥n":"PIGMENTOS SET PASTEL EXTREME X2OZ 7 TONOS", "Unidad":"Pieza", "Compra":"10,38", "Venta":"16,61", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"EXTREME", "UAlmac√©n":"", "Favoritos":"-45468,5926157407", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":183, "Descripci√≥n":"BUTTER X 50GRS ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,02894736842105", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":185, "Descripci√≥n":"WITCH HAZEL HARBOR X125ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,15", "Descuento":"0", "Inventario":"30", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"HARBOR", "UAlmac√©n":"", "Favoritos":"-45470,5419675926", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":186, "Descripci√≥n":"JABON LIQUIDO SECRET X 125ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,5", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"-45470,5421990741", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":187, "Descripci√≥n":"PIGMENTO MGC COLOR X6OZ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"7", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"EXTREME", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":188, "Descripci√≥n":"MAQUINA IMPORTADA NEGRA Y GRIS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"21,7894736842105", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":189, "Descripci√≥n":"OFERTA", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,3", "Descuento":"0", "Inventario":"-63", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,521099537", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":190, "Descripci√≥n":"CUBRE MAQUINA X250U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"3,56", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6145486111", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":191, "Descripci√≥n":"CARTUCHOS SPARK X20U", "Unidad":"Pieza", "Compra":"8,06", "Venta":"12,09", "Descuento":"0,05", "Inventario":"931", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7814814815", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":192, "Descripci√≥n":"CUBRE MAQUINA PEN X100U", "Unidad":"Pieza", "Compra":"1,56", "Venta":"3,12", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":193, "Descripci√≥n":"MAQUINITAS DE AFEITAR UNIDAD X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,45", "Descuento":"0", "Inventario":"71", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5271990741", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":194, "Descripci√≥n":"PIGMENTO KLUG V3 1OZ", "Unidad":"Pieza", "Compra":"4,11", "Venta":"7,81", "Descuento":"0", "Inventario":"18", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7873842593", "DOLAR":"1340", "F18":"90"},
- {"Art√≠culo":195, "Descripci√≥n":"CARTUCHOS CARBON X10U", "Unidad":"Pieza", "Compra":"7,08", "Venta":"10,62", "Descuento":"0", "Inventario":"857", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5585185185", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":196, "Descripci√≥n":"PIEL SINTETICA CHICA 15X20CM", "Unidad":"Pieza", "Compra":"1,46", "Venta":"2,34", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7599652778", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":197, "Descripci√≥n":"PIGMENTO KLUG V3 4OZ", "Unidad":"Pieza", "Compra":"8,58", "Venta":"14,9", "Descuento":"0", "Inventario":"6", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7875", "DOLAR":"1340", "F18":"74"},
- {"Art√≠culo":198, "Descripci√≥n":"ENVASE ROCIADOR SPRAY ALUMINIO X 350CC", "Unidad":"Pieza", "Compra":"1,49", "Venta":"2,98", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6568865741", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":199, "Descripci√≥n":"CARTUCHOS BRONC X20U", "Unidad":"Pieza", "Compra":"14,28", "Venta":"21,42", "Descuento":"0", "Inventario":"97", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8182175926", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":200, "Descripci√≥n":"CUBRE MAQUINA PEN X10U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0,786842105263158", "Descuento":"0", "Inventario":"969", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45254,8182986111", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":201, "Descripci√≥n":"ENVASE ROCIADOR SPRAY NEGRO X 250CC", "Unidad":"Pieza", "Compra":"0,97", "Venta":"1,94", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6567939815", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":202, "Descripci√≥n":"PIGMENTO EXCALIBUR 1OZ", "Unidad":"Pieza", "Compra":"1,49", "Venta":"2,01", "Descuento":"0", "Inventario":"28", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"440"},
- {"Art√≠culo":203, "Descripci√≥n":"ENVASE PIZETA PUNTA FIJA X250ML", "Unidad":"Pieza", "Compra":"1,31", "Venta":"2,79", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7692361111", "DOLAR":"1340", "F18":"110"},
- {"Art√≠culo":204, "Descripci√≥n":"ENVASE PIZETA PUNTA FIJA X500ML", "Unidad":"Pieza", "Compra":"1,86", "Venta":"3,72", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7900347222", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":205, "Descripci√≥n":"CUBRE PEN AUTO AJUSTABLE NEGROS", "Unidad":"Pieza", "Compra":"2,43", "Venta":"4,38", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"80"},
- {"Art√≠culo":206, "Descripci√≥n":"PIGMENTO EXCALIBUR 4OZ NEGRO O BLANCO", "Unidad":"Pieza", "Compra":"3,00", "Venta":"5,94", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5429861111", "DOLAR":"1340", "F18":"300"},
- {"Art√≠culo":207, "Descripci√≥n":"FUENTE PORTATIL ASSASSIN", "Unidad":"Pieza", "Compra":"0,01", "Venta":"61,4584210526316", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":208, "Descripci√≥n":"CARTUCHOS CARBON 25M Y 25RM X10U", "Unidad":"Pieza", "Compra":"7,28", "Venta":"11,00", "Descuento":"0", "Inventario":"5", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":209, "Descripci√≥n":"CARTUCHOS SPARK CAJA CERRADA x10u MEDIDA 45RM- 45M1", "Unidad":"Pieza", "Compra":"18,58", "Venta":"22,29", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5300925926", "DOLAR":"1340", "F18":"40"},
- {"Art√≠culo":210, "Descripci√≥n":"VASELINA MINT EXCALIBUR X250GRS", "Unidad":"Pieza", "Compra":"2,61", "Venta":"3,64", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":211, "Descripci√≥n":"DESCARTADOR X4L", "Unidad":"Pieza", "Compra":"2,61", "Venta":"5,22", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6155787037", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":213, "Descripci√≥n":"FUENTE TACTIL HARBOR", "Unidad":"Pieza", "Compra":"0,01", "Venta":"58,1052631578947", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"SUBLIME", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":214, "Descripci√≥n":"FUENTE PORTATIL BRONC", "Unidad":"Pieza", "Compra":"0,01", "Venta":"92,21", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45342,815625", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":215, "Descripci√≥n":"ADAPTADOR CARTUCHOS DESCARTABLES X1U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,15", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"GRIPS Y ADAPTADORES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45489,6348263889", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":216, "Descripci√≥n":"PIEL SINTETICA CHICA 15X20CM COLOR PIEL ", "Unidad":"Pieza", "Compra":"1,46", "Venta":"2,41", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":217, "Descripci√≥n":"ESPUMA OLD SCHOOL X60ML", "Unidad":"Pieza", "Compra":"3,07", "Venta":"4,86", "Descuento":"0,25", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45502,5055208333", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":218, "Descripci√≥n":"BUTTER B X50G (BUTTER ANESTESICO LIDOCAINA 20%) ", "Unidad":"Pieza", "Compra":"2,00", "Venta":"4,04", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"BUTTER", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":219, "Descripci√≥n":"CARTUCHOS SPARK BLISTER 5U", "Unidad":"Pieza", "Compra":"2,34", "Venta":"4,68", "Descuento":"0", "Inventario":"966", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":220, "Descripci√≥n":"JABON CLORHEXIDINA 2% DOYPACK X 220ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2", "Descuento":"0", "Inventario":"7", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7913078704", "DOLAR":"1340", "F18":"197"},
- {"Art√≠culo":221, "Descripci√≥n":"LOCION SECRET POST PIERCING", "Unidad":"Pieza", "Compra":"0,01", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"SECRET", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":222, "Descripci√≥n":"MAQUINA ALLIEN HEAD CLIP", "Unidad":"Pieza", "Compra":"0,01", "Venta":"25,0215789473684", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":223, "Descripci√≥n":"AGUA DE ROSAS EXCALIBUR", "Unidad":"Pieza", "Compra":"1,27", "Venta":"2,51", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DILUYENTES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5327893519", "DOLAR":"1340", "F18":"90"},
- {"Art√≠culo":224, "Descripci√≥n":"PIGMENTO DRAKKAR 1OZ", "Unidad":"Pieza", "Compra":"2,98", "Venta":"5,36", "Descuento":"0", "Inventario":"17", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7877430556", "DOLAR":"1340", "F18":"80"},
- {"Art√≠culo":227, "Descripci√≥n":"PIGMENTOS SET DRAKKAR CHICO 1/2OZ X16", "Unidad":"Pieza", "Compra":"27,39", "Venta":"36,12", "Descuento":"0,5", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,8384837963", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":228, "Descripci√≥n":"PIGMENTO 5 JINETES 1OZ", "Unidad":"Pieza", "Compra":"2,09", "Venta":"4,18", "Descuento":"0", "Inventario":"18", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5651388889", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":229, "Descripci√≥n":"VASELINA X500G", "Unidad":"Pieza", "Compra":"3,36", "Venta":"4,94", "Descuento":"0", "Inventario":"7", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"INSUMOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7696412037", "DOLAR":"1340", "F18":"47"},
- {"Art√≠culo":230, "Descripci√≥n":"CREMA CUIDADO INK PLAY POST TATTOO", "Unidad":"Pieza", "Compra":"1,86", "Venta":"2,42", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CREMAS DE CUIDADO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"30"},
- {"Art√≠culo":231, "Descripci√≥n":"CREMA CUIDADO INK PLAY REVENDEDOR 10 UNIDADES", "Unidad":"Pieza", "Compra":"18,6", "Venta":"22,32", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CREMAS DE CUIDADO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"20"},
- {"Art√≠culo":233, "Descripci√≥n":"MAQUINA PEN HARBOR PORTATIL BOTONES", "Unidad":"Pieza", "Compra":"0,01", "Venta":"73,47", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45391,7438888889", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":234, "Descripci√≥n":"GRIP ALUMINIO 35MM ", "Unidad":"Pieza", "Compra":"4,85", "Venta":"7,76", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PUNTERAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":235, "Descripci√≥n":"APOYA BRAZOS CA\u00d1O CUADRADO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"38,56", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45477,5276736111", "DOLAR":"1340", "F18":"41"},
- {"Art√≠culo":236, "Descripci√≥n":"GRIP ALUMINIO 20MM", "Unidad":"Pieza", "Compra":"2,61", "Venta":"4,70", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"GRIPS Y ADAPTADORES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6615046296", "DOLAR":"1340", "F18":"80"},
- {"Art√≠culo":237, "Descripci√≥n":"TETINAS CHICAS TARRO X300U COLORES", "Unidad":"Pieza", "Compra":"3,66", "Venta":"5,65", "Descuento":"0", "Inventario":"8", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"TETINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5337615741", "DOLAR":"1340", "F18":"54"},
- {"Art√≠culo":238, "Descripci√≥n":"ANESTESIA TKTX 60% 10G DORADO O VERDE", "Unidad":"Pieza", "Compra":"2,20", "Venta":"4,62", "Descuento":"0", "Inventario":"5", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7559606481", "DOLAR":"1340", "F18":"110"},
- {"Art√≠culo":239, "Descripci√≥n":"MAQUINITAS DE AFEITAR BLISTER X24U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"8,37", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,516400463", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":240, "Descripci√≥n":"FUENTE HARBOR PORTATIL", "Unidad":"Pieza", "Compra":"0,01", "Venta":"46,3268421052632", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"HARBOR", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":241, "Descripci√≥n":"CARTUCHOS COCO FINAS", "Unidad":"Pieza", "Compra":"0,01", "Venta":"14,06", "Descuento":"0", "Inventario":"6", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":242, "Descripci√≥n":"FUENTE SUPREMO PORTATIL", "Unidad":"Pieza", "Compra":"0,01", "Venta":"70,21", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"", "Categoria":"FUENTES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":243, "Descripci√≥n":"MAQUINA PEN CARBON", "Unidad":"Pieza", "Compra":"0,01", "Venta":"87,6421052631579", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":244, "Descripci√≥n":"ANESTESIA TKTX 99.9% 10G NEGRA", "Unidad":"Pieza", "Compra":"2,46", "Venta":"6,15", "Descuento":"0", "Inventario":"13", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7562037037", "DOLAR":"1340", "F18":"150"},
- {"Art√≠culo":245, "Descripci√≥n":"PIEL SINTETICA GRANDE 30X20CM", "Unidad":"Pieza", "Compra":"0,01", "Venta":"4,17631578947368", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":246, "Descripci√≥n":"JABON CLOROXILENOL 40Z 120ML", "Unidad":"Pieza", "Compra":"0,01", "Venta":"2,6", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5332291667", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":247, "Descripci√≥n":"JABON CLOROXILENOL X1L", "Unidad":"Pieza", "Compra":"10,82", "Venta":"16,28", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":248, "Descripci√≥n":"PARCHE PARA EL CUIDADO EUROMIX  10 X 12CM", "Unidad":"Pieza", "Compra":"0,59", "Venta":"0,89", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":249, "Descripci√≥n":"PARCHE PARA EL CUIDADO EUROMIX  15 X 20CM", "Unidad":"Pieza", "Compra":"1,49", "Venta":"2,23", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":250, "Descripci√≥n":"MAQUINA ROTATIVA CARTUCHOS RED SCORPION", "Unidad":"Pieza", "Compra":"0,01", "Venta":"55,6357894736842", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":251, "Descripci√≥n":"PIGMENTO CARBON 1OZ SUPER BLACK", "Unidad":"Pieza", "Compra":"0,01", "Venta":"5,66", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,7883680556", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":252, "Descripci√≥n":"PIGMENTO CARBON 4OZ SUPER BLACK", "Unidad":"Pieza", "Compra":"6,34", "Venta":"12,68", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5334375", "DOLAR":"1340", "F18":"100"},
- {"Art√≠culo":253, "Descripci√≥n":"PIGMENTO KLUG V3 8OZ", "Unidad":"Pieza", "Compra":"12,32", "Venta":"21,44", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5372453704", "DOLAR":"1340", "F18":"74"},
- {"Art√≠culo":254, "Descripci√≥n":"PIGMENTO KLUG TRIPLE BLACK 4OZ", "Unidad":"Pieza", "Compra":"9,33", "Venta":"16,23", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,563125", "DOLAR":"1340", "F18":"70"},
- {"Art√≠culo":255, "Descripci√≥n":"PIGMENTO KLUG TRIPLE BLACK 8OZ", "Unidad":"Pieza", "Compra":"14,93", "Venta":"23,8", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45328,5637152778", "DOLAR":"1340", "F18":"59"},
- {"Art√≠culo":256, "Descripci√≥n":"ADAPTADOR CARTUCHOS 35MM ALUMINIO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"18", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":257, "Descripci√≥n":"ANESTESIA TKTX 80% 10G GOLDEN AMARILLO", "Unidad":"Pieza", "Compra":"2,20", "Venta":"5,06", "Descuento":"0", "Inventario":"5", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5354513889", "DOLAR":"1340", "F18":"130"},
- {"Art√≠culo":258, "Descripci√≥n":"PIGMENTOS SET DRAKKAR PIEL 16 TONOS ", "Unidad":"Pieza", "Compra":"47,69", "Venta":"0", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":259, "Descripci√≥n":"ANESTESIA STEEL SKIN SPRAY LIDOCAINA 15ML", "Unidad":"Pieza", "Compra":"3,83", "Venta":"7,06", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6623263889", "DOLAR":"1340", "F18":"90"},
- {"Art√≠culo":260, "Descripci√≥n":"ADAPTADOR CARTUCHO ALUMINIO 25MM", "Unidad":"Pieza", "Compra":"0,01", "Venta":"15,25", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"OTROS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":261, "Descripci√≥n":"CARTUCHOS KING CARBON X10U", "Unidad":"Pieza", "Compra":"9,85", "Venta":"14,78", "Descuento":"0", "Inventario":"10", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"CARTUCHOS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"50"},
- {"Art√≠culo":262, "Descripci√≥n":"MAQUINITAS DE AFEITAR BIC X24U", "Unidad":"Pieza", "Compra":"0,01", "Venta":"10", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"DESCARTABLES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"45254,762164", "DOLAR":"1340", "F18":"0"},
- {"Art√≠culo":263, "Descripci√≥n":"ANESTESIA STEEL SKIN CREMA X15G", "Unidad":"Pieza", "Compra":"5,15", "Venta":"6,99", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6607291667", "DOLAR":"1340", "F18":"80"},
- {"Art√≠culo":264, "Descripci√≥n":"ANESTESIA STEEL SKIN SPRAY LIDOCAINA 30ML", "Unidad":"Pieza", "Compra":"6,26", "Venta":"8,66", "Descuento":"0", "Inventario":"3", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5322685185", "DOLAR":"1340", "F18":"90"},
- {"Art√≠culo":265, "Descripci√≥n":"REMOVEDOR HECTOGRAFICO ELEPHANT ANTIDOTO X200ML", "Unidad":"Pieza", "Compra":"5,97", "Venta":"6,31", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45435,6644675926", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":266, "Descripci√≥n":"MAQUINA MIINI PEN OUO", "Unidad":"Pieza", "Compra":"0,01", "Venta":"62,61", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"MAQUINAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45338,8045949074", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":267, "Descripci√≥n":"ANESTESIA TKTX SPRAY LIDOCAINA X15ML", "Unidad":"Pieza", "Compra":"1,71", "Venta":"4", "Descuento":"0", "Inventario":"8", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45470,5351388889", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":268, "Descripci√≥n":"STENCIL KING X30ML", "Unidad":"Pieza", "Compra":"1,27", "Venta":"2,3", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,814537037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":269, "Descripci√≥n":"JABON CLORHEXIDINA X1L", "Unidad":"Pieza", "Compra":"11,87", "Venta":"16,28", "Descuento":"0", "Inventario":"1", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45446,8077662037", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":270, "Descripci√≥n":"PIGMENTOS SET CAMOUFLAJE EXTREME X1OZ", "Unidad":"Pieza", "Compra":"10,38", "Venta":"16,61", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"EXTREME", "UAlmac√©n":"", "Favoritos":"-45446,8193518519", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":271, "Descripci√≥n":"PIGMENTOS SET GRISES EXTREME X1OZ 7 TONOS", "Unidad":"Pieza", "Compra":"10,38", "Venta":"16,61", "Descuento":"0", "Inventario":"2", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"PIGMENTOS", "MSTOCK":0, "BAlterna":"", "Marca":"EXTREME", "UAlmac√©n":"", "Favoritos":"-45446,8117939815", "DOLAR":"1340", "F18":"60"},
- {"Art√≠culo":272, "Descripci√≥n":"ENVASE FRAZCO 8OZ COMPLETO ", "Unidad":"Pieza", "Compra":"0,01", "Venta":"1,6", "Descuento":"0", "Inventario":"9", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ENVASES", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45457,5275578704", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":273, "Descripci√≥n":"AGUJAS CAJA X50U PREMIUM", "Unidad":"Pieza", "Compra":"8,41", "Venta":"12,66", "Descuento":"0", "Inventario":"0", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"AGUJAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45461,5263078704", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":274, "Descripci√≥n":"ANESTESIA TKTX 95% 10G AMARILLA", "Unidad":"Pieza", "Compra":"2,20", "Venta":"5,50", "Descuento":"0", "Inventario":"15", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ANESTESIAS", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7638310185", "DOLAR":"1340", "F18":"150"},
- {"Art√≠culo":275, "Descripci√≥n":"PAPEL TERMO-COPIADORA HECTOGRAFICO X1U", "Unidad":"Pieza", "Compra":"2,24", "Venta":"0,95", "Descuento":"0", "Inventario":"97", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7653009259", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":276, "Descripci√≥n":"ESPUMA INK PLAY X60ML", "Unidad":"Pieza", "Compra":"2,69", "Venta":"4,29", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"ESPUMAS Y LIMPIEZA", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45485,7671875", "DOLAR":"1340", "F18":""},
- {"Art√≠culo":277, "Descripci√≥n":"PAPEL TERMO-COPIADORA HECTOGRAFICO X10U", "Unidad":"Pieza", "Compra":"0,23", "Venta":"7,5", "Descuento":"0", "Inventario":"4", "Disponible":"", "Impuesto":0.0, "cImpuesto":"SIN IMPUESTO", "Categoria":"STENCIL REMOV Y HECTO", "MSTOCK":0, "BAlterna":"", "Marca":"OTRAS", "UAlmac√©n":"", "Favoritos":"-45489,6391087963", "DOLAR":"1340", "F18":""}]
+[
+  {
+    "ArtÌculo": 1
+    ,"DescripciÛn": "PIGMENTO HARBOR 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,5"
+    ,"Descuento": "0"
+    ,"Inventario": "263"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": "TINTA SUBLIME"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45453,5190162037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 2
+    ,"DescripciÛn": "TETINAS CHICAS X100 35grs"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,4"
+    ,"Descuento": "0"
+    ,"Inventario": "794"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": "CUPS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6045023148"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 3
+    ,"DescripciÛn": "AGUJAS CAJA X50"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11,63"
+    ,"Descuento": "0"
+    ,"Inventario": "427"
+    ,"Disponible": ""
+    ,"Categoria": "AGUJAS"
+    ,"BAlterna": "AGUJAS"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45461,5226388889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 4
+    ,"DescripciÛn": "AGUJAS BLISTER X5U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,04"
+    ,"Descuento": "0"
+    ,"Inventario": "134"
+    ,"Disponible": ""
+    ,"Categoria": "AGUJAS"
+    ,"BAlterna": "BLISTER AGUJAS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8808449074"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 5
+    ,"DescripciÛn": "TETINAS MEDIANAS X100 59grs"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,9"
+    ,"Descuento": "0"
+    ,"Inventario": "887"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": "CUPS M"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45481,5931134259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 6
+    ,"DescripciÛn": "TETINAS GRANDES X100 95grs"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,4"
+    ,"Descuento": "0"
+    ,"Inventario": "972"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": "CUPS G"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6046180556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 8
+    ,"DescripciÛn": "TIPS COMUNES X50"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,38947368421053"
+    ,"Descuento": "0"
+    ,"Inventario": "565"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "TIPS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8198263889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 9
+    ,"DescripciÛn": "DESCARTADOR X2L"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,28"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "PATOGENOS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8165509259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 10
+    ,"DescripciÛn": "VASELINA X1KG"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": "VASELINA KILO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8198726852"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 11
+    ,"DescripciÛn": "ANESTESIA TKTX 40% 10G VARIOS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,7"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": "TKTX"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6037152778"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 12
+    ,"DescripciÛn": "ENVASE PIZETA BOMBA VACIO X500ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": "PIZETA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6033333333"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 13
+    ,"DescripciÛn": "PUNTERA DESCARTABLE NYN 25MM X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,65"
+    ,"Descuento": "0"
+    ,"Inventario": "7990"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": "PUNTERA NYN"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5097337963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 14
+    ,"DescripciÛn": "CAMPOS COMPRESAS X100U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,31"
+    ,"Descuento": "0"
+    ,"Inventario": "9"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "COMPRESAS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7688078704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 15
+    ,"DescripciÛn": "ESPUMA ELEPHAT X160ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6.90"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": "ESPUMA LIMPIEZA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45471,5092361111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 16
+    ,"DescripciÛn": "DILUYENTE SUBLIME X3OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DILUYENTES"
+    ,"BAlterna": "DILUYENTE SUBLIME"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45436,6924652778"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 18
+    ,"DescripciÛn": "STENCIL SUBLIME 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": "STENCIL SUBLIME"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6558449074"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 19
+    ,"DescripciÛn": "BAJA LENGUAS ADULTO X100"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,96"
+    ,"Descuento": "0"
+    ,"Inventario": "17"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "PALITOS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 20
+    ,"DescripciÛn": "CINTA TIPO COBAN 5CM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,8"
+    ,"Descuento": "0"
+    ,"Inventario": "124"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": "CINTA CUBRE GRIP"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7690393519"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 21
+    ,"DescripciÛn": "ANESTESIA NOPAIN LIDOCAINA X3OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": "NOPAIN"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6621759259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 22
+    ,"DescripciÛn": "CARTUCHOS BLUE INK CAJA X10"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11,0036842105263"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": "CARTUCHOS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8355439815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 23
+    ,"DescripciÛn": "STENCIL ELEPHANT BLANCO X125CC"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,9"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": "STENCIL ELEPHANT C"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45468,5907291667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 24
+    ,"DescripciÛn": "STENCIL ELEPHANT NEGRO X200CC"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,9"
+    ,"Descuento": "0"
+    ,"Inventario": "8"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": "STENCIL ELEPHANT G"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45468,5909375"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 25
+    ,"DescripciÛn": "PUNTERA IMPORTADA 19MM X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,65"
+    ,"Descuento": "0"
+    ,"Inventario": "9936"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": "PUNTERAS 19MM"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5098842593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 26
+    ,"DescripciÛn": "TETINAS CHICAS X1000U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,52"
+    ,"Descuento": "0"
+    ,"Inventario": "947"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": "TETINAS CHICAS X1000"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6089583333"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 27
+    ,"DescripciÛn": "TETINAS MEDIANAS X1000U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "10,23"
+    ,"Descuento": "0"
+    ,"Inventario": "978"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": "TETINAS MEDIANAS X1000"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6090856481"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 28
+    ,"DescripciÛn": "TETINAS GRANDES X1000U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "12,79"
+    ,"Descuento": "0"
+    ,"Inventario": "993"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": "TETINAS GRANDES X1000"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,609224537"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 29
+    ,"DescripciÛn": "BANDITAS ELASTICAS X50U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,9"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "GOMITAS ELASTICAS X50"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 31
+    ,"DescripciÛn": "FILM ROLLO 38CM GRANDE"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,74"
+    ,"Descuento": "0,1"
+    ,"Inventario": "39"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": "FILM ADHERENTE X100"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45481,7412384259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 33
+    ,"DescripciÛn": "ADAPTADOR CARTUCHO ALUMINIO GENERICO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "GRIPS Y ADAPTADORES"
+    ,"BAlterna": "ADAPTADOR CARTUCHO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6100231481"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 34
+    ,"DescripciÛn": "CUBRE CABLES X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,837280701794737"
+    ,"Descuento": "0"
+    ,"Inventario": "857"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "CUBRE CLIP X10"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 35
+    ,"DescripciÛn": "CUBRE CABLES X100"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,12"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "CUBRE CLIP X100"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 36
+    ,"DescripciÛn": "CLIP CORD SILICONADO IMPORTADO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "8,4"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": "CLIP CORD"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6528472222"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 37
+    ,"DescripciÛn": "CABLE RCA SUBLIME ECONOMICO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,83"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": "RCA ECONOMICO"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6561458333"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 39
+    ,"DescripciÛn": "NIPPLES X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1"
+    ,"Descuento": "0"
+    ,"Inventario": "908"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "NIPPLES X10"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,833599537"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 40
+    ,"DescripciÛn": "NIPPLES X100U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": "NIPPLES X100"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5453240741"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 41
+    ,"DescripciÛn": "CINTA HIPOALERGENICA X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,74"
+    ,"Descuento": "0"
+    ,"Inventario": "917"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": "CINTA HIPOALERGENICA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8334143519"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 42
+    ,"DescripciÛn": "PAPEL HECTOGRAFICO X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,95"
+    ,"Descuento": "0"
+    ,"Inventario": "8858"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": "HOJA HECTOGRAFICO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45453,7399768519"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 43
+    ,"DescripciÛn": "PIGMENTO HARBOR BLANCO 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": "TINTA SUBLIME BLANCA 4OZ"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,8332986111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 44
+    ,"DescripciÛn": "PIGMENTO HARBOR NEGRO 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": "TINTA SUBLIME NEGRA 4OZ"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,761123"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 45
+    ,"DescripciÛn": "COMBO PIGMENTOS SUBLIME 2X 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": "COMBO TINTAS SUBLIME 2X 4OZ"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 46
+    ,"DescripciÛn": "MAQUINA IMPORTADA CHINA ECONOMICA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "23,56"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": "MAQUINA BOBINAS CHICA ECONOMICA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45394,7245601852"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 47
+    ,"DescripciÛn": "MAQUINA BISHOP GENERICA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "30,13"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": "BISHOP GENERICA"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45461,6665856481"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 48
+    ,"DescripciÛn": "MAQUINA PEN AFRODITA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "94,5370613994737"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": "PEN AFRODITA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 49
+    ,"DescripciÛn": "MAQUINA ROTATIVA ECONOMICA PLASTICA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "25,0225877152632"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": "ROTATIVA ECONOMICA PLASTICA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8342476852"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 51
+    ,"DescripciÛn": "PEDAL ACRILICO SUBLIME"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,35"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": "PEDAL SUBLIME"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6631597222"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 52
+    ,"DescripciÛn": "PEDAL CHAPA NEGRO IMPORTADO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11,4"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": "PEDAL CHAPA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,536400463"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 53
+    ,"DescripciÛn": "PUNTERAS NYN CAJA X50U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": "CAJA PUNTERAS NYN"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "24/11/2023 09:09:14 p.m."
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 54
+    ,"DescripciÛn": "JABON CLORHEXIDINA X500ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": "JABON CLORHEXIDINA X500"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8167592593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 55
+    ,"DescripciÛn": "REPUESTO MARTILLO NACIONAL PAVONADO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,84"
+    ,"Descuento": "0"
+    ,"Inventario": "994"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": "MARTILLO NACIONAL"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,60875"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 56
+    ,"DescripciÛn": "REPUESTO TORNILLO DE CONTACTO NACIONAL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,95"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": "TORNILLO NACIONAL DEL CONTACTO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7241087963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 57
+    ,"DescripciÛn": "REPUESTO TORNILLO DE CONTACTO IMPORTADO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,34"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": "TORNILLO IMPORTADO DE CONTACTO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6070949074"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 59
+    ,"DescripciÛn": "PUNTERA 25MM IMPORTADA X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,65"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": "PUNTERA 25MM X1U"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5098148148"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 60
+    ,"DescripciÛn": "PUNTERA 30MM IMPORTADA X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,65"
+    ,"Descuento": "0"
+    ,"Inventario": "934"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": "PUNTERA 30MM IMPORTADA"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45328,5099652778"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 61
+    ,"DescripciÛn": "REPUESTO JUEGO DE FLEJES UNIVERSALES"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,51"
+    ,"Descuento": "0"
+    ,"Inventario": "907"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": "JUEGO FLEJES"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6109259259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 62
+    ,"DescripciÛn": "PUNTERA + AGUJA NYN X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,03"
+    ,"Descuento": "0"
+    ,"Inventario": "7133"
+    ,"Disponible": ""
+    ,"Categoria": "AGUJAS"
+    ,"BAlterna": "AGUJA CON PUNTERA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6062384259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 64
+    ,"DescripciÛn": "LLAVES ALLEN KIT"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,12"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": "juego allen"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8359837963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 65
+    ,"DescripciÛn": "AGUJA SUELTA X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,58"
+    ,"Descuento": "0"
+    ,"Inventario": "9640"
+    ,"Disponible": ""
+    ,"Categoria": "AGUJAS"
+    ,"BAlterna": "AGUJA SUELTA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8359490741"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 66
+    ,"DescripciÛn": "REPUESTO ORRINGS X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,5"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": "orrings"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6617013889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 67
+    ,"DescripciÛn": "MAQUINA PEN SUBLIME V3 RCA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "22,37"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": "PEN SUBLIME V2"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,8781597222"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 68
+    ,"DescripciÛn": "CAPACITOR 47UF X50V X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,84"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": "CAPACITOR"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6085648148"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 69
+    ,"DescripciÛn": "lapiz hipoalergenico"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": "lapiz hectografico"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6596759259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 71
+    ,"DescripciÛn": "TIP ACERO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,24"
+    ,"Descuento": "0"
+    ,"Inventario": "91"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": "TIP ACERO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8358796296"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 73
+    ,"DescripciÛn": "PIGMENTO 1OZ PROMO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,73245613994737"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": "NEGRO OFERTA"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45254,8611342593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 74
+    ,"DescripciÛn": "ARREGLO SERVICE"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,6"
+    ,"Descuento": "0"
+    ,"Inventario": "-1"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": "ARREGLO"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45483,738587963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 75
+    ,"DescripciÛn": "AGUJAS CAJA SURTIDA X50U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "14,82"
+    ,"Descuento": "0"
+    ,"Inventario": "907"
+    ,"Disponible": ""
+    ,"Categoria": "AGUJAS"
+    ,"BAlterna": "AGUJAS SURTIDAS"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8180787037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 76
+    ,"DescripciÛn": "MINI FUENTE 3 AMP NACIONAL 1 MAQUINA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": "FUNTE MINI 1 MAQUINA"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,8193055556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 78
+    ,"DescripciÛn": "PUNTERAS NYN CAJA X25U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "14,46"
+    ,"Descuento": "0"
+    ,"Inventario": "9975"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": "NYN X25"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5027430556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 79
+    ,"DescripciÛn": "MORZA PUNTERA PARA MAQUINA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": "MORZA MAQUINA"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 80
+    ,"DescripciÛn": "FUENTE NACIONAL SUBLIME 1 MAQUINA 3 AMP"
+    ,"Unidad": "Pieza"
+    ,"Venta": "37,2"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": "1 MAQUINA 3 AMP"
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45394,7239467593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 82
+    ,"DescripciÛn": "CARTUCHOS SUELTOS X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,22"
+    ,"Descuento": "0"
+    ,"Inventario": "8515"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": "CARTUCHOS X1U"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8688425926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 84
+    ,"DescripciÛn": "CARTUCHOS DRAGONFLY YELLOW X20U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "17,2"
+    ,"Descuento": "0"
+    ,"Inventario": "30"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6658564815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 87
+    ,"DescripciÛn": "MOTOR 5 A 9V"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,9"
+    ,"Descuento": "0"
+    ,"Inventario": "996"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8165972222"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 88
+    ,"DescripciÛn": "APOYA BRAZOS CA—O REDONDO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "38,56"
+    ,"Descuento": "0,1"
+    ,"Inventario": "5"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45477,5278125"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 89
+    ,"DescripciÛn": "CLIP CORD ECONOMICO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,00"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6531944444"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 90
+    ,"DescripciÛn": "MAQUINA ALLIEN HEAD ROTATIVA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "25,0225877152632"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 91
+    ,"DescripciÛn": "ESPUMA SECRET X160ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,8055555556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 93
+    ,"DescripciÛn": "STENCIL LA VIRGEN X4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6552546296"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 94
+    ,"DescripciÛn": "VASELINA X900GRS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "8,24"
+    ,"Descuento": "0"
+    ,"Inventario": "9"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8191087963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 95
+    ,"DescripciÛn": "DILUYENTE LA VIRGEN 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,28"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "DILUYENTES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6725347222"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 96
+    ,"DescripciÛn": "PIGMENTO LA VIRGEN BLANCO 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5413541667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 97
+    ,"DescripciÛn": "PIGMENTO LA VIRGEN NEGRO 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45477,5313078704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 100
+    ,"DescripciÛn": "FUENTE 3 AMP 1 MAQUINA DIGITAL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "43,5063157894737"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 102
+    ,"DescripciÛn": "ENVASE FRAZCO 1 OZ COMPLETO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1"
+    ,"Descuento": "0"
+    ,"Inventario": "979"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6072569444"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 103
+    ,"DescripciÛn": "FUENTE SUBLIME NACIONAL 2.5AMP MINI"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,8349305556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 107
+    ,"DescripciÛn": "BUTTER OLD SCHOOL COMUN X250G oferta"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 108
+    ,"DescripciÛn": "AGUA INYECTABLE X500"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,42105263157895"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 110
+    ,"DescripciÛn": "MAQUINA PEN ECONOMICA IMPORTADA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "75,0728070215789"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 111
+    ,"DescripciÛn": "PUNTERAS IMPORTADAS CAJA 19MM X30U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11,66"
+    ,"Descuento": "0"
+    ,"Inventario": "9952"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5024652778"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 112
+    ,"DescripciÛn": "PUNTERAS IMPORTADAS CAJA 30MM X15U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11,66"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5029398148"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 114
+    ,"DescripciÛn": "VASOS DESCARTABLES X50"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,51315789473684"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 116
+    ,"DescripciÛn": "PIGMENTO HARBOR 8OZ "
+    ,"Unidad": "Pieza"
+    ,"Venta": "14,8894736842105"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 119
+    ,"DescripciÛn": "STENCIL ELEPHANT VIOLETA 70CC"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,71"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7693981482"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 120
+    ,"DescripciÛn": "JABON CLORHEXIDINA X250ML 4%"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,69"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 122
+    ,"DescripciÛn": "DILUYENTE SUBLIME 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DILUYENTES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6076041667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 123
+    ,"DescripciÛn": "DILUYENTE SUBLIME 4 OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,28"
+    ,"Descuento": "0,1"
+    ,"Inventario": "49"
+    ,"Disponible": ""
+    ,"Categoria": "DILUYENTES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45442,628912037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 124
+    ,"DescripciÛn": "MAQUINA PEN SUBLIME PORTATIL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "53,03"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45485,7243287037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 125
+    ,"DescripciÛn": "REVISTA ECONOMICA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,51315789473684"
+    ,"Descuento": "0"
+    ,"Inventario": "5"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 126
+    ,"DescripciÛn": "CARTUCHOS SURTIDOS DRAGON X20U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "18,97"
+    ,"Descuento": "0"
+    ,"Inventario": "878"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": "CARTUCHOS SURTIDOS X20"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 127
+    ,"DescripciÛn": "COMBO CAJA AGUJAS + TIPS MISMA MEDIDA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8188541667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 128
+    ,"DescripciÛn": "MAQUINA PEN SUBLIME PORTATIL + CARTUCHOS SURTIDOS X20"
+    ,"Unidad": "Pieza"
+    ,"Venta": "119,842105263158"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45254,8188194444"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 129
+    ,"DescripciÛn": "PAPEL HECTOGRAFICOS X10"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,5"
+    ,"Descuento": "0"
+    ,"Inventario": "20"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6651736111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 130
+    ,"DescripciÛn": "OFERTA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,05315789473684"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 132
+    ,"DescripciÛn": "CREMA CUIDADO ELEPHANT POST TATTOO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,56"
+    ,"Descuento": "0"
+    ,"Inventario": "22"
+    ,"Disponible": ""
+    ,"Categoria": "CREMAS DE CUIDADO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6648726852"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 134
+    ,"DescripciÛn": "MAQUINA CUSTOM IMPORTADA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "36,31"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45356,7072453704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 135
+    ,"DescripciÛn": "CREMA CUIDADO ELEPHANT REVENDEDOR 10 UNIDADES"
+    ,"Unidad": "Pieza"
+    ,"Venta": "13,52"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "CREMAS DE CUIDADO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 136
+    ,"DescripciÛn": "PIGMENTO DYNAMIC 8OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "39,4"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 137
+    ,"DescripciÛn": "BUTTER OLD SCHOOL MIEL X250G"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,71"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8180439815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 138
+    ,"DescripciÛn": "BUTTER OLD SCHOOL ALOE X150G oferta"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,8610416667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 139
+    ,"DescripciÛn": "BUTTER OLD SCHOOL COCO X250G"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,5"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 140
+    ,"DescripciÛn": "REMOVEDOR HECTOGRAFICO OLD SCHOOL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,75"
+    ,"Descuento": "0,25"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45502,5072569444"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 141
+    ,"DescripciÛn": "CONVERTIDOR 2 MAQUINAS SUBLIME"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "24/11/2023 09:08:21 p.m."
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 142
+    ,"DescripciÛn": "10 hecto + elephant x200cc"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,653599537"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 144
+    ,"DescripciÛn": "ENVASE FRAZCO 4 OZ COMPLETO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,3"
+    ,"Descuento": "0"
+    ,"Inventario": "997"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6123842593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 145
+    ,"DescripciÛn": "PIGMENTO HARBOR PALETA COMPLETA 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,59"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,560914"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 146
+    ,"DescripciÛn": "WITCH HAZEL EXTREME X60ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,94"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45471,5083912037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 147
+    ,"DescripciÛn": "ANESTESIA NOPAIN LIDOCAINA 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6127314815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 148
+    ,"DescripciÛn": "CAMPOS COMPRESAS NEGRAS X50U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,97"
+    ,"Descuento": "0"
+    ,"Inventario": "15"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5134953704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 149
+    ,"DescripciÛn": "FICHA PLUG ON OFF PEDAL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,652662037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 150
+    ,"DescripciÛn": "EXCENTRICO ROTATIVO NACIONAL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "15,93"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6129976852"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 151
+    ,"DescripciÛn": "KIT INICIAL ECO BOBINAS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": "KIT BOBINAS ECO"
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 152
+    ,"DescripciÛn": "JABON CLOROXILENOL X250ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,89789473684211"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 153
+    ,"DescripciÛn": "PIGMENTO EXTREME 2OZ NEGROS O BLANCO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6.78"
+    ,"Descuento": "0"
+    ,"Inventario": "29"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5341898148"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 154
+    ,"DescripciÛn": "PIGMENTO EXTREME 1OZ COLORES"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,58"
+    ,"Descuento": "0,1"
+    ,"Inventario": "15"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45453,5086689815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 155
+    ,"DescripciÛn": "ESPUMA EXTREME DETTOL X160ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,17631578947368"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 156
+    ,"DescripciÛn": "ESPUMA EXTREME FOAM X160ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,61947368421053"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 157
+    ,"DescripciÛn": "ESPUMA EXTREME FOAM X60ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,50578947368421"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 158
+    ,"DescripciÛn": "BUTTER CLASIC EXTREME X900GRS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "9"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 159
+    ,"DescripciÛn": "CUBRE MAQUINA X100"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,05"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 160
+    ,"DescripciÛn": "CAMPOS COMPRESAS NEGROS X25U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 161
+    ,"DescripciÛn": "GUANTES LATEX CAJA X100U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,71"
+    ,"Descuento": "0"
+    ,"Inventario": "950"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 162
+    ,"DescripciÛn": "FUENTE HARBOR NACIONAL 3 AMPERS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "43,36"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45461,6670833333"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 163
+    ,"DescripciÛn": "GUANTES NITRILO NEGROS X100U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "8,24"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5486342593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 164
+    ,"DescripciÛn": "MAQUINA PEN AFRODITA VENUS NEGRA Y ROJA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8185763889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 165
+    ,"DescripciÛn": "CAPACITOR CELESTE 47 X 63V"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,96"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,613287037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 166
+    ,"DescripciÛn": "MAQUINA PEN IMPORTADA TATTOO ARTIST"
+    ,"Unidad": "Pieza"
+    ,"Venta": "80,86"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45342,8150810185"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 167
+    ,"DescripciÛn": "EXCENTRICO PEN NACIONAL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "12,39"
+    ,"Descuento": "0"
+    ,"Inventario": "49"
+    ,"Disponible": ""
+    ,"Categoria": "REPUESTOS MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6077314815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 168
+    ,"DescripciÛn": "CABLE RCA IMPORTADO FLEXIBLE"
+    ,"Unidad": "Pieza"
+    ,"Venta": "8,4"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6524768519"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 169
+    ,"DescripciÛn": "CABLE DC NACIONAL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,67"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "CABLES FICHAS Y PEDALES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "-45435,6527314815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 170
+    ,"DescripciÛn": "CARTUCHOS ELITE X20U TODAS LAS MEDIDAS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "23,01"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6660300926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 171
+    ,"DescripciÛn": "SPRAY SECRET POST TATTOO X60ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "CREMAS DE CUIDADO"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 172
+    ,"DescripciÛn": "SPRAY SECRET POST TATTOO X10U X60ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "CREMAS DE CUIDADO"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 173
+    ,"DescripciÛn": "STENCIL SECRET X100ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "-45435,6550462963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 175
+    ,"DescripciÛn": "BUTTER SECRET COMUN X225GRS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,99"
+    ,"Descuento": "0,25"
+    ,"Inventario": "11"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "-45442,6293634259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 176
+    ,"DescripciÛn": "PIERCING ARITO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,4"
+    ,"Descuento": "0"
+    ,"Inventario": "-4"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 177
+    ,"DescripciÛn": "WITCH HAZEL SECRET X300ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,97"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "-45470,5450925926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 178
+    ,"DescripciÛn": "STENCIL OLD SCHOOL X125ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,01"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6549305556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 179
+    ,"DescripciÛn": "PIGMENTOS SET PIEL EXTREME X1OZ 7 TONOS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,61"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "EXTREME"
+    ,"Favoritos": "-45435,6655671296"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 180
+    ,"DescripciÛn": "BUTTER MOTHER CARE X200ML VARIOS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,9"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "EXTREME"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 181
+    ,"DescripciÛn": "BUTTER OLD SCHOOL MINT X150GRS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,65"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 182
+    ,"DescripciÛn": "PIGMENTOS SET PASTEL EXTREME X2OZ 7 TONOS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,61"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "EXTREME"
+    ,"Favoritos": "-45468,5926157407"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 183
+    ,"DescripciÛn": "BUTTER X 50GRS "
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,02894736842105"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 185
+    ,"DescripciÛn": "WITCH HAZEL HARBOR X125ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,15"
+    ,"Descuento": "0"
+    ,"Inventario": "30"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "HARBOR"
+    ,"Favoritos": "-45470,5419675926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 186
+    ,"DescripciÛn": "JABON LIQUIDO SECRET X 125ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,5"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "-45470,5421990741"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 187
+    ,"DescripciÛn": "PIGMENTO MGC COLOR X6OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "EXTREME"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 188
+    ,"DescripciÛn": "MAQUINA IMPORTADA NEGRA Y GRIS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "21,7894736842105"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 189
+    ,"DescripciÛn": "OFERTA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,3"
+    ,"Descuento": "0"
+    ,"Inventario": "-63"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,521099537"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 190
+    ,"DescripciÛn": "CUBRE MAQUINA X250U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,56"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6145486111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 191
+    ,"DescripciÛn": "CARTUCHOS SPARK X20U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "12,09"
+    ,"Descuento": "0,05"
+    ,"Inventario": "931"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7814814815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 192
+    ,"DescripciÛn": "CUBRE MAQUINA PEN X100U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,12"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 193
+    ,"DescripciÛn": "MAQUINITAS DE AFEITAR UNIDAD X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,45"
+    ,"Descuento": "0"
+    ,"Inventario": "71"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5271990741"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 194
+    ,"DescripciÛn": "PIGMENTO KLUG V3 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,81"
+    ,"Descuento": "0"
+    ,"Inventario": "18"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7873842593"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 195
+    ,"DescripciÛn": "CARTUCHOS CARBON X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "10,62"
+    ,"Descuento": "0"
+    ,"Inventario": "857"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5585185185"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 196
+    ,"DescripciÛn": "PIEL SINTETICA CHICA 15X20CM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,34"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7599652778"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 197
+    ,"DescripciÛn": "PIGMENTO KLUG V3 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "14,9"
+    ,"Descuento": "0"
+    ,"Inventario": "6"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7875"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 198
+    ,"DescripciÛn": "ENVASE ROCIADOR SPRAY ALUMINIO X 350CC"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,98"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6568865741"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 199
+    ,"DescripciÛn": "CARTUCHOS BRONC X20U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "21,42"
+    ,"Descuento": "0"
+    ,"Inventario": "97"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8182175926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 200
+    ,"DescripciÛn": "CUBRE MAQUINA PEN X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,786842105263158"
+    ,"Descuento": "0"
+    ,"Inventario": "969"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45254,8182986111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 201
+    ,"DescripciÛn": "ENVASE ROCIADOR SPRAY NEGRO X 250CC"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,94"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6567939815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 202
+    ,"DescripciÛn": "PIGMENTO EXCALIBUR 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,01"
+    ,"Descuento": "0"
+    ,"Inventario": "28"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 203
+    ,"DescripciÛn": "ENVASE PIZETA PUNTA FIJA X250ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,79"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7692361111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 204
+    ,"DescripciÛn": "ENVASE PIZETA PUNTA FIJA X500ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,72"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7900347222"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 205
+    ,"DescripciÛn": "CUBRE PEN AUTO AJUSTABLE NEGROS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,38"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 206
+    ,"DescripciÛn": "PIGMENTO EXCALIBUR 4OZ NEGRO O BLANCO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,94"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5429861111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 207
+    ,"DescripciÛn": "FUENTE PORTATIL ASSASSIN"
+    ,"Unidad": "Pieza"
+    ,"Venta": "61,4584210526316"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 208
+    ,"DescripciÛn": "CARTUCHOS CARBON 25M Y 25RM X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "11,00"
+    ,"Descuento": "0"
+    ,"Inventario": "5"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 209
+    ,"DescripciÛn": "CARTUCHOS SPARK CAJA CERRADA x10u MEDIDA 45RM- 45M1"
+    ,"Unidad": "Pieza"
+    ,"Venta": "22,29"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5300925926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 210
+    ,"DescripciÛn": "VASELINA MINT EXCALIBUR X250GRS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "3,64"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 211
+    ,"DescripciÛn": "DESCARTADOR X4L"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,22"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6155787037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 213
+    ,"DescripciÛn": "FUENTE TACTIL HARBOR"
+    ,"Unidad": "Pieza"
+    ,"Venta": "58,1052631578947"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "SUBLIME"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 214
+    ,"DescripciÛn": "FUENTE PORTATIL BRONC"
+    ,"Unidad": "Pieza"
+    ,"Venta": "92,21"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45342,815625"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 215
+    ,"DescripciÛn": "ADAPTADOR CARTUCHOS DESCARTABLES X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,15"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "GRIPS Y ADAPTADORES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45489,6348263889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 216
+    ,"DescripciÛn": "PIEL SINTETICA CHICA 15X20CM COLOR PIEL "
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,41"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 217
+    ,"DescripciÛn": "ESPUMA OLD SCHOOL X60ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,86"
+    ,"Descuento": "0,25"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45502,5055208333"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 218
+    ,"DescripciÛn": "BUTTER B X50G (BUTTER ANESTESICO LIDOCAINA 20%) "
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,04"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "BUTTER"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 219
+    ,"DescripciÛn": "CARTUCHOS SPARK BLISTER 5U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,68"
+    ,"Descuento": "0"
+    ,"Inventario": "966"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 220
+    ,"DescripciÛn": "JABON CLORHEXIDINA 2% DOYPACK X 220ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2"
+    ,"Descuento": "0"
+    ,"Inventario": "7"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7913078704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 221
+    ,"DescripciÛn": "LOCION SECRET POST PIERCING"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "SECRET"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 222
+    ,"DescripciÛn": "MAQUINA ALLIEN HEAD CLIP"
+    ,"Unidad": "Pieza"
+    ,"Venta": "25,0215789473684"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 223
+    ,"DescripciÛn": "AGUA DE ROSAS EXCALIBUR"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,51"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "DILUYENTES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5327893519"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 224
+    ,"DescripciÛn": "PIGMENTO DRAKKAR 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,36"
+    ,"Descuento": "0"
+    ,"Inventario": "17"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7877430556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 227
+    ,"DescripciÛn": "PIGMENTOS SET DRAKKAR CHICO 1/2OZ X16"
+    ,"Unidad": "Pieza"
+    ,"Venta": "36,12"
+    ,"Descuento": "0,5"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,8384837963"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 228
+    ,"DescripciÛn": "PIGMENTO 5 JINETES 1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,18"
+    ,"Descuento": "0"
+    ,"Inventario": "18"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5651388889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 229
+    ,"DescripciÛn": "VASELINA X500G"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,94"
+    ,"Descuento": "0"
+    ,"Inventario": "7"
+    ,"Disponible": ""
+    ,"Categoria": "INSUMOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7696412037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 230
+    ,"DescripciÛn": "CREMA CUIDADO INK PLAY POST TATTOO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,42"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "CREMAS DE CUIDADO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 231
+    ,"DescripciÛn": "CREMA CUIDADO INK PLAY REVENDEDOR 10 UNIDADES"
+    ,"Unidad": "Pieza"
+    ,"Venta": "22,32"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "CREMAS DE CUIDADO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 233
+    ,"DescripciÛn": "MAQUINA PEN HARBOR PORTATIL BOTONES"
+    ,"Unidad": "Pieza"
+    ,"Venta": "73,47"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45391,7438888889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 234
+    ,"DescripciÛn": "GRIP ALUMINIO 35MM "
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,76"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PUNTERAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 235
+    ,"DescripciÛn": "APOYA BRAZOS CA—O CUADRADO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "38,56"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45477,5276736111"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 236
+    ,"DescripciÛn": "GRIP ALUMINIO 20MM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,70"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "GRIPS Y ADAPTADORES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6615046296"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 237
+    ,"DescripciÛn": "TETINAS CHICAS TARRO X300U COLORES"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,65"
+    ,"Descuento": "0"
+    ,"Inventario": "8"
+    ,"Disponible": ""
+    ,"Categoria": "TETINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5337615741"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 238
+    ,"DescripciÛn": "ANESTESIA TKTX 60% 10G DORADO O VERDE"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,62"
+    ,"Descuento": "0"
+    ,"Inventario": "5"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7559606481"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 239
+    ,"DescripciÛn": "MAQUINITAS DE AFEITAR BLISTER X24U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "8,37"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,516400463"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 240
+    ,"DescripciÛn": "FUENTE HARBOR PORTATIL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "46,3268421052632"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "HARBOR"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 241
+    ,"DescripciÛn": "CARTUCHOS COCO FINAS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "14,06"
+    ,"Descuento": "0"
+    ,"Inventario": "6"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 242
+    ,"DescripciÛn": "FUENTE SUPREMO PORTATIL"
+    ,"Unidad": "Pieza"
+    ,"Venta": "70,21"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "FUENTES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 243
+    ,"DescripciÛn": "MAQUINA PEN CARBON"
+    ,"Unidad": "Pieza"
+    ,"Venta": "87,6421052631579"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 244
+    ,"DescripciÛn": "ANESTESIA TKTX 99.9% 10G NEGRA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,15"
+    ,"Descuento": "0"
+    ,"Inventario": "13"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7562037037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 245
+    ,"DescripciÛn": "PIEL SINTETICA GRANDE 30X20CM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,17631578947368"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 246
+    ,"DescripciÛn": "JABON CLOROXILENOL 40Z 120ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,6"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5332291667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 247
+    ,"DescripciÛn": "JABON CLOROXILENOL X1L"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,28"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 248
+    ,"DescripciÛn": "PARCHE PARA EL CUIDADO EUROMIX  10 X 12CM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,89"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 249
+    ,"DescripciÛn": "PARCHE PARA EL CUIDADO EUROMIX  15 X 20CM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,23"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 250
+    ,"DescripciÛn": "MAQUINA ROTATIVA CARTUCHOS RED SCORPION"
+    ,"Unidad": "Pieza"
+    ,"Venta": "55,6357894736842"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 251
+    ,"DescripciÛn": "PIGMENTO CARBON 1OZ SUPER BLACK"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,66"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,7883680556"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 252
+    ,"DescripciÛn": "PIGMENTO CARBON 4OZ SUPER BLACK"
+    ,"Unidad": "Pieza"
+    ,"Venta": "12,68"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5334375"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 253
+    ,"DescripciÛn": "PIGMENTO KLUG V3 8OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "21,44"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5372453704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 254
+    ,"DescripciÛn": "PIGMENTO KLUG TRIPLE BLACK 4OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,23"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,563125"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 255
+    ,"DescripciÛn": "PIGMENTO KLUG TRIPLE BLACK 8OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "23,8"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45328,5637152778"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 256
+    ,"DescripciÛn": "ADAPTADOR CARTUCHOS 35MM ALUMINIO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "18"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 257
+    ,"DescripciÛn": "ANESTESIA TKTX 80% 10G GOLDEN AMARILLO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,06"
+    ,"Descuento": "0"
+    ,"Inventario": "5"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5354513889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 258
+    ,"DescripciÛn": "PIGMENTOS SET DRAKKAR PIEL 16 TONOS "
+    ,"Unidad": "Pieza"
+    ,"Venta": "0"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 259
+    ,"DescripciÛn": "ANESTESIA STEEL SKIN SPRAY LIDOCAINA 15ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,06"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6623263889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 260
+    ,"DescripciÛn": "ADAPTADOR CARTUCHO ALUMINIO 25MM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "15,25"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "OTROS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 261
+    ,"DescripciÛn": "CARTUCHOS KING CARBON X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "14,78"
+    ,"Descuento": "0"
+    ,"Inventario": "10"
+    ,"Disponible": ""
+    ,"Categoria": "CARTUCHOS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 262
+    ,"DescripciÛn": "MAQUINITAS DE AFEITAR BIC X24U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "10"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "DESCARTABLES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "45254,762164"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 263
+    ,"DescripciÛn": "ANESTESIA STEEL SKIN CREMA X15G"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,99"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6607291667"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 264
+    ,"DescripciÛn": "ANESTESIA STEEL SKIN SPRAY LIDOCAINA 30ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "8,66"
+    ,"Descuento": "0"
+    ,"Inventario": "3"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5322685185"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 265
+    ,"DescripciÛn": "REMOVEDOR HECTOGRAFICO ELEPHANT ANTIDOTO X200ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "6,31"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45435,6644675926"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 266
+    ,"DescripciÛn": "MAQUINA MIINI PEN OUO"
+    ,"Unidad": "Pieza"
+    ,"Venta": "62,61"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "MAQUINAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45338,8045949074"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 267
+    ,"DescripciÛn": "ANESTESIA TKTX SPRAY LIDOCAINA X15ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4"
+    ,"Descuento": "0"
+    ,"Inventario": "8"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45470,5351388889"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 268
+    ,"DescripciÛn": "STENCIL KING X30ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "2,3"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,814537037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 269
+    ,"DescripciÛn": "JABON CLORHEXIDINA X1L"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,28"
+    ,"Descuento": "0"
+    ,"Inventario": "1"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45446,8077662037"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 270
+    ,"DescripciÛn": "PIGMENTOS SET CAMOUFLAJE EXTREME X1OZ"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,61"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "EXTREME"
+    ,"Favoritos": "-45446,8193518519"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 271
+    ,"DescripciÛn": "PIGMENTOS SET GRISES EXTREME X1OZ 7 TONOS"
+    ,"Unidad": "Pieza"
+    ,"Venta": "16,61"
+    ,"Descuento": "0"
+    ,"Inventario": "2"
+    ,"Disponible": ""
+    ,"Categoria": "PIGMENTOS"
+    ,"BAlterna": ""
+    ,"Marca": "EXTREME"
+    ,"Favoritos": "-45446,8117939815"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 272
+    ,"DescripciÛn": "ENVASE FRAZCO 8OZ COMPLETO "
+    ,"Unidad": "Pieza"
+    ,"Venta": "1,6"
+    ,"Descuento": "0"
+    ,"Inventario": "9"
+    ,"Disponible": ""
+    ,"Categoria": "ENVASES"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45457,5275578704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 273
+    ,"DescripciÛn": "AGUJAS CAJA X50U PREMIUM"
+    ,"Unidad": "Pieza"
+    ,"Venta": "12,66"
+    ,"Descuento": "0"
+    ,"Inventario": "0"
+    ,"Disponible": ""
+    ,"Categoria": "AGUJAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45461,5263078704"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 274
+    ,"DescripciÛn": "ANESTESIA TKTX 95% 10G AMARILLA"
+    ,"Unidad": "Pieza"
+    ,"Venta": "5,50"
+    ,"Descuento": "0"
+    ,"Inventario": "15"
+    ,"Disponible": ""
+    ,"Categoria": "ANESTESIAS"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7638310185"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 275
+    ,"DescripciÛn": "PAPEL TERMO-COPIADORA HECTOGRAFICO X1U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "0,95"
+    ,"Descuento": "0"
+    ,"Inventario": "97"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7653009259"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 276
+    ,"DescripciÛn": "ESPUMA INK PLAY X60ML"
+    ,"Unidad": "Pieza"
+    ,"Venta": "4,29"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "ESPUMAS Y LIMPIEZA"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45485,7671875"
+    ,"DOLAR": "1340"
+  }
+,
+  {
+    "ArtÌculo": 277
+    ,"DescripciÛn": "PAPEL TERMO-COPIADORA HECTOGRAFICO X10U"
+    ,"Unidad": "Pieza"
+    ,"Venta": "7,5"
+    ,"Descuento": "0"
+    ,"Inventario": "4"
+    ,"Disponible": ""
+    ,"Categoria": "STENCIL REMOV Y HECTO"
+    ,"BAlterna": ""
+    ,"Marca": "OTRAS"
+    ,"Favoritos": "-45489,6391087963"
+    ,"DOLAR": "1340"
+  }
+,
+]
