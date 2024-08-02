@@ -8,7 +8,7 @@
 export function mostrarBotones() {
 
     $(document).ready(function () {
-        var botones = document.querySelectorAll('.card-text button');
+        var botones = document.querySelectorAll('.botonaparecer');
 
         var opciones = {
             root: null,

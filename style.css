@@ -238,7 +238,7 @@ section h4 {
   }
 }
 
-.card-text button {
+.botonaparecer {
 
   display: block;
   /* Convertir el botón en un elemento de bloque */
@@ -368,4 +368,29 @@ li form {
   /* Agrega esta línea */
   color: #333;
   z-index: 1;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* ponemos el boton con display block y margen 0 */
+.botonaparecer {
+  display: block;
+  margin: 0 auto;
+  
+}
+/* a continuacion sacamos el borde al contenido de la tarjeta */
+.contentarj{
+border: 0;
+
 }
