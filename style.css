@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -391,6 +391,6 @@ li form {
 }
 /* a continuacion sacamos el borde al contenido de la tarjeta */
 .contentarj{
-border: 0;
+/*border: 0;*/
 
 }
