@@ -153,7 +153,8 @@ function MostrarEnCatalogo(datos, contenedorId) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
   const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
-  template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+  let im= mostrarImagen(datos, contenedorId);
+  template2.querySelector("img").setAttribute("src", (im));
   template2.querySelector("img").setAttribute("id", imageId);
   template2.querySelector("h5").textContent = (datos.Descripción);
   template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
@@ -177,6 +178,25 @@ function MostrarEnCatalogo(datos, contenedorId) {
 
 
 
+function mostrarImagen(datos, contenedorId) {
+  var imagen = datos.Artículo + ".jpg";
+  var ruta = "./imgcarrito/" + imagen;
+var img= ruta;
+  var xhr = new XMLHttpRequest();
+  xhr.open("HEAD", ruta, false);
+  xhr.send();
+
+  if (xhr.status === 200) {
+    // La imagen existe, mostramos la imagen real
+    img= ruta;
+    return img;
+  } else {
+    // La imagen no existe, mostramos la imagen de "IMGINEXISTENTE"
+    img= "./imgcarrito/" + "IMGND.jpg";
+    return img;
+  }
+ 
+}
 
 
 
@@ -462,11 +482,10 @@ let contenedorId = 0;
 datos.forEach((datos) => {
   if (datos.Inventario >= 1 && datos.Descuento == 0) {
     //mostramos los datos en el catalogo!!! <--------------------------------------------------
-   let imgn=comprobarImagen(datos)
-   console.log(imgn)
+  
     contenedorId = 0
   
-    fragmento2 = MostrarEnCatalogo(datos, contenedorId,imgn);
+    fragmento2 = MostrarEnCatalogo(datos, contenedorId);
   }
   mBotones.mostrarBotones();
 });
@@ -926,49 +945,6 @@ descu.porDeDescuento();
 
 
 
-
-
-function comprobarImagen(datos) {
-  // Ruta de la imagen que quieres comprobar
-  let imagePath = "./imgcarrito/" + datos.Artículo + ".jpg";
-
-  let finalImagePath;
-
-  // Comprobar si la imagen existe
-  return checkImageExists(imagePath)
-    .then(() => {
-      console.log('La imagen existe en el directorio');
-      finalImagePath = imagePath;
-      return finalImagePath;
-    })
-    .catch(() => {
-      console.log('La imagen no se encuentra en el directorio');
-      finalImagePath = "./imgcarrito/IMGND.jpg";
-      return finalImagePath;
-    });
-}
-
-function checkImageExists(path) {
-  return new Promise((resolve, reject) => {
-    // Usar la API de Entrada de Archivos si está disponible
-    if (window.File && window.FileReader && window.FileList && window.Blob) {
-      fetch(path)
-        .then((response) => {
-          if (response.ok) {
-            resolve();
-          } else {
-            reject();
-          }
-        })
-        .catch(() => {
-          reject();
-        });
-    } else {
-      // Usar una alternativa adecuada para la plataforma
-      reject();
-    }
-  });
-}
 
 
 
