@@ -85,37 +85,6 @@ let flagMostrarDescuentos = false;
 
 
 
-//este es para poner imagen si no estala imagen
-// var img = new Image();
-// img.src = `./imgcarrito/${datos.Artículo}.jpg`;
-
-// if  (img.src.includes(img.src))  {
-
-// contenedorId = 0;
-
-//   // La imagen existe, asignamos la ruta a la imagen en el DOM
-//    let imgn= (datos.Artículo);
-
-//    fragmento2 = MostrarEnCatalogo(datos, contenedorId, imgn);
-//   console.log("se encontro imagen "+ datos.Artículo)
-
-
-// } else
-
-// {
-//   // La imagen no existe, asignamos la ruta a la imagen predeterminada
-//  contenedorId = 0;
-
-  
-//    let imgn="IMGND";
-//    fragmento2 = MostrarEnCatalogo(datos, contenedorId, imgn);
-
-//   console.log(" no se encontro imagen "+ datos.Artículo)
-
-
-// }
-
-
 
 
 
@@ -153,6 +122,7 @@ function MostrarEnCatalogo(datos, contenedorId) {
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
   const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
+  //llamamos a la funcion de control de imagen
   let im= mostrarImagen(datos, contenedorId);
   template2.querySelector("img").setAttribute("src", (im));
   template2.querySelector("img").setAttribute("id", imageId);
@@ -178,6 +148,7 @@ function MostrarEnCatalogo(datos, contenedorId) {
 
 
 
+//funcion para comprobar si la imagen existe
 function mostrarImagen(datos, contenedorId) {
   var imagen = datos.Artículo + ".jpg";
   var ruta = "./imgcarrito/" + imagen;
@@ -382,8 +353,10 @@ function MostrarDescuentos() {
 
       // MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
       template3.querySelector('.caca').setAttribute("id", contenedorId);
-
-      template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+//llamamos a la funcion de control de imagen
+      let im= mostrarImagen(datos, contenedorId);
+      template2.querySelector("img").setAttribute("src", (im));
+  //  template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
       template2.querySelector("img").setAttribute("id", "img" + (datos.Artículo));
       template2.querySelector("h5").textContent = (datos.Descripción);
       template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
@@ -423,10 +396,7 @@ function MostrarDescuentos() {
 
 
 
-
-
-
-
+// boton para mostrar uy ocultar descuentos
 function toggleCacaContent() {
   const cacaContainer = document.querySelector('.caca');
   cacaContainer.classList.toggle('d-none');
@@ -949,6 +919,3 @@ descu.porDeDescuento();
 
 
 
-
-
-//funcion para comprobar si la imagen existe
