@@ -879,7 +879,13 @@ function filtrarConBusqueda() {
     }
   });
   
-  formulario.addEventListener('change', filtrar);
+  formulari.addEventListener('change', filtrar);
+  const debounce = require('lodash.debounce');
+
+const formulari = document.getElementById('Formulario');
+const filtrarDebounced = debounce(filtrar, 300);
+
+formulari.addEventListener('input', filtrarDebounced);
 }
 
 
