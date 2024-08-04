@@ -124,9 +124,8 @@ function MostrarEnCatalogo(datos, contenedorId) {
   //const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
   
  
-  //llamamos a la funcion de control de imagen
-  let im= mostrarImagen(datos, contenedorId);
-  template2.querySelector("img").setAttribute("src", (im));
+
+  template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
   template2.querySelector("img").setAttribute("id", "img"+ datos.Artículo);
   template2.querySelector("h5").textContent = (datos.Descripción);
   template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
@@ -167,27 +166,6 @@ else {
 };
 
 
-
-//funcion para comprobar si la imagen existe
-function mostrarImagen(datos, contenedorId) {
-  var imagen = datos.Artículo + ".jpg";
-  var ruta = "./imgcarrito/" + imagen;
-var img= ruta;
-  var xhr = new XMLHttpRequest();
-  xhr.open("HEAD", ruta, false);
-  xhr.send();
-
-  if (xhr.status === 200) {
-    // La imagen existe, mostramos la imagen real
-    img= ruta;
-    return img;
-  } else {
-    // La imagen no existe, mostramos la imagen de "IMGINEXISTENTE"
-    img= "./imgcarrito/" + "IMGND.jpg";
-    return img;
-  }
- 
-}
 
 
 
@@ -377,10 +355,8 @@ function MostrarDescuentos() {
 
       // MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
       template3.querySelector('.caca').setAttribute("id", contenedorId);
-//llamamos a la funcion de control de imagen
-      let im= mostrarImagen(datos, contenedorId);
-      template2.querySelector("img").setAttribute("src", (im));
-  //  template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+
+    template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
       template2.querySelector("img").setAttribute("id", "img" + (datos.Artículo));
       template2.querySelector("h5").textContent = (datos.Descripción);
       template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
@@ -955,3 +931,29 @@ descu.porDeDescuento();
 
 
 
+//si lo usamos, este codigo iria en mostrarCatalogo 
+  //llamamos a la funcion de control de imagen
+  //let im= mostrarImagen(datos, contenedorId);
+  //template2.querySelector("img").setAttribute("src", (im));
+
+
+// //funcion para comprobar si la imagen existe
+// function mostrarImagen(datos, contenedorId) {
+//   var imagen = datos.Artículo + ".jpg";
+//   var ruta = "./imgcarrito/" + imagen;
+// var img= ruta;
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("HEAD", ruta, false);
+//   xhr.send();
+
+//   if (xhr.status === 200) {
+//     // La imagen existe, mostramos la imagen real
+//     img= ruta;
+//     return img;
+//   } else {
+//     // La imagen no existe, mostramos la imagen de "IMGINEXISTENTE"
+//     img= "./imgcarrito/" + "IMGND.jpg";
+//     return img;
+//   }
+ 
+// }
