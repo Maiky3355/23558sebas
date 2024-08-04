@@ -876,11 +876,39 @@ function filtrarConBusqueda() {
   //PONEMOS LOS EVENTOS DEL BUSCADOR 
   formulario.addEventListener('keydown', filtrar);
   formulario.addEventListener('click', filtrar);
-  formulario.addEventListener('change', filtrar);
+  formulario.addEventListener('change', filtrar );
   formulario.addEventListener('inputType', filtrar);
-
+  
+  formulario.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13 || event.key === 'Enter') { // Verifica si se presionó Enter
+      filtrar();
+      ocultarCanvasBusqueda();
+    }
+  });
 
 }
+
+function ocultarCanvasBusqueda() {
+  // Obtenemos todos los elementos con la clase "offcanvas-backdrop"
+  let elementosBackdrop = document.getElementsByClassName("offcanvas-backdrop");
+
+  // Obtenemos el elemento con el ID "offcanvasDarkNavbar"
+  let canvasInteres = document.getElementById("offcanvasDarkNavbar");
+
+  // Iteramos sobre los elementos backdrop y el canvas para aplicar los cambios
+  for (let i = 0; i < elementosBackdrop.length; i++) {
+    elementosBackdrop[i].classList.remove('show');
+    elementosBackdrop[i].classList.add('hide');
+  }
+
+  if (canvasInteres) {
+    canvasInteres.classList.remove('show');
+    canvasInteres.classList.add('hide');
+  }
+}
+
+
+
 
 //actualizamos el carrito
 
