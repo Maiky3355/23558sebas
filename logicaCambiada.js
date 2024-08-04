@@ -879,7 +879,8 @@ function filtrarConBusqueda() {
     }
   });
   
- 
+  formulario.addEventListener('change', filtrar);
+
 formulario.addEventListener('input', filtrar);
 }
 
