@@ -873,15 +873,80 @@ function filtrarConBusqueda() {
     subirScroll.subir();
 
   };
-  formulario.addEventListener('keydown', (event) => {
-    if (event.keyCode === 13 || event.key === 'Enter') {
-      filtrar();
-    }
-  });
-  
-  formulario.addEventListener('change', filtrar);
+  //PONEMOS LOS EVENTOS DEL BUSCADOR 
 
-formulario.addEventListener('input', filtrar);
+
+  formulario.addEventListener('input', filtrar);
+  formulario.addEventListener('change', filtrar );
+formulario.addEventListener('keydown', (event) => {
+  if (event.keyCode === 13 || event.key === 'Enter') { // Verifica si se presionó Enter
+    filtrar();
+    //llamamos la funcion ocultar canvas cuando precionamos enter o buscar
+    ocultarCanvasBusqueda();
+  }
+});
+
+}
+
+// function ocultarCanvasBusqueda() {
+//   // Obtenemos todos los elementos con la clase "offcanvas-backdrop"
+//   let elementosBackdrop = document.getElementsByClassName("offcanvas-backdrop");
+
+//   // Obtenemos el elemento con el ID "offcanvasDarkNavbar"
+//   let canvasInteres = document.getElementById("offcanvasDarkNavbar");
+
+//   // Iteramos sobre los elementos backdrop y el canvas para aplicar los cambios
+//   for (let i = 0; i < elementosBackdrop.length; i++) {
+//     elementosBackdrop[i].classList.remove('show');
+//     elementosBackdrop[i].classList.add('hide');
+//   }
+
+//   if (canvasInteres) {
+//     canvasInteres.classList.remove('show');
+//     canvasInteres.classList.add('hide');
+//   }
+//   const offcanvasElement = document.getElementById('offcanvasDarkNavbar');
+//   const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+//   offcanvas.hide();
+
+//   const body = document.body;
+//   body.removeAttribute('style');
+
+
+  
+//     // Elimina manualmente la clase 'show' del backdrop (si es necesario)
+//     const backdrop = document.querySelector('.offcanvas-backdrop');
+//     if (backdrop) {
+//       backdrop.remove();
+
+//     }
+
+ 
+// }
+
+
+  // funcion ocultar canvas
+function ocultarCanvasBusqueda() {
+  // Obtenemos los elementos
+  const elementosBackdrop = document.getElementsByClassName("offcanvas-backdrop");
+  const canvasInteres = document.getElementById("offcanvasDarkNavbar");
+
+  // Ocultamos los elementos backdrop y el canvas
+  for (let i = 0; i < elementosBackdrop.length; i++) {
+    elementosBackdrop[i].classList.remove('show');
+  }
+  if (canvasInteres) {
+    canvasInteres.classList.remove('show');
+  }
+
+  // Usamos Bootstrap para ocultar el offcanvas
+  const offcanvasElement = document.getElementById('offcanvasDarkNavbar');
+  const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+  offcanvas.hide();
+
+  // Eliminamos los estilos del body
+  const body = document.body;
+  body.removeAttribute('style');
 }
 
 
@@ -960,48 +1025,3 @@ descu.porDeDescuento();
 //   }
  
 // }
-
-
-
-
-
-
-
-
-
-
-
-//este codigo lo usamos si queremos cerrar el canvas de busqueda
-
-//este tramo va en eventos de la busqueda
-// formulario.addEventListener('keydown', (event) => {
-//   if (event.keyCode === 13 || event.key === 'Enter') {
-//     filtrar();
-//   }
-// });
-
-
-// function ocultarCanvasBusqueda() {
-//   // Obtenemos todos los elementos con la clase "offcanvas-backdrop"
-//   let elementosBackdrop = document.getElementsByClassName("offcanvas-backdrop");
-
-//   // Obtenemos el elemento con el ID "offcanvasDarkNavbar"
-//   let canvasInteres = document.getElementById("offcanvasDarkNavbar");
-
-//   // Iteramos sobre los elementos backdrop y el canvas para aplicar los cambios
-//   for (let i = 0; i < elementosBackdrop.length; i++) {
-//     elementosBackdrop[i].classList.remove('show');
-//     elementosBackdrop[i].classList.add('hide');
-//   }
-
-//   if (canvasInteres) {
-//     canvasInteres.classList.remove('show');
-//     canvasInteres.classList.add('hide');
-//   }
-// }
-
-
-
-
-
-
