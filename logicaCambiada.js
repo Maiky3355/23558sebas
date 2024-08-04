@@ -132,11 +132,31 @@ function MostrarEnCatalogo(datos, contenedorId) {
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
   template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
+
+console.log (datos.Descuento)
+
+if (datos.Descuento != 0){
+// Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+//los valores vienen con "," y hay q pasarlos a puntos
+var precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number((datos.Descuento).replace(/,/g, "."))));
+precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
+
+template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>" + " $" + precioCatalogo2;
+
+
+}
+   
+else {
   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
   precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
   template2.querySelector("small").textContent = "$" + precioCatalogo;
 
+}
+
+ 
   template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
 
   //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
@@ -292,15 +312,14 @@ categoriasUnicas.forEach(categoria => {
       fragmento.removeChild(fragmento.firstChild);
     }
     datos.forEach((datos) => {
-      if (datos.Inventario >= 1 && datos.Descuento == 0 && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
+      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */&& (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
         contenedorId = 0;
         fragmento2 = MostrarEnCatalogo(datos, contenedorId);
-
       }
 
       mBotones.mostrarBotones();
-
+      
     });
     let clone = document.importNode(template, true);
     fragmento.appendChild(clone);
@@ -313,6 +332,8 @@ categoriasUnicas.forEach(categoria => {
     //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
 
     escucharBotones();
+    var a=true;
+    toggleCacaContent(a);
     subirScroll.subir()
   });
   //ESTO SUBE AL DOM LAS CATEGORIAS
@@ -397,11 +418,19 @@ function MostrarDescuentos() {
 
 
 // boton para mostrar uy ocultar descuentos
-function toggleCacaContent() {
+function toggleCacaContent(a) {
   const cacaContainer = document.querySelector('.caca');
   cacaContainer.classList.toggle('d-none');
 
   const toggleButton = document.getElementById('toggleDiscountSection');
+
+  if (!cacaContainer.classList.contains('d-none') && a ==true) {
+    cacaContainer.classList.toggle('d-none');
+    toggleButton.textContent = 'Mostrar sección de descuentos';
+  }
+
+
+  
   if (cacaContainer.classList.contains('d-none')) {
     toggleButton.textContent = 'Mostrar sección de descuentos';
   } else {
@@ -838,7 +867,7 @@ function filtrarConBusqueda() {
       // const element2 = document.querySelector(".tarjetas");
       // element2.remove();
       //VEMOS SI COINCIDEN CON EL TEXTO BUSCADO, SI TIENE INVENTARIO Y NO TIENE DESCUENTO
-      if (Descripcion.indexOf(texto) !== -1 && producto.Descuento == 0 && producto.Inventario >= 1) {
+      if (Descripcion.indexOf(texto) !== -1 /*&& producto.Descuento == 0*/ && producto.Inventario >= 1) {
 
         contenedorId = 0;
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
@@ -859,7 +888,11 @@ function filtrarConBusqueda() {
     mBotones.mostrarBotones();
 
     escucharBotones();
+    var a=true;
+    toggleCacaContent(a);
+
     subirScroll.subir();
+
   };
   //PONEMOS LOS EVENTOS DEL BUSCADOR 
   formulario.addEventListener('keydown', filtrar);
