@@ -121,19 +121,19 @@ function MostrarEnCatalogo(datos, contenedorId) {
 
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
-  const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
+  //const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
+  
+ 
   //llamamos a la funcion de control de imagen
   let im= mostrarImagen(datos, contenedorId);
   template2.querySelector("img").setAttribute("src", (im));
-  template2.querySelector("img").setAttribute("id", imageId);
+  template2.querySelector("img").setAttribute("id", "img"+ datos.Artículo);
   template2.querySelector("h5").textContent = (datos.Descripción);
   template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
   template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
-
-console.log (datos.Descuento)
 
 if (datos.Descuento != 0){
 // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
@@ -319,6 +319,7 @@ categoriasUnicas.forEach(categoria => {
       }
 
       mBotones.mostrarBotones();
+
       
     });
     let clone = document.importNode(template, true);
@@ -334,7 +335,9 @@ categoriasUnicas.forEach(categoria => {
     escucharBotones();
     var a=true;
     toggleCacaContent(a);
+    descu.porDeDescuento();
     subirScroll.subir()
+
   });
   //ESTO SUBE AL DOM LAS CATEGORIAS
   lil.appendChild(boton);
@@ -502,7 +505,7 @@ document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las c
 
 //Ponemos a escuchar botones de productos
 escucharBotones();
-
+descu.porDeDescuento();
 
 
 
@@ -890,7 +893,7 @@ function filtrarConBusqueda() {
     escucharBotones();
     var a=true;
     toggleCacaContent(a);
-
+    descu.porDeDescuento();
     subirScroll.subir();
 
   };

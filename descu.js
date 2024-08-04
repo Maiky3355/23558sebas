@@ -16,6 +16,7 @@ imageElements.forEach((imgElement) => {
 
   // Buscar el valor de descuento en el objeto "datos"
   let discountValue = datos.find(item => item.Artículo === imageId)?.Descuento;
+  if (discountValue !=0){
   discountValue = (discountValue.replace(/,/g, ".")) * 100;
   // Crear el elemento de texto
   const textElement = document.createElement('span');
@@ -30,6 +31,7 @@ imageElements.forEach((imgElement) => {
 
   // Agregar el texto al contenedor de la imagen
   imgElement.parentElement.appendChild(textElement);
+}
 });
 
 
