@@ -8,7 +8,7 @@
     <button id="boton-pagar">Pagar</button>
 
     <script>
-        const mp = new MercadoPago("TEST-8a687449-380b-4845-aede-5352500674e0", "TEST-7469243817254275-080419-0ef6b9d1baa88e210d6b3dd93ad9d90a-237516622");
+        const MercadoPago = new MercadoPago("TEST-8a687449-380b-4845-aede-5352500674e0", "TEST-7469243817254275-080419-0ef6b9d1baa88e210d6b3dd93ad9d90a-237516622");
 
         const preference = {
             items: [
@@ -18,7 +18,7 @@
         };
 
         document.getElementById('boton-pagar').addEventListener('click', () => {
-            mp.checkout({
+            MercadoPago.checkout({
                 preference,
                 render: {
                     container: '#boton-pagar',
