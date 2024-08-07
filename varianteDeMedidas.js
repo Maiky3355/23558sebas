@@ -86,9 +86,13 @@ export function cambiarVariantes() {
   const selects = document.querySelectorAll('select[id^=med]');
 
   selects.forEach(select => {
-    select.addEventListener('click', event => {
+    select.addEventListener('touchend', event => {
       const id = event.target.id;
       console.log(id)
+      if (!event.target) {
+        console.error(`El elemento select con ID "${event.target.Id}" no existe.`);
+        return;
+      }
       let selectElement7 = document.getElementById(id); // Obtener el elemento select por su id
       var varied = selectElement7.value; // Obtener el valor seleccionado del elemento select
       console.log(varied)
@@ -102,8 +106,7 @@ export function cambiarVariantes() {
 
       switch (varied) {
         case '1':
-          console.log('Has seleccionado la opción 1');
-          // Aquí puedes realizar acciones específicas para la opción
+           // Aquí puedes realizar acciones específicas para la opción
 
           // Crear las nuevas opciones
           let nuevasOpcionesRL = '<option value="1">1</option>' +
@@ -121,7 +124,6 @@ export function cambiarVariantes() {
 
           break;
         case '2':
-          console.log('Has seleccionado la opción 2');
           // Acciones para la opción 2
 
 
