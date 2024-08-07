@@ -122,7 +122,7 @@ var selectElement = template2.querySelector('.variantes');
 
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos, contenedorId) {
-  
+
 
 
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
@@ -135,7 +135,7 @@ function MostrarEnCatalogo(datos, contenedorId) {
   template2.querySelector("img").setAttribute("id", "img" + datos.Artículo);
   template2.querySelector("h5").textContent = (datos.Descripción);
 
-
+  //llamamos la funcion del modulo para agregar las variantes 
   varianteDeMedidas.AgregaVariantes(datos, template2)
 
 
@@ -165,11 +165,6 @@ function MostrarEnCatalogo(datos, contenedorId) {
     template2.querySelector("small").textContent = "$" + precioCatalogo;
 
   }
-
-  // if (datos.Categoria== "CARTUCHOS"||datos.Categoria=="AGUJAS" ||datos.Categoria=="PUNTERAS"){
-  // template2.querySelector(".variantes").innerHTML = template4.querySelector(".Variante").innerHTML 
-
-  // }
 
 
 
@@ -535,10 +530,10 @@ function escucharBotones() {
       unidades = Number(selectElement.value); // Obtener el valor seleccionado del elemento select
 
       let selectElement77 = document.getElementById('med' + da2); // Obtener el elemento select por su id
-      if(selectElement77!= null){
+      if (selectElement77 != null) {
         var medidas = selectElement77.value; // Obtener el valor seleccionado del elemento select
-        
-      
+
+
 
 
 
@@ -546,38 +541,38 @@ function escucharBotones() {
           case '1':
             console.log('Has seleccionado la opción 1');
             // Aquí puedes realizar acciones específicas para la opción 1
-            var textMedidas= "RL-";
+            var textMedidas = "RL-";
             break;
           case '2':
             console.log('Has seleccionado la opción 2');
             // Acciones para la opción 2
-            var textMedidas= "M1-";
+            var textMedidas = "M1-";
             break;
           case '3':
             // ...
-            var textMedidas= "RM-";
-            break; 
-             case '4':
+            var textMedidas = "RM-";
+            break;
+          case '4':
             // ...
-            var textMedidas= "RS-";
+            var textMedidas = "RS-";
             break;
           default:
             console.log('Opción no válida');
             break;
         }
-     
+
 
 
       }
-    
+
 
 
       let selectElement7 = document.getElementById('var' + da2); // Obtener el elemento select por su id
-      if(selectElement7!= null){
+      if (selectElement7 != null) {
         var varied = selectElement7.value; // Obtener el valor seleccionado del elemento select
- 
+
       }
-      
+
 
 
       var tit = buscarDatos.buscarId(parseInt(da2));
@@ -590,7 +585,7 @@ function escucharBotones() {
         //vemos si esta por el id
         let siEstaId = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
         //vemos si esta con la misma descripcion
-       
+
         // let siEsta2 = itemCarrito.find(artic => artic.Descripción === (Descripción));
         // //falta poner comprobacion para guardar en carrito variedad
 
@@ -701,12 +696,12 @@ function escucharBotones() {
       };
       if (medidas == null & varied == null) {
         agregarOModificarItem(da2, (parseInt(da2)), tit, pre, dol, unidades, desc);
-      
+
       }
       else {
         //modificamos el id y agregamos descropcion diferente
-       agregarOModificarItem(medidas+9990+da2+varied, (parseInt(medidas+9990+da2+varied)), `${tit}  ${textMedidas} ${varied}`, pre, dol, unidades, desc);
-   
+        agregarOModificarItem(medidas + 9990 + da2 + varied, (parseInt(medidas + 9990 + da2 + varied)), `${tit}  ${textMedidas} ${varied}`, pre, dol, unidades, desc);
+
       }
 
 
@@ -780,7 +775,7 @@ function EliminarV() {
   //ELIMINAMOS DEPENDE SI HAY VARIOS O 1 SOLO Y VAMOS ACTUALIZANDO CARRITO Y LINK DE WHATSAPP
   let eliminarOModificarItem = (dato, unidades, parrafo) => {
     let siEsta = itemCarrito.find((artic) => artic.Artículo === dato);
-   
+
     if (siEsta) {
       // console.log(siEsta.Unidades);
 
@@ -1177,7 +1172,7 @@ descu.porDeDescuento();
 
 
 
-
+varianteDeMedidas.cambiarVariantes()
 
 
 
