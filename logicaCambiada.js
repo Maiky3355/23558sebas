@@ -638,20 +638,20 @@ function escucharBotones() {
           case '1':
             console.log('Has seleccionado la opción 1');
             // Aquí puedes realizar acciones específicas para la opción 1
-            var textMedidas= "RL";
+            var textMedidas= "RL-";
             break;
           case '2':
             console.log('Has seleccionado la opción 2');
             // Acciones para la opción 2
-            var textMedidas= "M1";
+            var textMedidas= "M1-";
             break;
           case '3':
             // ...
-            var textMedidas= "RM";
+            var textMedidas= "RM-";
             break; 
              case '4':
             // ...
-            var textMedidas= "RS";
+            var textMedidas= "RS-";
             break;
           default:
             console.log('Opción no válida');
@@ -660,27 +660,8 @@ function escucharBotones() {
      
 
 
-
-
-
-
-
-
       }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       let selectElement7 = document.getElementById('var' + da2); // Obtener el elemento select por su id
@@ -816,7 +797,7 @@ function escucharBotones() {
       }
       else {
         //modificamos el id y agregamos descropcion diferente
-       agregarOModificarItem(medidas+9990+da2+varied, (parseInt(medidas+9990+da2+varied)), `${tit}  ${textMedidas} - ${varied}`, pre, dol, unidades, desc);
+       agregarOModificarItem(medidas+9990+da2+varied, (parseInt(medidas+9990+da2+varied)), `${tit}  ${textMedidas} ${varied}`, pre, dol, unidades, desc);
    
       }
 
