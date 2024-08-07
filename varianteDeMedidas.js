@@ -88,21 +88,19 @@ export function cambiarVariantes() {
   selects.forEach(select => {
     select.addEventListener('change', event => {
       const id = event.target.id;
-      console.log(id)
+  
       if (!event.target) {
         console.error(`El elemento select con ID "${event.target.Id}" no existe.`);
         return;
       }
       let selectElement7 = document.getElementById(id); // Obtener el elemento select por su id
       var varied = selectElement7.value; // Obtener el valor seleccionado del elemento select
-      console.log(varied)
+
       var regex = /(\d+)/g;
       var id2 = (id.match(regex));
-      console.log(id2)
+   
       const selectElement77 = document.getElementById("var" + id2); // Obtener el elemento select por su id
 
-
-      console.log(varied)
 
       switch (varied) {
         case '1':
