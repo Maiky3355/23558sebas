@@ -1,7 +1,7 @@
 //importamos los modulos y variables a ser utilizados
 
 //datos carga el Json en variable (datos)
-import  data from './jADatos.js';
+import data from './jADatos.js';
 const datos = Array.from(data);
 
 //mBotones muestra los botones Agregar al carrito con movimiento
@@ -106,6 +106,7 @@ let fragmento2 = document.createDocumentFragment();
 
 let template3 = document.getElementById("contTemplate3").content;
 
+
 //cargamos donde mostramos total de carrino en el navbar
 let totalCarritoNavb = document.getElementById("totalCarritoNavb");
 //cargamos a interes la etiqueta donde mostraremos el titulo de producto
@@ -113,56 +114,173 @@ const interes = document.getElementById("interes");
 
 //cargamos a interes2 la etiqueta donde mostraremos el precio total
 const intprecioTotal = document.getElementById("precioTotal");
+var selectElement = template2.querySelector('.variantes');
+
 
 
 
 //creamos funcion con datos para mostrar elementos del catalogo y no repetir code <-------
 function MostrarEnCatalogo(datos, contenedorId) {
+  
+
 
   //MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
   template.querySelector('.esteSi').setAttribute("id", contenedorId);
   //const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
-  
- 
+
+
 
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
-  template2.querySelector("img").setAttribute("id", "img"+ datos.Artículo);
+  template2.querySelector("img").setAttribute("id", "img" + datos.Artículo);
   template2.querySelector("h5").textContent = (datos.Descripción);
+
+
+
+
+
+  var selectElement5 = template2.querySelector('.tVariante');
+  var selectElement4 = template2.querySelector('.tMedida');
+
+
+  const categoriasValidas = ["CARTUCHOS", "AGUJAS", "PUNTERAS"];
+
+  // Verificamos si la categoría NO está en la lista de categorías válidas
+  if (!categoriasValidas.includes(datos.Categoria)) {
+    console.log("La categoría es válida (no es Cartuchos, Agujas o Punteras).");
+   
+  
+    removeElements([selectElement4, selectElement5]);
+
+
+  }else {
+
+    removeElements([selectElement4, selectElement5]);
+    var selectElement5 = template2.querySelector('.tVariante');
+    var selectElement4 = template2.querySelector('.tMedida');
+    if (selectElement4 == null && selectElement5 == null) {
+
+
+  
+    
+
+      const selectElement77 = document.createElement('select');
+      selectElement77.classList.add('tMedida');
+      selectElement77.setAttribute("id", "med" + (datos.Artículo));
+      
+      template2.querySelector('.variantes').appendChild(selectElement77);
+
+
+
+
+      const selectElement7 = document.createElement('select');
+      selectElement7.classList.add('tVariante');
+      selectElement7.setAttribute("id", "var" + (datos.Artículo));
+
+      template2.querySelector('.variantes').appendChild(selectElement7);
+
+
+    }
+
+    var selectElement5 = template2.querySelector('.tVariante');
+    var selectElement4 = template2.querySelector('.tMedida');
+
+
+
+    // Crear las nuevas opciones
+    let nuevasOpciones = '<option value="1">RL</option>' +
+      '<option value="2">M1</option>' +
+      '<option value="3">RM</option>' +
+      '<option value="4">RS</option>';
+
+    // Asignar las opciones al select
+    selectElement4.innerHTML = nuevasOpciones;
+
+    // Crear las nuevas opciones
+    let nuevasOpciones2 = '<option value="1">1</option>' +
+      '<option value="3">3</option>' +
+      '<option value="5">5</option>' +
+      '<option value="7">7</option>' +
+      '<option value="9">9</option>' +
+      '<option value="11">11</option>' +
+      '<option value="13">13</option>' +
+      '<option value="15">15</option>';
+
+    // Asignar las opciones al select
+    selectElement5.innerHTML = nuevasOpciones2;
+
+
+
+ 
+  
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-  template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
+  template2.querySelector(".cantidad").setAttribute("id", "idbot" + (datos.Artículo));
 
-if (datos.Descuento != 0){
-// Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
-precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-//los valores vienen con "," y hay q pasarlos a puntos
-var precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number((datos.Descuento).replace(/,/g, "."))));
-precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
+  if (datos.Descuento != 0) {
+    // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
+    var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+    //los valores vienen con "," y hay q pasarlos a puntos
+    var precioCatalogo2 = (datos.Venta.replace(/,/g, ".") * datos.DOLAR) * (1 - (Number((datos.Descuento).replace(/,/g, "."))));
+    precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
 
-template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>" + " $" + precioCatalogo2;
+    template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>" + " $" + precioCatalogo2;
 
 
-}
-   
-else {
-  var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
-  precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
+  }
 
-  template2.querySelector("small").textContent = "$" + precioCatalogo;
+  else {
+    var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
+    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-}
+    template2.querySelector("small").textContent = "$" + precioCatalogo;
 
- 
+  }
+
+  // if (datos.Categoria== "CARTUCHOS"||datos.Categoria=="AGUJAS" ||datos.Categoria=="PUNTERAS"){
+  // template2.querySelector(".variantes").innerHTML = template4.querySelector(".Variante").innerHTML 
+
+  // }
+
+
+
+
   template2.querySelector("button").setAttribute("id", "idbot" + (datos.Artículo));
 
   //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
 
   let clone2 = document.importNode(template2, true);
+
   fragmento2.appendChild(clone2);
+
   return fragmento2
+
 };
 
 
@@ -194,7 +312,7 @@ else {
 //     // La imagen existe, asignamos la ruta a la imagen en el DOM
 //     template2.querySelector("img").setAttribute("src", `./imgcarrito/${datos.Artículo}.jpg`);
 //   console.log("se encontro imagen "+ datos.Artículo)
-  
+
 //   };
 
 //   img.onerror = function() {
@@ -210,7 +328,7 @@ else {
 //   // template2.querySelector("a").dataset.bsContent=(datos.Descripción);
 //   // template2.querySelector("a").setAttribute("id", "Modal-" + (datos.Artículo));
 //   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
-//   template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
+//   template2.querySelector(".cantidad").setAttribute("id", "idbot" + (datos.Artículo));
 //   var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
 //   precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
@@ -290,7 +408,7 @@ categoriasUnicas.forEach(categoria => {
       fragmento.removeChild(fragmento.firstChild);
     }
     datos.forEach((datos) => {
-      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */&& (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
+      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
         contenedorId = 0;
         fragmento2 = MostrarEnCatalogo(datos, contenedorId);
@@ -298,7 +416,7 @@ categoriasUnicas.forEach(categoria => {
 
       mBotones.mostrarBotones();
 
-      
+
     });
     let clone = document.importNode(template, true);
     fragmento.appendChild(clone);
@@ -311,7 +429,7 @@ categoriasUnicas.forEach(categoria => {
     //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
 
     escucharBotones();
-    var a=true;
+    var a = true;
     toggleCacaContent(a);
     descu.porDeDescuento();
     subirScroll.subir()
@@ -356,12 +474,12 @@ function MostrarDescuentos() {
       // MOSTRAMOS LOS ELEMENTOS DEL CATALOGO
       template3.querySelector('.caca').setAttribute("id", contenedorId);
 
-    template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
+      template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
       template2.querySelector("img").setAttribute("id", "img" + (datos.Artículo));
       template2.querySelector("h5").textContent = (datos.Descripción);
       template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
 
-      template2.querySelector("select").setAttribute("id", "idbot" + (datos.Artículo));
+      template2.querySelector(".cantidad").setAttribute("id", "idbot" + (datos.Artículo));
 
       // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
       let precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
@@ -403,13 +521,13 @@ function toggleCacaContent(a) {
 
   const toggleButton = document.getElementById('toggleDiscountSection');
 
-  if (!cacaContainer.classList.contains('d-none') && a ==true) {
+  if (!cacaContainer.classList.contains('d-none') && a == true) {
     cacaContainer.classList.toggle('d-none');
     toggleButton.textContent = 'Mostrar sección de descuentos';
   }
 
 
-  
+
   if (cacaContainer.classList.contains('d-none')) {
     toggleButton.textContent = 'Mostrar sección de descuentos';
   } else {
@@ -460,9 +578,9 @@ let contenedorId = 0;
 datos.forEach((datos) => {
   if (datos.Inventario >= 1 && datos.Descuento == 0) {
     //mostramos los datos en el catalogo!!! <--------------------------------------------------
-  
+
     contenedorId = 0
-  
+
     fragmento2 = MostrarEnCatalogo(datos, contenedorId);
   }
   mBotones.mostrarBotones();
@@ -508,6 +626,71 @@ function escucharBotones() {
       let selectElement = document.getElementById('idbot' + da2); // Obtener el elemento select por su id
       unidades = Number(selectElement.value); // Obtener el valor seleccionado del elemento select
 
+      let selectElement77 = document.getElementById('med' + da2); // Obtener el elemento select por su id
+      if(selectElement77!= null){
+        var medidas = selectElement77.value; // Obtener el valor seleccionado del elemento select
+        
+      
+
+
+
+        switch (medidas) {
+          case '1':
+            console.log('Has seleccionado la opción 1');
+            // Aquí puedes realizar acciones específicas para la opción 1
+            var textMedidas= "RL";
+            break;
+          case '2':
+            console.log('Has seleccionado la opción 2');
+            // Acciones para la opción 2
+            var textMedidas= "M1";
+            break;
+          case '3':
+            // ...
+            var textMedidas= "RM";
+            break; 
+             case '4':
+            // ...
+            var textMedidas= "RS";
+            break;
+          default:
+            console.log('Opción no válida');
+            break;
+        }
+     
+
+
+
+
+
+
+
+
+      }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      let selectElement7 = document.getElementById('var' + da2); // Obtener el elemento select por su id
+      if(selectElement7!= null){
+        var varied = selectElement7.value; // Obtener el valor seleccionado del elemento select
+ 
+      }
+      
+
+
       var tit = buscarDatos.buscarId(parseInt(da2));
       var pre = buscarDatos.buscarIdPrecio(parseInt(da2));
       var dol = buscarDatos.buscarIdDol(parseInt(da2));
@@ -515,12 +698,75 @@ function escucharBotones() {
       var desc = buscarDatos.buscarDescuento(parseInt(da2));
 
       let agregarOModificarItem = (da2, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento) => {
-        let siEsta = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
+        //vemos si esta por el id
+        let siEstaId = itemCarrito.find(artic => artic.Artículo === (parseInt(da2)));
+        //vemos si esta con la misma descripcion
+       
+        // let siEsta2 = itemCarrito.find(artic => artic.Descripción === (Descripción));
+        // //falta poner comprobacion para guardar en carrito variedad
 
-        if (siEsta) {
-          if ((siEsta.Unidades + unidades) <= stock) {
 
-            siEsta.Unidades += unidades;
+
+
+        if (siEstaId) {
+
+
+          // if (siEsta2) {
+          //   //siEsta2 y las unidades a agregar no superan el stock se suman las nuevas unidades
+          //   if ((siEsta2.Unidades + unidades) <= stock) {
+
+          //     siEsta2.Unidades += unidades;
+          //     localStor.guardarEnLocalStorage(itemCarrito);
+          //     agregar(tit, da2);
+          //   } else {
+          //     //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
+          //     let suceso = "NO HAY STOCK SUFICIENTE";
+          //     let tipoAlert = "alert-danger";
+          //     alertas.alertAgrego(Descripción, suceso, tipoAlert);
+          //     return;
+          //   }
+          // } else {
+          //   //si no esta y las unidades son menor o igual que el stock pasa al siguiente paso
+          //   if ((Unidades) <= stock) {
+          //     //si tiene descuento lo calcula y agrega al carrito
+          //     if (Descuento != 0) {
+          //       let ventaCD = ((Venta) * (1 - (Number(Descuento) / 100)));
+
+          //       itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades });
+          //       localStor.guardarEnLocalStorage(itemCarrito);
+          //       agregar(tit, da2);
+          //       //si no tiene descuento solo agrega al carrito
+          //     } else {
+          //       itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
+          //       localStor.guardarEnLocalStorage(itemCarrito);
+          //       agregar(tit, da2);
+          //       console.log(Venta)
+          //       console.log(typeof Venta);
+
+          //     }
+          //   } else {
+
+          //     //MOSTRAMOS ALERTAS DE NO HAY STOCK SUFICIENTE
+          //     let suceso = "NO HAY STOCK SUFICIENTE";
+          //     let tipoAlert = "alert-danger";
+          //     alertas.alertAgrego(Descripción, suceso, tipoAlert);
+          //     return;
+          //   }
+
+          // }
+
+
+
+
+
+
+
+
+
+
+          if ((siEstaId.Unidades + unidades) <= stock) {
+
+            siEstaId.Unidades += unidades;
             localStor.guardarEnLocalStorage(itemCarrito);
             agregar(tit, da2);
           }
@@ -564,8 +810,16 @@ function escucharBotones() {
 
         }
       };
+      if (medidas == null & varied == null) {
+        agregarOModificarItem(da2, (parseInt(da2)), tit, pre, dol, unidades, desc);
+      
+      }
+      else {
+        //modificamos el id y agregamos descropcion diferente
+       agregarOModificarItem(medidas+9990+da2+varied, (parseInt(medidas+9990+da2+varied)), `${tit}  ${textMedidas} - ${varied}`, pre, dol, unidades, desc);
+   
+      }
 
-      agregarOModificarItem(da2, (parseInt(da2)), tit, pre, dol, unidades, desc);
 
       console.log(itemCarrito);
 
@@ -615,18 +869,21 @@ function EliminarV() {
 
       var regex = /(\d+)/g;
       let da2 = (da.match(regex));
-      console.log(Number(da2));
+
+      if (Number(da2) != 0) {
 
 
-      var prodAElimin = eliminarOModificarItem(Number(da2), unidades, da);
+        var prodAElimin = eliminarOModificarItem(Number(da2), unidades, da);
+
+        console.log(`se elimino del carrito el id: ${Number(da2)}`);
+
+        //MOSTRAMOS ALERTAS DE LO ELIMINADO
+        let suceso = "Se eliminó del carrito";
+        let tipoAlert = "alert-danger";
+        alertas.alertAgrego(prodAElimin, suceso, tipoAlert);
 
 
-      //MOSTRAMOS ALERTAS DE LO ELIMINADO
-      let suceso = "Se eliminó del carrito";
-      let tipoAlert = "alert-danger";
-      alertas.alertAgrego(prodAElimin, suceso, tipoAlert);
-
-
+      }
 
 
     })
@@ -634,8 +891,9 @@ function EliminarV() {
   //ELIMINAMOS DEPENDE SI HAY VARIOS O 1 SOLO Y VAMOS ACTUALIZANDO CARRITO Y LINK DE WHATSAPP
   let eliminarOModificarItem = (dato, unidades, parrafo) => {
     let siEsta = itemCarrito.find((artic) => artic.Artículo === dato);
+   
     if (siEsta) {
-      console.log(siEsta.Unidades);
+      // console.log(siEsta.Unidades);
 
       if (siEsta.Unidades >= 2) {
         siEsta.Unidades -= unidades;
@@ -867,7 +1125,7 @@ function filtrarConBusqueda() {
     mBotones.mostrarBotones();
 
     escucharBotones();
-    var a=true;
+    var a = true;
     toggleCacaContent(a);
     descu.porDeDescuento();
     subirScroll.subir();
@@ -877,14 +1135,14 @@ function filtrarConBusqueda() {
 
 
   formulario.addEventListener('input', filtrar);
-  formulario.addEventListener('change', filtrar );
-formulario.addEventListener('keydown', (event) => {
-  if (event.keyCode === 13 || event.key === 'Enter') { // Verifica si se presionó Enter
-    filtrar();
-    //llamamos la funcion ocultar canvas cuando precionamos enter o buscar
-    ocultarCanvasBusqueda();
-  }
-});
+  formulario.addEventListener('change', filtrar);
+  formulario.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13 || event.key === 'Enter') { // Verifica si se presionó Enter
+      filtrar();
+      //llamamos la funcion ocultar canvas cuando precionamos enter o buscar
+      ocultarCanvasBusqueda();
+    }
+  });
 
 }
 
@@ -913,7 +1171,7 @@ formulario.addEventListener('keydown', (event) => {
 //   body.removeAttribute('style');
 
 
-  
+
 //     // Elimina manualmente la clase 'show' del backdrop (si es necesario)
 //     const backdrop = document.querySelector('.offcanvas-backdrop');
 //     if (backdrop) {
@@ -921,11 +1179,11 @@ formulario.addEventListener('keydown', (event) => {
 
 //     }
 
- 
+
 // }
 
 
-  // funcion ocultar canvas
+// funcion ocultar canvas
 function ocultarCanvasBusqueda() {
   // Obtenemos los elementos
   const elementosBackdrop = document.getElementsByClassName("offcanvas-backdrop");
@@ -1000,9 +1258,9 @@ descu.porDeDescuento();
 
 
 //si lo usamos, este codigo iria en mostrarCatalogo 
-  //llamamos a la funcion de control de imagen
-  //let im= mostrarImagen(datos, contenedorId);
-  //template2.querySelector("img").setAttribute("src", (im));
+//llamamos a la funcion de control de imagen
+//let im= mostrarImagen(datos, contenedorId);
+//template2.querySelector("img").setAttribute("src", (im));
 
 
 // //funcion para comprobar si la imagen existe
@@ -1023,5 +1281,30 @@ descu.porDeDescuento();
 //     img= "./imgcarrito/" + "IMGND.jpg";
 //     return img;
 //   }
- 
+
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function removeElements(elements) {
+  elements.forEach(element => {
+    if (element) {
+      element.remove();
+    }
+  });
+}
+
+// ...
+
