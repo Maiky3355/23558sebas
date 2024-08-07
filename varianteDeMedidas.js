@@ -86,7 +86,7 @@ export function cambiarVariantes() {
   const selects = document.querySelectorAll('select[id^=med]');
 
   selects.forEach(select => {
-    select.addEventListener('touchend', event => {
+    select.addEventListener('change', event => {
       const id = event.target.id;
       console.log(id)
       if (!event.target) {
