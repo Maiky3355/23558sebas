@@ -47,7 +47,7 @@ export function AgregaVariantes(datos, template2) {
 
     }
 
-    // var selectElement5 = template2.querySelector('.tVariante');
+     var selectElement5 = template2.querySelector('.tVariante');
     var selectElement4 = template2.querySelector('.tMedida');
 
 
@@ -61,18 +61,18 @@ export function AgregaVariantes(datos, template2) {
     // Asignar las opciones al select
     selectElement4.innerHTML = nuevasOpciones;
 
-    // // Crear las nuevas opciones
-    // let nuevasOpciones2 = '<option value="1">1</option>' +
-    //   '<option value="3">3</option>' +
-    //   '<option value="5">5</option>' +
-    //   '<option value="7">7</option>' +
-    //   '<option value="9">9</option>' +
-    //   '<option value="11">11</option>' +
-    //   '<option value="13">13</option>' +
-    //   '<option value="15">15</option>';
+    // Crear las nuevas opciones
+    let nuevasOpciones2 = '<option value="1">1</option>' +
+      '<option value="3">3</option>' +
+      '<option value="5">5</option>' +
+      '<option value="7">7</option>' +
+      '<option value="9">9</option>' +
+      '<option value="11">11</option>' +
+      '<option value="13">13</option>' +
+      '<option value="15">15</option>';
 
-    // // Asignar las opciones al select
-    // selectElement5.innerHTML = nuevasOpciones2;
+    // Asignar las opciones al select
+    selectElement5.innerHTML = nuevasOpciones2;
 
   }
 }
