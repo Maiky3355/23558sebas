@@ -47,7 +47,7 @@ export function AgregaVariantes(datos, template2) {
 
     }
 
-     var selectElement5 = template2.querySelector('.tVariante');
+    var selectElement5 = template2.querySelector('.tVariante');
     var selectElement4 = template2.querySelector('.tMedida');
 
 
