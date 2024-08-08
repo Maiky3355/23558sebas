@@ -279,7 +279,7 @@ function MostrarDescuentos() {
 
 
 
-// boton para mostrar uy ocultar descuentos
+// boton para mostrar y ocultar descuentos
 function toggleCacaContent(a) {
   const cacaContainer = document.querySelector('.caca');
   cacaContainer.classList.toggle('d-none');
