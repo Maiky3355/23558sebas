@@ -159,8 +159,7 @@ export function cambiarVariantes() {
           // ...
 
           // Crear las nuevas opciones
-          let nuevasOpcionesRS = '<option value="5">5</option>' +
-            '<option value="7">7</option>' +
+          let nuevasOpcionesRS = '<option value="7">7</option>' +
             '<option value="9">9</option>' +
             '<option value="11">11</option>';
 
