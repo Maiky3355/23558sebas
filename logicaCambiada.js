@@ -330,6 +330,10 @@ categoriasUnicas.forEach(categoria => {
     var a = true;
     toggleCacaContent(a);
     descu.porDeDescuento();
+    
+varianteDeMedidas.cambiarVariantes()
+
+
     subirScroll.subir()
 
   });
@@ -1012,6 +1016,10 @@ function filtrarConBusqueda() {
     var a = true;
     toggleCacaContent(a);
     descu.porDeDescuento();
+    
+varianteDeMedidas.cambiarVariantes()
+
+
     subirScroll.subir();
 
   };
