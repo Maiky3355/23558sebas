@@ -3,8 +3,6 @@
 
 
 //hacemos que los botones agregar carrito aparezcan despues de mostrar las tarjetas
-
-
 export function mostrarBotones() {
 
     $(document).ready(function () {

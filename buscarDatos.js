@@ -1,6 +1,9 @@
 //import { datos } from './jADatos.js'; SACAMOS ESTE Y PROBAMOS CON EL FETCH
 import datos from './jADatos.js';
 
+
+
+
 //buscamos el id y ponemos el titulo
 export function buscarId(id) {
     const found = datos.find(elem => elem.Artículo == id);
@@ -10,12 +13,18 @@ export function buscarId(id) {
 
 
 
+
+
+
 //buscamos el id y ponemos el dolar
 export function buscarIdDol(id) {
     const found = datos.find(elem => elem.Artículo == id);
 
     return found.DOLAR;
 };
+
+
+
 
 
 //buscamos el id y ponemos el precio
@@ -31,12 +40,18 @@ export function buscarIdPrecio(id) {
 };
 
 
+
+
+
 //buscamos el stock
 export function buscarStock(id) {
     const found = datos.find(elem => elem.Artículo == id);
 
     return found.Inventario;
 };
+
+
+
 
 
 //buscamos si tienen descuentos

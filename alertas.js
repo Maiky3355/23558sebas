@@ -1,7 +1,6 @@
 
 
 //funcion PARA MOSTRAR ALERTAS PERSONALIZADAS
-
 export function alertAgrego(titAlert, suceso, tipoAlert) {
     //ponemos el titulo del producto en el alert
     let alertTitulo = document.getElementById("alertTit");
@@ -29,7 +28,6 @@ export function alertAgrego(titAlert, suceso, tipoAlert) {
 
 
     }, 2000);
-
 
 };
 

@@ -8,6 +8,12 @@ export function guardarEnLocalStorage(array) {
     localStorage.setItem('datosCarrito', JSON.stringify(datos));
 }
 
+
+
+
+
+
+
 // Función para extraer el carrito del local storage si existe y está dentro de la fecha de validez
 export function extraerDeLocalStorage() {
     var datos = localStorage.getItem('datosCarrito');

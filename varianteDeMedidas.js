@@ -1,5 +1,13 @@
 // let template2 = document.getElementById("contTemplate2").content;//por las dudas lo pongo aca
 import * as eliminarDelDom from './eliminarDelDom.js'
+
+
+
+
+
+
+
+
 export function AgregaVariantes(datos, template2) {
 
   var selectElement5 = template2.querySelector('.tVariante');
@@ -24,9 +32,6 @@ export function AgregaVariantes(datos, template2) {
     if (selectElement4 == null && selectElement5 == null) {
 
 
-
-
-
       const selectElement77 = document.createElement('select');
       selectElement77.classList.add('tMedida');
       selectElement77.setAttribute("id", "med" + (datos.Artículo));
@@ -34,14 +39,11 @@ export function AgregaVariantes(datos, template2) {
       template2.querySelector('.variantes').appendChild(selectElement77);
 
 
-
-
       const selectElement7 = document.createElement('select');
       selectElement7.classList.add('tVariante');
       selectElement7.setAttribute("id", "var" + (datos.Artículo));
 
       template2.querySelector('.variantes').appendChild(selectElement7);
-
 
     }
 
@@ -72,14 +74,16 @@ export function AgregaVariantes(datos, template2) {
     // // Asignar las opciones al select
     // selectElement5.innerHTML = nuevasOpciones2;
 
-
-
-
-
-
-
   }
 }
+
+
+
+
+
+
+
+
 
 
 export function cambiarVariantes() {
@@ -88,7 +92,7 @@ export function cambiarVariantes() {
   selects.forEach(select => {
     select.addEventListener('change', event => {
       const id = event.target.id;
-  
+
       if (!event.target) {
         console.error(`El elemento select con ID "${event.target.Id}" no existe.`);
         return;
@@ -98,13 +102,13 @@ export function cambiarVariantes() {
 
       var regex = /(\d+)/g;
       var id2 = (id.match(regex));
-   
+
       const selectElement77 = document.getElementById("var" + id2); // Obtener el elemento select por su id
 
 
       switch (varied) {
         case '1':
-           // Aquí puedes realizar acciones específicas para la opción
+          // Aquí puedes realizar acciones específicas para la opción
 
           // Crear las nuevas opciones
           let nuevasOpcionesRL = '<option value="1">1</option>' +
@@ -169,16 +173,6 @@ export function cambiarVariantes() {
           console.log('Opción no válida');
           break;
       }
-
-
-
-
-
-
-
-
-
-
 
     }
     )
