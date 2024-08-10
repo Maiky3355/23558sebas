@@ -350,15 +350,27 @@ llamaMostDescuentos()
 
 
 let contenedorId = 0;
-//por cada uno de los conjuntos de datos agregamos las variantes de cada etiqueta
-datos.forEach((datos) => {
-  if (datos.Inventario >= 1 && datos.Descuento == 0) {
-    //mostramos los datos en el catalogo!!! <--------------------------------------------------
 
-    contenedorId = 0
 
-    fragmento2 = MostrarEnCatalogo(datos, contenedorId);
+
+// 1. Ordenar el array por la propiedad "Categoria":
+datos.sort((a, b) => a.Descripción.localeCompare(b.Descripción));
+
+// 2. Iterar sobre el array ordenado y agrupar por categoría:
+let descActual = '';
+datos.forEach(datos => {
+  if (datos.Descripción !== descActual && datos.Inventario >= 1) {
+
+   descActual = datos.Descripción;
+
+
   }
+  if (datos.Inventario >= 1) {
+
+  contenedorId = 0
+  fragmento2 = MostrarEnCatalogo(datos, contenedorId);
+ }
+
   mBotones.mostrarBotones();
 });
 

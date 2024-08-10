@@ -18,11 +18,8 @@ export function AgregaVariantes(datos, template2) {
 
   // Verificamos si la categoría NO está en la lista de categorías válidas
   if (!categoriasValidas.includes(datos.Categoria)) {
-    console.log("La categoría es válida (no es Cartuchos, Agujas o Punteras).");
-
 
     eliminarDelDom.removeElements([selectElement4, selectElement5]);
-
 
   } else {
 
