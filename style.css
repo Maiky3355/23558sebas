@@ -136,8 +136,8 @@
 
 footer .redes {
   position: fixed;
-  top: 85%;
-  right: 2%;
+  top: 80vh;
+  right: 2vh;
   z-index: 50;
 }
 
