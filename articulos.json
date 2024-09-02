@@ -15,7 +15,7 @@
  {"Artículo":16, "Descripción":"DILUYENTE SUBLIME X3OZ", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Categoria":"DILUYENTES", "BAlterna":"DILUYENTE SUBLIME", "Marca":"SUBLIME", "DOLAR":"1340"},
  {"Artículo":18, "Descripción":"STENCIL SUBLIME 4OZ", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Categoria":"STENCIL REMOV Y HECTO", "BAlterna":"STENCIL SUBLIME", "Marca":"SUBLIME", "DOLAR":"1340"},
  {"Artículo":19, "Descripción":"BAJA LENGUAS ADULTO X100", "Venta":"1,96", "Descuento":"0", "Inventario":"17", "Categoria":"DESCARTABLES", "BAlterna":"PALITOS", "Marca":"OTRAS", "DOLAR":"1340"},
- {"Artículo":20, "Descripción":"CINTA TIPO COBAN 5CM", "Venta":"1,8", "Descuento":"0", "Inventario":"112", "Categoria":"INSUMOS", "BAlterna":"CINTA CUBRE GRIP", "Marca":"OTRAS", "DOLAR":"1340"},
+ {"Artículo":20, "Descripción":"CINTA TIPO COBAN 5CM", "Venta":"1,8", "Descuento":"0", "Inventario":"111", "Categoria":"INSUMOS", "BAlterna":"CINTA CUBRE GRIP", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":21, "Descripción":"ANESTESIA NOPAIN LIDOCAINA X3OZ", "Venta":"0,01", "Descuento":"0", "Inventario":"0", "Categoria":"ANESTESIAS", "BAlterna":"NOPAIN", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":22, "Descripción":"CARTUCHOS BLUE INK CAJA X10", "Venta":"11,0036842105263", "Descuento":"0", "Inventario":"0", "Categoria":"CARTUCHOS", "BAlterna":"CARTUCHOS", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":23, "Descripción":"STENCIL ELEPHANT BLANCO X125CC", "Venta":"5,9", "Descuento":"0", "Inventario":"0", "Categoria":"STENCIL REMOV Y HECTO", "BAlterna":"STENCIL ELEPHANT C", "Marca":"OTRAS", "DOLAR":"1340"},
@@ -155,7 +155,7 @@
  {"Artículo":188, "Descripción":"MAQUINA IMPORTADA NEGRA Y GRIS", "Venta":"21,7894736842105", "Descuento":"0", "Inventario":"0", "Categoria":"MAQUINAS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":189, "Descripción":"OFERTA", "Venta":"4,48", "Descuento":"0", "Inventario":"-1", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":190, "Descripción":"CUBRE MAQUINA X250U", "Venta":"3,56", "Descuento":"0", "Inventario":"0", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
- {"Artículo":191, "Descripción":"CARTUCHOS SPARK X20U", "Venta":"13", "Descuento":"0,05", "Inventario":"917", "Categoria":"CARTUCHOS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
+ {"Artículo":191, "Descripción":"CARTUCHOS SPARK X20U", "Venta":"13", "Descuento":"0,05", "Inventario":"916", "Categoria":"CARTUCHOS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":192, "Descripción":"CUBRE MAQUINA PEN X100U", "Venta":"3,12", "Descuento":"0", "Inventario":"10", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":193, "Descripción":"MAQUINITAS DE AFEITAR UNIDAD X1U", "Venta":"0,45", "Descuento":"0", "Inventario":"71", "Categoria":"DESCARTABLES", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":194, "Descripción":"PIGMENTO KLUG V3 1OZ", "Venta":"5,9", "Descuento":"0", "Inventario":"18", "Categoria":"PIGMENTOS", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
@@ -249,4 +249,4 @@
  {"Artículo":286, "Descripción":"STENCIL ELEPHANT ROCKY X125CC", "Venta":"7,9", "Descuento":"0", "Inventario":"2", "Categoria":"STENCIL REMOV Y HECTO", "BAlterna":"", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":287, "Descripción":"ESPUMA HARBOR CON WITCH HAZEL Y CLOROX X60CC", "Venta":"2,68", "Descuento":"0,11", "Inventario":"28", "Categoria":"ESPUMAS Y LIMPIEZA", "BAlterna":"", "Marca":"HARBOR", "DOLAR":"1340"},
  {"Artículo":288, "Descripción":"ESPUMA HARBOR CON WITCH HAZEL Y CLORHEX X60CC", "Venta":"2,68", "Descuento":"0,11", "Inventario":"29", "Categoria":"ESPUMAS Y LIMPIEZA", "BAlterna":"", "Marca":"HARBOR", "DOLAR":"1340"},
- {"Artículo":289, "Descripción":"STENCIL HARBOR GEL 120CC 4OZ", "Venta":"2,98", "Descuento":"0", "Inventario":"3", "Categoria":"STENCIL REMOV Y HECTO", "BAlterna":"", "Marca":"HARBOR", "DOLAR":"1340"}]
+ {"Artículo":289, "Descripción":"STENCIL HARBOR GEL 120CC 4OZ", "Venta":"3,32", "Descuento":"0,1", "Inventario":"3", "Categoria":"STENCIL REMOV Y HECTO", "BAlterna":"", "Marca":"HARBOR", "DOLAR":"1340"}]
