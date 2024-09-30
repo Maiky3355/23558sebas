@@ -24,6 +24,13 @@ import * as eventCerrCanvas from './eventCerrCanvas.js';
 //cargamos el evento que asigna las medidas de los productos cartuchos-agujas-punteras
 import * as varianteDeMedidas from './varianteDeMedidas.js';
 
+
+//VARIABLE PARA MOSTRAR CANTIDAD DE ITEMS EN FLOBO DE CARRITO
+const cantCarritod = document.getElementById("cantCarrito");
+ 
+let cantCarritoLet=0;
+
+
 let flagMostrarDescuentos = false;
 
 
@@ -631,7 +638,12 @@ function agregar(da, da2) {
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
     //CREAMOS LAS ETIQUETAS LI Y SPAN CON SUS DATOS PARA EL CANVAS
+
+
+
+  
     const parrafo = document.createElement("li");
+    
     var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
     precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
@@ -642,15 +654,33 @@ function agregar(da, da2) {
 
     const span = document.createElement("span");
     span.setAttribute("class", "badge badge-primary badge-pill active");
-    span.style.cssText = '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: rgb(0, 123, 255);';
+    span.style.cssText = '  z-index: 999 !important;  font-weight: bold;font-size: 16px;   background-color: rgb(0, 123, 255);';
 
     span.textContent = producto.Unidades;
 
 
     parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
+
+
+//tratamos de poner imagen en carrito
+    // const img1 = new Image();
+    // img1.onload = () => {
+    //   // Una vez que la imagen se ha cargado, la agregamos al elemento parrafo
+    //   parrafo.appendChild(img1);
+    // };
+    // img1.src = "./imgcarrito/" + producto.Artículo + ".jpg";
+    // img1.alt = "Imagen del producto " + producto.Artículo;
+    // img1.style.cssText = 'z-index: 1100 !important; width:10px; height: 10px;';
+    
+
+
+
     parrafo.appendChild(span);
     interes.appendChild(parrafo);
 
+
+
+    console.log(parrafo);
   });
   //ACTUALIZAMOS CARRITO Y WHATSAPP.
   actualizarCarrito();
@@ -852,17 +882,12 @@ function ocultarCanvasBusqueda() {
 
 
 
-
-
-
-
-
-
 //actualizamos el carrito
 function actualizarCarrito() {
   total();
   // Limpiar el contenido existente en el contenedor
   interes.innerHTML = '';
+  cantCarritoLet=0;
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
     const parrafo = document.createElement("li");
@@ -882,10 +907,24 @@ function actualizarCarrito() {
 
 
     parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
+    
+
+
+//AGREGAMOS LAS UNIDADES A MOSTRAR EN GLOBO DE CARRITO    
+
+    cantCarritoLet +=producto.Unidades;
+
+
+
+
+
+
     parrafo.appendChild(span);
     interes.appendChild(parrafo);
 
   });
+
+    cantCarritod.textContent= cantCarritoLet;
 
   localStor.guardarEnLocalStorage(itemCarrito);
   EliminarV();
