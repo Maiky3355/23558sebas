@@ -679,8 +679,6 @@ function agregar(da, da2) {
     interes.appendChild(parrafo);
 
 
-
-    console.log(parrafo);
   });
   //ACTUALIZAMOS CARRITO Y WHATSAPP.
   actualizarCarrito();
@@ -927,7 +925,11 @@ function actualizarCarrito() {
     cantCarritod.textContent= cantCarritoLet;
 
   localStor.guardarEnLocalStorage(itemCarrito);
+  borrarCarritoCompleto()
+
+
   EliminarV();
+ 
 };
 
 
@@ -983,3 +985,81 @@ varianteDeMedidas.cambiarVariantes()
 
 
 
+
+
+
+//creamos funcion que crea boton, lo muestra si hay items y borra todo el carrito.
+function borrarCarritoCompleto(){
+
+
+  const BCarritoComp= document.getElementById('borrarCarr');
+
+  BCarritoComp.innerHTML='';
+  const btnBorrarCarrito = document.createElement("button");
+  btnBorrarCarrito.setAttribute("class", "btn btn-danger");
+  btnBorrarCarrito.setAttribute("id", "btbc");
+  btnBorrarCarrito.textContent = "Vaciar Carrito";
+
+
+  BCarritoComp.appendChild(btnBorrarCarrito)
+
+  const btbc= document.getElementById('btbc');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  if (itemCarrito.length<=0) {
+    BCarritoComp.classList.remove('show');
+    BCarritoComp.classList.add('hide');
+  }
+
+else{
+  if (itemCarrito.length>=1) {
+    BCarritoComp.classList.remove('hide');
+    BCarritoComp.classList.add('show');
+
+   
+    btbc.addEventListener('click', function (event) {
+  event.preventDefault(); // Evita la redirección
+itemCarrito.splice(0, itemCarrito.length);
+
+actualizarCarrito()
+actualizarEnlaceWhatsApp(); // Actualizar el enlace
+});
+
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
