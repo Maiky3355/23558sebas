@@ -1006,18 +1006,6 @@ function borrarCarritoCompleto(){
   const btbc= document.getElementById('btbc');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   if (itemCarrito.length<=0) {
     BCarritoComp.classList.remove('show');
     BCarritoComp.classList.add('hide');
@@ -1044,30 +1032,6 @@ alertas.alertAgrego(da, suceso, tipoAlert);
 actualizarCarrito()
 actualizarEnlaceWhatsApp(); // Actualizar el enlace
 });
-
-
-
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  }
+  };
