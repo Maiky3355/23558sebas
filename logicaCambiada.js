@@ -1033,6 +1033,14 @@ else{
   event.preventDefault(); // Evita la redirección
 itemCarrito.splice(0, itemCarrito.length);
 
+
+let suceso = "Ya no hay elementos";
+let tipoAlert = "alert-danger";
+let  da="SE VACIO EL CARRITO"
+alertas.alertAgrego(da, suceso, tipoAlert);
+
+
+
 actualizarCarrito()
 actualizarEnlaceWhatsApp(); // Actualizar el enlace
 });
