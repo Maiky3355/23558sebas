@@ -1103,24 +1103,51 @@ switch (true) {
 //      toast.parentNode.removeChild(toast);
 //  }, 10000);
 
+let isToastClosed = false;
+
+
+
 const toast = document.getElementById('propaganda');
 const countdownElement = toast.querySelector('li'); // Suponiendo que el elemento small contiene la cuenta regresiva
-
+const toast2 = document.getElementById('propagandaPadre');
 let timeLeft = 10; // Tiempo en segundos
 
 const countdownInterval = setInterval(() => {
     countdownElement.textContent = timeLeft + ' segundos';
     timeLeft--;
 
-    if (timeLeft < 0) {
+    if (timeLeft < 0 ) {
         clearInterval(countdownInterval);
         toast.style.opacity = 0;
         setTimeout(() => {
-            toast.parentNode.removeChild(toast);
+          if (timeLeft < 0 && !isToastClosed) {
+            // ... código para cerrar el toast
+            toast2.parentNode.removeChild(toast2);
+          }
+          
+           
+
         }, 500);
     }
 }, 1000);
 
+
+
+// obtiene el elemento padre a cerrar de propaganda
+const propagandaPadre = document.getElementById('propagandaPadre');
+
+// obtiene los botones dentro 
+const buttons = propagandaPadre.querySelectorAll('button');
+
+// agregamos evento click a los botones
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // borramos el elemento padre y ponemos bandera para saber que se cerro
+    propagandaPadre.remove();
+     isToastClosed = true;
+
+  });
+});
 
 
 
