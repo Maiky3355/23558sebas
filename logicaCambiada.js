@@ -1106,7 +1106,7 @@ switch (true) {
 const toast = document.getElementById('propaganda');
 const countdownElement = toast.querySelector('li'); // Suponiendo que el elemento small contiene la cuenta regresiva
 
-let timeLeft = 7; // Tiempo en segundos
+let timeLeft = 10; // Tiempo en segundos
 
 const countdownInterval = setInterval(() => {
     countdownElement.textContent = timeLeft + ' segundos';
@@ -1119,7 +1119,7 @@ const countdownInterval = setInterval(() => {
             toast.parentNode.removeChild(toast);
         }, 500);
     }
-}, 700);
+}, 1000);
 
 
 
