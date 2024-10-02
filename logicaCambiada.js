@@ -1035,3 +1035,94 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
   }
 }
   };
+
+
+
+
+
+
+
+
+
+  propagandaAlAzar()
+
+
+ function propagandaAlAzar(){
+  const propaganda = document.getElementById("propaganda");
+
+// Obtener los últimos 5 elementos del array
+let ultimosCinco = data.slice(-6);
+
+// Seleccionar un elemento aleatorio de los últimos 5
+const indiceAleatorio = Math.floor(Math.random() * ultimosCinco.length);
+switch (true) {
+  case "indiceAleatorio.Inventario <= 1":
+    
+    break;
+
+  default:
+    break;
+
+}
+
+
+  const articulo = ultimosCinco[indiceAleatorio].Artículo;
+  const descripcion= ultimosCinco[indiceAleatorio].Descripción;
+  const Categoria = ultimosCinco[indiceAleatorio].Categoria;
+  const Marca = ultimosCinco[indiceAleatorio].Marca;
+  const Inventario = ultimosCinco[indiceAleatorio].Inventario;
+  
+  
+  const small = propaganda.querySelector("small");
+  small.textContent= "En: "+ Categoria
+  
+  
+  const parrafo = propaganda.querySelector("b");
+  // Asignar el artículo aleatorio al contenido del párrafo
+  parrafo.textContent =Marca
+  // Obtener el párrafo donde queremos mostrar el resultado
+  const parrafo2 = propaganda.querySelector("p");
+  // Asignar el artículo aleatorio al contenido del párrafo
+  parrafo2.textContent = descripcion;
+  
+  
+  
+  const imagen = propaganda.querySelector("img");
+  // Asignar el artículo aleatorio al contenido del párrafo
+  imagen.src = "./imgcarrito/" + (articulo) + ".jpg";
+
+
+ }; 
+
+
+
+
+//  const toast = document.getElementById('propaganda');
+
+//  setTimeout(() => {
+//      toast.parentNode.removeChild(toast);
+//  }, 10000);
+
+const toast = document.getElementById('propaganda');
+const countdownElement = toast.querySelector('li'); // Suponiendo que el elemento small contiene la cuenta regresiva
+
+let timeLeft = 7; // Tiempo en segundos
+
+const countdownInterval = setInterval(() => {
+    countdownElement.textContent = timeLeft + ' segundos';
+    timeLeft--;
+
+    if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        toast.style.opacity = 0;
+        setTimeout(() => {
+            toast.parentNode.removeChild(toast);
+        }, 500);
+    }
+}, 700);
+
+
+
+
+
+
