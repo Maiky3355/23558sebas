@@ -169,6 +169,7 @@ categoriasUnicas.forEach(categoria => {
       fragmento.removeChild(fragmento.firstChild);
     }
 
+ 
     datos.forEach((datos) => {
       if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTROS === "TODOS" || datos.Categoria == FILTROS)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
@@ -207,9 +208,50 @@ categoriasUnicas.forEach(categoria => {
 
 
 
+// function obtenerURL() {
+//   const urlParams = new URLSearchParams(window.location.search);
 
+//   const FILTROS = urlParams.get('filtro') || 'todos'; // Si no hay filtro, se usa 'todos'
 
+//   //eliminamos el contenido del cATALOGO PARA MOSTRAR EL CONTENIDO FILTRADO
+//   const element = document.querySelector(".esteSi");
+//   element.parentElement.remove();
+//   while (fragmento2.firstChild) {
+//     fragmento2.removeChild(fragmento2.firstChild);
+//   }
+//   while (fragmento.firstChild) {
+//     fragmento.removeChild(fragmento.firstChild);
+//   }
+// let FILTRO=FILTROS.toUpperCase();
+//   datos.forEach((datos) => {
+//     if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTRO === "TODOS" || datos.Categoria == FILTRO)) {
+//       //mostramos los datos en el catalogo!!! <--------------------------------------------------
+//       contenedorId = 0;
+//       fragmento2 = MostrarEnCatalogo(datos, contenedorId);
+//     }
 
+//     mBotones.mostrarBotones();
+//   });
+//   let clone = document.importNode(template, true);
+//   fragmento.appendChild(clone);
+//   document.body.appendChild(fragmento);//agregamos el contenedor padre
+//   document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
+//   //MOSTRAMOS EL BOTON QUE SELECCIONAMOS
+//   console.log("Botón seleccionado:", FILTRO);
+//   //CAMBIAMOS EL NOMBRE AL BOTON PRINCIPAL DEL MENU DESPLEGABLE POR EL SELECCIONADO
+//   nombreDesplegable.textContent = FILTRO;
+//   //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
+
+//   escucharBotones();
+//   var a = true;
+
+//   descu.porDeDescuento();
+
+//   varianteDeMedidas.cambiarVariantes()
+
+//   subirScroll.subir()
+
+// };
 
 
 
@@ -514,7 +556,7 @@ function escucharBotones() {
       if (medidas == null & varied == null) {
         agregarOModificarItem(da2, (parseInt(da2)), tit, pre, dol, unidades, desc);
       } else {
-        //modificamos el id y agregamos descropcion diferente
+        //modificamos el id y agregamos descropcion diferente... agregamos la medida y 9990 al principio y la variedad al final
         agregarOModificarItem(medidas + 9990 + da2 + varied, (parseInt(medidas + 9990 + da2 + varied)), `${tit}  ${textMedidas} ${varied}`, pre, dol, unidades, desc);
       }
 
@@ -1039,3 +1081,4 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
 
 
   propagandaAlAzar.propagandaAlAzar()
+  // obtenerURL()
