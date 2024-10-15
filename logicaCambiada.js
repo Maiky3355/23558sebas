@@ -309,7 +309,7 @@ function MostrarDescuentos() {
   });
 
   if (fragmento2.hasChildNodes()) {
-    template3.querySelector("H3").textContent = '¡PROMOCIONES Y OFERTAS!';
+    template3.querySelector("H3").textContent = '¡PROMOCIONES Y DESCUENTOS!';
     let clon = document.importNode(template3, true);
     fragmento.appendChild(clon);
     document.body.appendChild(fragmento); // Agregamos el contenedor padre
