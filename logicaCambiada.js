@@ -1084,7 +1084,7 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
   // obtenerURL()
 
   const fondo = document.getElementById('fondo');
-
+  const fondo2 = document.getElementById('fondo2');
   // Función para cambiar el z-index después de 4 segundos
   function cambiarZIndex() {
       fondo.style.zIndex = -50;
