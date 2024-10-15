@@ -1082,3 +1082,16 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
 
   //propagandaAlAzar.propagandaAlAzar()
   // obtenerURL()
+
+  const fondo = document.getElementById('fondo');
+
+  // Función para cambiar el z-index después de 4 segundos
+  function cambiarZIndex() {
+      fondo.style.zIndex = -50;
+      fondo.style.opacity = "30%";
+      fondo2.style.height = "200%";
+
+  }
+
+  // Llama a la función después de 4 segundos
+  setTimeout(cambiarZIndex, 4000);
