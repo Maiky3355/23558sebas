@@ -23,7 +23,7 @@ import { itemCarrito } from './inItemCarr.js';
 import * as eventCerrCanvas from './eventCerrCanvas.js';
 //cargamos el evento que asigna las medidas de los productos cartuchos-agujas-punteras
 import * as varianteDeMedidas from './varianteDeMedidas.js';
-import * as propagandaAlAzar from'./propaganda.js';
+//import * as propagandaAlAzar from'./propaganda.js';
 
 //VARIABLE PARA MOSTRAR CANTIDAD DE ITEMS EN FLOBO DE CARRITO
 const cantCarritod = document.getElementById("cantCarrito");
@@ -1080,5 +1080,5 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
 
 
 
-  propagandaAlAzar.propagandaAlAzar()
+  //propagandaAlAzar.propagandaAlAzar()
   // obtenerURL()

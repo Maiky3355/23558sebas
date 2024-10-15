@@ -16,17 +16,20 @@
 
 }
 
-#fondo {
+#fondo2, #fondo {
 
   position: fixed;
-  z-index: -50;
-  opacity: 10%;
-  height: 90%;
+  z-index: 9999999999;
+  opacity:100%;
+  height: 44vh;
+
 
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
+border-radius: 50%;
+border-color: #333;
+border-style:double;
 
 }
 
@@ -401,3 +404,23 @@ li form {
   /*border: 0;*/
 
 /* }   */
+
+.img-prod:hover {
+  transform: scale(1);
+  z-index: 1;
+
+}
+
+.img-prod:active {
+position: fixed !; /* La imagen se posicionará en relación a la ventana */
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(2);
+z-index: 99999999!important; /* Asegúrate de que esté por encima de otros elementos */
+transform: scale(2);
+z-index: 1;
+margin: -5px; /* Agrega un margen negativo para crear espacio */
+object-fit: cover;
+transition: transform 0.3s ease-in-out;
+}
+
