@@ -1094,4 +1094,4 @@ actualizarEnlaceWhatsApp(); // Actualizar el enlace
   }
 
   // Llama a la función después de 4 segundos
-  setTimeout(cambiarZIndex, 4000);
+  setTimeout(cambiarZIndex, 3000);
