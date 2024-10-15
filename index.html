@@ -13,8 +13,22 @@
 </head>
 
 <body>
+    <div id="fondo">
+        <img id="fondo2" src="IMG/logo blanco.jpg">
 
-    <img id="fondo" src="IMG/logo.png">
+    </div>
+<script>  const fondo = document.getElementById('fondo');
+    const fondo2 = document.getElementById('fondo2');
+    // Función para cambiar el z-index después de 4 segundos
+    function cambiarZIndex() {
+        fondo.style.zIndex = -50;
+        fondo.style.opacity = "30%";
+        fondo2.style.height = "200%";
+  
+    }
+  
+    // Llama a la función después de 4 segundos
+    setTimeout(cambiarZIndex, 2000);</script>
 
 
     <header>
