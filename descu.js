@@ -22,7 +22,7 @@ export function porDeDescuento() {
     let discountValue = datos.find(item => item.Artículo === imageId)?.Descuento;
     if (discountValue != 0) {
       discountValue = (discountValue.replace(/,/g, ".")) * 100;
-      discountValue = discountValue.toFixed();
+      discountValue = discountValue.toFixed(0);
       // Crear el elemento de texto
       const textElement = document.createElement('span');
       textElement.classList.add('text-overlay');
