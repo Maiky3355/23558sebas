@@ -80,7 +80,7 @@ function MostrarEnCatalogo(datos, contenedorId) {
 
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
   template2.querySelector(".cantidad").setAttribute("id", "idbot" + (datos.Artículo));
-
+  template2.querySelector(".cantidad").setAttribute("max", (datos.Inventario));
   if (datos.Descuento != 0) {
     // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
     var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
@@ -290,6 +290,7 @@ function MostrarDescuentos() {
       template2.querySelector("p").textContent = (datos.Inventario) + " disponibles";
 
       template2.querySelector(".cantidad").setAttribute("id", "idbot" + (datos.Artículo));
+      template2.querySelector(".cantidad").setAttribute("max", (datos.Inventario));
 
       // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
       let precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
@@ -461,6 +462,7 @@ function escucharBotones() {
       var da2 = (da.match(regex));
 
       let selectElement = document.getElementById('idbot' + da2); // Obtener el elemento select por su id
+
       unidades = Number(selectElement.value); // Obtener el valor seleccionado del elemento select
 
       let selectElement77 = document.getElementById('med' + da2); // Obtener el elemento select por su id
