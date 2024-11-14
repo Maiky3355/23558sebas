@@ -1,0 +1,430 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#totalCarritoNavb {
+  font-size: 14px;
+}
+
+.variantes select {
+  height: min-content;
+  width: min-content;
+  display: inline-block;
+
+}
+
+#fondo2, #fondo {
+
+  position: fixed;
+  z-index: 9999999999;
+  opacity:100%;
+  height: 44vh;
+
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+border-radius: 50%;
+border-color: #333;
+border-style:double;
+
+}
+
+.contenedor {
+  overflow-x: hidden;
+
+}
+
+.tarjetas {
+
+  margin-top: 58px;
+  text-align: center;
+
+
+}
+
+.tarjetas img {
+  max-width: 60%;
+  align-self: center;
+  border-radius: 15% !important;
+  padding: 5PX;
+}
+
+/* #logo{
+      position: fixed;
+      z-index: -49;
+      width: 50vh;
+      height: 50vh;
+      border-radius: 50%;
+      opacity: 25%;
+      
+      left: 15%;
+      top: 30%;
+      transform: translate(-15%, -30%);
+  
+  } */
+
+/* 
+  
+  
+  nav ul {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(87, 83, 83);
+      right: 0;
+      left: 0;
+      top: 0;
+  
+  }
+  
+  nav ul li {
+      border: 1px solid rgb(122, 155, 155);
+      text-align: center;
+      padding: 2PX;
+      background-color: rgb(5, 5, 5);
+      list-style: none;
+      transition: background-color .5 cubic-bezier(0.075, 0.82, 0.165, 1);
+      border-radius: 10%;
+      margin: 1PX;
+  
+  
+  
+  } */
+
+/* 
+  nav ul li a {
+      text-decoration: NONE;
+      font-size: 16px;
+      color: aliceblue;
+  
+  
+  }
+  
+  
+  
+  
+  nav ul li:hover {
+      background-color: rgb(192, 83, 32);
+      color: #fff;
+      font-weight: bold;
+      
+  }
+  
+   */
+
+#nav1 {
+  z-index: 48 !important;
+}
+
+#offcanvasDark {
+  z-index: 49 !important;
+
+}
+
+#alertAgrego {
+  position: fixed;
+  left: 50%;
+  top: 30% !important;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+
+#totalCarritoNavb {
+  z-index: 55 !important;
+}
+
+
+
+footer .redes {
+  position: fixed;
+  top: 88vh;
+  right: 1.5%;
+  z-index: 50;
+}
+
+
+.redes a img {
+  width: 9vh;
+  height: 9vh;
+  border-radius: 50%;
+
+
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+
+}
+
+
+
+
+
+
+/* .diseñador{
+     
+      position:fixed;
+      display: flex;
+  justify-content: center;
+      border: 1px solid rgb(192, 141, 47);
+      background-color: #7cf86c;
+      text-align: center;
+      padding: 1px;
+      margin-bottom: 01PX !important;
+  
+      right: 0;
+      left: 0;
+      bottom: 1PX;
+    
+   
+  } */
+
+
+
+section iframe {
+
+  border-radius: 20%;
+
+}
+
+section img {
+  border-radius: 50%;
+  width: 30vh;
+  height: 30vh;
+}
+
+section h1 {
+  font-size: 44px;
+  font-weight: bold
+}
+
+section h4 {
+  font-size: 18px;
+  font-weight: bold
+}
+
+
+.home {
+  font-size: 16px;
+  text-align: center;
+}
+
+.home2 {
+  font-size: 2vh;
+  text-align: left;
+}
+
+/* #inp{
+      margin-bottom: 58px; 
+  } */
+
+
+.cardcontact {
+  padding: 50PX;
+}
+
+.checknot {
+  justify-content: end !important;
+  margin: auto;
+  text-align: start;
+}
+
+@keyframes aparecerDesdeAbajo {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.botonaparecer {
+
+  display: block;
+  /* Convertir el botón en un elemento de bloque */
+
+  margin: auto;
+  /* Establecer márgenes automáticos para centrarlo */
+
+  opacity: 0;
+}
+
+.card-text {
+
+  display: block;
+  /* Convertir el botón en un elemento de bloque */
+  margin: auto;
+  /* Establecer márgenes automáticos para centrarlo */
+
+}
+
+.card {
+  width: 100%;
+  /* Establece el ancho deseado para la imagen */
+  height: 100%;
+  /* Establece la altura deseada para la imagen */
+  object-fit: contain;
+  /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+}
+
+.card-img-top {
+  width: 100%;
+  /* Establece el ancho deseado para la imagen */
+  height: 200px;
+  /* Establece la altura deseada para el contenedor */
+  object-fit: contain;
+  /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+}
+
+.card-body {
+  width: 100%;
+  /* Establece el ancho deseado para la imagen */
+  /* height: 220px; cambio para que sea mas chico y aparezcan mejor de a 2 tarjetas*/
+  height: 280px;
+  /* Establece la altura deseada para el contenedor */
+  object-fit: contain;
+  /* Ajusta la imagen dentro del contenedor, recortándola si es necesario */
+}
+
+/* hacemos que las tarjetas se muevan de posicion */
+/* .card-img-top {
+    transition: transform 0.0s ease;
+  } */
+/* hacemos que las imagenes se agranden al pasar el puntero */
+/* .card-img-top:hover {
+    transform: scale(1.5);
+  } */
+
+
+.cantidad {
+  width: 70px;
+  /* Ajusta el valor según tus necesidades */
+  display: block;
+  /* Convertir el botón en un elemento de bloque */
+  margin: auto;
+  /* Establecer márgenes automáticos para centrarlo */
+}
+
+
+/*  
+    nav {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      justify-content: center;
+    }
+    nav {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      width: 100%;
+    }
+  */
+li form {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.scroll-up-btn-container {
+  position: fixed;
+  bottom: 50px;
+  left: 5px;
+  z-index: 999;
+  display: none;
+}
+
+.scroll-up-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.scroll-up-btn img {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  /* Agrega esto para que el texto se posicione correctamente */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* Agrega esta línea */
+  color: #333;
+  z-index: 1;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ponemos el boton con display block y margen 0 */
+.botonaparecer {
+  display: block;
+  margin: 0 auto;
+
+}
+
+/* a continuacion sacamos el borde al contenido de la tarjeta */
+/* .contentarj {
+  /*border: 0;*/
+
+/* }   */
+
+.img-prod:hover {
+  transform: scale(1);
+  z-index: 1;
+
+}
+
+.img-prod:active {
+position: fixed !; /* La imagen se posicionará en relación a la ventana */
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(2);
+z-index: 99999999!important; /* Asegúrate de que esté por encima de otros elementos */
+transform: scale(2);
+z-index: 1;
+margin: -5px; /* Agrega un margen negativo para crear espacio */
+object-fit: cover;
+transition: transform 0.3s ease-in-out;
+}
+
