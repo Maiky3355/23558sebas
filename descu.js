@@ -33,6 +33,9 @@ export function porDeDescuento() {
       textElement.style.top = '15%';
       textElement.style.left = '87%';
       textElement.style.transform = 'translate(-50%, -50%)';
+      textElement.style.borderRadius = '50%';
+      textElement.style.backgroundColor= 'rgba(200, 50, 100, 0.5)';
+      textElement.style.opacity = '50%';
 
       // Agregar el texto al contenedor de la imagen
       imgElement.parentElement.appendChild(textElement);
