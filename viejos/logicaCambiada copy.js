@@ -1,28 +1,28 @@
 //importamos los modulos y variables a ser utilizados
 
 //datos carga el Json en variable (datos)
-import data from './jADatos.js';
+import data from '../jADatos.js';
 const datos = Array.from(data);
 //mBotones muestra los botones Agregar al carrito con movimiento
-import * as mBotones from './mBotones.js';
+import * as mBotones from '../mBotones.js';
 //alertas muestras las alertas!
-import * as alertas from './alertas.js';
+import * as alertas from '../alertas.js';
 //cargamos las funciones de vuscar los datos de los productos para agregar al carrito
-import * as buscarDatos from './buscarDatos.js';
+import * as buscarDatos from '../buscarDatos.js';
 //funciones de carga y extraccion de local storage
-import * as localStor from './localStor.js';
+import * as localStor from '../localStor.js';
 //cargamos la funcion de descuentos correspondientes
-import * as descu from './descu.js';
+import * as descu from '../descu.js';
 //vargamos la funvion de subir scroll y el boton con esa misma accion
-import * as subirScroll from './subirScroll.js';
+import * as subirScroll from '../subirScroll.js';
 //cargamos la inicializacion de itemCarrito
-import * as inItemCarr from './inItemCarr.js';
+import * as inItemCarr from '../inItemCarr.js';
 //cargamos la variable de itemCarrito
-import { itemCarrito } from './inItemCarr.js';
+import { itemCarrito } from '../inItemCarr.js';
 //cargamos los eventos de cerrar canvas
-import * as eventCerrCanvas from './eventCerrCanvas.js';
+import * as eventCerrCanvas from '../eventCerrCanvas.js';
 //cargamos el evento que asigna las medidas de los productos cartuchos-agujas-punteras
-import * as varianteDeMedidas from './varianteDeMedidas.js';
+import * as varianteDeMedidas from '../varianteDeMedidas.js';
 
 let flagMostrarDescuentos = false;
 

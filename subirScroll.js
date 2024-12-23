@@ -40,8 +40,11 @@ export function crearBotonScroll() {
   function toggleScrollUpButton() {
     if (window.pageYOffset > 0) {
       scrollUpButtonContainer.style.display = 'block';
+      scrollUpButtonContainer.style.zIndex = '10';
     } else {
       scrollUpButtonContainer.style.display = 'none';
+      scrollUpButtonContainer.style.zIndex = '10';
+
     }
   }
   // Agrega un evento de scroll a la ventana que llame a la función 'toggleScrollUpButton()'

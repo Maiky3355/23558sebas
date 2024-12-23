@@ -267,6 +267,7 @@ section h4 {
   100% {
     opacity: 1;
     transform: translateY(0);
+    z-index: 999;
   }
 }
 
@@ -279,6 +280,7 @@ section h4 {
   /* Establecer márgenes automáticos para centrarlo */
 
   opacity: 0;
+  z-index: 999;
 }
 
 .card-text {
@@ -365,8 +367,15 @@ li form {
   position: fixed;
   bottom: 50px;
   left: 5px;
-  z-index: 999;
+  z-index: 99;
   display: none;
+
+ 
+   width: 8.5vh;
+    height: 8.5vh;
+    border-radius: 50%;
+
+  
 }
 
 .scroll-up-btn {
@@ -421,6 +430,7 @@ li form {
 .botonaparecer {
   display: block;
   margin: 0 auto;
+  z-index: 999;
 
 }
 
