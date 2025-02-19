@@ -255,7 +255,7 @@
  {"Artículo":301, "Descripción":"CINTA TIPO COBAN 5CM X12 UNIDADES", "Venta":"11,93", "Descuento":"0", "Inventario":"1", "Categoria":"INSUMOS", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":302, "Descripción":"CARTUCHOS EZ REVOLUTION X20U", "Venta":"16,8", "Descuento":"0", "Inventario":"5", "Categoria":"CARTUCHOS", "Marca":"EZ", "DOLAR":"1340"},
  {"Artículo":303, "Descripción":"MEZCLADOR DE TINTAS", "Venta":"7,46", "Descuento":"0", "Inventario":"1", "Categoria":"OTROS", "Marca":"OTRAS", "DOLAR":"1340"},
- {"Artículo":304, "Descripción":"PORTA TINTAS 20 ESPACIOS", "Venta":"18,66", "Descuento":"0", "Inventario":"2", "Categoria":"OTROS", "Marca":"OTRAS", "DOLAR":"1340"},
- {"Artículo":305, "Descripción":"PORTA TINTAS 40 ESPACIOS", "Venta":"26,12", "Descuento":"0", "Inventario":"2", "Categoria":"OTROS", "Marca":"OTRAS", "DOLAR":"1340"},
+ {"Artículo":304, "Descripción":"PORTA TINTAS 20 ESPACIOS", "Venta":"18,66", "Descuento":"0,05", "Inventario":"2", "Categoria":"OTROS", "Marca":"OTRAS", "DOLAR":"1340"},
+ {"Artículo":305, "Descripción":"PORTA TINTAS 40 ESPACIOS", "Venta":"26,12", "Descuento":"0,05", "Inventario":"2", "Categoria":"OTROS", "Marca":"OTRAS", "DOLAR":"1340"},
  {"Artículo":306, "Descripción":"MAQUINA PEN BRONC ARROW ", "Venta":"164,18", "Descuento":"0", "Inventario":"1", "Categoria":"MAQUINAS", "Marca":"BRONC", "DOLAR":"1340"},
  {"Artículo":307, "Descripción":"TERMOCOPIADORA BRONC ", "Venta":"313,44", "Descuento":"0", "Inventario":"1", "Categoria":"OTROS", "Marca":"BRONC", "DOLAR":"1340"}]
