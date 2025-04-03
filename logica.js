@@ -141,9 +141,9 @@ const categoriasUnicas = new Set();
 // Iterar sobre el array de datos y agregar cada categoría al conjunto
 datos.forEach(objeto => {
   //si las categorias tienen productos con stock la agregamos al menu desplegable
-  categoriasUnicas.add("DESCUENTOS");
-  categoriasUnicas.add("TODOS");
-
+  categoriasUnicas.add("VER TODOS");
+  categoriasUnicas.add("CON DESCUENTOS");
+ 
   if (objeto.Inventario >= 1) {
     categoriasUnicas.add(objeto.Categoria);
   }
@@ -175,7 +175,7 @@ categoriasUnicas.forEach(categoria => {
 
 
     datos.forEach((datos) => {
-      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTROS === "TODOS" || datos.Categoria == FILTROS || FILTROS === "DESCUENTOS" && datos.Descuento != 0)) {
+      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTROS === "VER TODOS" || datos.Categoria == FILTROS || FILTROS === "CON DESCUENTOS" && datos.Descuento != 0)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
         contenedorId = 0;
         fragmento2 = MostrarEnCatalogo(datos, contenedorId);
@@ -190,7 +190,16 @@ categoriasUnicas.forEach(categoria => {
     //MOSTRAMOS EL BOTON QUE SELECCIONAMOS
     console.log("Botón seleccionado:", FILTROS);
     //CAMBIAMOS EL NOMBRE AL BOTON PRINCIPAL DEL MENU DESPLEGABLE POR EL SELECCIONADO
-    nombreDesplegable.textContent = FILTROS;
+    //nombreDesplegable.textContent = FILTROS;
+    const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+    dropdownItems.forEach((item) => {
+      item.style.fontWeight = 'normal';
+    });
+    boton.style.fontWeight = 'bold';
+
+
+
     //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
 
     escucharBotones();
@@ -206,6 +215,8 @@ categoriasUnicas.forEach(categoria => {
   //ESTO SUBE AL DOM LAS CATEGORIAS
   lil.appendChild(boton);
   dropdownMenu.appendChild(lil);
+  const lil2 = document.createElement("ul");
+  dropdownMenu.appendChild(lil2);
 });
 
 
@@ -631,15 +642,20 @@ function generarEnlaceWhatsApp() {
 
   // Construir el texto del mensaje con la información de los duplicados y los precios
   let textoCarrito = "Hola! Me interesan estos productos de la web:";
+  let UnidadesProductosTotales=0;
+
+  
   itemCarrito.forEach(producto => {
     var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
     precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
     textoCarrito += `\n\n ${producto.Unidades} - ${producto.Descripción} -  $${precioCatalogo}`;
 
+    UnidadesProductosTotales +=producto.Unidades;
   });
   let tota = total();
   textoCarrito += `\n\n--- PRECIO TOTAL DEL CARRITO:${tota} \n\n`; // Agregar un salto de línea adicional
+  textoCarrito += `\n\n--- Total de productos: ${UnidadesProductosTotales} \n\n`;
 
   const enlace = `https://wa.me/${telefono}/?text=${encodeURIComponent(textoCarrito)}`;
   return enlace;
