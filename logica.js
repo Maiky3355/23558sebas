@@ -70,7 +70,34 @@ function MostrarEnCatalogo(datos, contenedorId) {
   //const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
   template2.querySelector("img").setAttribute("id", "img" + datos.Artículo);
-  template2.querySelector("h5").textContent = (datos.Descripción);
+// Selecciona el elemento H5 dentro de tu template
+const h5Element = template2.querySelector("h5");
+
+// Verifica si se encontró el elemento H5
+if (h5Element) {
+    // Obtén la descripción del objeto de datos
+    const descripcionTexto = datos.Descripción;
+
+    // Verifica si la descripción es un string válido
+    if (typeof descripcionTexto === 'string') {
+        // Asigna el texto al H5
+        h5Element.textContent = descripcionTexto;
+
+        // Verifica la longitud del texto y ajusta el tamaño de la fuente
+        if (descripcionTexto.length < 40) {
+            h5Element.style.fontSize = '2VH'; // Tamaño si es corto
+        } else {
+            h5Element.style.fontSize = '1.4VH'; // Tamaño si es largo o igual a 20
+        }
+    } else {
+        // Manejo opcional si la descripción no es un string
+        h5Element.textContent = 'Descripción no válida';
+        h5Element.style.fontSize = '1.4VH'; // Un tamaño por defecto
+        console.warn('datos.Descripción no es un string:', datos.Descripción);
+    }
+} else {
+    console.warn('Elemento h5 no encontrado en template2');
+}
 
   //llamamos la funcion del modulo para agregar las variantes 
   varianteDeMedidas.AgregaVariantes(datos, template2);
@@ -91,13 +118,16 @@ function MostrarEnCatalogo(datos, contenedorId) {
     precioCatalogo2 = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo2);
 
     //mostramos el precio del producto y el descuento tachado
-    template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>" + " $" + precioCatalogo2;
+    template2.querySelector("small").innerHTML = "<del>$" + precioCatalogo + "</del>";// + " $" + precioCatalogo2;
+    template2.querySelector("h7").textContent = " $" + precioCatalogo2;
+     
   } else {
     var precioCatalogo = (datos.Venta.replace(/,/g, ".") * datos.DOLAR);
     precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
     //mostramos el precio del producto
     template2.querySelector("small").textContent = "$" + precioCatalogo;
+    template2.querySelector("h7").textContent = "";
   }
 
   //seleccionamos el boton y le asignamos el id que corresponde
@@ -144,8 +174,10 @@ datos.forEach(objeto => {
   categoriasUnicas.add("VER TODOS");
   categoriasUnicas.add("CON DESCUENTOS");
  
+
   if (objeto.Inventario >= 1) {
     categoriasUnicas.add(objeto.Categoria);
+
   }
 });
 
@@ -157,10 +189,9 @@ categoriasUnicas.forEach(categoria => {
   boton.textContent = categoria;
   boton.className = "dropdown-item";
   boton.type = "button";
-
-
   // Agregar evento de clic al botón
   boton.addEventListener("click", () => {
+
     FILTROS = boton.textContent;
 
     //eliminamos el contenido del cATALOGO PARA MOSTRAR EL CONTENIDO FILTRADO
@@ -191,13 +222,13 @@ categoriasUnicas.forEach(categoria => {
     console.log("Botón seleccionado:", FILTROS);
     //CAMBIAMOS EL NOMBRE AL BOTON PRINCIPAL DEL MENU DESPLEGABLE POR EL SELECCIONADO
     //nombreDesplegable.textContent = FILTROS;
+
     const dropdownItems = document.querySelectorAll(".dropdown-item");
 
     dropdownItems.forEach((item) => {
       item.style.fontWeight = 'normal';
     });
     boton.style.fontWeight = 'bold';
-
 
 
     //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
@@ -213,7 +244,9 @@ categoriasUnicas.forEach(categoria => {
 
   });
   //ESTO SUBE AL DOM LAS CATEGORIAS
+
   lil.appendChild(boton);
+
   dropdownMenu.appendChild(lil);
   const lil2 = document.createElement("ul");
   dropdownMenu.appendChild(lil2);
@@ -339,37 +372,63 @@ function escucharBotones() {
       let selectElement77 = document.getElementById('med' + da2); // Obtener el elemento select por su id
       if (selectElement77 != null) {
         var medidas = selectElement77.value; // Obtener el valor seleccionado del elemento select
+        if (selectElement77 && typeof selectElement77.selectedIndex !== 'undefined') {
 
-
-        switch (medidas) {
-          case '1':
-            console.log('Has seleccionado la opción 1');
-            // Aquí puedes realizar acciones específicas para la opción 1
-            var textMedidas = "RL-";
-            break;
-          case '2':
-            console.log('Has seleccionado la opción 2');
-            // Acciones para la opción 2
-            var textMedidas = "M1-";
-            break;
-          case '3':
-            // ...
-            var textMedidas = "RM-";
-            break;
-          case '4':
-            // ...
-            var textMedidas = "RS-";
-            break;
-          default:
-            console.log('Opción no válida');
-            break;
-        }
+          // Verifica si realmente hay una opción seleccionada (selectedIndex será -1 si no hay nada seleccionado)
+          if (selectElement77.selectedIndex >= 0) {
+              // Obtén el elemento <option> seleccionado usando el índice
+              const selectedOptionElement = selectElement77.options[selectElement77.selectedIndex];
+      
+              // Obtén el texto visible de esa opción
+              var medidas2 = selectedOptionElement.textContent; // O también puedes usar .innerText
+      
+              console.log("Texto de la opción seleccionada:",medidas2);
+              console.log("Valor de la opción seleccionada:",selectElement77.value); // Para comparar
+      
+          } else {
+              // No hay ninguna opción seleccionada
+              var medidas2 = ""; // O null, o un valor por defecto
+              console.log("Ninguna opción seleccionada.");
+          }
+      
+      } else {
+          console.error("selectElement77 no es un elemento select válido o no existe.");
+          var medidas2 = ""; // Manejo de error
+      }
+      var textMedidas =medidas2;
+        // switch (medidas) {
+        //   case '1':
+        //     console.log('Has seleccionado la opción 1');
+        //     // Aquí puedes realizar acciones específicas para la opción 1
+        //     var textMedidas = "SH-";
+        //     break;
+        //   case '2':
+        //     console.log('Has seleccionado la opción 2');
+        //     // Acciones para la opción 2
+        //     var textMedidas = "AC-";
+        //     break;
+        //   // case '3':
+        //   //   // ...
+        //   //   var textMedidas = "RM-";
+        //   //   break;
+        //   // case '4':
+        //   //   // ...
+        //   //   var textMedidas = "RS-";
+        //   //   break;
+        //   default:
+        //     console.log('Opción no válida');
+        //     break;
+        // }
 
       }
 
       let selectElement7 = document.getElementById('var' + da2); // Obtener el elemento select por su id
       if (selectElement7 != null) {
         var varied = selectElement7.value; // Obtener el valor seleccionado del elemento select
+        const selectedOptionElement2 = selectElement7.options[selectElement7.selectedIndex];
+      
+        // Obtén el texto visible de esa opción
+        var varied2 = selectedOptionElement2.textContent; // O también puedes usar .innerText
 
       }
       //buscamos los datos del boton precionado
@@ -429,8 +488,13 @@ function escucharBotones() {
       if (medidas == null & varied == null) {
         agregarOModificarItem(da2, (parseInt(da2)), tit, pre, dol, unidades, desc);
       } else {
+ 
+        if (varied==null){
+          
+          varied2="";
+        } 
         //modificamos el id y agregamos descropcion diferente... agregamos la medida y 9990 al principio y la variedad al final
-        agregarOModificarItem(medidas + 9990 + da2 + varied, (parseInt(medidas + 9990 + da2 + varied)), `${tit}  ${textMedidas} ${varied}`, pre, dol, unidades, desc);
+        agregarOModificarItem(medidas + 9990 + da2 + varied, (parseInt(medidas + 9990 + da2 + varied)), `${tit}  ${textMedidas} ${varied2}`, pre, dol, unidades, desc);
       }
 
 
