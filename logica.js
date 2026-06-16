@@ -1,4 +1,4 @@
-//importamos los modulos y variables a ser utilizados
+﻿//importamos los modulos y variables a ser utilizados
 
 //datos carga el Json en variable (datos)
 import data from './jADatos.js';
@@ -328,7 +328,7 @@ datos.forEach(datos => {
   mBotones.mostrarBotones();
 });
 
-template.querySelector("H3").textContent = 'Precios solo en efectivo, debito, QR y transferencia.';
+template.querySelector("H3").textContent = 'Precios solo en efectivo, debito, QR y transferencia. Consultar crédito y promociones';
 
 
 let clone = document.importNode(template, true);
