@@ -20,7 +20,7 @@ nav{
   height: min-content;
   width: min-content;
   display: inline-block;
- font-size: 2vh;
+
 }
 
 
@@ -461,7 +461,7 @@ transition: transform 0.3s ease-in-out;
 
 h7 {
   color: red;
-  font-size: 2vh;
+
 }
 h11 {
   color: rgb(67, 64, 64);
@@ -480,6 +480,7 @@ h1, h2, h3, h5 {
 small {
    font-size: 1.5vh;
 }
+
 
 .porCategoria {
     display: flex;
@@ -506,12 +507,11 @@ small {
     padding:2px 4px;
     transition:.2s;
     font-weight:5;
-  color: rgb(6, 6, 6);
 }
 
 .categoria-btn:hover{
     transform:translateY(-2px);
-    box-shadow:0 2px 4px rgba(0, 0, 0, 0.518);
+    box-shadow:0 2px 4px rgba(0,0,0,.2);
 }
 
 .bg-gray.py-5{
@@ -519,22 +519,4 @@ small {
     top:5px;
     z-index:40;
     padding:5px;
-}
-
-
-
-
-.card-text {
-
-  display: block;
-  /* Convertir el botón en un elemento de bloque */
-  margin: auto;
-  /* Establecer márgenes automáticos para centrarlo */
-     font-size: 2vh;
-}
-
-
-.cantidadParaAgregar{
-
-     font-size: 2.5vh;
 }
