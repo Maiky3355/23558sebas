@@ -463,3 +463,55 @@ h7 {
   color: red;
 
 }
+h11 {
+  color: rgb(67, 64, 64);
+  font-size: 1.4vh;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+.porCategoria {
+    display: flex;
+    justify-content: center;
+    margin: 2px 0;
+}
+
+.porCategoriaUl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.porCategoriaUl li{
+    margin:0;
+}
+
+.categoria-btn{
+    border-radius:4px;
+    padding:2px 4px;
+    transition:.2s;
+    font-weight:5;
+}
+
+.categoria-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 2px 4px rgba(0,0,0,.2);
+}
+
+.bg-gray.py-5{
+    position: sticky;
+    top:5px;
+    z-index:40;
+    padding:5px;
+}

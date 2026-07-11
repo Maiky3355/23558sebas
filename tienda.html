@@ -133,9 +133,9 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
     </STYle>
-<!-- le saque el row al main para que se centre el filtrado -->
+    <!-- le saque el row al main para que se centre el filtrado -->
     <!-- <main class="row"> -->
-        <main >
+    <main>
         <template id="contTemplate3">
             <div class="tarjetas container">
                 <button id="toggleDiscountSection" class="btn btn-secondary">Ocultar sección de descuentos</button>
@@ -198,7 +198,10 @@
 
 
 
-                                            <p class="card-text"></p><small class="text-body-secondary"></small><h7 class=""></h7>
+                                            <p class="card-text"></p><small class="text-body-secondary"></small>
+                                            <h7 class=""></h7><br>
+                                            <h11 class=""></h11>
+
                                         </div>
                                         <div>
                                             <p>Cantidad:
@@ -256,26 +259,34 @@
 
             <div class="row">
                 <div class="col">
-                     
+
                     <h2>TIENDA ONLINE</h2>
-                </P> 
+                    </P>
                     <div class="bg-gray py-5" style="background-color: darkgrey;">
+                        <div class="d-md-none text-center mb-2">
+                            <button class="btn btn-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#filtrosCategoria" aria-expanded="false">
 
-                        <div class="dropdown porCategoria">
-                            <!-- 
-                            <button class="btn btn-primary dropdown-toggle nombreDesplegable" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Ver por categoria
-                            </button> -->
-                            <ul class="nav porCategoriaUl">
-                            
-                            </ul>
-                             <!-- <ul class="dropdown-menu porCategoriaUl">
-                            </ul> -->
+                                🔍 Filtros
+                            </button>
                         </div>
+                        <div id="filtrosCategoria" class="collapse d-md-block">
 
+                            <div class="dropdown porCategoria">
+                                <!-- 
+                             <button class="btn btn-primary dropdown-toggle nombreDesplegable" type="button"
+                             data-bs-toggle="dropdown" aria-expanded="false">
+                             Ver por categoria
+                               </button> -->
+                                <ul class="nav porCategoriaUl">
+
+                                </ul>
+                                <!-- <ul class="dropdown-menu porCategoriaUl">
+                            </ul> -->
+                            </div>
+
+                        </div>
                     </div>
-
                 </div>
 
             </div>
