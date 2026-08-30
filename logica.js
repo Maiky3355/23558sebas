@@ -1,4 +1,4 @@
-﻿//importamos los modulos y variables a ser utilizados
+//importamos los modulos y variables a ser utilizados
 
 //datos carga el Json en variable (datos)
 import data from './jADatos.js';
@@ -23,6 +23,12 @@ import { itemCarrito } from './inItemCarr.js';
 import * as eventCerrCanvas from './eventCerrCanvas.js';
 //cargamos el evento que asigna las medidas de los productos cartuchos-agujas-punteras
 import * as varianteDeMedidas from './varianteDeMedidas.js';
+//cargamos la animacion compartida del logo de fondo (antes duplicada con index.html)
+import { iniciarAnimLogo } from './animLogo.js';
+
+// Faltaba esta llamada: se importaba la función pero nunca se ejecutaba,
+// así que en tienda.html el logo de fondo nunca pasaba a segundo plano.
+iniciarAnimLogo();
 //import * as propagandaAlAzar from'./propaganda.js';
 
 //VARIABLE PARA MOSTRAR CANTIDAD DE ITEMS EN FLOBO DE CARRITO
@@ -70,6 +76,10 @@ function MostrarEnCatalogo(datos, contenedorId) {
   //const imageId = `gimg-${contenedorId}-${datos.Artículo}`;
   template2.querySelector("img").setAttribute("src", "./imgcarrito/" + (datos.Artículo) + ".jpg");
   template2.querySelector("img").setAttribute("id", "img" + datos.Artículo);
+  // Alt descriptivo real para accesibilidad (antes quedaba un texto fijo
+  // que decía "Imagen no encontrada" incluso cuando la imagen cargaba bien)
+  template2.querySelector("img").setAttribute("alt",
+    typeof datos.Descripción === 'string' ? datos.Descripción : "Producto");
   // Selecciona el elemento H5 dentro de tu template
   const h5Element = template2.querySelector("h5");
 
@@ -165,7 +175,6 @@ function MostrarEnCatalogo(datos, contenedorId) {
   //seleccionamos el boton y le asignamos el id que corresponde
   const addButton = template2.querySelector("button");
   addButton.setAttribute("id", "idbot" + (datos.Artículo));
-  console.log("Botón de agregar al carrito creado con ID:", addButton.id); // Agregado para depuración
 
   //hacemos un clon y lo subimos al fragmento correspondiente para poder repetirlo. clone 1 contenedor . clone 2 etiquetas restantes
 
@@ -254,7 +263,6 @@ categoriasUnicas.forEach(categoria => {
     document.body.appendChild(fragmento);//agregamos el contenedor padre
     document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
     //MOSTRAMOS EL BOTON QUE SELECCIONAMOS
-    console.log("Botón seleccionado:", FILTROS);
     //CAMBIAMOS EL NOMBRE AL BOTON PRINCIPAL DEL MENU DESPLEGABLE POR EL SELECCIONADO
     //nombreDesplegable.textContent = FILTROS;
 
@@ -320,7 +328,6 @@ function obtenerURL() {
   document.body.appendChild(fragmento);//agregamos el contenedor padre
   document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
   //MOSTRAMOS EL BOTON QUE SELECCIONAMOS
-  console.log("Botón seleccionado:", FILTRO);
   //CAMBIAMOS EL NOMBRE AL BOTON PRINCIPAL DEL MENU DESPLEGABLE POR EL SELECCIONADO
   nombreDesplegable.textContent = FILTRO;
   //PONEMOS A ESCUCHAR LOS BOTONES NUEVAMENTE
@@ -370,8 +377,9 @@ fragmento.appendChild(clone);
 document.body.appendChild(fragmento);//agregamos el contenedor padre
 document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
 
-
-//Ponemos a escuchar botones de productos
+// Ocultamos el loader inicial: el catálogo ya está pintado
+const loaderInicial = document.getElementById('loaderCatalogo');
+if (loaderInicial) loaderInicial.remove();
 escucharBotones(); // Esta es la única llamada a escucharBotones que debe existir.
 descu.porDeDescuento();
 
@@ -392,13 +400,11 @@ function escucharBotones() {
   // Esto garantiza que el listener esté siempre activo, sin importar si los elementos
   // del DOM son agregados o eliminados dinámicamente.
   document.addEventListener('click', event => {
-    console.log("Click detectado en el documento."); // Log 1: Se dispara en cada clic en cualquier parte del documento
     // Usamos event.target.closest() para verificar si el clic fue en un botón
     // con un ID que empieza por 'idbot'. Esto funciona para botones dinámicos.
     const btn = event.target.closest('button[id^=idbot]');
 
     if (btn) {
-      console.log("Botón de agregar al carrito clicado:", btn.id); // Log 2: Solo se dispara si se hizo clic en un botón de carrito
       event.stopImmediatePropagation(); // Detiene la propagación del evento de forma inmediata
 
       var da = btn.id; // Obtenemos el ID del botón que fue clicado
@@ -411,16 +417,13 @@ function escucharBotones() {
         return; // Salir de la función si no hay ID numérico
       }
       let productId = da2[0]; // Usar el primer elemento del array
-      console.log("ID del artículo (productId):", productId); // Log 3
 
       let selectElement = document.getElementById('idbot' + productId); // Obtener el elemento select por su id
 
       let unidades = 1; // Valor por defecto
       if (selectElement) {
         unidades = Number(selectElement.value);
-        console.log("Unidades seleccionadas:", unidades); // Log 4
       } else {
-        console.log("Error: selectElement (cantidad) no encontrado para id:", productId); // Log 5
       }
 
 
@@ -432,12 +435,9 @@ function escucharBotones() {
         if (selectElement77.selectedIndex >= 0) {
           const selectedOptionElement = selectElement77.options[selectElement77.selectedIndex];
           textMedidas = selectedOptionElement.textContent;
-          console.log("Medidas seleccionadas:", medidas, "Texto:", textMedidas); // Log 6
         } else {
-          console.log("Ninguna opción de medida seleccionada para id:", productId); // Log 7
         }
       } else {
-        console.log("Elemento de medida (selectElement77) no encontrado para id:", productId); // Log 8
       }
 
       let selectElement7 = document.getElementById('var' + productId); // Obtener el elemento select por su id
@@ -448,12 +448,9 @@ function escucharBotones() {
         if (selectElement7.selectedIndex >= 0) {
           const selectedOptionElement2 = selectElement7.options[selectElement7.selectedIndex];
           varied2 = selectedOptionElement2.textContent;
-          console.log("Variedad seleccionada:", varied, "Texto:", varied2); // Log 9
         } else {
-          console.log("Ninguna opción de variedad seleccionada para id:", productId); // Log 10
         }
       } else {
-        console.log("Elemento de variedad (selectElement7) no encontrado para id:", productId); // Log 11
       }
 
       //buscamos los datos del boton precionado
@@ -462,146 +459,67 @@ function escucharBotones() {
       var dol = buscarDatos.buscarIdDol(parseInt(productId));
       var stock = buscarDatos.buscarStock(parseInt(productId));
       var desc = buscarDatos.buscarDescuento(parseInt(productId));
-      console.log("Datos del producto:", { tit, pre, dol, stock, desc }); // Log 12
 
-      let agregarOModificarItem = (articuloId, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento) => {
-        console.log("Llamando a agregarOModificarItem con:", { articuloId, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento }); // Log 13
+      // El stock es del PRODUCTO, no de cada variante por separado: si hay
+      // 10 en stock y ya tenés 8 de una variante en el carrito, no podés
+      // agregar 8 más de otra variante (serían 16 de un producto con solo
+      // 10 disponibles). Sumamos las unidades de TODAS las variantes de
+      // este mismo producto que ya estén en el carrito antes de validar.
+      const idBaseProducto = parseInt(productId);
+      const unidadesYaEnCarrito = itemCarrito.reduce((total, item) => {
+        const idBaseItem = item.ImagenId !== undefined ? item.ImagenId : item.Artículo;
+        return idBaseItem === idBaseProducto ? total + item.Unidades : total;
+      }, 0);
+
+      if (unidadesYaEnCarrito + unidades > stock) {
+        let suceso = "NO HAY STOCK SUFICIENTE";
+        let tipoAlert = "alert-danger";
+        alertas.alertAgrego(tit, suceso, tipoAlert);
+        total();
+        return;
+      }
+
+      let agregarOModificarItem = (articuloId, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento, ImagenId) => {
         let siEstaId = itemCarrito.find(artic => artic.Artículo === (parseInt(articuloId)));
 
         if (siEstaId) {
-          console.log("Producto ya en carrito:", siEstaId); // Log 14
-          if ((siEstaId.Unidades + Unidades) <= stock) {
-            siEstaId.Unidades += Unidades;
+          siEstaId.Unidades += Unidades;
+          localStor.guardarEnLocalStorage(itemCarrito);
+          agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
+        } else {
+          if (Descuento != 0) {
+            let ventaCD = ((Venta) * (1 - (Number(Descuento) / 100)));
+            // Guardamos "ImagenId" (el id real del producto) además de
+            // "Artículo" (que para variantes es un id compuesto y no
+            // corresponde a ningún archivo de imagen real).
+            itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades, ImagenId });
             localStor.guardarEnLocalStorage(itemCarrito);
             agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
-            console.log("Unidades actualizadas y guardadas."); // Log 15
-          } else {
-            let suceso = "NO HAY STOCK SUFICIENTE";
-            let tipoAlert = "alert-danger";
-            alertas.alertAgrego(Descripción, suceso, tipoAlert);
-            console.log("No hay stock suficiente para actualizar."); // Log 16
-            return;
-          }
-        } else {
-          console.log("Producto nuevo para carrito."); // Log 17
-          if ((Unidades) <= stock) {
-            if (Descuento != 0) {
-              let ventaCD = ((Venta) * (1 - (Number(Descuento) / 100)));
-              itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades });
-              localStor.guardarEnLocalStorage(itemCarrito);
-              agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
-              console.log("Producto con descuento agregado y guardado."); // Log 18
 
-            } else {
-              itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades });
-              localStor.guardarEnLocalStorage(itemCarrito);
-              agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
-              console.log("Producto sin descuento agregado y guardado."); // Log 19
-            }
           } else {
-            let suceso = "NO HAY STOCK SUFICIENTE";
-            let tipoAlert = "alert-danger";
-            alertas.alertAgrego(Descripción, suceso, tipoAlert);
-            console.log("No hay stock suficiente para agregar nuevo producto."); // Log 20
-            return;
+            itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades, ImagenId });
+            localStor.guardarEnLocalStorage(itemCarrito);
+            agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
           }
         }
       };
 
       if (medidas == null && varied == null) {
-        agregarOModificarItem(productId, (parseInt(productId)), tit, pre, dol, unidades, desc);
+        agregarOModificarItem(productId, (parseInt(productId)), tit, pre, dol, unidades, desc, parseInt(productId));
       } else {
         if (varied == null) {
           varied2 = "";
         }
         let articuloIdModificado = medidas + '9990' + productId + varied; // Concatenar como string
-        agregarOModificarItem(articuloIdModificado, (parseInt(articuloIdModificado)), `${tit}  ${textMedidas} ${varied2}`, pre, dol, unidades, desc);
+        // Le pasamos parseInt(productId) como ImagenId: es el id real del
+        // producto base, el que sí corresponde a un archivo de imagen.
+        agregarOModificarItem(articuloIdModificado, (parseInt(articuloIdModificado)), `${tit}  ${textMedidas} ${varied2}`, pre, dol, unidades, desc, parseInt(productId));
       }
 
-      console.log("Estado actual de itemCarrito:", itemCarrito); // Log 21
 
-      EliminarV();
       total();
     }
   });
-}
-function EliminarV() {
-
-  //SELECCIONAMOS LAS LI DEL CANVAS PARA HACERLAS ESCUCHAR
-  const parrafos = document.querySelectorAll('li[id^=item]');
-
-  parrafos.forEach(parr => {
-    parr.addEventListener('click', parraf => {
-      parraf.stopImmediatePropagation(); // Detener la propagación y ejecución adicional
-
-      var da = parraf.target.id;
-      unidades = 1;
-
-      var regex = /(\d+)/g;
-      let da2 = (da.match(regex));
-
-      if (Number(da2) != 0) {
-
-
-        var prodAElimin = eliminarOModificarItem(Number(da2), unidades, da);
-
-        console.log(`se elimino del carrito el id: ${Number(da2)}`);
-
-        //MOSTRAMOS ALERTAS DE LO ELIMINADO
-        let suceso = "Se eliminó del carrito";
-        let tipoAlert = "alert-danger";
-        alertas.alertAgrego(prodAElimin, suceso, tipoAlert);
-
-
-      }
-
-
-    })
-  })
-  //ELIMINAMOS DEPENDE SI HAY VARIOS O 1 SOLO Y VAMOS ACTUALIZANDO CARRITO Y LINK DE WHATSAPP
-  let eliminarOModificarItem = (dato, unidades, parrafo) => {
-    let siEsta = itemCarrito.find((artic) => artic.Artículo === dato);
-
-    if (siEsta) {
-      // console.log(siEsta.Unidades);
-
-      if (siEsta.Unidades >= 2) {
-        siEsta.Unidades -= unidades;
-        if (siEsta) {
-          actualizarCarrito();
-          actualizarEnlaceWhatsApp();
-          return siEsta.Descripción
-        }
-        actualizarCarrito();
-
-      } else {
-        const index = itemCarrito.findIndex((artic) => artic.Artículo === dato);
-
-        if (index > -1) {
-          itemCarrito.splice(index, 1);
-          document.getElementById(parrafo).remove();
-
-
-
-          if (siEsta) {
-            actualizarCarrito();
-            actualizarEnlaceWhatsApp();
-            return siEsta.Descripción
-          }
-          actualizarCarrito();
-          actualizarEnlaceWhatsApp();
-        }
-      }
-    } else {
-      console.log("El elemento no se encontró en el carrito");
-    }
-    if (siEsta) {
-      actualizarCarrito();
-      actualizarEnlaceWhatsApp();
-      return siEsta.Descripción
-    }
-    actualizarCarrito();
-  };
 }
 
 
@@ -611,62 +529,15 @@ function EliminarV() {
 
 
 //AGREGAMOS LOS DATOS AL CANVAS AL TOCAR BOTONES "AGREGAR AL CARRITO" DEL CATALOGO
+// (antes esta función reconstruía el carrito a mano Y LUEGO llamaba a
+// actualizarCarrito(), que hacía el mismo trabajo de nuevo: quedaba doble
+// renderizado. Ahora actualizarCarrito() es la única fuente de verdad.)
 function agregar(da, da2) {
-  console.log(itemCarrito);
 
   let suceso = "Se agregó al carrito";
   let tipoAlert = "alert-success";
   alertas.alertAgrego(da, suceso, tipoAlert);
 
-  // Limpiar el contenido existente en el contenedor
-  interes.innerHTML = '';
-
-  // Mostrar los productos en el DOM
-  itemCarrito.forEach(producto => {
-    //CREAMOS LAS ETIQUETAS LI Y SPAN CON SUS DATOS PARA EL CANVAS
-
-
-
-
-    const parrafo = document.createElement("li");
-
-    var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
-    precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
-
-    parrafo.setAttribute("id", "item" + producto.Artículo);
-    parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
-
-    parrafo.style.cssText = ' z-index: 998!important;';
-
-    const span = document.createElement("span");
-    span.setAttribute("class", "badge badge-primary badge-pill active");
-    span.style.cssText = '  z-index: 999 !important;  font-weight: bold;font-size: 16px;   background-color: rgb(0, 123, 255);';
-
-    span.textContent = producto.Unidades;
-
-
-    parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
-
-
-    //tratamos de poner imagen en carrito
-    // const img1 = new Image();
-    // img1.onload = () => {
-    //   // Una vez que la imagen se ha cargado, la agregamos al elemento parrafo
-    //   parrafo.appendChild(img1);
-    // };
-    // img1.src = "./imgcarrito/" + producto.Artículo + ".jpg";
-    // img1.alt = "Imagen del producto " + producto.Artículo;
-    // img1.style.cssText = 'z-index: 1100 !important; width:10px; height: 10px;';
-
-
-
-
-    parrafo.appendChild(span);
-    interes.appendChild(parrafo);
-
-
-  });
-  //ACTUALIZAMOS CARRITO Y WHATSAPP.
   actualizarCarrito();
   actualizarEnlaceWhatsApp();
 }
@@ -710,7 +581,7 @@ eventCerrCanvas.eventCerrCanvas();
 // Función para generar el enlace de WhatsApp
 function generarEnlaceWhatsApp() {
 
-  const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
+  const telefono = "5491168162451"; // Reemplaza con el número de teléfono deseado
 
   // Construir el texto del mensaje con la información de los duplicados y los precios
   let textoCarrito = "Hola! Me interesan estos productos de la web:";
@@ -780,11 +651,12 @@ function filtrarConBusqueda() {
   //VEMOS EL CONTENIDO DEL FORMULARIO BUSCAR
   const formulario = document.querySelector('#formulario');
 
+  let debounceBusqueda;
+
   const filtrar = () => {
 
-    console.log("se busco:" + formulario.value)
-
     const texto = formulario.value.toLowerCase();
+    let coincidencias = 0;
     for (let producto of datos) {
       let Descripcion = producto.Descripción.toLowerCase();
       //BORRAMOS LOS ELEMENTOS DEL CATALOGO
@@ -798,6 +670,7 @@ function filtrarConBusqueda() {
         contenedorId = 0;
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
         fragmento2 = MostrarEnCatalogo(producto, contenedorId);
+        coincidencias++;
       }
     }
 
@@ -809,6 +682,18 @@ function filtrarConBusqueda() {
     document.body.appendChild(fragmento);//agregamos el contenedor padre
 
     document.getElementById(contenedorId).appendChild(fragmento2); //agregamos las cards
+
+    // Si no hubo coincidencias, mostramos un aviso en vez de dejar la sección vacía
+    if (coincidencias === 0) {
+      const contenedorResultados = document.getElementById(contenedorId);
+      const sinResultados = document.createElement('div');
+      sinResultados.className = 'sin-resultados';
+      sinResultados.textContent = texto
+        ? `No encontramos productos que coincidan con "${formulario.value}"`
+        : 'No hay productos disponibles.';
+      contenedorResultados.appendChild(sinResultados);
+    }
+
     mBotones.mostrarBotones();
 
 
@@ -823,13 +708,21 @@ function filtrarConBusqueda() {
     subirScroll.subir();
 
   };
+
+  // Debounce: esperamos 300ms de inactividad antes de refiltrar,
+  // para no reconstruir todo el catálogo en cada tecla presionada
+  const filtrarConDebounce = () => {
+    clearTimeout(debounceBusqueda);
+    debounceBusqueda = setTimeout(filtrar, 300);
+  };
+
   //PONEMOS LOS EVENTOS DEL BUSCADOR
 
-
-  formulario.addEventListener('input', filtrar);
+  formulario.addEventListener('input', filtrarConDebounce);
   formulario.addEventListener('change', filtrar);
   formulario.addEventListener('keydown', (event) => {
     if (event.keyCode === 13 || event.key === 'Enter') { // Verifica si se presionó Enter
+      clearTimeout(debounceBusqueda);
       filtrar();
       //llamamos la funcion ocultar canvas cuando precionamos enter o buscar
       ocultarCanvasBusqueda();
@@ -874,6 +767,7 @@ function ocultarCanvasBusqueda() {
 
 
 //actualizamos el carrito
+//actualizamos el carrito
 function actualizarCarrito() {
   total();
   // Limpiar el contenido existente en el contenedor
@@ -881,37 +775,73 @@ function actualizarCarrito() {
   cantCarritoLet = 0;
   // Mostrar los productos en el DOM
   itemCarrito.forEach(producto => {
-    const parrafo = document.createElement("li");
+    const fila = document.createElement("li");
     var precioCatalogo = (producto.Venta.replace(/,/g, ".") * producto.DOLAR * producto.Unidades);
     precioCatalogo = new Intl.NumberFormat('es-Mx', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(precioCatalogo);
 
-    parrafo.setAttribute("id", "item" + producto.Artículo);
-    parrafo.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center");
+    fila.setAttribute("id", "item" + producto.Artículo);
+    fila.setAttribute("class", "list-group-item d-flex align-items-center carrito-item");
 
-    parrafo.style.cssText = ' z-index: 998!important;';
+    // Miniatura del producto, para identificarlo más fácil de un vistazo.
+    // Para productos con variante, "Artículo" es un id compuesto (no
+    // corresponde a ningún archivo real), así que usamos "ImagenId" si
+    // existe. Los carritos guardados antes de este cambio no tienen ese
+    // campo, así que como respaldo usamos "Artículo" igual que antes.
+    const idImagenProducto = producto.ImagenId !== undefined ? producto.ImagenId : producto.Artículo;
+    const miniatura = document.createElement("img");
+    miniatura.className = "carrito-item-img";
+    miniatura.src = "./imgcarrito/" + idImagenProducto + ".jpg";
+    miniatura.alt = producto.Descripción;
+    miniatura.onerror = function () { this.src = "./imgcarrito/IMGND.jpg"; };
 
-    const span = document.createElement("span");
-    span.setAttribute("class", "badge badge-primary badge-pill active");
-    span.style.cssText = '  z-index: 1101 !important;  font-weight: bold;font-size: 16px;   background-color: black;';
+    // Nombre y precio del producto
+    const info = document.createElement("div");
+    info.className = "carrito-item-info";
+    info.innerHTML = `<span class="carrito-item-nombre">${producto.Descripción}</span>
+      <span class="carrito-item-precio">$${precioCatalogo}</span>`;
 
-    span.textContent = producto.Unidades;
+    // Controles de cantidad: - / cantidad / +, y botón de eliminar aparte
+    const controles = document.createElement("div");
+    controles.className = "carrito-item-controles";
 
+    const btnMenos = document.createElement("button");
+    btnMenos.type = "button";
+    btnMenos.className = "btn btn-sm btn-outline-light carrito-btn-cantidad";
+    btnMenos.textContent = "−";
+    btnMenos.setAttribute("aria-label", "Quitar una unidad de " + producto.Descripción);
+    btnMenos.addEventListener("click", () => cambiarCantidadCarrito(producto.Artículo, -1));
 
-    parrafo.textContent += ` - ${producto.Descripción} - $${precioCatalogo}`;
+    const cantidadTexto = document.createElement("span");
+    cantidadTexto.className = "carrito-item-cantidad";
+    cantidadTexto.textContent = producto.Unidades;
 
+    const btnMas = document.createElement("button");
+    btnMas.type = "button";
+    btnMas.className = "btn btn-sm btn-outline-light carrito-btn-cantidad";
+    btnMas.textContent = "+";
+    btnMas.setAttribute("aria-label", "Agregar una unidad de " + producto.Descripción);
+    btnMas.addEventListener("click", () => cambiarCantidadCarrito(producto.Artículo, 1));
 
+    const btnEliminar = document.createElement("button");
+    btnEliminar.type = "button";
+    btnEliminar.className = "btn btn-sm btn-outline-danger carrito-btn-eliminar";
+    btnEliminar.innerHTML = "🗑";
+    btnEliminar.setAttribute("aria-label", "Eliminar " + producto.Descripción + " del carrito");
+    btnEliminar.addEventListener("click", () => eliminarDelCarrito(producto.Artículo));
+
+    controles.appendChild(btnMenos);
+    controles.appendChild(cantidadTexto);
+    controles.appendChild(btnMas);
+    controles.appendChild(btnEliminar);
+
+    fila.appendChild(miniatura);
+    fila.appendChild(info);
+    fila.appendChild(controles);
 
     //AGREGAMOS LAS UNIDADES A MOSTRAR EN GLOBO DE CARRITO
-
     cantCarritoLet += producto.Unidades;
 
-
-
-
-
-
-    parrafo.appendChild(span);
-    interes.appendChild(parrafo);
+    interes.appendChild(fila);
 
   });
 
@@ -920,127 +850,117 @@ function actualizarCarrito() {
   localStor.guardarEnLocalStorage(itemCarrito);
   borrarCarritoCompleto()
 
-
-  EliminarV();
-
 };
 
 
-//llamamos a la funcion que crea el boton scroll y sube.
-subirScroll.crearBotonScroll();
+// Aumenta o disminuye en 1 la cantidad de un producto del carrito.
+// Si llega a 0, se elimina directamente.
+function cambiarCantidadCarrito(articuloId, delta) {
+  const item = itemCarrito.find(p => p.Artículo === articuloId);
+  if (!item) return;
 
-//llamamos a la funcion para mostrar el % de descuento correspondiente
-descu.porDeDescuento();
+  const nuevasUnidades = item.Unidades + delta;
 
+  if (delta > 0) {
+    // Para productos con variante, "Artículo" es un id compuesto que no
+    // existe en el catálogo (por eso buscarStock no lo encontraba y el
+    // límite de stock no se aplicaba). Usamos "ImagenId" (el id real del
+    // producto) para esta comprobación, con respaldo a "Artículo" para
+    // carritos guardados antes de este cambio.
+    const idRealProducto = item.ImagenId !== undefined ? item.ImagenId : item.Artículo;
 
+    // Además, el stock es del producto en general, no de cada variante
+    // por separado: sumamos las unidades de TODAS las variantes de este
+    // mismo producto que ya estén en el carrito (menos este item, que ya
+    // se cuenta en "nuevasUnidades").
+    const unidadesDeOtrasVariantes = itemCarrito.reduce((total, otro) => {
+      if (otro === item) return total;
+      const idBaseOtro = otro.ImagenId !== undefined ? otro.ImagenId : otro.Artículo;
+      return idBaseOtro === idRealProducto ? total + otro.Unidades : total;
+    }, 0);
 
+    const stock = buscarDatos.buscarStock(idRealProducto);
+    if (stock !== undefined && (unidadesDeOtrasVariantes + nuevasUnidades) > stock) {
+      let suceso = "NO HAY STOCK SUFICIENTE";
+      let tipoAlert = "alert-danger";
+      alertas.alertAgrego(item.Descripción, suceso, tipoAlert);
+      return;
+    }
+  }
 
+  // Si llegaría a 0, delegamos en eliminarDelCarrito (que pide confirmación)
+  // en vez de restar primero: así, si el usuario cancela, la cantidad
+  // queda intacta en vez de quedar en 0 sin eliminarse.
+  if (nuevasUnidades <= 0) {
+    eliminarDelCarrito(articuloId);
+    return;
+  }
 
+  item.Unidades = nuevasUnidades;
 
+  actualizarCarrito();
+  actualizarEnlaceWhatsApp();
+}
 
+// Elimina un producto completo del carrito, sin importar la cantidad.
+function eliminarDelCarrito(articuloId) {
+  const index = itemCarrito.findIndex(p => p.Artículo === articuloId);
+  if (index === -1) return;
 
+  const descripcion = itemCarrito[index].Descripción;
 
-//si lo usamos, este codigo iria en mostrarCatalogo
-//llamamos a la funcion de control de imagen
-//let im= mostrarImagen(datos, contenedorId);
-//template2.querySelector("img").setAttribute("src", (im));
+  if (!confirm(`¿Eliminar "${descripcion}" del carrito?`)) {
+    return;
+  }
 
+  itemCarrito.splice(index, 1);
 
-// //funcion para comprobar si la imagen existe
-// function mostrarImagen(datos, contenedorId) {
-//   var imagen = datos.Artículo + ".jpg";
-//   var ruta = "./imgcarrito/" + imagen;
-// var img= ruta;
-//   var xhr = new XMLHttpRequest();
-//   xhr.open("HEAD", ruta, false);
-//   xhr.send();
+  let suceso = "Se eliminó del carrito";
+  let tipoAlert = "alert-danger";
+  alertas.alertAgrego(descripcion, suceso, tipoAlert);
 
-//   if (xhr.status === 200) {
-//     // La imagen existe, mostramos la imagen real
-//     img= ruta;
-//     return img;
-//   } else {
-//     // La imagen no existe, mostramos la imagen de "IMGINEXISTENTE"
-//     img= "./imgcarrito/" + "IMGND.jpg";
-//     return img;
-//   }
-
-// }
-
-
-
-
-
-varianteDeMedidas.cambiarVariantes()
-
-
-
-
-
-
-
-
+  actualizarCarrito();
+  actualizarEnlaceWhatsApp();
+}
 
 //creamos funcion que crea boton, lo muestra si hay items y borra todo el carrito.
 function borrarCarritoCompleto() {
 
-
   const BCarritoComp = document.getElementById('borrarCarr');
 
   BCarritoComp.innerHTML = '';
-  const btnBorrarCarrito = document.createElement("button");
-  btnBorrarCarrito.setAttribute("class", "btn btn-danger");
-  btnBorrarCarrito.setAttribute("id", "btbc");
-  btnBorrarCarrito.textContent = "Vaciar Carrito";
-
-
-  BCarritoComp.appendChild(btnBorrarCarrito)
-  const btbc = document.getElementById('btbc');
-
 
   if (itemCarrito.length <= 0) {
     BCarritoComp.classList.remove('show');
     BCarritoComp.classList.add('hide');
+    return;
   }
 
-  else {
-    if (itemCarrito.length >= 1) {
-      BCarritoComp.classList.remove('hide');
-      BCarritoComp.classList.add('show');
+  const btnBorrarCarrito = document.createElement("button");
+  btnBorrarCarrito.setAttribute("class", "btn btn-outline-danger");
+  btnBorrarCarrito.setAttribute("id", "btbc");
+  btnBorrarCarrito.innerHTML = "🗑 Vaciar carrito";
 
+  BCarritoComp.appendChild(btnBorrarCarrito);
 
-      btbc.addEventListener('click', function (event) {
-        event.preventDefault(); // Evita la redirección
-        itemCarrito.splice(0, itemCarrito.length);
+  BCarritoComp.classList.remove('hide');
+  BCarritoComp.classList.add('show');
 
+  btnBorrarCarrito.addEventListener('click', function (event) {
+    event.preventDefault();
 
-        let suceso = "Ya no hay elementos";
-        let tipoAlert = "alert-danger";
-        let da = "SE VACIO EL CARRITO"
-        alertas.alertAgrego(da, suceso, tipoAlert);
-
-
-
-        actualizarCarrito()
-        actualizarEnlaceWhatsApp(); // Actualizar el enlace
-      });
+    if (!confirm("¿Vaciar todo el carrito? Esta acción no se puede deshacer.")) {
+      return;
     }
-  }
+
+    itemCarrito.splice(0, itemCarrito.length);
+
+    let suceso = "Ya no hay elementos";
+    let tipoAlert = "alert-danger";
+    let da = "SE VACIÓ EL CARRITO";
+    alertas.alertAgrego(da, suceso, tipoAlert);
+
+    actualizarCarrito();
+    actualizarEnlaceWhatsApp();
+  });
 };
-
-
-
-//propagandaAlAzar.propagandaAlAzar()
-// obtenerURL()
-const fondo = document.getElementById('fondo');
-const fondo2 = document.getElementById('fondo2');
-// Función para cambiar el z-index después de 4 segundos
-function cambiarZIndex() {
-  fondo.style.zIndex = -50;
-  fondo.style.opacity = "30%";
-  fondo2.style.height = "200%";
-
-}
-
-// Llama a la función después de 4 segundos
-setTimeout(cambiarZIndex, 2000);

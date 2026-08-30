@@ -14,21 +14,13 @@
 
 <body>
     <div id="fondo">
-        <img id="fondo2" src="IMG/logo blanco.jpg">
+        <img id="fondo2" alt="" src="IMG/logo blanco.jpg">
 
     </div>
-<script>  const fondo = document.getElementById('fondo');
-    const fondo2 = document.getElementById('fondo2');
-    // Función para cambiar el z-index después de 4 segundos
-    function cambiarZIndex() {
-        fondo.style.zIndex = -50;
-        fondo.style.opacity = "30%";
-        fondo2.style.height = "200%";
-  
-    }
-  
-    // Llama a la función después de 4 segundos
-    setTimeout(cambiarZIndex, 2000);</script>
+<script type="module">
+    import { iniciarAnimLogo } from './animLogo.js';
+    iniciarAnimLogo();
+</script>
 
 
     <header>
@@ -108,7 +100,7 @@
 
                         <div class="card-group tarjetas2">
                             <div class="card  ">
-                                <img src="imgcarrito/1.jpg" class="card-img-top" alt="...">
+                                <img src="imgcarrito/1.jpg" class="card-img-top" alt="Pigmentos HARBOR">
                                 <div class="card-body">
                                     <h5 class="card-title">Pigmentos HARBOR</h5>
                                     <p class="card-text">Pigmentos de alta calidad</p>
@@ -118,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="imgcarrito/288.jpg" class="card-img-top" alt="...">
+                                <img src="imgcarrito/288.jpg" class="card-img-top" alt="Espuma de limpieza HARBOR con extracto de Hamamelis, Clorhexidina y Vitamina E">
                                 <div class="card-body">
                                     <h5 class="card-title">Espuma de limpieza HARBOR</h5>
                                     <p class="card-text">Alta espuma, anticeptico y desinflamante!</p>
@@ -128,7 +120,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="imgcarrito/287.jpg" class="card-img-top" alt="...">
+                                <img src="imgcarrito/287.jpg" class="card-img-top" alt="Espuma de limpieza HARBOR con extracto de Hamamelis, Cloroxilenol y Vitamina E">
                                 <div class="card-body">
                                     <h5 class="card-title">Espuma de limpieza HARBOR</h5>
                                     <p class="card-text">Alta espuma, anticeptico y desinflamante!</p>
@@ -138,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="imgcarrito/185.jpg" class="card-img-top" alt="...">
+                                <img src="imgcarrito/185.jpg" class="card-img-top" alt="Witch Hazel concentrado HARBOR">
                                 <div class="card-body">
                                     <h5 class="card-title">Witch Hazel concentrado HARBOR</h5>
                                     <p class="card-text">Desinflamante, astringente. calma y purifica la piel!</p>

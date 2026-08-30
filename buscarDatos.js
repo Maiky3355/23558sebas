@@ -46,6 +46,12 @@ export function buscarIdPrecio(id) {
 //buscamos el stock
 export function buscarStock(id) {
     const found = datos.find(elem => elem.Artículo == id);
+    // Antes, si no se encontraba el producto (por ejemplo los que tienen
+    // variante/medida, cuyo id es compuesto y no existe tal cual en el
+    // catálogo), esto rompía con un error "Cannot read properties of
+    // undefined" que silenciosamente cortaba la ejecución de quien la
+    // llamaba (por ejemplo, el botón "+" del carrito dejaba de responder).
+    if (!found) return undefined;
 
     return found.Inventario;
 };

@@ -16,7 +16,7 @@
 
 <body class="row">
     <div id="fondo">
-        <img id="fondo2" src="IMG/logo blanco.jpg">
+        <img id="fondo2" alt="" src="IMG/logo blanco.jpg">
 
     </div>
 
@@ -59,7 +59,7 @@
 
                                 <form class="d-flex justify-content-center " role="search" onsubmit="return false;">
                                     <input id="formulario" class="form-control me-2" type="search"
-                                        placeholder="Buscar producto" aria-label="Search">
+                                        placeholder="Buscar producto" aria-label="Buscar producto">
 
                                 </form>
                             </li>
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </nav>
-        <header class="bg-gray py-5">
+        <div class="bg-gray py-5 heroTitulo">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Sublime Supplies</h1>
@@ -112,9 +112,9 @@
 
             </div>
 
-        </header>
+        </div>
     </header>
-    <STYle>
+    <style>
         .bg-gray.py-5 {
             background-color: darkgrey;
             opacity: 60%;
@@ -127,12 +127,21 @@
             right: 0 !important;
         }
 
+        /* El encabezado con el título necesita buen contraste para el texto
+           blanco: el fondo claro con opacidad reducida de arriba no alcanza
+           el mínimo de contraste accesible, así que acá lo pisamos con un
+           fondo sólido y oscuro solo para esta sección. */
+        .heroTitulo {
+            background-color: #2c2c2c !important;
+            opacity: 1 !important;
+        }
+
 
 
         .display-4.fw-bolder {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-    </STYle>
+    </style>
     <!-- le saque el row al main para que se centre el filtrado -->
     <!-- <main class="row"> -->
     <main>
@@ -182,7 +191,7 @@
                 <div class="card-group tarjetas2 ">
                     <div class="card ">
                         <img class="card-img-top img-prod" onerror="this.src='./imgcarrito/IMGND.jpg'"
-                            alt="Imagen no encontrada">
+                            alt="Producto">
                         <div class="row">
                             <div>
                                 <div class="card contentarj h-100">
@@ -290,6 +299,12 @@
                 </div>
 
             </div>
+            <div id="loaderCatalogo">
+                <div class="spinner-border text-dark" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                </div>
+                <p>Cargando catálogo de productos...</p>
+            </div>
             <!-- necesito agregar class display none -->
             <!-- agregamos esto para sombras en class " shadow-lg p-3 mb-5  rounded" -->
             <div class="offcanvas offcanvas-start hide text-bg-dark shadow-lg p-3 mb-5  rounded" tabindex="-1"
@@ -311,7 +326,7 @@
                                 <div class="card">
                                     <p>PRODUCTOS</p>
                                     <div id="aca">
-                                        <ul id="interes" class="list-group" style="cursor: pointer">
+                                        <ul id="interes" class="list-group">
 
                                         </ul>
 
@@ -323,7 +338,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p>Precione en el producto para eliminar cantidad</p>
+                                <p>Usá los botones − / + para cambiar la cantidad, o 🗑 para eliminar un producto.</p>
 
                                 <br>
 
