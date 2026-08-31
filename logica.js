@@ -196,6 +196,21 @@ function MostrarEnCatalogo(datos, contenedorId) {
 inItemCarr.inItemCarr();
 actualizarCarrito();
 
+// Faltaba esta llamada: se importaba subirScroll pero nunca se ejecutaba
+// crearBotonScroll(), que es la función que arma el botón flotante y lo
+// agrega a la página. Por eso nunca aparecía al hacer scroll.
+subirScroll.crearBotonScroll();
+
+// Evita el menú nativo del navegador ("Abrir imagen en pestaña nueva",
+// "Copiar imagen", etc) al mantener apretada una imagen de producto en
+// celular. El CSS (-webkit-touch-callout) ya lo bloquea en iOS; esto es
+// el respaldo para Android, donde a veces el menú igual aparece.
+document.addEventListener('contextmenu', function (event) {
+  if (event.target.closest('.img-prod')) {
+    event.preventDefault();
+  }
+});
+
 //creamos una variable para los filtros de productos en catalogo
 var FILTROS = "";
 

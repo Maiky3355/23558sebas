@@ -719,3 +719,46 @@ h11 {
   color: inherit;
   border-color: rgba(255, 255, 255, 0.2);
 }
+
+/* ===================================================== */
+/* CARRITO EN CELULAR: el offcanvas usa 400px de ancho por
+   defecto (Bootstrap), que no entra en la mayoría de las
+   pantallas de celular y obliga a hacer scroll horizontal.
+   Los botones de +/-/eliminar también eran chicos para tocar
+   con el dedo. Ajustamos ambas cosas sin tocar el diseño de
+   escritorio (que ya andaba bien con 400px). */
+/* ===================================================== */
+
+#offcanvasDark {
+  width: min(400px, 92vw) !important;
+}
+
+@media (max-width: 480px) {
+  .carrito-btn-cantidad,
+  .carrito-btn-eliminar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .carrito-item-nombre {
+    font-size: clamp(13px, 3.8vw, 16px);
+  }
+
+  .carrito-item-precio {
+    font-size: clamp(12px, 3.2vw, 14px);
+  }
+
+  .carrito-item-cantidad {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+}
+
+/* Evita que al mantener apretada una imagen en celular aparezca el menú
+   nativo del navegador ("Abrir imagen en pestaña nueva", "Copiar imagen",
+   etc). No afecta el efecto de zoom con :active que ya tenía la imagen,
+   son dos cosas independientes. */
+.img-prod {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
