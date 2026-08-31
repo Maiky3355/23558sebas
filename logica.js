@@ -205,8 +205,10 @@ subirScroll.crearBotonScroll();
 // "Copiar imagen", etc) al mantener apretada una imagen de producto en
 // celular. El CSS (-webkit-touch-callout) ya lo bloquea en iOS; esto es
 // el respaldo para Android, donde a veces el menú igual aparece.
+// Cubre tanto las imágenes del catálogo (.img-prod) como la miniatura
+// del carrito (.carrito-item-img).
 document.addEventListener('contextmenu', function (event) {
-  if (event.target.closest('.img-prod')) {
+  if (event.target.closest('.img-prod') || event.target.closest('.carrito-item-img')) {
     event.preventDefault();
   }
 });
