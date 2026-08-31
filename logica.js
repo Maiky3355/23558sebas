@@ -816,6 +816,7 @@ function actualizarCarrito() {
     miniatura.className = "carrito-item-img";
     miniatura.src = "./imgcarrito/" + idImagenProducto + ".jpg";
     miniatura.alt = producto.Descripción;
+    miniatura.draggable = false;
     miniatura.onerror = function () { this.src = "./imgcarrito/IMGND.jpg"; };
 
     // Nombre y precio del producto
@@ -921,6 +922,10 @@ function cambiarCantidadCarrito(articuloId, delta) {
   }
 
   item.Unidades = nuevasUnidades;
+
+  let suceso = delta > 0 ? "Se agregó una unidad" : "Se quitó una unidad";
+  let tipoAlert = delta > 0 ? "alert-success" : "alert-danger";
+  alertas.alertAgrego(item.Descripción, suceso, tipoAlert);
 
   actualizarCarrito();
   actualizarEnlaceWhatsApp();

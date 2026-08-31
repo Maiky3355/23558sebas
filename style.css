@@ -761,6 +761,9 @@ h11 {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  touch-action: manipulation;
 }
 
 /* ===================================================== */
@@ -773,6 +776,9 @@ h11 {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  touch-action: manipulation;
 }
 
 .carrito-item-img:active {
