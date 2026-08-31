@@ -605,7 +605,7 @@ eventCerrCanvas.eventCerrCanvas();
 // Función para generar el enlace de WhatsApp
 function generarEnlaceWhatsApp() {
 
-  const telefono = "5491168162451"; // Reemplaza con el número de teléfono deseado
+  const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
 
   // Construir el texto del mensaje con la información de los duplicados y los precios
   let textoCarrito = "Hola! Me interesan estos productos de la web:";
