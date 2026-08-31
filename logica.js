@@ -581,6 +581,13 @@ function total() {
   intprecioTotal.textContent = "PRECIO TOTAL: $ " + sumaTotal;
   totalCarritoNavb.textContent = "$ " + sumaTotal
 
+  // Cantidad total de unidades en el carrito (sumando todos los productos)
+  const cantidadTotal = itemCarrito.reduce((total, item) => total + item.Unidades, 0);
+  const elementoCantidadTotal = document.getElementById("cantidadTotalCarrito");
+  if (elementoCantidadTotal) {
+    elementoCantidadTotal.textContent = "Cantidad de productos: " + cantidadTotal;
+  }
+
   return ("$ " + sumaTotal);
 }
 

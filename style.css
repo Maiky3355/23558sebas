@@ -762,3 +762,22 @@ h11 {
   -webkit-user-select: none;
   user-select: none;
 }
+
+/* ===================================================== */
+/* Imagen del carrito: mismo comportamiento táctil que las
+   imágenes del catálogo (mantener presionado para agrandar,
+   sin que aparezca el menú contextual del celular). */
+/* ===================================================== */
+
+.carrito-item-img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.carrito-item-img:active {
+  transform: scale(2);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 999;
+}
