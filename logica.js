@@ -386,8 +386,6 @@ datos.forEach(datos => {
 
 });
 
-template.querySelector("H3").textContent = '';
-
 
 let clone = document.importNode(template, true);
 fragmento.appendChild(clone);
@@ -743,8 +741,7 @@ function filtrarConBusqueda() {
   //PONEMOS LOS EVENTOS DEL BUSCADOR
 
   formulario.addEventListener('input', filtrarConDebounce);
-  formulario.addEventListener('change', filtrar);
-  formulario.addEventListener('keydown', (event) => {
+    formulario.addEventListener('keydown', (event) => {
     if (event.keyCode === 13 || event.key === 'Enter') { // Verifica si se presionó Enter
       clearTimeout(debounceBusqueda);
       filtrar();

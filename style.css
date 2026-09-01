@@ -787,3 +787,314 @@ h11 {
   position: relative;
   z-index: 999;
 }
+
+/* ===================================================== */
+/* PERSONALIZACIÓN DE COLORES: NAVBAR, OFFCANVAS Y BOTONES */
+/* Estos valores son los que Sublime ya tiene actualmente   */
+/* (gris oscuro de Bootstrap + el gris del banner). Para    */
+/* cambiar la paleta a futuro, solo hay que tocar acá.       */
+/* ===================================================== */
+
+:root {
+  /* 🎨 CAMBIA ESTOS COLORES SEGÚN TU PREFERENCIA */
+  --tema-principal: #212529;
+  /* Navbar y botón "Carrito" (gris oscuro actual de Bootstrap) */
+
+  --tema-secundario: #212529;
+  /* Menú desplegable en celular (offcanvas de navegación) */
+
+  --tema-canvas: #212529;
+  /* Fondo del panel del carrito */
+
+  --tema-acento: #000000;
+  /* Categoría seleccionada / hover del botón "Agregar" */
+
+  --tema-acento-hover: #000000;
+  /* Hover sobre elementos de acento */
+
+  --texto-general: #ffffff;
+  /* Color del texto sobre fondos oscuros */
+
+  --borde-suave: rgba(255, 255, 255, 0.15);
+  /* Bordes de separación */
+
+  --tema-categoria: transparent;
+  /* Fondo de los botones de categoría sin seleccionar */
+
+  --texto-categoria: #060606;
+  /* Texto de los botones de categoría */
+
+  --tema-hero: #2c2c2c;
+  /* Fondo del banner "Sublime Supplies" */
+
+  --tema-filtros: darkgrey;
+  /* Fondo de la barra de filtros de categoría */
+}
+
+/* ----------------------------------------------------- */
+/* 1. BARRA DE NAVEGACIÓN PRINCIPAL (NAVBAR) */
+/* ----------------------------------------------------- */
+#nav1,
+#nav1.bg-dark {
+  background-color: var(--tema-principal) !important;
+  border-bottom: 1px solid var(--borde-suave);
+}
+
+#nav1 .navbar-brand,
+#nav1 .nav-link {
+  color: var(--texto-general) !important;
+}
+
+#nav1 .nav-link:hover,
+#nav1 .nav-link.active {
+  color: #ffffff !important;
+}
+
+/* Botón "Carrito" del Navbar */
+#listaInteres {
+  background-color: var(--tema-principal) !important;
+  color: var(--texto-general) !important;
+  border: 1px solid var(--borde-suave) !important;
+}
+
+#listaInteres:hover {
+  background-color: var(--tema-acento) !important;
+}
+
+/* Indicador de precio en el Navbar */
+#totalCarritoNavb.text-bg-dark {
+  background-color: var(--tema-principal) !important;
+  color: var(--texto-general) !important;
+  font-weight: bold;
+}
+
+/* Botón de menú hamburguesa (Móviles) */
+.navbar-toggler {
+  border-color: var(--borde-suave) !important;
+}
+
+/* ----------------------------------------------------- */
+/* 2. MENÚ DESPLEGABLE EN MÓVILES (OFFCANVAS NAVBAR) */
+/* ----------------------------------------------------- */
+#offcanvasDarkNavbar.text-bg-dark {
+  background-color: var(--tema-secundario) !important;
+  color: var(--texto-general) !important;
+}
+
+/* ----------------------------------------------------- */
+/* 3. PANEL DEL CARRITO DE COMPRAS (OFFCANVAS CARRITO) */
+/* ----------------------------------------------------- */
+#offcanvasDark.text-bg-dark {
+  background-color: var(--tema-canvas) !important;
+  color: var(--texto-general) !important;
+}
+
+#offcanvasDark .offcanvas-header {
+  border-bottom: 1px solid var(--borde-suave);
+  background-color: var(--tema-canvas);
+}
+
+#offcanvasDark .offcanvas-title,
+#offcanvasDark #precioTotal,
+#offcanvasDark #cantidadTotalCarrito,
+#offcanvasDark p,
+#offcanvasDark h4 {
+  color: var(--texto-general) !important;
+}
+
+/* Tarjeta interna y lista de ítems dentro del Carrito */
+#offcanvasDark .card,
+#offcanvasDark .list-group,
+#offcanvasDark .list-group-item {
+  background-color: var(--tema-canvas) !important;
+  color: var(--texto-general) !important;
+  border-color: var(--borde-suave) !important;
+}
+
+/* ----------------------------------------------------- */
+/* 4. BOTONES DEL CARRITO (+, -, 🗑) */
+/* ----------------------------------------------------- */
+.carrito-btn-cantidad {
+  background-color: var(--tema-principal) !important;
+  color: var(--texto-general) !important;
+  border: 1px solid var(--borde-suave) !important;
+}
+
+.carrito-btn-cantidad:hover {
+  background-color: var(--tema-acento) !important;
+}
+
+.carrito-btn-eliminar {
+  background-color: #e74c3c !important;
+  /* Rojo para borrar */
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.carrito-btn-eliminar:hover {
+  background-color: #c0392b !important;
+}
+
+/* ----------------------------------------------------- */
+/* 5. BOTÓN "AGREGAR" DEL CATÁLOGO */
+/* ----------------------------------------------------- */
+.botonaparecer {
+  background-color: var(--tema-principal) !important;
+  color: var(--texto-general) !important;
+}
+
+.botonaparecer:hover {
+  background-color: var(--tema-acento) !important;
+}
+
+/* ----------------------------------------------------- */
+/* 6. SECCIÓN DE FILTROS Y CATEGORÍAS */
+/* ----------------------------------------------------- */
+.categoria-btn {
+  background-color: var(--tema-categoria) !important;
+  color: var(--texto-categoria) !important;
+  border: 1px solid var(--borde-suave) !important;
+}
+
+/* Categoría seleccionada (JS le agrega la clase btn-dark) */
+.categoria-btn.btn-dark {
+  background-color: var(--tema-acento) !important;
+  color: var(--texto-general) !important;
+}
+
+/* Fondo de la barra de filtros (la franja gris clara detrás de los
+   botones de categoría). Se excluye .heroTitulo porque comparte la
+   misma clase .bg-gray.py-5 pero usa su propio color (--tema-hero). */
+.bg-gray.py-5:not(.heroTitulo) {
+  background-color: var(--tema-filtros) !important;
+}
+
+/* ===================================================== */
+/* CANTIDAD DE TARJETAS POR FILA (RESPONSIVE) */
+/* Cambiá el número dentro de repeat(N, 1fr) en cada media  */
+/* query de abajo para mostrar más o menos tarjetas por fila */
+/* según el tamaño de pantalla.                              */
+/* ===================================================== */
+
+.esteSi {
+  display: grid !important;
+  grid-auto-flow: dense !important;
+  /* Ocupa automáticamente cualquier hueco */
+  align-content: start !important;
+  /* Alinea las tarjetas arriba del todo */
+  justify-content: start !important;
+  /* Alinea las tarjetas a la izquierda */
+  align-items: start !important;
+  gap: 1rem !important;
+  /* Espaciado uniforme */
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.esteSi > [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Eliminar pseudoelementos de Bootstrap que generan espacios vacíos en Grid */
+.esteSi::before,
+.esteSi::after {
+  display: none !important;
+}
+
+/* Forzar reset de márgenes en la primera tarjeta */
+.esteSi > *:first-child,
+.esteSi .card:first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ----------------------------------------------------- */
+/* CELULAR (menos de 768px): 2 tarjetas por fila */
+/* ----------------------------------------------------- */
+@media (max-width: 767px) {
+  .esteSi {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* TABLET (768px a 991px): 3 tarjetas por fila */
+/* ----------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .esteSi {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* COMPUTADORA / PC (más de 992px): 4 tarjetas por fila */
+/* ----------------------------------------------------- */
+@media (min-width: 992px) {
+  .esteSi {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+/* ===================================================== */
+/* CONTROL DE CANTIDAD DE CARDS DESDE CSS (GRID CENTRADO) */
+/* ===================================================== */
+
+.esteSi {
+  display: grid !important;
+  grid-auto-flow: dense !important;
+  
+  /* CAMBIO CLAVE: Centra la grilla horizontalmente dentro del contenedor */
+  justify-content: center !important; 
+  align-content: start !important;
+  align-items: start !important;
+  
+  gap: 1rem !important;
+  width: 100% !important;
+  
+  /* Resetea márgenes negativos y paddings extraños de Bootstrap */
+  margin: 0 auto !important;
+  padding: 0 15px !important; /* Agrega un colchón de seguridad simétrico a los lados */
+  box-sizing: border-box !important;
+}
+
+/* Anular interferencias de columnas Bootstrap dentro de .esteSi */
+.esteSi > [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Eliminar pseudoelementos de Bootstrap */
+.esteSi::before,
+.esteSi::after {
+  display: none !important;
+}
+
+/* ----------------------------------------------------- */
+/* CONFIGURACIÓN RESPONSIVA */
+/* ----------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .esteSi {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 0 8px !important; /* Margen contenido para celulares */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .esteSi {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .esteSi {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}

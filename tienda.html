@@ -116,7 +116,7 @@
     </header>
     <style>
         .bg-gray.py-5 {
-            background-color: darkgrey;
+            background-color: var(--tema-filtros);
             opacity: 60%;
 
             right: 0;
@@ -132,7 +132,7 @@
            el mínimo de contraste accesible, así que acá lo pisamos con un
            fondo sólido y oscuro solo para esta sección. */
         .heroTitulo {
-            background-color: #2c2c2c !important;
+            background-color: var(--tema-hero) !important;
             opacity: 1 !important;
         }
 
@@ -168,7 +168,7 @@
         <template id="contTemplate">
             <div class="tarjetas ">
                 <div class=" row justify-content-center esteSi">
-                    <h3></h3>
+                   
                     <!-- <div class="card " >
                         <img class="card-img-top" >
                         <div class="card-body">
@@ -271,7 +271,7 @@
 
                     <h2>TIENDA ONLINE</h2>
                     </P>
-                    <div class="bg-gray py-5" style="background-color: darkgrey;">
+                    <div class="bg-gray py-5">
                         <div class="d-md-none text-center mb-2">
                             <button class="btn btn-dark" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#filtrosCategoria" aria-expanded="false">
