@@ -448,14 +448,17 @@ li form {
 }
 
 .img-prod:active {
-position: fixed !; /* La imagen se posicionará en relación a la ventana */
+position: fixed !; 
+/* La imagen se posicionará en relación a la ventana */
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%) scale(2);
-z-index: 99999999!important; /* Asegúrate de que esté por encima de otros elementos */
+z-index: 99999999 !important; 
+/* Asegúrate de que esté por encima de otros elementos */
 transform: scale(2);
 z-index: 1;
-margin: -5px; /* Agrega un margen negativo para crear espacio */
+margin: -5px; 
+/* Agrega un margen negativo para crear espacio */
 object-fit: cover;
 transition: transform 0.3s ease-in-out;
 }
@@ -474,7 +477,10 @@ body {
   background-color: #ffffff;
 }
 
-h1, h2, h3, h5 {
+h1,
+ h2,
+  h3,
+   h5 {
     font-family: 'Playfair Display', serif;
 }
 
