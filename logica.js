@@ -386,7 +386,6 @@ datos.forEach(datos => {
 
 });
 
-
 let clone = document.importNode(template, true);
 fragmento.appendChild(clone);
 document.body.appendChild(fragmento);//agregamos el contenedor padre
