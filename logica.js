@@ -25,6 +25,11 @@ import * as eventCerrCanvas from './eventCerrCanvas.js';
 import * as varianteDeMedidas from './varianteDeMedidas.js';
 //cargamos la animacion compartida del logo de fondo (antes duplicada con index.html)
 import { iniciarAnimLogo } from './animLogo.js';
+//cargamos la configuracion general del sitio (nombre, whatsapp, avisos, etc)
+import config from './config.js';
+
+//cargamos el detalle de producto (click en la imagen -> modal con carrusel)
+import * as detalleProducto from './detalleProducto.js';
 
 // Faltaba esta llamada: se importaba la función pero nunca se ejecutaba,
 // así que en tienda.html el logo de fondo nunca pasaba a segundo plano.
@@ -200,6 +205,10 @@ actualizarCarrito();
 // crearBotonScroll(), que es la función que arma el botón flotante y lo
 // agrega a la página. Por eso nunca aparecía al hacer scroll.
 subirScroll.crearBotonScroll();
+
+// Detalle de producto: click en la imagen de cualquier producto del
+// catálogo abre el modal con carrusel, descripción, precio y stock.
+detalleProducto.inicializarClicksDetalle();
 
 // Evita el menú nativo del navegador ("Abrir imagen en pestaña nueva",
 // "Copiar imagen", etc) al mantener apretada una imagen de producto en
@@ -467,73 +476,108 @@ function escucharBotones() {
       } else {
       }
 
-      //buscamos los datos del boton precionado
-      var tit = buscarDatos.buscarId(parseInt(productId));
-      var pre = buscarDatos.buscarIdPrecio(parseInt(productId));
-      var dol = buscarDatos.buscarIdDol(parseInt(productId));
-      var stock = buscarDatos.buscarStock(parseInt(productId));
-      var desc = buscarDatos.buscarDescuento(parseInt(productId));
-
-      // El stock es del PRODUCTO, no de cada variante por separado: si hay
-      // 10 en stock y ya tenés 8 de una variante en el carrito, no podés
-      // agregar 8 más de otra variante (serían 16 de un producto con solo
-      // 10 disponibles). Sumamos las unidades de TODAS las variantes de
-      // este mismo producto que ya estén en el carrito antes de validar.
-      const idBaseProducto = parseInt(productId);
-      const unidadesYaEnCarrito = itemCarrito.reduce((total, item) => {
-        const idBaseItem = item.ImagenId !== undefined ? item.ImagenId : item.Artículo;
-        return idBaseItem === idBaseProducto ? total + item.Unidades : total;
-      }, 0);
-
-      if (unidadesYaEnCarrito + unidades > stock) {
-        let suceso = "NO HAY STOCK SUFICIENTE";
-        let tipoAlert = "alert-danger";
-        alertas.alertAgrego(tit, suceso, tipoAlert);
-        total();
-        return;
-      }
-
-      let agregarOModificarItem = (articuloId, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento, ImagenId) => {
-        let siEstaId = itemCarrito.find(artic => artic.Artículo === (parseInt(articuloId)));
-
-        if (siEstaId) {
-          siEstaId.Unidades += Unidades;
-          localStor.guardarEnLocalStorage(itemCarrito);
-          agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
-        } else {
-          if (Descuento != 0) {
-            let ventaCD = ((Venta) * (1 - (Number(Descuento) / 100)));
-            // Guardamos "ImagenId" (el id real del producto) además de
-            // "Artículo" (que para variantes es un id compuesto y no
-            // corresponde a ningún archivo de imagen real).
-            itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades, ImagenId });
-            localStor.guardarEnLocalStorage(itemCarrito);
-            agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
-
-          } else {
-            itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades, ImagenId });
-            localStor.guardarEnLocalStorage(itemCarrito);
-            agregar(Descripción, articuloId); // Usar Descripción en lugar de tit para la alerta
-          }
-        }
-      };
-
-      if (medidas == null && varied == null) {
-        agregarOModificarItem(productId, (parseInt(productId)), tit, pre, dol, unidades, desc, parseInt(productId));
-      } else {
-        if (varied == null) {
-          varied2 = "";
-        }
-        let articuloIdModificado = medidas + '9990' + productId + varied; // Concatenar como string
-        // Le pasamos parseInt(productId) como ImagenId: es el id real del
-        // producto base, el que sí corresponde a un archivo de imagen.
-        agregarOModificarItem(articuloIdModificado, (parseInt(articuloIdModificado)), `${tit}  ${textMedidas} ${varied2}`, pre, dol, unidades, desc, parseInt(productId));
-      }
-
-
-      total();
+      // Delegamos todo (buscar los datos del producto, armar el id
+      // compuesto si hay variante, validar stock, guardar en el carrito
+      // y mostrar el aviso) a agregarProductoAlCarrito(), que también usa
+      // el modal de detalle de producto (ver detalleProducto.js) para que
+      // agregar desde ahí se comporte exactamente igual que agregar desde
+      // la tarjeta.
+      agregarProductoAlCarrito(parseInt(productId), {
+        unidades,
+        medida: medidas,
+        medidaTexto: textMedidas,
+        variante: varied,
+        varianteTexto: varied2,
+      });
     }
   });
+}
+
+
+
+
+//Agrega (o suma unidades a) un producto del carrito. La usan tanto el
+//botón "Agregar" de cada tarjeta del catálogo como el botón "Agregar al
+//carrito" del modal de detalle de producto.
+//productId: id numérico del producto base (el que corresponde a una
+//  imagen real, ej: 98).
+//opciones.unidades: cantidad a agregar.
+//opciones.medida / opciones.medidaTexto: valor y texto elegido en el
+//  select de medida (o null si el producto no tiene).
+//opciones.variante / opciones.varianteTexto: idem para el select de
+//  variante secundaria.
+//Devuelve true si se agregó, false si no había stock suficiente.
+export function agregarProductoAlCarrito(productId, opciones = {}) {
+  const {
+    unidades = 1,
+    medida = null,
+    medidaTexto = "",
+    variante = null,
+    varianteTexto = "",
+  } = opciones;
+
+  var tit = buscarDatos.buscarId(productId);
+  var pre = buscarDatos.buscarIdPrecio(productId);
+  var dol = buscarDatos.buscarIdDol(productId);
+  var stock = buscarDatos.buscarStock(productId);
+  var desc = buscarDatos.buscarDescuento(productId);
+
+  // El stock es del PRODUCTO, no de cada variante por separado: si hay
+  // 10 en stock y ya tenés 8 de una variante en el carrito, no podés
+  // agregar 8 más de otra variante (serían 16 de un producto con solo
+  // 10 disponibles). Sumamos las unidades de TODAS las variantes de
+  // este mismo producto que ya estén en el carrito antes de validar.
+  const unidadesYaEnCarrito = itemCarrito.reduce((totalAcumulado, item) => {
+    const idBaseItem = item.ImagenId !== undefined ? item.ImagenId : item.Artículo;
+    return idBaseItem === productId ? totalAcumulado + item.Unidades : totalAcumulado;
+  }, 0);
+
+  if (unidadesYaEnCarrito + unidades > stock) {
+    let suceso = "NO HAY STOCK SUFICIENTE";
+    let tipoAlert = "alert-danger";
+    alertas.alertAgrego(tit, suceso, tipoAlert);
+    total();
+    return false;
+  }
+
+  let agregarOModificarItem = (articuloId, Artículo, Descripción, Venta, DOLAR, Unidades, Descuento, ImagenId) => {
+    let siEstaId = itemCarrito.find(artic => artic.Artículo === (parseInt(articuloId)));
+
+    if (siEstaId) {
+      siEstaId.Unidades += Unidades;
+      localStor.guardarEnLocalStorage(itemCarrito);
+      agregar(Descripción, articuloId);
+    } else {
+      if (Descuento != 0) {
+        let ventaCD = ((Venta) * (1 - (Number(Descuento) / 100)));
+        // Guardamos "ImagenId" (el id real del producto) además de
+        // "Artículo" (que para variantes es un id compuesto y no
+        // corresponde a ningún archivo de imagen real).
+        itemCarrito.push({ Artículo, Descripción, Venta: ventaCD.toString(), DOLAR, Unidades, ImagenId });
+        localStor.guardarEnLocalStorage(itemCarrito);
+        agregar(Descripción, articuloId);
+      } else {
+        itemCarrito.push({ Artículo, Descripción, Venta, DOLAR, Unidades, ImagenId });
+        localStor.guardarEnLocalStorage(itemCarrito);
+        agregar(Descripción, articuloId);
+      }
+    }
+  };
+
+  if (medida == null && variante == null) {
+    agregarOModificarItem(productId, productId, tit, pre, dol, unidades, desc, productId);
+  } else {
+    // OJO: se deja "variante" tal cual (puede ser null) en la
+    // concatenación del id compuesto, igual que en el código original,
+    // para no generar ids distintos a los que ya puedan existir
+    // guardados en carritos de local storage de antes de este cambio.
+    let varianteTextoFinal = variante == null ? "" : varianteTexto;
+    let articuloIdModificado = medida + '9990' + productId + variante;
+    agregarOModificarItem(articuloIdModificado, (parseInt(articuloIdModificado)), `${tit}  ${medidaTexto} ${varianteTextoFinal}`, pre, dol, unidades, desc, productId);
+  }
+
+  total();
+  return true;
 }
 
 
@@ -602,10 +646,10 @@ eventCerrCanvas.eventCerrCanvas();
 // Función para generar el enlace de WhatsApp
 function generarEnlaceWhatsApp() {
 
-  const telefono = "5491125275189"; // Reemplaza con el número de teléfono deseado
+  const telefono = config.telefonoWhatsApp; // Se define en config.js
 
   // Construir el texto del mensaje con la información de los duplicados y los precios
-  let textoCarrito = "Hola! Me interesan estos productos de la web:";
+  let textoCarrito = config.mensajeInicialCarritoWhatsApp;
   let UnidadesProductosTotales = 0;
 
 

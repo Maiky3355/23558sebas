@@ -69,3 +69,10 @@ export function buscarDescuento(id) {
 };
 
 
+
+
+//devuelve el objeto completo del producto (todos sus campos), para
+//pantallas como el detalle de producto que necesitan mostrar todo junto
+export function buscarDatosCompletos(id) {
+    return datos.find(elem => elem.Artículo == id);
+};

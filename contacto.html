@@ -8,8 +8,9 @@
     <link rel="shortcut icon" href="IMG/logoBLANCO NUEVO.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="coloresConfig.css">
     <link rel="stylesheet" href="style.css">
-    <title>Sublime Supplies</title>
+    <title data-config="nombreEmpresa"></title>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Sublime Supplies</a>
+                <a class="navbar-brand" href="#" data-config="nombreEmpresa"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -47,7 +48,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="contacto.html">Contacto</a>
                             </li>
-                            <li class="nav-item dropdown">
+                             <!--<li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     LISTAS DE PRECIOS
@@ -61,7 +62,7 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <!-- <li><a class="dropdown-item" href="mobiliarios.html">Mobiliarios</a></li> -->
+                                    <li><a class="dropdown-item" href="mobiliarios.html">Mobiliarios</a></li> -->
                                 </ul>
                             </li>
                         </ul>
@@ -86,14 +87,13 @@
 
                             <section id="3">
                                 <img id="logo" alt="Logo de Sublime Supplies" src="IMG/logoBLANCO NUEVO.png">
-                                <p>Telefono: 1125275189</p>
+                                <p>Telefono: <span data-config="contacto.telefono"></span></p>
                                 <br>
-                                <p> Direccion: Av. del Sesquicentenario 2613, Ing. Pablo Nogues, Provincia de Buenos
-                                    Aires
+                                <p> Direccion: <span data-config="contacto.direccion"></span>
                                 </p>
                                 <br>
-                                <p>Horarios de apertura: Lunes a Viernes de 12hs a 18hs</p>
-                                <p>Sabados, Domingos y feriados CERRADO</p>
+                                <p>Horarios de apertura: <span data-config="contacto.horarioAtencion"></span></p>
+                                <p data-config="contacto.horarioCerrado"></p>
 
                             </section>
 
@@ -126,36 +126,6 @@
                 <div class=" row justify-content-center">
                     <div class="col-8 text-center">
                         <div class="card-group ">
-                            <!-- <div class="card cardcontact">
-
-                                <h3>Puede dejarnos un mensaje por aquí</h3>
-                                <p>Si necesita una respuesta urgente, por favor contactarse por WhatsApp</p>
-                                <br>
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico
-                                            con nadie más.
-                                        </div>
-                                    </div>
-
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here"
-                                            id="floatingTextarea"></textarea>
-                                        <label for="floatingTextarea">Comentario</label>
-                                    </div>
-                                    <div class="mb-3 form-check checknot">
-                                        <input type="checkbox" class="form-check-input text-left" id="exampleCheck1"
-                                            checked>
-                                        <label class="form-check-label" for="exampleCheck1">Deseo recibir ofertas y
-                                            promociones por
-                                            Email</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-dark">Enviar</button>
-                                </form>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -175,7 +145,7 @@
 
         <div class="redes">
 
-            <a id="w" href="https://wa.me/message/L5DVPFBSNYERD1" target="_blank"><img src="IMG/w.png"
+            <a id="w" href="" data-config-href="enlaceWhatsAppContacto" target="_blank"><img src="IMG/w.png"
                     alt="WhatsApp"></a>
             <!-- 
             <a id="I" href="#i"><img src="IMG/i.png" alt="Instagram"></a>
@@ -184,16 +154,11 @@
 
         </div>
 
-        <!-- <div class="diseñador">
-
-
-            <p>Diseño web para Codo a codo de:</p>
-            <a href="#">Sebastian Hector Manassero</a>
-        </div> -->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script type="module" src="aplicarConfig.js"></script>
 
 </body>
 

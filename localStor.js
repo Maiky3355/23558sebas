@@ -32,5 +32,3 @@ export function extraerDeLocalStorage() {
 
     return datos.items;
 }
-
-

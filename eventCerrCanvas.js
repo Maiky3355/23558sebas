@@ -1,5 +1,4 @@
 
-
 export function eventCerrCanvas() {
     //cargamos los valores de canvas y botones
 

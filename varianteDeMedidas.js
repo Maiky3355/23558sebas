@@ -162,41 +162,6 @@ export function cambiarVariantes() {
                // console.error(`El elemento select variante con ID "var${id2}" no existe.`);
                 return;
             }
-
-            // // El switch para actualizar las opciones de 'tVariante' según la selección de 'tMedida'
-            // switch (varied) {
-            //     case '1': // SH
-            //         // Crear las nuevas opciones
-            //         let nuevasOpcionesRL = '<option value="1">1</option>' +
-            //                              '<option value="3">3</option>' +
-            //                              '<option value="5">5</option>' +
-            //                              '<option value="7">7</option>' +
-            //                              '<option value="9">9</option>' +
-            //                              '<option value="11">11</option>' +
-            //                              '<option value="13">13</option>' +
-            //                              '<option value="15">15</option>';
-            //         // Asignar las opciones al select
-            //         selectElement77.innerHTML = nuevasOpcionesRL;
-            //         break;
-            //     case '2': // AC
-            //          // Crear las nuevas opciones
-            //         let nuevasOpcionesM1 = '<option value="7">7</option>' +
-            //                                '<option value="9">9</option>' +
-            //                                '<option value="11">11</option>' +
-            //                                '<option value="13">13</option>' +
-            //                                '<option value="15">15</option>';
-            //         // Asignar las opciones al select
-            //         selectElement77.innerHTML = nuevasOpcionesM1;
-            //         break;
-            //     // Faltan los case '3' y '4' que estaban comentados en tu código original
-            //     // case '3': ... break;
-            //     // case '4': ... break;
-            //     default:
-            //         console.log(`Opción no válida seleccionada en tMedida: ${varied}`);
-            //         // Podrías limpiar las opciones o poner un mensaje por defecto
-            //         selectElement77.innerHTML = '<option value="">-- Seleccione medida --</option>';
-            //         break;
-            // }
         });
     });
 }

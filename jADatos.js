@@ -34,6 +34,8 @@
 // jADatos.js
 // Cargar el archivo JSON con manejo de errores para que la tienda
 // no quede en blanco silenciosamente si falla la carga.
+import config from './config.js';
+
 let data;
 
 try {
@@ -57,7 +59,7 @@ try {
     
     <div class="redes">
                  
-               <a id="w" href="https://wa.me/5491125275189" target="_blank"><img src="IMG/w.png"
+               <a id="w" href="https://wa.me/${config.telefonoWhatsApp}" target="_blank"><img src="IMG/w.png"
                     alt="WhatsApp"></a>
               <!-- 
               <a id="I" href="#i"><img src="../IMG/i.png" alt="Instagram"></a>

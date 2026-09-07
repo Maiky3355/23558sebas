@@ -161,6 +161,17 @@ nav{
   z-index: 55 !important;
 }
 
+/* En PC, #listaInteres (botón Carrito) y #totalCarritoNavb quedan como
+   hijos directos y consecutivos del navbar, y se ven pegados entre sí.
+   En celular no hace falta el margen porque el botón de menú (☰) y el
+   ancho más chico ya los separan. El breakpoint 768px coincide con el
+   navbar-expand-md de tienda.html, donde arranca el modo PC. */
+@media (min-width: 768px) {
+  #totalCarritoNavb {
+    margin-left: 0.75rem;
+  }
+}
+
 
 
 footer .redes {
@@ -447,20 +458,13 @@ li form {
 
 }
 
-.img-prod:active {
-position: fixed !; 
-/* La imagen se posicionará en relación a la ventana */
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) scale(2);
-z-index: 99999999 !important; 
-/* Asegúrate de que esté por encima de otros elementos */
-transform: scale(2);
-z-index: 1;
-margin: -5px; 
-/* Agrega un margen negativo para crear espacio */
-object-fit: cover;
-transition: transform 0.3s ease-in-out;
+/* Antes acá había un efecto de "zoom" al mantener presionada la imagen
+   (:active), que agrandaba la foto centrada en pantalla. Se sacó porque
+   ahora el click en la imagen abre el modal de detalle del producto
+   (ver detalleProducto.js), y los dos efectos superpuestos se veían
+   raros (un flash de zoom justo antes de que se abra el modal). */
+.img-prod {
+  cursor: pointer;
 }
 
 h7 {
@@ -761,8 +765,8 @@ h11 {
 
 /* Evita que al mantener apretada una imagen en celular aparezca el menú
    nativo del navegador ("Abrir imagen en pestaña nueva", "Copiar imagen",
-   etc). No afecta el efecto de zoom con :active que ya tenía la imagen,
-   son dos cosas independientes. */
+   etc), para que el click/tap se sienta como abrir el detalle del
+   producto y no como si fuera a guardar la imagen. */
 .img-prod {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -796,46 +800,11 @@ h11 {
 
 /* ===================================================== */
 /* PERSONALIZACIÓN DE COLORES: NAVBAR, OFFCANVAS Y BOTONES */
-/* Estos valores son los que Sublime ya tiene actualmente   */
-/* (gris oscuro de Bootstrap + el gris del banner). Para    */
-/* cambiar la paleta a futuro, solo hay que tocar acá.       */
+/* Los colores de todo el sitio ahora viven en un archivo   */
+/* aparte: coloresConfig.css. Para cambiar la paleta, andá  */
+/* a ese archivo — acá no hay que tocar nada.                */
 /* ===================================================== */
 
-:root {
-  /* 🎨 CAMBIA ESTOS COLORES SEGÚN TU PREFERENCIA */
-  --tema-principal: #212529;
-  /* Navbar y botón "Carrito" (gris oscuro actual de Bootstrap) */
-
-  --tema-secundario: #212529;
-  /* Menú desplegable en celular (offcanvas de navegación) */
-
-  --tema-canvas: #212529;
-  /* Fondo del panel del carrito */
-
-  --tema-acento: #000000;
-  /* Categoría seleccionada / hover del botón "Agregar" */
-
-  --tema-acento-hover: #000000;
-  /* Hover sobre elementos de acento */
-
-  --texto-general: #ffffff;
-  /* Color del texto sobre fondos oscuros */
-
-  --borde-suave: rgba(255, 255, 255, 0.15);
-  /* Bordes de separación */
-
-  --tema-categoria: transparent;
-  /* Fondo de los botones de categoría sin seleccionar */
-
-  --texto-categoria: #060606;
-  /* Texto de los botones de categoría */
-
-  --tema-hero: #2c2c2c;
-  /* Fondo del banner "Sublime Supplies" */
-
-  --tema-filtros: darkgrey;
-  /* Fondo de la barra de filtros de categoría */
-}
 
 /* ----------------------------------------------------- */
 /* 1. BARRA DE NAVEGACIÓN PRINCIPAL (NAVBAR) */
@@ -887,6 +856,29 @@ h11 {
   color: var(--texto-general) !important;
 }
 
+/* En PC (a partir del breakpoint donde el navbar deja de estar
+   colapsado), este menú deja de ser un panel deslizante y pasa a
+   mostrarse pegado, adentro del propio navbar. Si sigue teniendo su
+   color de fondo (--tema-secundario) distinto al del navbar
+   (--tema-principal), se ve como un bloque de otro color dentro de
+   la barra. En ese ancho lo hacemos transparente para que se mezcle
+   con el navbar; en celular (por debajo de ese ancho) sigue
+   funcionando como panel aparte y conserva su color propio.
+   Se cubren los dos anchos usados en el sitio: navbar-expand-sm
+   (index.html y contacto.html, 576px) y navbar-expand-md
+   (tienda.html, 768px). */
+@media (min-width: 576px) {
+  .navbar-expand-sm #offcanvasDarkNavbar.text-bg-dark {
+    background-color: transparent !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md #offcanvasDarkNavbar.text-bg-dark {
+    background-color: transparent !important;
+  }
+}
+
 /* ----------------------------------------------------- */
 /* 3. PANEL DEL CARRITO DE COMPRAS (OFFCANVAS CARRITO) */
 /* ----------------------------------------------------- */
@@ -907,6 +899,7 @@ h11 {
 #offcanvasDark h4 {
   color: var(--texto-general) !important;
 }
+
 
 /* Tarjeta interna y lista de ítems dentro del Carrito */
 #offcanvasDark .card,
@@ -931,14 +924,13 @@ h11 {
 }
 
 .carrito-btn-eliminar {
-  background-color: #e74c3c !important;
-  /* Rojo para borrar */
+  background-color: var(--boton-eliminar) !important;
   color: #ffffff !important;
   border: none !important;
 }
 
 .carrito-btn-eliminar:hover {
-  background-color: #c0392b !important;
+  background-color: var(--boton-eliminar-hover) !important;
 }
 
 /* ----------------------------------------------------- */
@@ -975,3 +967,44 @@ h11 {
   background-color: var(--tema-filtros) !important;
 }
 
+
+/* ----------------------------------------------------- */
+/* 7. MODAL DE DETALLE DE PRODUCTO (carrusel + descripción) */
+/* ----------------------------------------------------- */
+
+/* Cada imagen del carrusel ocupa el mismo alto para que no "salte" el
+   modal al pasar de una foto vertical a una horizontal. object-fit:
+   contain evita que la imagen se recorte o se deforme. */
+.modal-carrusel-img {
+  width: 100%;
+  height: 55vh;
+  max-height: 420px;
+  object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+/* En celular el modal ya no ocupa toda la pantalla (se sacó
+   modal-fullscreen-sm-down): queda centrado, con un margen prolijo a los
+   costados y arriba/abajo, y con scroll interno si el contenido no entra
+   (modal-dialog-scrollable). Achicamos también la imagen del carrusel
+   para que acompañe el tamaño más chico del modal. */
+@media (max-width: 575.98px) {
+  #modalDetalleProducto .modal-dialog {
+    max-width: 92%;
+    max-height: 85vh;
+    margin: 7.5vh auto;
+  }
+
+  .modal-carrusel-img {
+    height: 32vh;
+  }
+}
+
+/* Flechas del carrusel un poco más visibles sobre fondo claro */
+#carruselDetalleProducto .carousel-control-prev-icon,
+#carruselDetalleProducto .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 1.2rem;
+  background-size: 50%;
+}

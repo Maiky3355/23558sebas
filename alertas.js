@@ -1,5 +1,4 @@
 
-
 // Guardamos referencia al temporizador activo. Antes, cada llamada a
 // alertAgrego() programaba su propio setTimeout de 2 segundos sin cancelar
 // el anterior: si se agregaban dos productos seguidos (o pasaba cualquier
@@ -36,7 +35,11 @@ export function alertAgrego(titAlert, suceso, tipoAlert) {
     alertAgrego.classList.add(tipoAlert);
 
     alertAgrego.classList.add("show");
-    alertAgrego.style.cssText = 'z-index: 50 !important;';
+    // 100000 asegura que la alerta se vea por encima de TODO, incluido el
+    // modal de detalle de producto (Bootstrap usa z-index 1055 para el
+    // modal y 1050 para el fondo oscuro detrás). Antes tenía 50, que
+    // quedaba tapado por el modal.
+    alertAgrego.style.cssText = 'z-index: 100000 !important;';
     //Colocamos el timpo del alert antes de desactivarse
     temporizadorAlerta = setTimeout(() => {
         alertAgrego.classList.remove("hide", "show");
@@ -48,5 +51,3 @@ export function alertAgrego(titAlert, suceso, tipoAlert) {
     }, 2000);
 
 };
-
-
