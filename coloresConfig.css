@@ -1,0 +1,85 @@
+/* ============================================================ */
+/* coloresConfig.css — CONFIGURACIÓN DE COLORES DEL SITIO        */
+/* ============================================================ */
+/* Este es el ÚNICO archivo que necesitás tocar para cambiar la  */
+/* paleta de colores del sitio. No hace falta editar style.css.  */
+/*                                                                 */
+/* Cada color está agrupado por la parte del sitio donde se ve,  */
+/* con un comentario que dice exactamente qué pinta.             */
+/* Se puede usar cualquier formato de color: #hex, rgb(), o       */
+/* nombres como "darkgrey".                                       */
+/* ============================================================ */
+
+:root {
+
+  /* ---------------------------------------------------------- */
+  /* 1. BARRA DE NAVEGACIÓN PRINCIPAL (arriba de todo)            */
+  /* ---------------------------------------------------------- */
+
+  /* Fondo del navbar y del botón "Carrito" */
+  --tema-principal: #212529;
+
+  /* Menú desplegable que aparece en celular al tocar el ☰ */
+  --tema-secundario: #212529;
+
+
+  /* ---------------------------------------------------------- */
+  /* 2. PANEL DEL CARRITO (offcanvas que se abre al tocar Carrito)*/
+  /* ---------------------------------------------------------- */
+
+  /* Fondo del panel del carrito */
+  --tema-canvas: #212529;
+
+
+  /* ---------------------------------------------------------- */
+  /* 3. BOTONES DE ACCIÓN (Agregar, categoría seleccionada, +/-)  */
+  /* ---------------------------------------------------------- */
+
+  /* Color de fondo cuando el mouse pasa por arriba, o de la
+     categoría de producto que está seleccionada */
+  --tema-acento: #000000;
+
+  /* Hover sobre elementos de acento (actualmente no se usa,
+     reservado por si se necesita un tono distinto al hacer hover) */
+  --tema-acento-hover: #000000;
+
+  /* Botón de eliminar producto del carrito (🗑) */
+  --boton-eliminar: #e74c3c;
+
+  /* Botón de eliminar al pasar el mouse por encima */
+  --boton-eliminar-hover: #c0392b;
+
+
+  /* ---------------------------------------------------------- */
+  /* 4. TEXTOS Y BORDES GENERALES                                  */
+  /* ---------------------------------------------------------- */
+
+  /* Color del texto sobre los fondos oscuros (navbar, carrito, etc) */
+  --texto-general: #ffffff;
+
+  /* Color de las líneas/bordes finos de separación */
+  --borde-suave: rgba(255, 255, 255, 0.15);
+
+
+  /* ---------------------------------------------------------- */
+  /* 5. FILTROS Y CATEGORÍAS (arriba del catálogo de productos)   */
+  /* ---------------------------------------------------------- */
+
+  /* Fondo de la franja de filtros de categoría */
+  --tema-filtros: darkgrey;
+
+  /* Fondo de los botones de categoría cuando NO están seleccionados */
+  --tema-categoria: transparent;
+
+  /* Color del texto de los botones de categoría */
+  --texto-categoria: #060606;
+
+
+  /* ---------------------------------------------------------- */
+  /* 6. BANNER PRINCIPAL (el cartel con el nombre de la empresa)   */
+  /* ---------------------------------------------------------- */
+
+  /* Fondo del banner con el título de la tienda */
+  --tema-hero: #2c2c2c;
+
+}
