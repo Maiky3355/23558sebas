@@ -235,8 +235,12 @@ function calcularPrecioFinal(datos, precioVarianteOverride) {
 
   const precioBase = precioBaseUnitario * Number(datos.DOLAR);
 
-  if (datos.Descuento != 0) {
-    const precioConDescuento = precioBase * (1 - Number(String(datos.Descuento).replace(/,/g, '.')));
+  // Igual que en logica.js/descu.js: comparamos ya normalizado (coma ->
+  // punto), porque "0,00" != 0 da true si se compara el string tal cual.
+  const descuentoNormalizado = Number(String(datos.Descuento).replace(/,/g, '.'));
+
+  if (descuentoNormalizado !== 0) {
+    const precioConDescuento = precioBase * (1 - descuentoNormalizado);
     return {
       original: precioBase,
       final: precioConDescuento,

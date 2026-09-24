@@ -131,7 +131,9 @@ function MostrarEnCatalogo(datos, contenedorId) {
   // Formatear precioCatalogo con formato numérico y limitar a 2 decimales
   template2.querySelector(".cantidad").setAttribute("id", "idbot" + (datos.Artículo));
   template2.querySelector(".cantidad").setAttribute("max", (datos.Inventario));
-  if (datos.Descuento != 0) {
+  // Comparamos ya normalizado (coma -> punto): "0,00" != 0 da true si se
+  // compara el string tal cual, porque Number("0,00") es NaN en JS.
+  if (Number(datos.Descuento.replace(/,/g, ".")) !== 0) {
 
     // Precio original
     let precioCatalogo = (Number(datos.Venta.replace(/,/g, ".")) * Number(datos.DOLAR));
@@ -282,7 +284,11 @@ categoriasUnicas.forEach(categoria => {
 
 
     datos.forEach((datos) => {
-      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTROS === "VER TODOS" || datos.Categoria == FILTROS || FILTROS === "CON DESCUENTOS" && datos.Descuento != 0)) {
+      // Comparamos ya normalizado (coma -> punto): antes, un producto con
+      // Descuento "0,00" entraba igual en el filtro "CON DESCUENTOS"
+      // porque "0,00" != 0 da true si se compara el string tal cual.
+      const tieneDescuentoReal = Number(datos.Descuento.replace(/,/g, ".")) !== 0;
+      if (datos.Inventario >= 1 /*&& datos.Descuento == 0 */ && (FILTROS === "VER TODOS" || datos.Categoria == FILTROS || FILTROS === "CON DESCUENTOS" && tieneDescuentoReal)) {
         //mostramos los datos en el catalogo!!! <--------------------------------------------------
         contenedorId = 0;
         fragmento2 = MostrarEnCatalogo(datos, contenedorId);

@@ -332,8 +332,14 @@ export function actualizarStockPorVariante() {
 
             const precioConDolar = precioBaseUnitario * Number(datosProducto.DOLAR);
 
-            if (datosProducto.Descuento != 0) {
-                const precioConDescuento = precioConDolar * (1 - Number(String(datosProducto.Descuento).replace(/,/g, '.')));
+            // Comparamos ya normalizado (coma -> punto): "0,00" != 0 da
+            // true si se compara el string tal cual, porque Number("0,00")
+            // es NaN en JS. "0,01" (o cualquier otro valor real) sigue
+            // funcionando igual que antes.
+            const descuentoNormalizado = Number(String(datosProducto.Descuento).replace(/,/g, '.'));
+
+            if (descuentoNormalizado !== 0) {
+                const precioConDescuento = precioConDolar * (1 - descuentoNormalizado);
                 const precioSinImp = precioConDescuento / 1.21;
                 if (elementoPrecioTachado) elementoPrecioTachado.innerHTML = `<del>$${formatear(precioConDolar)}</del>`;
                 if (elementoPrecioFinal) elementoPrecioFinal.textContent = `$${formatear(precioConDescuento)}`;

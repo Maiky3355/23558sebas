@@ -20,7 +20,12 @@ export function porDeDescuento() {
 
     // Buscar el valor de descuento en el objeto "datos"
     let discountValue = datos.find(item => item.Artículo === imageId)?.Descuento;
-    if (discountValue != 0) {
+    // Antes se comparaba el string tal cual contra 0 ("0,00" != 0 da
+    // true, porque Number("0,00") es NaN en JS -la coma no es el
+    // separador decimal que espera-, y NaN != 0 también es true). Un
+    // descuento guardado como "0,00" mostraba igual el cartel de
+    // "% OFF". Normalizamos la coma a punto ANTES de comparar.
+    if (discountValue != null && Number(discountValue.replace(/,/g, ".")) !== 0) {
       discountValue = (discountValue.replace(/,/g, ".")) * 100;
       discountValue = discountValue.toFixed(0);
       // Crear el elemento de texto
