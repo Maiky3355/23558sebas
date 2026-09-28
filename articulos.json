@@ -2869,8 +2869,8 @@
         "Descripción": "CARTUCHOS THE THOR X10U",
         "Unidad": "Pieza",
         "Venta": "11999,99",
-        "Descuento": "0",
-        "Inventario": "5",
+        "Descuento": "0,00",
+        "Inventario": "43",
         "Disponible": "",
         "Impuesto": "0",
         "cImpuesto": "SIN IMPUESTO",
@@ -2896,17 +2896,6 @@
                 "atributo2": "0803,3,1005,7,9,11,13,15,23"
             },
             {
-                "idVariante": 80,
-                "valor1": "RL",
-                "valor2": "1209",
-                "codigo": "",
-                "stock": 2,
-                "stockMinimo": 0,
-                "precioVenta": 11999.99,
-                "atributo1": "RL,M1,RS",
-                "atributo2": "0803,3,1005,7,9,11,13,15,23"
-            },
-            {
                 "idVariante": 121,
                 "valor1": "M1",
                 "valor2": "23",
@@ -2923,17 +2912,6 @@
                 "valor2": "0803",
                 "codigo": "",
                 "stock": 4,
-                "stockMinimo": 0,
-                "precioVenta": 11999.99,
-                "atributo1": "RL,M1,RS",
-                "atributo2": "0803,3,1005,7,9,11,13,15,23"
-            },
-            {
-                "idVariante": 123,
-                "valor1": "RL",
-                "valor2": "1003",
-                "codigo": "",
-                "stock": 3,
                 "stockMinimo": 0,
                 "precioVenta": 11999.99,
                 "atributo1": "RL,M1,RS",
