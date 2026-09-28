@@ -2427,7 +2427,217 @@
         "DOLAR": "1",
         "VarianteP": "RL,M1,RM,RS",
         "VarianteS": "3,5,7,9,11,13,15",
-        "variantes": null
+        "variantes": [
+            {
+                "idVariante": 140,
+                "valor1": "RL",
+                "valor2": "1203",
+                "codigo": "",
+                "stock": 10,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 141,
+                "valor1": "RL",
+                "valor2": "1205",
+                "codigo": "",
+                "stock": 10,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 142,
+                "valor1": "RL",
+                "valor2": "1003",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 143,
+                "valor1": "RL",
+                "valor2": "0803",
+                "codigo": "",
+                "stock": 1,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 144,
+                "valor1": "RL",
+                "valor2": "1207",
+                "codigo": "",
+                "stock": 9,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 145,
+                "valor1": "RL",
+                "valor2": "1209",
+                "codigo": "",
+                "stock": 7,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 146,
+                "valor1": "RS",
+                "valor2": "1209",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 147,
+                "valor1": "RM",
+                "valor2": "1209",
+                "codigo": "",
+                "stock": 4,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 148,
+                "valor1": "M1",
+                "valor2": "1211",
+                "codigo": "",
+                "stock": 3,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 149,
+                "valor1": "M1",
+                "valor2": "1215",
+                "codigo": "",
+                "stock": 4,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 150,
+                "valor1": "RS",
+                "valor2": "1211",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 151,
+                "valor1": "RM",
+                "valor2": "1211",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 152,
+                "valor1": "RM",
+                "valor2": "1215",
+                "codigo": "",
+                "stock": 3,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 153,
+                "valor1": "RL",
+                "valor2": "1211",
+                "codigo": "",
+                "stock": 3,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 154,
+                "valor1": "M1",
+                "valor2": "1207",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 155,
+                "valor1": "M1",
+                "valor2": "1209",
+                "codigo": "",
+                "stock": 3,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 156,
+                "valor1": "M1",
+                "valor2": "1213",
+                "codigo": "",
+                "stock": 0,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 157,
+                "valor1": "RM",
+                "valor2": "1213",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            },
+            {
+                "idVariante": 158,
+                "valor1": "RS",
+                "valor2": "1207",
+                "codigo": "",
+                "stock": 2,
+                "stockMinimo": 0,
+                "precioVenta": null,
+                "atributo1": "RL,M1,RM,RS",
+                "atributo2": "3,5,7,9,11,13,15"
+            }
+        ]
     },
     {
         "Artículo": 209,
