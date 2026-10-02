@@ -334,8 +334,8 @@
         "Descripción": "ANESTESIA TKTX 40% 10G VARIOS",
         "Unidad": "Pieza",
         "Venta": "9999,99",
-        "Descuento": "0",
-        "Inventario": "-1",
+        "Descuento": "0,00",
+        "Inventario": "0",
         "Disponible": "",
         "Impuesto": "0",
         "cImpuesto": "SIN IMPUESTO",
@@ -345,9 +345,9 @@
         "Marca": "TKTX",
         "UAlmacén": "",
         "Favoritos": "-45435,6037152778",
-        "DOLAR": "1",
-        "VarianteP": null,
-        "VarianteS": null,
+        "DOLAR": "1.00",
+        "VarianteP": "",
+        "VarianteS": "",
         "variantes": null
     },
     {
