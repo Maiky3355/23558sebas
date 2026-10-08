@@ -3849,7 +3849,7 @@
         "Descripción": "DESCARTADOR X2L",
         "Unidad": "Pieza",
         "Venta": "5700,00",
-        "Descuento": "0,1",
+        "Descuento": "0,05",
         "Inventario": "2",
         "Disponible": "",
         "Impuesto": "0",
@@ -3860,7 +3860,7 @@
         "Marca": "OTRAS",
         "UAlmacén": "",
         "Favoritos": "-46139,8464814815",
-        "DOLAR": "1",
+        "DOLAR": "1.00",
         "VarianteP": "",
         "VarianteS": "",
         "variantes": null
